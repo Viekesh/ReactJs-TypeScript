@@ -14,7 +14,7 @@ const PortfolioLinks = () => {
         </div>
       </label>
 
-      <a href="https://www.github.com" className="links github"></a >
+      <a href="https://github.com/Viekesh" className="links github"></a >
 
         <a href="https://www.linkedin.com/in/vikesh-gaikwad-994872194" className="links linkedin"></a >
 
