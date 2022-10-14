@@ -1,12 +1,13 @@
 import Navigation from './Navigation';
-import "./Styles/landing_page.css";
-
+import "../Styles/LandingPage.css";
+import PortfolioLinks from './PortfolioLinks';
 
 
 const LandingPage = () => {
   return (
     <div className='landing_page'>
         <Navigation />
+        <PortfolioLinks />
     </div>
   )
 }

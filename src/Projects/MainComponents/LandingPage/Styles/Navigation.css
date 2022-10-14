@@ -1,7 +1,6 @@
 .navigation {
     height: 9vh;
-    /* padding: 3vw 0; */
-    background-color: rgb(252, 29, 0);
+    background-color: rgba(255, 0, 0, 0.9);
     box-shadow: 1px 1px 10px black;
 }
 
@@ -12,7 +11,7 @@
 }
 
 .logo {
-    width: 30vw;
+    width: 27vw;
     height: auto;
     text-align: center;
 }
@@ -35,6 +34,7 @@
     transition: transform 0.3s ease-in-out 0s;
     background-color: rgb(0, 0, 14);
     /* box-shadow: 1px 1px 30px black; */
+    z-index: 4;
 }
 
 .navigation_section_elements {
@@ -59,7 +59,7 @@
 
 .navigation_buttons {
     margin: 0 2vw;
-    width: 24%;
+    width: 27%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -82,10 +82,13 @@
     font-size: larger;
 }
 
+.menu_icon {
+    z-index: 9;
+}
+
 .navigation_section.overlay {
     transform: translateX(0px);
 }
-
 
 
 
@@ -122,6 +125,7 @@
 }
 
 .hamburger-box {
+    outline: 0px;
     width: 30px;
     height: 20px;
     display: inline-block;
@@ -291,6 +295,7 @@
         border-radius: .6vw;
         padding: 0 3vw;
         height: 6vh;
-        font-size: 1.1vw;
+        font-size: 1vw;
+        font-weight: 900;
     }
 }
