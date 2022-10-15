@@ -125,20 +125,16 @@
         bottom: 260px;
     }
 
-    #eqr-click:checked ~ .telegram {
+    #eqr-click:checked ~ .mail {
         bottom: 340px;
     }
-
-    #eqr-click:checked ~ .mail {
+    
+    #eqr-click:checked ~ .linkedin {
         bottom: 420px;
     }
-
-    #eqr-click:checked ~ .linkedin {
-        bottom: 500px;
-    }
-
+    
     #eqr-click:checked ~ .github {
-        bottom: 580px;
+        bottom: 500px;
     }
 }
 
@@ -162,5 +158,28 @@
 
     .eqr h1 {
         font-size: 12px;
+    }
+
+    .links {
+        width: 40px;
+        height: 40px;
+        right: 216px;
+        bottom: 96px;
+    }
+
+    #eqr-click:checked ~ .call {
+        bottom: 180px;
+    }
+
+    #eqr-click:checked ~ .mail {
+        bottom: 240px;
+    }
+    
+    #eqr-click:checked ~ .linkedin {
+        bottom: 300px;
+    }
+    
+    #eqr-click:checked ~ .github {
+        bottom: 360px;
     }
 }
