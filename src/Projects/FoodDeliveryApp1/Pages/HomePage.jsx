@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Footer from "../Components/Common/Footer";
 import Header from "../Components/Common/Header";
-import TabOptions from "../Components/Common/TabOptions";
+import TabOption from "../Components/Common/TabOptions/TabOption";
 import "../Styles/HomePage.css";
 
 
@@ -28,7 +28,7 @@ const HomePage = () => {
 
       <Header />
 
-      <TabOptions />
+      <TabOption activeTab={activeTab} setActiveTab={setActiveTab} />
       {getCorrectScreen(activeTab)}
 
       <Footer />
