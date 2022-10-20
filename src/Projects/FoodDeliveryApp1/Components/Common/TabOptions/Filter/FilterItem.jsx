@@ -1,4 +1,4 @@
-import "../../../Styles/FilterItem.css";
+import "../../../../Styles/FilterItem.css";
 
 const FilterItem = ({filter}) => {
   return (

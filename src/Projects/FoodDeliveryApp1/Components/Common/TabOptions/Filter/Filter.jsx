@@ -1,4 +1,4 @@
-import "../../../Styles/Filter.css";
+import "../../../../Styles/Filter.css";
 import FilterItem from "./FilterItem";
 
 const Filter = ({filterList}) => {

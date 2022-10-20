@@ -1,10 +1,11 @@
 import { useState } from "react";
 import Footer from "../Components/Common/Footer";
 import Header from "../Components/Common/Header";
-import Delivery from "../Components/Common/TabOptions/Delivery";
+import Delivery from "../Components/Common/TabOptions/Delivery/Delivery";
 import DiningOut from "../Components/Common/TabOptions/DiningOut";
 import Nightlife from "../Components/Common/TabOptions/Nightlife";
 import TabOption from "../Components/Common/TabOptions/TabOption";
+
 import "../Styles/HomePage.css";
 
 

@@ -41,6 +41,7 @@ const TabOption = ({ activeTab, setActiveTab }) => {
           return <div
             onClick={() => setActiveTab(tab.name)}
             className={`tab_item x_Y_axis_center ${activeTab === tab.name && "active_tab"}`}
+            key={tab.id}
           >
 
             <div

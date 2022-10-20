@@ -1,0 +1,22 @@
+.box_style {
+    margin: 15px auto;
+    padding: 3px;
+}
+
+.collection_title {
+    font-family: "Neucha", cursive;
+    font-size: 30px;
+    font-weight: bold;
+    color: gray;
+}
+
+.slick-next::before,
+.slick-prev::before {
+    color: gray;
+}
+
+@media only screen and (min-width: 1020px) {
+    .box_style {
+        max-width: 900px;
+    }
+}
