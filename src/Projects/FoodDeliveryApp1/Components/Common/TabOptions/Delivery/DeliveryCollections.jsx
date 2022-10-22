@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import NextArrow from "../../Carousel/NextArrow";
 import RightArrow from "../../Carousel/RightArrow";
 import DeliveryItem from "./DeliveryItem";
+// import TopBrands from "../../../TopBrands/TopBrands";
 
 
 
@@ -97,6 +98,7 @@ const DeliveryCollections = () => {
           {deliveryItems.map((item) => {
             return <div key={item.id}>
               <DeliveryItem item={item} />
+              {/* <TopBrands /> */}
             </div>
           })}
         </Slider>

@@ -1,0 +1,31 @@
+.top_brands {
+  margin: 24px auto;
+  padding: 3px;
+}
+
+.top_brands_cover {
+  height: 60px;
+  margin: 0 auto;
+  width: 60px;
+  border-radius: 10%;
+  background-color: black;
+  box-shadow: 1px 1px 3px 1px gray;
+}
+
+.top_brands_image {
+  border-radius: inherit;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+@media only screen and (min-width: 1020px) {
+  .top_brands {
+    width: 900px;
+  }
+
+  .top_brands_cover {
+    width: 90px;
+    height: 90px;
+  }
+}

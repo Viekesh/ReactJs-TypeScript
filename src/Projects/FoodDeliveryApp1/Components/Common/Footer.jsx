@@ -2,8 +2,8 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div>Footer</div>
-  )
-}
+    <div className="x_y_axis_center">Made By Vikesh</div>
+  );
+};
 
 export default Footer;

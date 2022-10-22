@@ -1,0 +1,15 @@
+.explore_section {
+    margin: 15px auto;
+}
+
+.explore_grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+@media only screen and (min-width: 1020px) {
+    .explore_section {
+        width: 900px;
+    }
+}

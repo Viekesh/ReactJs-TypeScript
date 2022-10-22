@@ -1,6 +1,9 @@
 import DeliveryDiningIcon from "@mui/icons-material/DeliveryDining";
 import RoomServiceIcon from "@mui/icons-material/RoomService";
 import "../../../../Styles/Delivery.css";
+import TopBrands from "../../../TopBrands/TopBrands";
+import ExploreSection from "../../ExploreSection/ExploreSection";
+import { restaurants } from "../../ExploreSection/Restaurants";
 import Filter from "../Filter/Filter";
 import DeliveryCollections from "./DeliveryCollections";
 
@@ -41,11 +44,15 @@ const deliveryFilters = [
 
 
 
+const restaurantList = restaurants;
+
 const Delivery = () => {
   return (
     <>
       <Filter filterList={deliveryFilters} />
       <DeliveryCollections />
+      <TopBrands />
+      <ExploreSection list = {restaurantList} collectionNam = "Delivery Restaurants In Nagpur" />
     </>
   );
 };
