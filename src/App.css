@@ -20,6 +20,16 @@ a {
     cursor: pointer;
 }
 
+input {
+    border: none;
+    outline: none;
+}
+
+button {
+    border: none;
+    outline: none;
+}
+
 .x_axis_center {
     display: flex;
     justify-content: center;
