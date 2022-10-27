@@ -6,18 +6,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-decoration: none;
     list-style-type: none;
     scroll-behavior: smooth;
 }
 
-*::-webkit-scrollbar {
+::-webkit-scrollbar {
     display: none;
-}
-
-a {
-    text-decoration: none;
-    cursor: pointer;
 }
 
 input {

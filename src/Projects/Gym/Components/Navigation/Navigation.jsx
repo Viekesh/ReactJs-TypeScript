@@ -14,9 +14,9 @@ const Navigation = () => {
     }
 
     return (
-        <div className='navigation'>
-            <nav className='y-axis-center'>
-                <div className="logo y-axis-center">
+        <div className='gym_navigation'>
+            <nav className='gym_nav y_axis_center'>
+                <div className="logo y_axis_center">
                     <img src={logo1} alt="" />
                     <h4>AlgoTrade</h4>
                 </div>
@@ -31,9 +31,9 @@ const Navigation = () => {
                     </div>
                 </div>
 
-                <div className="nav-elements y-axis-center">
-                    <div className="log-in-icon x-y-axis-center">
-                        <NavLink to='/LogIn' className='log-icon x-y-axis-center'><AccountCircleIcon /></NavLink>
+                <div className="nav-elements y_axis_center">
+                    <div className="log-in-icon x_y_axis_center">
+                        <NavLink to='/LogIn' className='log-icon x_y_axis_center'><AccountCircleIcon /></NavLink>
                     </div>
 
                     <div className="menu-icon">

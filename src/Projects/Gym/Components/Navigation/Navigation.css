@@ -1,4 +1,4 @@
-.navigation {
+.gym_navigation {
     padding: 0.6vw;
     width: 100vw;
     height: 18vh;
@@ -7,7 +7,7 @@
     z-index: 10;
 }
 
-nav {
+.gym_nav {
     margin: 0 auto;
     border-radius: 1vw;
     width: 98%;
@@ -212,7 +212,7 @@ nav {
         padding: 0;
     }
 
-    nav {
+    .gym_nav {
         width: 100%;
     }
 
