@@ -23,11 +23,11 @@ const Navigation = () => {
 
                 <div className={`mobile-menu only-mobile ${showMobMenu ? "overlay" : ""}`} >
                     <div className="mobile-navbar">
-                        <NavLink to='/'><h4 className='y-axis-center'>Home</h4></NavLink>
-                        <NavLink to='/'><h4 className='y-axis-center'>Services</h4></NavLink>
-                        <NavLink to='/'><h4 className='y-axis-center'>Gallery</h4></NavLink>
-                        <NavLink to='/'><h4 className='y-axis-center'>Contact</h4></NavLink>
-                        <NavLink to='/'><h4 className='y-axis-center'>About Us</h4></NavLink>
+                        <NavLink to='/'><h4 className='y_axis_center'>Home</h4></NavLink>
+                        <NavLink to='/'><h4 className='y_axis_center'>Services</h4></NavLink>
+                        <NavLink to='/'><h4 className='y_axis_center'>Gallery</h4></NavLink>
+                        <NavLink to='/'><h4 className='y_axis_center'>Contact</h4></NavLink>
+                        <NavLink to='/'><h4 className='y_axis_center'>About Us</h4></NavLink>
                     </div>
                 </div>
 

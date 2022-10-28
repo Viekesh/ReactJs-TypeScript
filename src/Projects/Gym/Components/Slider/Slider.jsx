@@ -6,7 +6,7 @@ import './Slider.css';
 
 
 let img1, img2, img3;
-img1 = "https://www.smartdatacollective.com/wp-content/uploads/2017/09/Algorithmic-Trading.jpeg";
+img1 = "https://www.nerdfitness.com/wp-content/uploads/2020/01/treadmill-at-gym.jpg";
 img2 = "https://www.bkconnection.com/system/refinery/blog/posts/thumbnails/000/009/062/original/Algorithmic_Trading.jpg?1512393484";
 img3 = "http://seangtkelley.me/img/blog/2018-08-05-algo-trading-pt1/thumbnail.jpg";
 
