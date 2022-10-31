@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import Navigation from '../MainComponents/LandingPage/Components/Navigation';
 
 
 
@@ -26,6 +27,9 @@ const SignUp = () => {
 
     return (
         <>
+        <Navigation />
+        <div className="profile">
+            <h2>SignUp Here</h2>
             <input
                 type="email"
                 name='email'
@@ -38,7 +42,9 @@ const SignUp = () => {
                 placeholder='Enter Password'
                 onChange={(event) => handleInput(event)}
             />
+            
             <button onClick={handleSubmit}>Submit</button>
+        </div>
         </>
     )
 }

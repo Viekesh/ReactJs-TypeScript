@@ -1,0 +1,41 @@
+.profile {
+    margin: 25% auto 0 auto;
+    padding: 9px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: bolder;
+}
+
+.profile > input {
+    border: 1px solid gray;
+    margin: 6px auto;
+    padding: 9px;
+    font-size: 21px;
+}
+
+.profile > button {
+    border: 1px solid gray;
+    margin: 6px auto;
+    padding: 9px;
+    font-size: 21px;
+}
+
+@media only screen and (min-width: 768px) {
+    .profile {
+        margin: 10% auto 0 auto;
+    }
+
+    .profile > input {
+        margin: 3px auto;
+        padding: 6px;
+        font-size: 15px;
+    }
+    
+    .profile > button {
+        margin: 3px auto;
+        padding: 6px;
+        font-size: 15px;
+    }
+}

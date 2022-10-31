@@ -5,12 +5,18 @@
     justify-content: space-between;
     box-shadow: 1px 1px 6px 3px rgb(180, 180, 180);
     /* box-shadow: var(--border-white) 0px -0.5px 0px inset; */
+
+    /* position: fixed;
+    bottom: 0;
+    width: 100vw; */
 }
 
 .options_wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    /* background-color: yellow; */
 }
 
 .tab_item {
@@ -58,9 +64,15 @@
 }
 
 @media only screen and (min-width: 1020px) {
+
     .tab_options {
         max-width: 900px;
     }
+
+    /* .options_wrapper {
+        max-width: 900px;
+        margin: 0 auto;
+    } */
 
     .tab_item {
         padding: 6px;

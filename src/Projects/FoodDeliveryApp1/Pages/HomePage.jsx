@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Footer from "../Components/Common/Footer";
+// import Footer from "../Components/Common/Footer";
 import Header from "../Components/Common/Header";
 import Delivery from "../Components/Common/TabOptions/Delivery/Delivery";
 import DiningOut from "../Components/Common/TabOptions/DiningOut";
@@ -35,7 +35,7 @@ const HomePage = () => {
       <TabOption activeTab={activeTab} setActiveTab={setActiveTab} />
       {getCorrectScreen(activeTab)}
 
-      <Footer />
+      {/* <Footer /> */}
 
     </div>
   )
