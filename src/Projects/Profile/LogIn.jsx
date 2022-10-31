@@ -9,7 +9,7 @@ const LogIn = () => {
   return (
     <>
       <Navigation />
-      <div className='profile'>
+      <div className='profile' id='pfl'>
         <h2>LogIn Here</h2>
         <input type="email" name='email' id='' placeholder='Enter Email Here' />
         <input type="password" name="password" id="" placeholder='Enter Password Here' />

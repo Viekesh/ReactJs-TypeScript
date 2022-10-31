@@ -1,50 +1,54 @@
 import React, { useState } from 'react';
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { useNavigate } from 'react-router-dom';
 import Navigation from '../MainComponents/LandingPage/Components/Navigation';
+import { UserAuth } from '../Context/AuthContext';
 
 
 
 const SignUp = () => {
 
-    let auth = getAuth;
+    const [email, setEmail] = useState("");
 
-    const [data, setData] = useState({});
+    const [password, setPassword] = useState("");
 
-    const handleInput = (event) => {
-        let newInput = { [event.target.name]: event.target.value };
-        setData({ ...data, ...newInput });
-    }
+    const [error, setError] = useState("");
 
-    const handleSubmit = (event) => {
-        createUserWithEmailAndPassword(auth, data.email, data.password)
-            .then((response) => {
-                console.log(response.user);
-            }).catch((error) => {
-                alert(error.message);
-                console.log(error.message);
-            })
+    const {createUser} = UserAuth();
+
+    const navigate = useNavigate();
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        setError("");
+        try {
+            await createUser(email, password);
+            navigate('/');
+        } catch (error) {
+            console.log(error.message);
+            setError(error.code);
+        }
     }
 
     return (
         <>
         <Navigation />
-        <div className="profile">
+        <form className="profile" onSubmit={handleSubmit}>
             <h2>SignUp Here</h2>
             <input
                 type="email"
                 name='email'
                 placeholder='Enter Email'
-                onChange={(event) => handleInput(event)}
+                onChange={(event) => setEmail(event.target.value)}
             />
             <input
                 type="password"
                 name='password'
                 placeholder='Enter Password'
-                onChange={(event) => handleInput(event)}
+                onChange={(event) => setPassword(event.target.value)}
             />
             
-            <button onClick={handleSubmit}>Submit</button>
-        </div>
+            <button>Submit</button>
+        </form>
         </>
     )
 }

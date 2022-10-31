@@ -36,7 +36,7 @@ const Navigation = () => {
 
         <div className="navigation_buttons">
           <div className="log_in_icon x_y_axis_center">
-            <NavLink to="/LogIn" className="log_icon x_y_axis_center">
+            <NavLink to="/Profile" className="log_icon x_y_axis_center">
               <AccountCircleIcon />
             </NavLink>
           </div>
