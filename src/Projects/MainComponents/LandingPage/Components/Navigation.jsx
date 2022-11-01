@@ -26,6 +26,7 @@ const Navigation = () => {
 
         <div className={`navigation_section navigation_style ${showMenu ? "overlay" : ""}`} id="Navigation">
           <div className="navigation_section_elements">
+            <NavLink to="/Profile"><h5 className="y_axis_center">Account</h5></NavLink>
             <NavLink to="/Blog"><h5 className="y_axis_center">Blog</h5></NavLink>
             <NavLink to="/Tutorials"><h5 className="y_axis_center">Tuts</h5></NavLink>
             <NavLink to="/About"><h5 className="y_axis_center">About</h5></NavLink>
@@ -36,7 +37,7 @@ const Navigation = () => {
 
         <div className="navigation_buttons">
           <div className="log_in_icon x_y_axis_center">
-            <NavLink to="/Profile" className="log_icon x_y_axis_center">
+            <NavLink to="/LogIn" className="log_icon x_y_axis_center">
               <AccountCircleIcon />
             </NavLink>
           </div>
