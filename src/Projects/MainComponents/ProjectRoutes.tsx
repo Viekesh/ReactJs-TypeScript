@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import BlogLandingPage from "../BlogApp1/BlogLandingPage";
 import About from "../BlogApp1/Pages/About";
 import AddEditBlog from "../BlogApp1/Pages/AddEditBlog";
+import Auth from "../BlogApp1/Pages/Auth";
 import Details from "../BlogApp1/Pages/Details";
 import NotFound from "../BlogApp1/Pages/NotFound";
 import { AuthContextProvider } from "../Context/AuthContext";
@@ -15,6 +16,7 @@ import LandingPage from "./LandingPage/Components/LandingPage";
 
 
 const ProjectRoutes = () => {
+
     return (
         <>
             <AuthContextProvider>
@@ -31,6 +33,7 @@ const ProjectRoutes = () => {
                         <Route path="/FoodDeliverApp1" element={<HomePage />}></Route>
 
                         <Route path="/BlogLandingPage" element={<BlogLandingPage  />}></Route>
+                        <Route path="/Auth" element={<Auth />}></Route>
                         <Route path="/Details/:id" element={<Details />}></Route>
                         <Route path="/Create" element={<AddEditBlog />}></Route>
                         <Route path="/Update/:id" element={<AddEditBlog />}></Route>
