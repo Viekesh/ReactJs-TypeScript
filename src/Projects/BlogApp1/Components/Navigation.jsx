@@ -1,19 +1,33 @@
 import React, { useState } from 'react';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
+import { auth } from "../../../firebaseConfig";
+import { signOut } from "firebase/auth";
 import "./Stylesheets/Navigation.css";
 
 
 
-const Navigation = ({active, setActive}) => {
+const Navigation = ({ active, setActive, user, setUser }) => {
+
+  const userId = user?.uid;
 
   const [shoMenu, setShoMenu] = useState(false);
 
   const toggleMobMenu = () => {
     setShoMenu(!shoMenu);
-
     document.querySelector("body").classList.toggle("body-overflow-visible");
   }
+
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    signOut(auth).then(() => {
+        setUser(null);
+        setActive("login");
+        navigate("/Auth");
+        alert("You are logout");
+    })
+}
 
   return (
     <div className='blog_navigation'>
@@ -37,9 +51,31 @@ const Navigation = ({active, setActive}) => {
         <div className="navigation_buttons">
 
           <div className="log_in_icon x_y_axis_center">
-            <NavLink to="/Auth" className="log_icon x_y_axis_center">
-              <AccountCircleIcon />
-            </NavLink>
+            {userId ? (
+              <>
+                <NavLink to="/Auth" className="log_icon x_y_axis_center">
+                  <AccountCircleIcon />
+                </NavLink>
+                &nbsp;
+                <p>
+                  <span>
+                    {user?.displayName}
+                  </span>
+                  &nbsp;
+                  <span>
+                    <b onClick={handleLogout}>Logout</b>
+                  </span>
+                </p>
+              </>
+            ) : (
+              <NavLink
+                to="/Auth"
+                className={`log_icon x_y_axis_center ${active === "login" ? "active" : ""}`}
+                onClick={() => setActive("login")}
+              >
+                <AccountCircleIcon />
+              </NavLink>
+            )}
           </div>
 
           <div className="menu_icon">

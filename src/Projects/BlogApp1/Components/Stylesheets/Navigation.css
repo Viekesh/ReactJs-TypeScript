@@ -8,7 +8,6 @@
 
 .blog_nav {
     margin: 0 auto;
-    width: 80vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -79,6 +78,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.log_in_icon p {
+    color: snow;
+    font-size: 12px;
+}
+
+.log_in_icon p b {
+    color: yellow;
+    font-size: 12px;
+    cursor: pointer;
 }
 
 .log_icon {
@@ -253,7 +263,7 @@
 @media only screen and (min-width: 900px) {
     .blog_nav {
         margin: 0 auto;
-        width: 70%;
+        width: 70vw;
     }
 
     .blog_logo a h4 {

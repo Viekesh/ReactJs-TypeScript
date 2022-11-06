@@ -75,6 +75,7 @@
 
 .mail {
     background: url(../Images/Gmail.svg) no-repeat;
+    background-color: snow;
     background-size: 70%;
     background-position: center;
     transition:0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);;

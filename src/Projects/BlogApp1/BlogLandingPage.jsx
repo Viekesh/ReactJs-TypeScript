@@ -1,16 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import Header from "./Components/Header";
 import Home from "./Pages/Home";
 
 
 
-const BlogLandingPage = () => {
-
-  const [active, setActive] = useState("Home");
+const BlogLandingPage = ({active, setActive, user}) => {
 
   return (
     <div>
-      <Header active = {active} setActive = {setActive} />
+      <Header active={active} setActive={setActive} user={user} />
       <Home />
     </div>
   );
