@@ -1,4 +1,6 @@
-import React, { Component } from 'react'
+import React from 'react';
+import Ex2 from './State';
+import Car from './State';
 
 // const Tuts = () => {
 //     return (
@@ -97,10 +99,12 @@ class StudentInfo extends React.Component {
     render() {
         return (
             <div>
-                <StudentName />
+                {/* <StudentName />
                 <ul>
                     <li>{this.state.data.map((item) => <List data={item} /> )}</li>
-                </ul>
+                </ul> */}
+                {/* <Car /> */}
+                <Ex2 />
             </div>
         )
     }
