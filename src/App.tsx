@@ -1,7 +1,6 @@
 import React from "react";
 import "./App.css";
 import ProjectRoutes from "./Projects/MainComponents/ProjectRoutes";
-import {app} from "./firebaseConfig";
 
 
 
