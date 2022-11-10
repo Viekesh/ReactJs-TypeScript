@@ -4,11 +4,11 @@ import Home from "./Pages/Home";
 
 
 
-const BlogLandingPage = ({active, setActive, user}) => {
+const BlogLandingPage = ({active, setActive, user, setUser}) => {
 
   return (
     <div>
-      <Header active={active} setActive={setActive} user={user} />
+      <Header active={active} setActive={setActive} user={user} setUser={setUser} />
       <Home />
     </div>
   );

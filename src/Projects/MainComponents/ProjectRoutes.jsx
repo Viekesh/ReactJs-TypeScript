@@ -63,18 +63,23 @@ const ProjectRoutes = () => {
                         <Route
                             path="/BlogLandingPage"
                             element={<BlogLandingPage
-                                setUser={setUser}
-                                setActive={setActive}
                                 user={user}
+                                setUser={setUser}
                                 active={active}
+                                setActive={setActive}
                             />}></Route>
-
-                        <Route path="/Auth" element={<Auth setActive={setActive} setUser={setUser} />}></Route>
+                        <Route
+                            path="/Auth"
+                            element={<Auth
+                                setActive={setActive}
+                                setUser={setUser}
+                            />}></Route>
                         <Route path="/Details/:id" element={<Details />}></Route>
                         <Route path="/Create" element={<AddEditBlog />}></Route>
                         <Route path="/Update/:id" element={<AddEditBlog />}></Route>
                         <Route path="/About" element={<About />}></Route>
                         <Route path="*" element={<NotFound />}></Route>
+
                     </Routes>
                 </BrowserRouter>
             </AuthContextProvider>

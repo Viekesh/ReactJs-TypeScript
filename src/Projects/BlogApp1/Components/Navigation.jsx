@@ -22,12 +22,12 @@ const Navigation = ({ active, setActive, user, setUser }) => {
 
   const handleLogout = () => {
     signOut(auth).then(() => {
-        setUser(null);
-        setActive("login");
-        navigate("/Auth");
-        alert("You are logout");
+      setUser(null);
+      setActive("login");
+      navigate("/Auth");
+      alert("You are logout");
     })
-}
+  }
 
   return (
     <div className='blog_navigation'>
@@ -40,11 +40,43 @@ const Navigation = ({ active, setActive, user, setUser }) => {
 
         <div className={`blog_nav_section section_style ${shoMenu ? "overlay" : ""}`} id="Navigation">
           <div className="blog_section_elements">
-            <NavLink to="/Auth" className="child_elements"><h5 className="y_axis_center">Account</h5></NavLink>
-            <NavLink to="/BlogLandingPage" className="child_elements" onClick={() => setActive("BlogLandingPage")}><h5 className="y_axis_center">Home</h5></NavLink>
-            <NavLink to="/Create" className="child_elements"><h5 className="y_axis_center">Create</h5></NavLink>
-            <NavLink to="/Trending" className="child_elements"><h5 className="y_axis_center">Trending</h5></NavLink>
-            <NavLink to="/About" className="child_elements"><h5 className="y_axis_center">About</h5></NavLink>
+
+            <NavLink 
+            to="/Auth" 
+            className={`child_elements ${active === "Auth" ? "active" : ""}`}
+            >
+              <h5 className="y_axis_center">Account</h5>
+            </NavLink>
+
+            <NavLink
+              to="/BlogLandingPage"
+              className={`child_elements ${active === "BlogLandingPage" ? "active" : ""}`}
+              onClick={() => setActive("BlogLandingPage")}
+            >
+              <h5 className="y_axis_center">Home</h5>
+            </NavLink>
+
+            <NavLink 
+            to="/Create" 
+            className={`child_elements ${active === "Create" ? "active" : ""}`}
+            >
+              <h5 className="y_axis_center">Create</h5>
+            </NavLink>
+
+            <NavLink 
+            to="/Trending" 
+            className={`child_elements ${active === "Trending" ? "active" : ""}`}
+            >
+              <h5 className="y_axis_center">Trending</h5>
+            </NavLink>
+
+            <NavLink 
+            to="/About" 
+            className={`child_elements ${active === "About" ? "active" : ""}`}
+            >
+              <h5 className="y_axis_center">About</h5>
+            </NavLink>
+
           </div>
         </div>
 
