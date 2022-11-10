@@ -8,7 +8,7 @@
 // Props are passed to the component in the same way as arguments passed in a function.
 
 // Props are "immutable" so we cannot modify the props from inside the component. Inside
-// the component we can add the attribute called props
+// the component we can add the attribute called props.
 
 
 

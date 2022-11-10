@@ -1,7 +1,7 @@
 import React from 'react';
-// import CarEx from './State';
-// import Car from './State';
-// import Ex2 from './State';
+import Message from './State';
+
+
 
 // const Tuts = () => {
 //     return (
@@ -104,9 +104,7 @@ class StudentInfo extends React.Component {
                 <ul>
                     <li>{this.state.data.map((item) => <List data={item} /> )}</li>
                 </ul> */}
-                {/* <Ex2 /> */}
-                {/* <Car /> */}
-                {/* <CarEx /> */}
+                <Message />
             </div>
         )
     }
