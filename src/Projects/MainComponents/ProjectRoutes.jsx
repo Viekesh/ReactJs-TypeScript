@@ -23,9 +23,14 @@ const ProjectRoutes = () => {
 
     const [active, setActive] = useState("/BlogLandingPage");
 
+    // We have to persist loggedIn user in our application and we need some user information as well
+    // like display name, So here we can define useState (const [user, setUser] = useState(null);)
+    // Initially it will be null
     const [user, setUser] = useState(null);
 
     useEffect(() => {
+
+        // "auth" coming from firebaseConfig.js
         auth.onAuthStateChanged((authUser) => {
             if (authUser) {
                 setUser(authUser);
@@ -71,11 +76,18 @@ const ProjectRoutes = () => {
                         <Route
                             path="/Auth"
                             element={<Auth
+                                active={active}
                                 setActive={setActive}
+                                user={user}
                                 setUser={setUser}
                             />}></Route>
                         <Route path="/Details/:id" element={<Details />}></Route>
-                        <Route path="/Create" element={<AddEditBlog />}></Route>
+                        <Route path="/Create" element={<AddEditBlog
+                            user={user}
+                            setUser={setUser}
+                            active={active}
+                            setActive={setActive}
+                        />}></Route>
                         <Route path="/Update/:id" element={<AddEditBlog />}></Route>
                         <Route path="/About" element={<About />}></Route>
                         <Route path="*" element={<NotFound />}></Route>

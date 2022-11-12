@@ -1,0 +1,10 @@
+.add_edit_blogs {
+    border: 2px solid blue;
+    height: 100vh;
+    font-family: "Poppins", sans-serif;
+}
+
+.blog_container {
+    border: 2px solid red;
+    margin: 9vh auto 0 auto;
+}

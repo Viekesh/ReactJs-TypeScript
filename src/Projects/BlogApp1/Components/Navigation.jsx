@@ -9,7 +9,15 @@ import "./Stylesheets/Navigation.css";
 
 const Navigation = ({ active, setActive, user, setUser }) => {
 
+  // We need userId so we have to determine whether user is loggedIn or not in our application.
+  // In firebase userId is stored in the form of uid
   const userId = user?.uid;
+
+  // Verify userId
+  // console.log("userId : ", userId);
+
+  // Check user firstname or lastname (displayName) is showing or not
+  // console.log("name : ", user.displayName);
 
   const [shoMenu, setShoMenu] = useState(false);
 
@@ -41,9 +49,9 @@ const Navigation = ({ active, setActive, user, setUser }) => {
         <div className={`blog_nav_section section_style ${shoMenu ? "overlay" : ""}`} id="Navigation">
           <div className="blog_section_elements">
 
-            <NavLink 
-            to="/Auth" 
-            className={`child_elements ${active === "Auth" ? "active" : ""}`}
+            <NavLink
+              to="/Auth"
+              className={`child_elements ${active === "Auth" ? "active" : ""}`}
             >
               <h5 className="y_axis_center">Account</h5>
             </NavLink>
@@ -56,23 +64,23 @@ const Navigation = ({ active, setActive, user, setUser }) => {
               <h5 className="y_axis_center">Home</h5>
             </NavLink>
 
-            <NavLink 
-            to="/Create" 
-            className={`child_elements ${active === "Create" ? "active" : ""}`}
+            <NavLink
+              to="/Create"
+              className={`child_elements ${active === "Create" ? "active" : ""}`}
             >
               <h5 className="y_axis_center">Create</h5>
             </NavLink>
 
-            <NavLink 
-            to="/Trending" 
-            className={`child_elements ${active === "Trending" ? "active" : ""}`}
+            <NavLink
+              to="/Trending"
+              className={`child_elements ${active === "Trending" ? "active" : ""}`}
             >
               <h5 className="y_axis_center">Trending</h5>
             </NavLink>
 
-            <NavLink 
-            to="/About" 
-            className={`child_elements ${active === "About" ? "active" : ""}`}
+            <NavLink
+              to="/About"
+              className={`child_elements ${active === "About" ? "active" : ""}`}
             >
               <h5 className="y_axis_center">About</h5>
             </NavLink>
