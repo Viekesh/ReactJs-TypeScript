@@ -1,7 +1,9 @@
 import ReactTagInput from '@pathofdev/react-tag-input';
+import { getDownloadURL, ref, uploadBytesResumable } from 'firebase/storage';
 import React, { useState, useEffect } from 'react';
+import { storage } from '../../../firebaseConfig';
 import Navigation from '../Components/Navigation';
-import "./Stylesheets/AddEditBlog.css";
+import "./Stylesheets/AddEditBlog.scss";
 
 
 
@@ -29,8 +31,54 @@ const AddEditBlog = ({ active, setActive, user, setUser }) => {
 
   const [file, setFile] = useState(null);
 
+  const [progress, setProgress] = useState(null);
+
+  // This is for uploading the file
+  // The useEffect only run when we have the file
+  // "ref" coming from firebase storage
+  // "storage" coming from firebaseConfig file
+  useEffect(() => {
+    const uploadFile = () => {
+
+      const storageRef = ref(storage, file.name);
+
+      const uploadTask = uploadBytesResumable(storageRef, file);
+
+      uploadTask.on("state_changed", (snapshot) => {
+
+        const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+
+        console.log("Upload is progress" + progress + ", % is done");
+
+        setProgress(progress);
+
+        switch (snapshot.state) {
+          case "paused":
+            console.log("Upload is paused");
+            break;
+          case "running":
+            console.log("Upload is running");
+            break;
+          default:
+            break;
+        }
+      }, (error) => {
+        console.log(error);
+      }, () => {
+        getDownloadURL(uploadTask.snapshot.ref).then((downloadUrl) => {
+          alert("Image Uploaded In Firebase Successfully");
+          setForm((prev) => ({...prev, imageUrl : downloadUrl}));
+        });
+      });
+    }
+
+    file && uploadFile();
+  }, [file])
+
   // Destructuring our input fields
   const { title, tags, trending, category, description } = form;
+
+  const handleSubmit = () => {}
 
   const handleChange = () => { }
 
@@ -47,11 +95,9 @@ const AddEditBlog = ({ active, setActive, user, setUser }) => {
         <div className="blog_container">
           <div className="create_blog">
 
-            <div className="create">
-              Create
-            </div>
+            <h2>Create</h2>
 
-            <form className="form_input_fields">
+            <form className="form_input_fields" onSubmit={handleSubmit}>
               <input
                 className='input_field'
                 type="text"
@@ -72,7 +118,7 @@ const AddEditBlog = ({ active, setActive, user, setUser }) => {
               </div>
 
               <input
-                className='input_field form_check_input'
+                className='form_check_input'
                 type="radio"
                 checked={trending === "yes"}
                 name='radioOption'
@@ -85,7 +131,7 @@ const AddEditBlog = ({ active, setActive, user, setUser }) => {
               </label>
 
               <input
-                className='input_field form_check_input'
+                className='form_check_input'
                 type="radio"
                 checked={trending === "no"}
                 name='radioOption'
@@ -99,7 +145,7 @@ const AddEditBlog = ({ active, setActive, user, setUser }) => {
 
               <div className="dropdown_menu">
                 <select
-                  className="category_dropdown"
+                  className="input_field category_dropdown"
                   value={category}
                   onChange={onCategoryChange}
                 >
@@ -117,20 +163,28 @@ const AddEditBlog = ({ active, setActive, user, setUser }) => {
 
               <textarea
                 cols="30"
-                rows="10"
+                rows="6"
                 className="input_field form_control description_box"
                 name="description"
                 value={description}
                 onChange={handleChange}
               ></textarea>
 
-              {/* You can get this file whenever you can upload any image file at zeroth index */}
-              {/* So it will contain a single array of object */}
+              {/* You can get this file whenever you can upload any image file at 0th index */}
+              {/* So it will contain a single array of objects so you can access that object at 0th index because it contain only one single array of object */}
               <input
-                className='input_field form_control'
+                className='input_field file_control'
                 type="file"
-                onChange={(evnt) => evnt.target.files}
+                onChange={(evnt) => setFile(evnt.target.files[0])}
               />
+
+              <button
+                type='submit'
+                className="input_field btn btn_add"
+                disabled = {progress !== null && progress < 100}
+              >
+                Submit
+              </button>
             </form>
           </div>
         </div>

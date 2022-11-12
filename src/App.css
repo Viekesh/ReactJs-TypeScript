@@ -26,6 +26,7 @@ input {
 button {
     border: none;
     outline: none;
+    cursor: pointer;
 }
 
 .x_axis_center {
