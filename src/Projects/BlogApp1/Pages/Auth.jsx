@@ -26,11 +26,15 @@ const Auth = ({active, user, setActive, setUser }) => {
   // Destructuring all input fields in our state :
   const { firstname, lastname, email, password, confirmPass } = state;
 
+  console.log(state);
+
   const navigate = useNavigate();
 
   const handleChange = (event) => {
     setState({ ...state, [event.target.name]: event.target.value })
   };
+
+  // console.log(handleChange);
 
   const handleAuth = async (event) => {
 
@@ -72,7 +76,6 @@ const Auth = ({active, user, setActive, setUser }) => {
         return alert("All Fields Are Mandatory");
 
       }
-
     }
   };
 

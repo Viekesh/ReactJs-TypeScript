@@ -1,7 +1,10 @@
 import ReactTagInput from '@pathofdev/react-tag-input';
+import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
 import { getDownloadURL, ref, uploadBytesResumable } from 'firebase/storage';
 import React, { useState, useEffect } from 'react';
-import { storage } from '../../../firebaseConfig';
+import { useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import { database, storage } from '../../../firebaseConfig';
 import Navigation from '../Components/Navigation';
 import "./Stylesheets/AddEditBlog.scss";
 
@@ -33,10 +36,15 @@ const AddEditBlog = ({ active, setActive, user, setUser }) => {
 
   const [progress, setProgress] = useState(null);
 
-  // This is for uploading the file
-  // The useEffect only run when we have the file
-  // "ref" coming from firebase storage
-  // "storage" coming from firebaseConfig file
+  // Destructuring our input fields
+  const { title, tags, trending, category, description } = form;
+
+  // console.log(form);
+
+  const id = useParams();
+
+  // This is for uploading the file, the useEffect only run when we have the file
+  // "ref" coming from firebase storage, "storage" coming from firebaseConfig file
   useEffect(() => {
     const uploadFile = () => {
 
@@ -67,7 +75,7 @@ const AddEditBlog = ({ active, setActive, user, setUser }) => {
       }, () => {
         getDownloadURL(uploadTask.snapshot.ref).then((downloadUrl) => {
           alert("Image Uploaded In Firebase Successfully");
-          setForm((prev) => ({...prev, imageUrl : downloadUrl}));
+          setForm((prev) => ({ ...prev, imageUrl: downloadUrl }));
         });
       });
     }
@@ -75,18 +83,52 @@ const AddEditBlog = ({ active, setActive, user, setUser }) => {
     file && uploadFile();
   }, [file])
 
-  // Destructuring our input fields
-  const { title, tags, trending, category, description } = form;
+  // "e" means event
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value })
+  };
 
-  const handleSubmit = () => {}
+  const handleTags = (tags) => {
+    setForm({ ...form, tags });
+  };
 
-  const handleChange = () => { }
+  const handleTrending = (e) => {
+    setForm({...form, trending : e.target.value})
+  };
 
-  const handleTags = () => { }
+  const onCategoryChange = (e) => {
+    setForm({...form, category : e.target.value})
+  }
 
-  const handleTrending = () => { }
+  const navigate = useNavigate();
 
-  const onCategoryChange = () => { }
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    // Here we check whether each value is provided by our user or not
+    // If user have the value in different different input field then only this code can
+    // allowed to create a blog
+    if(category && tags && title && file && description && trending) {
+
+      try {
+        await addDoc(collection(database, "BlogApp1Data"), {
+          ...form,
+          timestamp : serverTimestamp(),
+          author : user.displayName,
+          id : user.uid
+        })
+      } catch(error) {
+        console.log(error.message);
+      }
+
+    }
+
+    navigate("/BlogLandingPage")
+  }
+
+  // We have to also protect our create link, suppose user logout from this application
+  // and whenever user can click on "Create" link he should navigate back to home page
+  // So we can protect our link when user is not authorised in our application
 
   return (
     <>
@@ -107,11 +149,13 @@ const AddEditBlog = ({ active, setActive, user, setUser }) => {
                 onChange={handleChange}
               />
 
-              <ReactTagInput
-                tags={tags}
-                placeholder="Tags"
-                onChange={handleTags}
-              ></ReactTagInput>
+              <div className="input_field react_tag">
+                <ReactTagInput
+                  tags={tags}
+                  placeholder="Tags"
+                  onChange={handleTags}
+                ></ReactTagInput>
+              </div>
 
               <div className="radio_selection">
                 <p className="trending">It is trending blogs</p>
@@ -181,7 +225,7 @@ const AddEditBlog = ({ active, setActive, user, setUser }) => {
               <button
                 type='submit'
                 className="input_field btn btn_add"
-                disabled = {progress !== null && progress < 100}
+                disabled={progress !== null && progress < 100}
               >
                 Submit
               </button>

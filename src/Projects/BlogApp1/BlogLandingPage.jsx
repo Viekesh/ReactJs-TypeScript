@@ -9,7 +9,7 @@ const BlogLandingPage = ({active, setActive, user, setUser}) => {
   return (
     <div>
       <Header active={active} setActive={setActive} user={user} setUser={setUser} />
-      <Home />
+      <Home active={active} setActive={setActive} user={user} setUser={setUser} />
     </div>
   );
 };

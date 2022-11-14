@@ -1,5 +1,6 @@
 .navigation {
     height: 9vh;
+    background-color: red;
     /* background-color: rgba(255, 0, 0, 0.9); */
     box-shadow: 1px 1px 10px black;
 }

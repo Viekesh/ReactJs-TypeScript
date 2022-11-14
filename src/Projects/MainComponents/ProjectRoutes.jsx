@@ -1,6 +1,6 @@
 // import { signOut } from "firebase/auth";
 import { useState, useEffect } from "react";
-import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useNavigate, Navigate } from "react-router-dom";
 import { auth } from "../../firebaseConfig";
 import BlogLandingPage from "../BlogApp1/BlogLandingPage";
 import About from "../BlogApp1/Pages/About";
@@ -82,13 +82,19 @@ const ProjectRoutes = () => {
                                 setUser={setUser}
                             />}></Route>
                         <Route path="/Details/:id" element={<Details />}></Route>
-                        <Route path="/Create" element={<AddEditBlog
+                        <Route path="/Create" element={user?.uid ? <AddEditBlog
                             user={user}
                             setUser={setUser}
                             active={active}
                             setActive={setActive}
-                        />}></Route>
-                        <Route path="/Update/:id" element={<AddEditBlog />}></Route>
+                        /> : <Navigate to="/BlogLandingPage" />}></Route>
+                        <Route path="/Update/:id" 
+                        element={user?.uid ? <AddEditBlog
+                            user={user}
+                            setUser={setUser}
+                            active={active}
+                            setActive={setActive}
+                        /> : <Navigate to="/BlogLandingPage" />}></Route>
                         <Route path="/About" element={<About />}></Route>
                         <Route path="*" element={<NotFound />}></Route>
 

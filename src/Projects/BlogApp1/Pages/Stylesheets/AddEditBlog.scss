@@ -22,6 +22,11 @@
     outline: none;
 }
 
+.react_tag {
+    padding: 0px;
+    font-size: 24px;
+}
+
 .category_dropdown {
     font-size: 18px;
 }
@@ -42,6 +47,10 @@
         width: 100%;
         font-size: 15px;
         outline: none;
+    }
+
+    .react_tag {
+        padding: 3px;
     }
 
     .category_dropdown {
