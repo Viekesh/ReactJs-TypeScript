@@ -26,7 +26,7 @@ const Auth = ({active, user, setActive, setUser }) => {
   // Destructuring all input fields in our state :
   const { firstname, lastname, email, password, confirmPass } = state;
 
-  console.log(state);
+  // console.log(state);
 
   const navigate = useNavigate();
 

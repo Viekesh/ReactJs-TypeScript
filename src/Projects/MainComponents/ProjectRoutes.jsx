@@ -87,7 +87,7 @@ const ProjectRoutes = () => {
                             setUser={setUser}
                             active={active}
                             setActive={setActive}
-                        /> : <Navigate to="/BlogLandingPage" />}></Route>
+                        /> : <Navigate to="/BlogLandingPage" /> }></Route>
                         <Route path="/Update/:id" 
                         element={user?.uid ? <AddEditBlog
                             user={user}

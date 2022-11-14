@@ -1,9 +1,8 @@
-import React from 'react'
+export const excerpt = (str, count) => {
+  if (str.length > count) {
+    str = str.substring(0, count) + " ... ";
+  }
+  return str;
+};
 
-const BlogIndex = () => {
-  return (
-    <div>BlogIndex</div>
-  )
-}
-
-export default BlogIndex;
+// This method (function) can short our description
