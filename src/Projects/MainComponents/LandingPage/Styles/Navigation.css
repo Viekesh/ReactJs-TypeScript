@@ -17,12 +17,12 @@
     text-align: center;
 }
 
-.logo a h4 {
+.logo a h2 {
     font-family: "Poppins", sans-serif;
     color: snow;
-    font-size: 5vw;
+    font-size: 4vw;
     font-weight: bolder;
-    line-height: 5vw;
+    line-height: 4vw;
 }
 
 .navigation_section {
@@ -45,16 +45,16 @@
 }
 
 .navigation_section_elements a h5 {
-    border-bottom: 3px solid rgb(252, 29, 0);
+    border-bottom: 3px solid snow;
     margin: 6vw 0;
     border-radius: 1vw;
     padding: 0 3vw;
     height: 6vh;
-    font-family: "Poppins", sans-serif;
+    font-family: 'Source Code Pro', monospace;
     font-size: 4vw;
     font-weight: 500;
     text-transform: uppercase;
-    color: rgb(252, 29, 0);
+    color: snow;
     background-color: #142130;
     /* background-color: rgb(202, 202, 202); */
     /* background-color: rgb(30, 30, 30); */
@@ -255,9 +255,9 @@
         width: 70%;
     }
 
-    .logo a h4 {
+    .logo a h2 {
         font-size: 24px;
-        line-height: 20px;
+        line-height: 21px;
     }
 
     .navigation_section {
