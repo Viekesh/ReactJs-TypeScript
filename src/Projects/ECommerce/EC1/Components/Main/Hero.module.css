@@ -1,14 +1,14 @@
 .hero {
     border: 2px solid snow;
     margin: 18vw auto 0 auto;
-    width: 100vw;
+    width: 98vw;
     height: 80vh;
     position: relative;
     display: flex;
 }
 
 .right_side {
-    width: 88vw;
+    width: 80vw;
     height: 18vh;
     position: absolute;
     bottom: 30vw;
@@ -57,11 +57,16 @@
 }
 
 .pinkCircle {
-    border: 2px solid pink;
+    /* border: 2px solid pink; */
     border-radius: 100%;
     width: 100%;
     height: 100%;
     background-color: pink;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* background: linear-gradient(to bottom, #ee0979, #fc1c62, #ff364a, #ff512f, #ff6a00); */
+    background: linear-gradient(to bottom, #de6161, #df467b, #ce389f, #a242c8, #2657eb);
+    box-shadow: 1px 1px 12px 1px pink;
 
     position: absolute;
     z-index: -1;

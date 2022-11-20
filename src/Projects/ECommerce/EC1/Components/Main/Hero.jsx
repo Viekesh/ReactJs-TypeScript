@@ -41,7 +41,7 @@ const heading3 = () => {
     const display = () => {
         document.getElementById("text3").style.opacity = 1;
     }
-    
+
     display();
 
 }
@@ -76,7 +76,7 @@ const Hero = () => {
             <div className={HeroStylesheet.right_side}>
                 <div className={HeroStylesheet.for_smartdevices}>
                     <h3 className={HeroStylesheet.text1} id="text1">
-                        Lorem, ipsum dolor
+                        Find Your Style
                     </h3>
                     <h3 className={HeroStylesheet.text2} id="text2">
                         Lorem ipsum dolor sit amet
@@ -85,7 +85,7 @@ const Hero = () => {
 
                 <div className={HeroStylesheet.for_desk} >
                     <h3 className={HeroStylesheet.text3} id="text3">
-                        Lorem, ipsum dolor
+                        Find Your Style
                     </h3>
                     <h3 className={HeroStylesheet.text4} id="text4">
                         Lorem ipsum dolor sit amet
