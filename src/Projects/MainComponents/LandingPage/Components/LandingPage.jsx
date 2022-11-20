@@ -32,8 +32,6 @@ const headingTime = () => {
   setTimeout(heading2, 2500);
 }
 
-headingTime();
-
 // Text animation for mobile end
 
 // Text animation for desktop start
@@ -59,19 +57,22 @@ const heading4 = () => {
 }
 
 const headingTimeD = () => {
-  setTimeout(heading3, 1000);
+  setTimeout(heading3, 900);
   setTimeout(heading4, 2500);
 }
 
-headingTimeD()
-
 // Text animaion for desktop end
+
+const textAnime = () => {
+  headingTime();
+  headingTimeD();
+}
 
 
 
 const LandingPage = () => {
   return (
-    <div className="landing_page">
+    <div className="landing_page" onLoad={textAnime()}>
       <Navigation />
       {/* <Tuts /> */}
       <PortfolioLinks />

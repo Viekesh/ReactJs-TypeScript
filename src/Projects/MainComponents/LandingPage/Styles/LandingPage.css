@@ -96,7 +96,7 @@
   }
 
   .for_desktops h3 {
-    font-family: 'Source Code Pro', monospace;
+    font-family: 'Source Code Pro', sans-serif;
     font-size: 33px;
     font-weight: 900;
     line-height: 40px;
@@ -125,10 +125,10 @@
   .for_desktops p {
     font-family: 'Montserrat', sans-serif;
     font-size: 21px;
-    font-weight: 900;
+    font-weight: 600;
     text-transform: capitalize;
     color: #11014c;
     position: absolute;
-    bottom: 0vw;
+    bottom: 2vw;
   }
 }

@@ -1,0 +1,43 @@
+.Header {
+    border: 2px solid black;
+}
+.container {
+    border: 2px solid blue;
+    margin: 0 auto;
+    width: 90vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container .logo {
+    border-radius: 100%;
+    width: 80px;
+    height: 80px;
+    background: url(../../Images/20221120_063036_0000.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+
+    color: snow;
+}
+
+@media only screen and (min-width: 768px) {
+    .container {
+        width: 60vw;
+    }
+}

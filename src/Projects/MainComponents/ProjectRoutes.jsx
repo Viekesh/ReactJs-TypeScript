@@ -9,6 +9,7 @@ import Auth from "../BlogApp1/Pages/Auth";
 import Details from "../BlogApp1/Pages/Details";
 import NotFound from "../BlogApp1/Pages/NotFound";
 import { AuthContextProvider } from "../Context/AuthContext";
+import EC1LandingPage from "../ECommerce/EC1/EC1LandingPage";
 import HomePage from "../FoodDeliveryApp1/Pages/HomePage";
 // import LogIn from "../Profile/LogIn";
 // import Profile from "../Profile/Profile";
@@ -97,6 +98,10 @@ const ProjectRoutes = () => {
                         /> : <Navigate to="/BlogLandingPage" />}></Route>
                         <Route path="/About" element={<About />}></Route>
                         <Route path="*" element={<NotFound />}></Route>
+
+                        {/* ECommerce */}
+                        {/* EC1 */}
+                        <Route path="/EC1LandingPage" element={<EC1LandingPage />}></Route>
 
                     </Routes>
                 </BrowserRouter>
