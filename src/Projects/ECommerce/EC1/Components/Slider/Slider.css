@@ -1,0 +1,74 @@
+@media only screen and (min-width: 768px) {
+    .carousel {
+        border: 2px solid red;
+        margin: 9vw auto 3vw auto;
+        width: 60vw;
+    }
+
+    .carousel h3 {
+        margin: 2vw 0 2vw 0;
+        font-family: "Monsterrat", sans-serif;
+        font-size: 30px;
+        font-weight: 900;
+        color: snow;
+    }
+
+    .desk_slider {
+        border: 2px solid blue;
+    }
+
+    .desk_slider .swiper {
+        border: 2px solid snow;
+        width: 100%;
+        height: 60%;
+    }
+
+    .desk_slider .swiper-slide {
+        border-radius: 9%;
+        background-color: snow;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .desk_slider .swiper-button-prev {
+        left: 1rem;
+    }
+
+    .desk_slider .swiper-button-next {
+        right: 1rem;
+    }
+
+    .desk_slider .swiper-button-prev, .desk_slider .swiper-button-next {
+        font-size: 10px;
+        color: black;
+    }
+    
+    .left_s {
+        height: 24vh;
+        border: 2px solid black;
+        text-align: center;
+        display: flex;
+        /* flex-direction: column; */
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .img_p {
+        border: 2px solid greenyellow;
+        width: 6vw;
+        height: 30vh;
+
+        transform: rotate(-20deg);
+        position: absolute;
+        right: 0;
+        bottom: -5vw;
+    }
+
+    .name {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}

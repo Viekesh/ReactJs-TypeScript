@@ -1,6 +1,9 @@
 import React from 'react';
 import Header from './Components/Header/Header';
 import Hero from './Components/Main/Hero';
+import Product from './Components/Products/Product';
+import Slider from './Components/Slider/Slider';
+import Virtual from './Components/Virtual/Virtual';
 import "./Styles/EC1LandingPage.scss";
 
 const EC1LandingPage = () => {
@@ -8,6 +11,9 @@ const EC1LandingPage = () => {
     <div className='EC1LandingPage'>
       <Header />
       <Hero />
+      <Slider />
+      <Virtual />
+      <Product />
     </div>
   )
 }

@@ -84,7 +84,7 @@ const LandingPage = () => {
             give wings to your business
           </h3>
           <h3 className="heading2" id="heading2">
-            by adoptiong digital emerging technologies
+            by adopting digital emerging technologies
           </h3>
           <p className="instruction">
             check the entire portfolio or hit the call now for getting more
@@ -97,7 +97,7 @@ const LandingPage = () => {
             give wings to your business
           </h3>
           <h3 className="heading4" id="heading4">
-            by adoptiong digital emerging technologies
+            by adopting digital emerging technologies
           </h3>
           <p className="instruction">
             check the entire portfolio or hit the call now for getting more
