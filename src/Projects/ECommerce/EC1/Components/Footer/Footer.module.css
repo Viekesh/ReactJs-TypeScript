@@ -1,0 +1,28 @@
+@media only screen and (min-width : 768px ) {
+    .footer_page {
+        border: 2px solid blue;
+        margin: 6vw auto 0 auto;
+        padding: .9vw 0;
+    }
+
+    .footer_wrapper {
+        border: 2px solid snow;
+        border-radius: 1rem;
+        margin: 0 auto;
+        width: 98%;
+        background-color: black;
+    }
+
+    .footer {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .logo>img {
+        border: 6px solid rgb(253, 0, 127);
+        border-radius: 100%;
+        width: 60px;
+        height: 60px;
+    }
+}

@@ -58,6 +58,13 @@
         text-transform: uppercase;
     }
 
+    .reviews {
+        margin: .9vw auto;
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: snow;
+    }
+
     .test_carousel {
         border: 2px solid blue;
         width: 100%;
@@ -65,7 +72,31 @@
 
     .carousel_info {
         border: 2px solid red;
+        border-radius: 1rem;
         display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+        background: snow;
+    }
+
+    .carousel_info>img {
+        border: 3px solid snow;
+        border-radius: 100%;
+        width: 3.3rem !important;
+        height: 3.3rem !important;
+        /* position: absolute !important;
+        top: -2rem !important;
+        left: 40%; */
+    }
+
+    .carousel_info :nth-child(2) {
+        font-size: .8rem;
+    }
+
+    .carousel_info :nth-child(3) {
+        font-weight: bold;
     }
 }

@@ -12,9 +12,11 @@
 }
 
 .container .logo {
+    /* border: 6px solid rgb(253, 0, 127); */
+    border: 6px solid snow;
     border-radius: 100%;
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     background: url(../../Images/logo1.png);
     background-repeat: no-repeat;
     background-position: center;

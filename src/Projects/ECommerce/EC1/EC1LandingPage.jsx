@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from './Components/Footer/Footer';
 import Header from './Components/Header/Header';
 import Hero from './Components/Main/Hero';
 import Product from './Components/Products/Product';
@@ -16,6 +17,7 @@ const EC1LandingPage = () => {
       <Virtual />
       <Product />
       <Testimonial />
+      <Footer />
     </div>
   )
 }
