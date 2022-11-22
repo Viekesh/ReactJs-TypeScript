@@ -2,7 +2,7 @@
     .carousel {
         border: 2px solid red;
         margin: 9vw auto 3vw auto;
-        width: 60vw;
+        width: 66vw;
     }
 
     .carousel h3 {
@@ -25,7 +25,10 @@
 
     .desk_slider .swiper-slide {
         border-radius: 9%;
-        background-color: snow;
+        background: rgba(255, 255, 255, 0.3);
+        box-shadow: 0 8px 32px 0 rgba(1, 18, 253, 0.37);
+        backdrop-filter: blur(3px);
+        -webkit-backdrop-filter: blur(3px);
         box-sizing: border-box;
         overflow: hidden;
     }

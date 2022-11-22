@@ -86,7 +86,7 @@
     .hero {
         border: 2px solid red;
         margin: 3vw auto 0 auto;
-        width: 60vw;
+        width: 66vw;
         height: 70vh;
     }
 
@@ -144,6 +144,6 @@
 
     .wrapper img {
         border-radius: 100%;
-        width: 30vw;
+        width: 33vw;
     }
 }

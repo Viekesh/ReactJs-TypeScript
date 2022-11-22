@@ -58,7 +58,7 @@ const Navigation = () => {
                 <h5 className="y_axis_center">Food Delivery App</h5>
               </NavLink>
               <NavLink to="/EC1LandingPage">
-                <h5 className="y_axis_center">ECommerce1 UI</h5>
+                <h5 className="y_axis_center">ECommerce UI</h5>
               </NavLink>
               {/* <NavLink to="/BlogLandingPage">
                 <h5 className="y_axis_center">Blog App</h5>
