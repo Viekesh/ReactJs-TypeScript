@@ -12,7 +12,6 @@ const Footer = () => {
     return (
         <div className={FooterStyleSheet.footer_page}>
             <div className={FooterStyleSheet.footer_wrapper}>
-                <hr />
 
                 <div className={FooterStyleSheet.footer}>
                     <div className={FooterStyleSheet.logo}>
@@ -24,13 +23,15 @@ const Footer = () => {
                     <div className={FooterStyleSheet.detail}>
                         <span>Contact Us</span>
                         <span className={FooterStyleSheet.png_line}>
+
                             <div className={FooterStyleSheet.location}>
                                 <MyLocationOutlinedIcon />
-                                <span>111, Lorem ipsum dolor sit amet consectetur.</span>
+                                <span>123, Lorem ipsum dolor sit amet consectetur.</span>
                             </div>
+                            
                             <div className={FooterStyleSheet.location}>
-
                             </div>
+
                         </span>
                     </div>
                 </div>

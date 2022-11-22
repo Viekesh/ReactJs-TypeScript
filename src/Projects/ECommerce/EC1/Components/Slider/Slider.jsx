@@ -16,6 +16,33 @@ const Slider = () => {
     return (
         <div className='carousel'>
             <h3>Products</h3>
+            <div className="smartphone_slider">
+                <Swiper
+                slidesPerView={1}
+                spaceBetween={20}
+                slidesPerGroup={1}
+                loop={true}
+                modules={[Pagination, Navigation]}
+                className="mySwiper"
+                loopFillGroupWithBlank={true}
+                navigation={true}
+                >
+                    {SliderProducts.map((slide, i) => (
+                        <SwiperSlide>
+                            <div className="left_s">
+                                <img src={slide.img} alt="Product" className='img_p' />
+                                <div className="name">
+                                    <span>{slide.name}</span>
+                                    <span>{slide.detail}</span>
+                                    <div>Shop Now</div>
+                                    <span>{slide.price}$</span>
+                                </div>
+                            </div>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
+            </div>
+
             <div className="desk_slider">
                 <Swiper
                     slidesPerView={3}

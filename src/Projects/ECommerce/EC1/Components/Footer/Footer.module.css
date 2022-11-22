@@ -1,28 +1,43 @@
 @media only screen and (min-width : 768px ) {
     .footer_page {
         border: 2px solid blue;
-        margin: 6vw auto 0 auto;
-        padding: .9vw 0;
+        border-radius: 1rem;
+        margin: 6vw auto .6vw auto;
+        width: 98vw;
+        background-color: black;
     }
 
     .footer_wrapper {
         border: 2px solid snow;
         border-radius: 1rem;
         margin: 0 auto;
-        width: 98%;
+        width: 66vw;
         background-color: black;
+        display: flex;
+        justify-content: space-between;
     }
 
     .footer {
-        width: 100%;
+        border: 2px solid blue;
         display: flex;
         justify-content: space-around;
     }
 
     .logo>img {
-        border: 6px solid rgb(253, 0, 127);
+        border: 6px solid snow;
         border-radius: 100%;
         width: 60px;
         height: 60px;
     }
+
+    .footer_wrapper .block {
+        border: 2px solid snow;
+    }
+
+    .detail>:nth-child(1) {
+        font-weight: bold;
+        color: snow;
+    }
 }
+
+

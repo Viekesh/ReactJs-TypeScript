@@ -13,9 +13,9 @@
 }
 
 .greet {
-  margin: 39vw auto 0 3vw;
+  margin: 30vw auto 0 3vw;
   width: 90vw;
-  height: 36vh;
+  height: 40vh;
   position: relative;
 }
 
@@ -48,16 +48,17 @@
 
 .for_smartphones p {
   font-family: 'Montserrat', sans-serif;
-  font-size: 24px;
+  font-size: 21px;
   font-weight: 900;
   text-transform: capitalize;
-  color: #11014c;
+  color: #000000;
   position: absolute;
-  bottom: 0vw;
+  bottom: -4vw;
 }
 
 .for_desktops {
   display: none;
+  
 }
 
 /* .box {

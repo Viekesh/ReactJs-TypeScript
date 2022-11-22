@@ -1,8 +1,8 @@
 .hero {
     border: 2px solid snow;
-    margin: 18vw auto 0 auto;
+    margin: 3vh auto 0 auto;
     width: 98vw;
-    height: 80vh;
+    height: 70vh;
     position: relative;
     display: flex;
 }
@@ -11,8 +11,8 @@
     width: 80vw;
     height: 18vh;
     position: absolute;
-    bottom: 30vw;
-    left: 4vw;
+    bottom: 3rem;
+    left: 1rem;
     z-index: 1;
 }
 
@@ -21,15 +21,11 @@
 }
 
 .for_smartdevices h3 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 33px;
+    font-family: 'Monsterrat', sans-serif;
+    font-size: 30px;
     font-weight: 900;
     text-transform: capitalize;
-    color: snow;
-
-    /* background: linear-gradient(to right, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8890d6, #7686cc, #647cc1, #4d5ca4, #383e87, #242069, #11014c);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
+    color: black;
 }
 
 .for_smartdevices>.text1 {
@@ -53,24 +49,19 @@
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
-    /* transform: translate(0, -50%); */
 }
 
 .pinkCircle {
-    /* border: 2px solid pink; */
     border-radius: 100%;
     width: 100%;
     height: 100%;
     background-color: pink;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    /* background: linear-gradient(to bottom, #ee0979, #fc1c62, #ff364a, #ff512f, #ff6a00); */
     background: linear-gradient(to bottom, #de6161, #df467b, #ce389f, #a242c8, #2657eb);
     box-shadow: 1px 1px 12px 1px pink;
-
     position: absolute;
     z-index: -1;
-
     top: 50%;
     left: 50%;
     margin-right: -50%;
@@ -106,10 +97,6 @@
         letter-spacing: -1px;
         text-transform: capitalize;
         color: pink;
-
-        /* background: linear-gradient(to right, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8890d6, #7686cc, #647cc1, #4d5ca4, #383e87, #242069, #11014c); */
-        /* -webkit-background-clip: text; */
-        /* -webkit-text-fill-color: transparent; */
     }
 
     .for_desk>.text3 {
