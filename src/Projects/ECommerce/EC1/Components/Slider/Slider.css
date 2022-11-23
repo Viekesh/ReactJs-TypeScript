@@ -1,5 +1,4 @@
 .carousel {
-    border: 2px solid blue;
     margin: 24vw auto 3vw auto;
     width: 98vw;
 }
@@ -12,9 +11,6 @@
     color: black;
 }
 
-.smartphone_slider {
-}
-
 .smartphone_slider .swiper {
     border-radius: 3vw;
     width: 96%;
@@ -22,10 +18,6 @@
 }
 
 .smartphone_slider .swiper-slide {
-    /* background: rgba(255, 255, 255, 0.3);
-    box-shadow: 0 8px 32px 0 rgba(1, 18, 253, 0.37);
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px); */
     background-color: snow;
     box-sizing: border-box;
     overflow: hidden;
@@ -70,7 +62,6 @@
 
 @media only screen and (min-width: 768px) {
     .carousel {
-        border: 2px solid red;
         margin: 9vw auto 3vw auto;
         width: 66vw;
     }
@@ -88,22 +79,21 @@
     }
 
     .desk_slider {
-        border: 2px solid blue;
         display: block;
     }
 
     .desk_slider .swiper {
-        border: 2px solid snow;
         width: 100%;
         height: 60%;
     }
 
     .desk_slider .swiper-slide {
         border-radius: 9%;
-        background: rgba(255, 255, 255, 0.3);
+        /* background: rgba(255, 255, 255, 0.3);
         box-shadow: 0 8px 32px 0 rgba(1, 18, 253, 0.37);
         backdrop-filter: blur(3px);
-        -webkit-backdrop-filter: blur(3px);
+        -webkit-backdrop-filter: blur(3px); */
+        background-color: snow;
         box-sizing: border-box;
         overflow: hidden;
     }
@@ -123,18 +113,16 @@
     }
 
     .left_s {
+        padding: 1vw;
         height: 24vh;
-        border: 2px solid black;
         text-align: center;
         display: flex;
-        /* flex-direction: column; */
         align-items: center;
         justify-content: space-between;
         position: relative;
     }
 
     .img_p {
-        border: 2px solid greenyellow;
         width: 6vw;
         height: 30vh;
 

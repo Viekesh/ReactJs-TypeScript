@@ -19,7 +19,7 @@ const heading1 = () => {
 
 const heading2 = () => {
 
-  document.getElementById("heading2").style.top = 21 + "vw";
+  document.getElementById("heading2").style.top = 18 + "vw";
   const display = () => {
     document.getElementById("heading2").style.opacity = 1;
   }

@@ -1,5 +1,4 @@
 .hero {
-    border: 2px solid snow;
     margin: 3vh auto 0 auto;
     width: 98vw;
     height: 70vh;
@@ -59,7 +58,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background: linear-gradient(to bottom, #de6161, #df467b, #ce389f, #a242c8, #2657eb);
-    box-shadow: 1px 1px 12px 1px pink;
+    box-shadow: 1px 0px 12px 0px rgb(248, 3, 207);
     position: absolute;
     z-index: -1;
     top: 50%;
@@ -75,7 +74,6 @@
 
 @media only screen and (min-width: 768px) {
     .hero {
-        border: 2px solid red;
         margin: 3vw auto 0 auto;
         width: 66vw;
         height: 70vh;
@@ -96,7 +94,7 @@
         line-height: 40px;
         letter-spacing: -1px;
         text-transform: capitalize;
-        color: pink;
+        color: black;
     }
 
     .for_desk>.text3 {

@@ -1,16 +1,13 @@
 .virtual_page {
-    border: 2px solid blue;
     margin: 24vw auto 3vw auto;
     width: 98vw;
 }
 
 .Virtual {
-    border: 2px solid snow;
     display: block;
 }
 
 .Virtual .left {
-    border: 2px solid black;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -49,32 +46,28 @@
     width: 50%;
 }
 
-.Virtual .right {
+/* .Virtual .right {
     border: 2px solid black;
-}
+} */
 
 .Virtual .right .wrapper {
-    border: 2px solid greenyellow;
     width: 100%;
 }
 
 
 @media only screen and (min-width: 768px) {
     .virtual_page {
-        border: 2px solid blue;
         margin: 9vw auto 3vw auto;
         width: 66vw;
     }
 
     .Virtual {
-        border: 2px solid snow;
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
 
     .Virtual .left {
-        border: 2px solid black;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -88,6 +81,7 @@
         font-family: "Monsterrat", sans-serif;
         font-size: 18px;
         font-weight: 900;
+        color: snow;
     }
 
     .Virtual .left>:nth-child(2) {
@@ -96,18 +90,22 @@
         font-weight: lighter;
         text-align: center;
         text-transform: uppercase;
+        color: snow;
+    }
+
+    .Virtual .left>:nth-child(3) {
+        color: snow;
     }
 
     .Virtual .left img {
         width: 10vw;
     }
 
-    .Virtual .right {
+    /* .Virtual .right {
         border: 2px solid black;
-    }
+    } */
 
     .Virtual .right .wrapper {
-        border: 2px solid greenyellow;
         width: 36vw;
     }
 }
