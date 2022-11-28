@@ -46,7 +46,7 @@ const Slider = () => {
             <div className="desk_slider">
                 <Swiper
                     slidesPerView={3}
-                    spaceBetween={40}
+                    spaceBetween={10}
                     slidesPerGroup={1}
                     loop={true}
                     modules={[Pagination, Navigation]}

@@ -4,12 +4,12 @@ import ProjectRoutes from "./Projects/MainComponents/ProjectRoutes";
 
 
 
-const App: React.FC = () => {
+const App = () => {
   return (
-      <div className="app">
-        <ProjectRoutes />
-      </div>
+      <><ProjectRoutes /></>
   )
 };
 
 export default App;
+
+

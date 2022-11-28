@@ -3,20 +3,28 @@ import { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route, useNavigate, Navigate } from "react-router-dom";
 import { auth } from "../../firebaseConfig";
 import BlogLandingPage from "../BlogApp1/BlogLandingPage";
-import About from "../BlogApp1/Pages/About";
+// import About from "../BlogApp1/Pages/About";
 import AddEditBlog from "../BlogApp1/Pages/AddEditBlog";
 import Auth from "../BlogApp1/Pages/Auth";
 import Details from "../BlogApp1/Pages/Details";
 import NotFound from "../BlogApp1/Pages/NotFound";
 import { AuthContextProvider } from "../Context/AuthContext";
 import EC1LandingPage from "../ECommerce/EC1/EC1LandingPage";
+import EC2LandingPage from "../ECommerce/EC2/EC2LandingPage";
+import Offers from "../ECommerce/EC2/Pages/Offers";
 import HomePage from "../FoodDeliveryApp1/Pages/HomePage";
+import Profile from "../Profile/Profile";
+import SignUp from "../Profile/SignUp";
+import About from "./About/About";
+import LandingPage from "./LandingPage/LandingPage";
 // import LogIn from "../Profile/LogIn";
 // import Profile from "../Profile/Profile";
 // import ProtectedRoute from "../Profile/ProtectedRoutes";
 // import SignUp from "../Profile/SignUp";
-import LandingPage from "./LandingPage/Components/LandingPage";
 import "./LandingPage/Styles/Profile.css";
+import ForgotPass from "./Profile/ForgotPass";
+import SignIn from "./Profile/SignIn";
+import TechStack from "./TechStack/TechStack";
 
 
 
@@ -56,7 +64,13 @@ const ProjectRoutes = () => {
             <AuthContextProvider>
                 <BrowserRouter>
                     <Routes>
-                        <Route path="/" element={<LandingPage />}></Route>
+                        <Route exact path="/" element={<LandingPage />}></Route>
+                        <Route exact path="/TechStack" element={<TechStack />}></Route>
+                        <Route exact path="/Profile" element={<Profile />}></Route>
+                        <Route exact path="/SignIn" element={<SignIn />}></Route>
+                        <Route exact path="/SignUp" element={<SignUp />}></Route>
+                        <Route exact path="/ForgotPass" element={<ForgotPass />}></Route>
+                        <Route exact path="/About" element={<About />}></Route>
 
                         {/* <Route path="/SignUp" element={<SignUp />}></Route>
                     <Route path="/LogIn" element={<LogIn />}></Route>
@@ -96,12 +110,16 @@ const ProjectRoutes = () => {
                             active={active}
                             setActive={setActive}
                         /> : <Navigate to="/BlogLandingPage" />}></Route>
-                        <Route path="/About" element={<About />}></Route>
+                        {/* <Route path="/About" element={<About />}></Route> */}
                         <Route path="*" element={<NotFound />}></Route>
 
                         {/* ECommerce */}
                         {/* EC1 */}
                         <Route path="/EC1LandingPage" element={<EC1LandingPage />}></Route>
+
+                        {/* EC2 */}
+                        <Route path="/EC2LandingPage" element={<EC2LandingPage />}></Route>
+                        <Route exact path="/Offers" element={<Offers />}></Route>
 
                     </Routes>
                 </BrowserRouter>

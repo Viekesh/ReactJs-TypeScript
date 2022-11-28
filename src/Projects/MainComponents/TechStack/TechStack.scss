@@ -1,0 +1,77 @@
+.techstack {
+    margin: 9vh 0 0 0;
+}
+
+.page_heading {
+    margin: 15vh auto 3vh auto;
+    width: 90%;
+}
+
+.page_heading>h3 {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 9vw;
+    font-weight: 900;
+    text-transform: capitalize;
+    color: red;
+    text-shadow: 1px 1px 3px blue;
+}
+
+.page_info {
+    margin: 9vh auto 3vh auto;
+    width: 90%;
+}
+
+.page_info>h3 {
+    margin: 0 auto 3vw auto;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 300;
+    text-transform: capitalize;
+}
+
+
+// Slider Start
+
+.techstack>.sm_slider {
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.slider_elements {
+    height: 20vh;
+    flex-direction: column;
+    position: relative;
+}
+
+.icon {
+    position: absolute;
+    width: 90px;
+}
+
+@media only screen and (min-width: 768px) {
+    .page_heading {
+        margin: 21vh auto 3vh auto;
+        width: 49%;
+    }
+
+    .page_heading>h3 {
+        font-size: 3vw;
+    }
+
+    .page_info {
+        margin: 9vh auto 6vh auto;
+        width: 49%;
+    }
+
+    .page_info>h3 {
+        margin: 0 auto 2vw auto;
+        font-family: 'Montserrat', monospace;
+        font-weight: 600;
+        text-transform: capitalize;
+    }
+
+    .techstack>.sm_slider {
+        width: 49%;
+    }
+}

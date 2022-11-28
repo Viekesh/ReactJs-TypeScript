@@ -1,41 +1,63 @@
-/* .navigation {
+$WhColor: white;
+$blueColor: blue;
+$redColor: red;
+
+
+.top_navigation {
+    width: 100vw;
     height: 9vh;
     background-color: red;
     box-shadow: 1px 1px 10px 0px black;
+
+    position: fixed;
+    top: 0;
+
+    z-index: 999;
 }
 
-.nav {
+.for_smartphone {
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    width: fit-content;
+}
+
+.logo a>img {
+    width: 12vw;
+}
+
+.nav_elements {
+    width: 27vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.logo {
-    border: 2px solid blue;
-    width: 27vw;
-    height: auto;
-    text-align: center;
+.github_icon {
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    background-color: snow;
 }
 
-.logo a h2 {
-    font-family: "Poppins", sans-serif;
-    color: snow;
-    font-size: 4vw;
-    font-weight: bolder;
-    line-height: 4vw;
+.github_icon a>svg {
+    width: 6vw;
 }
 
 .navigation_section {
+    border-left: 6px solid snow;
     width: 60vw;
     height: 100vh;
+    background-color: snow;
     position: fixed;
     top: 0;
     right: 0;
     transform: translateX(100%);
-    transition: transform 0.3s ease-in-out 0s;
-    background-color: #FCA311;
-    background-color: rgb(0, 0, 14);
-    box-shadow: 1px 1px 30px black;
+    transition: transform 0.2s ease-in-out 0s;
     z-index: 4;
 }
 
@@ -45,7 +67,6 @@
 }
 
 .navigation_section_elements a h5 {
-    border-bottom: 3px solid snow;
     margin: 6vw 0;
     border-radius: 1vw;
     padding: 0 3vw;
@@ -56,8 +77,6 @@
     text-transform: uppercase;
     color: snow;
     background-color: #142130;
-    background-color: rgb(202, 202, 202);
-    background-color: rgb(30, 30, 30);
 }
 
 .navigation_buttons {
@@ -66,23 +85,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-.log_in_icon {
-    width: 9vw;
-    height: 8vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.log_icon {
-    border: 3px solid gray;
-    border-radius: 50%;
-    width: 100%;
-    height: 50%;
-    color: snow;
-    font-size: larger;
 }
 
 .menu_icon {
@@ -95,7 +97,7 @@
 
 
 
-menu icon start
+// Menu Icon Start
 
 .hamburger {
     padding: 3px 3px;
@@ -124,7 +126,7 @@ menu icon start
 .hamburger.is-active .hamburger-inner,
 .hamburger.is-active .hamburger-inner::before,
 .hamburger.is-active .hamburger-inner::after {
-    background-color: snow;
+    background-color: black;
 }
 
 .hamburger-box {
@@ -143,9 +145,9 @@ menu icon start
 .hamburger-inner::before,
 .hamburger-inner::after {
     width: 30px;
-    height: 6px;
-    background-color: snow;
-    border-radius: 4px;
+    height: 3px;
+    background-color: black;
+    border-radius: 3px;
     position: absolute;
     transition-property: transform;
     transition-duration: 0.15s;
@@ -194,9 +196,7 @@ menu icon start
     transform: translate3d(0, -9px, 0) rotate(-45deg);
 }
 
-
-menu icon end
-
+// Menu Icon End
 
 
 @media only screen and (min-width: 600px) {
@@ -231,7 +231,7 @@ menu icon end
     .navigation {
         background-color: rgba(255, 0, 0, 0.9);
     }
-    
+
     .logo a h4 {
         font-size: 30px;
     }
@@ -263,24 +263,24 @@ menu icon end
     .navigation_section {
         width: 20vw;
     }
-    
+
     .navigation_buttons {
         width: 15%;
     }
-    
+
     .log_in_icon {
         width: 50px;
     }
-    
+
     .navigation_section_elements a h5 {
         font-size: 3vw;
     }
 
-    hamburger-inner,
+    /* hamburger-inner,
     .hamburger-inner::before,
     .hamburger-inner::after {
         height: 5px;
-    }
+    } */
 }
 
 @media only screen and (min-width: 1100px) {
@@ -296,7 +296,7 @@ menu icon end
         margin: 6vw auto;
         width: 90%;
     }
-    
+
     .navigation_section_elements a h5 {
         margin: 1vw 0;
         border-radius: .6vw;
@@ -305,4 +305,33 @@ menu icon end
         font-size: 1vw;
         font-weight: 900;
     }
-} */
+}
+
+@media only screen and (min-width: 1200px) {
+    .for_smartphone {
+        width: 50%;
+    }
+
+    .logo {
+        border: 0px solid snow;
+    }
+
+    .logo a>img {
+        width: 3.3vw;
+    }
+
+    .nav_elements {
+        width: 9vw;
+    }
+
+    .github_icon {
+        width: 30px;
+        height: 30px;
+        background-color: snow;
+    }
+
+    .github_icon a>svg {
+        width: 24px;
+    }
+
+}

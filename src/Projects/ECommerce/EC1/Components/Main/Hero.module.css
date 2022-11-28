@@ -1,5 +1,5 @@
 .hero {
-    margin: 3vh auto 0 auto;
+    margin: 15vh auto 0 auto;
     width: 98vw;
     height: 70vh;
     position: relative;
@@ -20,11 +20,12 @@
 }
 
 .for_smartdevices h3 {
-    font-family: 'Monsterrat', sans-serif;
-    font-size: 30px;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 33px;
     font-weight: 900;
     text-transform: capitalize;
-    color: black;
+    color: snow;
+    text-shadow: 1px 1px 12px snow;
 }
 
 .for_smartdevices>.text1 {
@@ -74,7 +75,7 @@
 
 @media only screen and (min-width: 768px) {
     .hero {
-        margin: 3vw auto 0 auto;
+        margin: 12vh auto 0 auto;
         width: 66vw;
         height: 70vh;
     }

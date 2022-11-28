@@ -1,5 +1,5 @@
 .virtual_page {
-    margin: 24vw auto 3vw auto;
+    margin: 33vw auto 30vw auto;
     width: 98vw;
 }
 
@@ -20,7 +20,7 @@
     font-family: "Monsterrat", sans-serif;
     font-size: 21px;
     font-weight: 900;
-    color: black;
+    color: snow;
 }
 
 .Virtual .left>:nth-child(2) {
@@ -30,7 +30,7 @@
     font-weight: lighter;
     text-align: center;
     text-transform: uppercase;
-    color: black;
+    color: snow;
 }
 
 .Virtual .left>:nth-child(3) {
@@ -39,16 +39,12 @@
     font-weight: lighter;
     text-align: center;
     text-transform: uppercase;
-    color: black;
+    color: snow;
 }
 
 .Virtual .left img {
     width: 50%;
 }
-
-/* .Virtual .right {
-    border: 2px solid black;
-} */
 
 .Virtual .right .wrapper {
     width: 100%;
@@ -100,10 +96,6 @@
     .Virtual .left img {
         width: 10vw;
     }
-
-    /* .Virtual .right {
-        border: 2px solid black;
-    } */
 
     .Virtual .right .wrapper {
         width: 36vw;

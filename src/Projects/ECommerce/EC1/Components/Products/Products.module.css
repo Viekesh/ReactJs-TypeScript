@@ -1,5 +1,5 @@
 .product {
-    margin: 9vw auto 3vw auto;
+    margin: 9vw auto 30vw auto;
     width: 98vw;
 }
 
@@ -8,7 +8,7 @@
     font-family: "Monsterrat", sans-serif;
     font-size: 30px;
     font-weight: 900;
-    color: black;
+    color: snow;
 
     display: flex;
     align-items: center;
@@ -27,6 +27,8 @@
 .menu {
     border-top: 2px solid snow;
     border-bottom: 2px solid snow;
+    margin: 0 auto;
+    width: 96%;
     padding: 0 3vw;
     display: grid;
     grid-template-columns: auto auto auto auto;
@@ -116,7 +118,7 @@
 
 @media only screen and (min-width: 768px) {
     .product {
-        margin: 9vw auto 3vw auto;
+        margin: 6vw auto 3vw auto;
         width: 66vw;
     }
 

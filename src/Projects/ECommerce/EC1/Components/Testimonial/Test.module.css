@@ -1,5 +1,5 @@
 .test {
-    margin: 24vw auto 3vw auto;
+    margin: 24vw auto 24vh auto;
 }
 
 .testimonial {
@@ -44,7 +44,7 @@
 
 .reviews {
     margin: .9vw auto;
-    font-size: 1.3rem;
+    font-size: 21px;
     font-weight: bold;
     color: snow;
 }
@@ -92,7 +92,7 @@
 @media only screen and (min-width: 768px) {
 
     .test {
-        margin: 9vw auto 3vw auto;
+        margin: 9vw auto 18vh auto;
     }
 
     .testimonial {

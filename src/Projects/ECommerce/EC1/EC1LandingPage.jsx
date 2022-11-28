@@ -1,6 +1,9 @@
 import React from 'react';
-import Footer from './Components/Footer/Footer';
-import Header from './Components/Header/Header';
+import BottomNavigation from '../../MainComponents/Navigation/BottomNavigation';
+import TopNavigation from '../../MainComponents/Navigation/TopNavigation';
+import PortfolioLinks from '../../MainComponents/PorfolioLinks/PortfolioLinks';
+// import Footer from './Components/Footer/Footer';
+// import Header from './Components/Header/Header';
 import Hero from './Components/Main/Hero';
 import Product from './Components/Products/Product';
 import Slider from './Components/Slider/Slider';
@@ -11,13 +14,16 @@ import "./Styles/EC1LandingPage.scss";
 const EC1LandingPage = () => {
   return (
     <div className='EC1LandingPage'>
-      <Header />
+      <TopNavigation />
+      <BottomNavigation />
+      <PortfolioLinks />
+      {/* <Header /> */}
       <Hero />
       <Slider />
       <Virtual />
       <Product />
       <Testimonial />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }

@@ -6,7 +6,7 @@ import DiningOut from "../Components/Common/TabOptions/DiningOut";
 import Nightlife from "../Components/Common/TabOptions/Nightlife";
 import TabOption from "../Components/Common/TabOptions/TabOption";
 
-import "../Styles/HomePage.css";
+import "../Styles/HomePage.scss";
 
 
 
