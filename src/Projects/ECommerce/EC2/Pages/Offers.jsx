@@ -1,8 +1,13 @@
 import React from 'react'
+import EC2Header from '../Components/EC2Header';
 
 const Offers = () => {
   return (
-    <div>Offers</div>
+    <>
+    <div className="offers">
+      <EC2Header />
+    </div>
+    </>
   )
 }
 
