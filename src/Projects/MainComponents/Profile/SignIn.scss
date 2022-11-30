@@ -1,0 +1,77 @@
+.sign_in {
+    border: 2px solid black;
+}
+
+.sign_in_form {
+    position: relative;
+    border: 2px solid blue;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.input_field {
+    border: 1px solid gray;
+    border-radius: 9px;
+    margin: 6px auto;
+    padding: 9px;
+    width: 100%;
+    font-size: 18px;
+    outline: none;
+}
+
+.invisible_pass {
+    position: absolute;
+    right: 3vw;
+    top: 21vw;
+}
+
+.visible_pass {
+    position: absolute;
+    right: 3vw;
+    top: 21vw;
+}
+
+.another_form_links {
+    border: 2px solid red;
+    margin: 18px auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.another_form_links a>button {
+    border: 1px solid gray;
+    border-radius: 9px;
+    padding: 1px;
+    width: 130px;
+    height: 33px;
+    font-size: 15px;
+    background-color: transparent;
+}
+
+@media only screen and (min-width: 1200px) {
+    .sign_in_form {
+        width: 50%;
+    }
+
+    .input_field {
+        width: 60%;
+        font-size: 15px;
+    }
+
+    .invisible_pass {
+        position: absolute;
+        top: 5.5vw;
+        right: 21vw;
+    }
+
+    .visible_pass {
+        position: absolute;
+        top: 5.5vw;
+        right: 21vw;
+    }
+
+    .another_form_links {
+        width: 50%;
+    }
+}

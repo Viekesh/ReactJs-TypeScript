@@ -17,7 +17,7 @@ const EC2Header = () => {
 
   // we add "pathMathchRoute" function and we just say if the path, if the "route" is equal to the forward slash 
   const pathMatchRoute = (route) => {
-    if(route === menuLinkLocation.pathname) {
+    if (route === menuLinkLocation.pathname) {
       return true;
     }
   }
@@ -37,9 +37,9 @@ const EC2Header = () => {
             {/* if you click any of the below link, then we want to navigate it to the associated link */}
             {/* "react-router-dom" is giving us this ability as well, by using "useNavigate" function */}
             {/* we can use "useNavigate" function to navigate inside the website */}
-            <li className={` ${pathMatchRoute("/EC2LandingPage") && "home_link"}` } onClick={() => ec2Navigate("/EC2LandingPage")}>Home</li>
-            <li className={` ${pathMatchRoute("/Offers") && "home_link"}` } onClick={() => ec2Navigate("/Offers")}>Offers</li>
-            <li className={` ${pathMatchRoute("/SignIn") && "home_link"}` } onClick={() => ec2Navigate("/SignIn")}>SignIn</li>
+            <li className={` ${pathMatchRoute("/EC2LandingPage") && "home_link"}`} onClick={() => ec2Navigate("/EC2LandingPage")}>Home</li>
+            <li className={` ${pathMatchRoute("/Offers") && "home_link"}`} onClick={() => ec2Navigate("/Offers")}>Offers</li>
+            <li className={` ${pathMatchRoute("/SignIn") && "home_link"}`} onClick={() => ec2Navigate("/SignIn")}>SignIn</li>
           </ul>
         </div>
       </div>

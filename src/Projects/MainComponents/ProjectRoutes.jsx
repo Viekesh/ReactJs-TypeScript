@@ -13,8 +13,8 @@ import EC1LandingPage from "../ECommerce/EC1/EC1LandingPage";
 import EC2LandingPage from "../ECommerce/EC2/EC2LandingPage";
 import Offers from "../ECommerce/EC2/Pages/Offers";
 import HomePage from "../FoodDeliveryApp1/Pages/HomePage";
-import Profile from "../Profile/Profile";
-import SignUp from "../Profile/SignUp";
+
+// import SignUp from "../Profiles/SignUp";
 import About from "./About/About";
 import LandingPage from "./LandingPage/LandingPage";
 // import LogIn from "../Profile/LogIn";
@@ -23,7 +23,9 @@ import LandingPage from "./LandingPage/LandingPage";
 // import SignUp from "../Profile/SignUp";
 import "./LandingPage/Styles/Profile.css";
 import ForgotPass from "./Profile/ForgotPass";
+import Profile from "./Profile/Profile";
 import SignIn from "./Profile/SignIn";
+import SignUp from "./Profile/SignUp";
 import TechStack from "./TechStack/TechStack";
 
 

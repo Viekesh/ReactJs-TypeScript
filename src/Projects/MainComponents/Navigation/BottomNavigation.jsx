@@ -26,7 +26,7 @@ const BottomNavigation = () => {
           </NavLink>
         </div>
         <div className="profile_icon x_y_axis_center">
-          <NavLink to="/Profile" className="x_y_axis_center">
+          <NavLink to="/SignIn" className="x_y_axis_center">
             <AccountCircleIcon />
           </NavLink>
         </div>
