@@ -1,6 +1,10 @@
 export const IconsAndName = [
     {
         name: 'SKIN',
+        img: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Typescript.svg/800px-Typescript.svg.png",
+    },
+    {
+        name: 'SKIN',
         img: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/MongoDB_Logo.svg/1920px-MongoDB_Logo.svg.png",
     },
     {
