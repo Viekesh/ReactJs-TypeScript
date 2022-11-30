@@ -1,10 +1,9 @@
-.sign_in {
-    border: 2px solid black;
-}
+// .sign_in {
+//     border: 2px solid black;
+// }
 
 .sign_in_form {
     position: relative;
-    border: 2px solid blue;
     margin: 0 auto;
     width: 90%;
 }
@@ -15,26 +14,26 @@
     margin: 6px auto;
     padding: 9px;
     width: 100%;
-    font-size: 18px;
+    height: 39px;
+    font-size: 15px;
     outline: none;
 }
 
 .invisible_pass {
     position: absolute;
     right: 3vw;
-    top: 21vw;
+    top: 19vw;
 }
 
 .visible_pass {
     position: absolute;
     right: 3vw;
-    top: 21vw;
+    top: 19vw;
 }
 
 .another_form_links {
-    border: 2px solid red;
     margin: 18px auto;
-    width: 90%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
@@ -49,8 +48,26 @@
     background-color: transparent;
 }
 
+.form_buttons {
+    margin: 18px 0;
+    width: 100%;
+    height: 39px;
+}
+
+.form_buttons a>button {
+    border: 1px solid gray;
+    border-radius: 9px;
+    padding: 3px;
+    width: 100%;
+    height: 100%;
+    font-size: 15px;
+    color: snow;
+    background: rgb(44, 111, 255);
+}
+
 @media only screen and (min-width: 1200px) {
     .sign_in_form {
+        border: 0px;
         width: 50%;
     }
 
@@ -61,17 +78,38 @@
 
     .invisible_pass {
         position: absolute;
-        top: 5.5vw;
+        top: 4.9vw;
         right: 21vw;
     }
 
     .visible_pass {
         position: absolute;
-        top: 5.5vw;
+        top: 4.9vw;
         right: 21vw;
     }
 
     .another_form_links {
-        width: 50%;
+        border: 0px solid blue;
+        margin: 18px 0;
+        width: 60%;
+    }
+
+    .form_buttons {
+        margin: 18px 0;
+        width: 60%;
+        height: 36px;
+    }
+
+    .form_buttons a>button {
+        border: 1px solid gray;
+        border-radius: 9px;
+        padding: 1px;
+        width: 100%;
+        height: 100%;
+        font-size: 15px;
+        color: snow;
+        background: rgb(44, 111, 255);
     }
 }
+
+

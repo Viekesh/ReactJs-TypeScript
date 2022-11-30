@@ -2,11 +2,10 @@ $WhColor: white;
 $blueColor: blue;
 $redColor: red;
 
-
 .top_navigation {
     width: 100vw;
     height: 9vh;
-    background-color: red;
+    background-color: black;
     box-shadow: 1px 1px 10px 0px black;
 
     position: fixed;
@@ -52,7 +51,7 @@ $redColor: red;
     border-left: 6px solid snow;
     width: 60vw;
     height: 100vh;
-    background-color: snow;
+    background-color: black;
     position: fixed;
     top: 0;
     right: 0;
@@ -126,7 +125,7 @@ $redColor: red;
 .hamburger.is-active .hamburger-inner,
 .hamburger.is-active .hamburger-inner::before,
 .hamburger.is-active .hamburger-inner::after {
-    background-color: black;
+    background-color: snow;
 }
 
 .hamburger-box {
@@ -146,7 +145,7 @@ $redColor: red;
 .hamburger-inner::after {
     width: 30px;
     height: 3px;
-    background-color: black;
+    background-color: snow;
     border-radius: 3px;
     position: absolute;
     transition-property: transform;
