@@ -31,6 +31,22 @@
     top: 19vw;
 }
 
+// for signup page
+
+.invisible_pass_sign_up {
+    position: absolute;
+    right: 3vw;
+    top: 33vw;
+}
+
+.visible_pass_sign_up {
+    position: absolute;
+    right: 3vw;
+    top: 33vw;
+}
+
+// for signup page complete
+
 .another_form_links {
     margin: 18px auto;
     width: 100%;
@@ -54,7 +70,7 @@
     height: 39px;
 }
 
-.form_buttons a>button {
+.form_buttons>button {
     border: 1px solid gray;
     border-radius: 9px;
     padding: 3px;

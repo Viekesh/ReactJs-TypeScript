@@ -5,6 +5,10 @@ import TopNavigation from "../Navigation/TopNavigation";
 import PortfolioLinks from "../PorfolioLinks/PortfolioLinks";
 import BottomNavigation from "../Navigation/BottomNavigation";
 import OAuth from "../OAuth/OAuth";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../../firebaseConfig";
+
+
 
 const SignUp = () => {
   const [showPass, setShowPass] = useState(false);
@@ -20,12 +24,35 @@ const SignUp = () => {
   const handleFormData = (event) => {
     setFormData((preState) => ({
       ...preState,
-
       [event.target.id]: event.target.value,
     }));
 
-    console.log(formData);
+    // console.log(formData);
   };
+
+
+
+  // we creating this function for submiting the form data
+  const submitFormData = async (event) => {
+    // after creating the function (like this "const submitFormData = () => {}") go on to page and
+    // click on signup button, when click on the function the page is refreshes
+    // to prevent this page refresh we take "event" as a parameter and type "event.preventDefault"
+    event.preventDefault();
+
+    // now we need authenticate the user
+    try {
+      // const app = initializeApp(firebaseConfig);
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      const user = userCredential.user;
+
+      console.log(user);
+
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+
 
   return (
     <>
@@ -37,7 +64,8 @@ const SignUp = () => {
           <h3>SignUp</h3>
         </div>
 
-        <form action="" className="sign_in_form">
+        {/* the form is going to call a function after calling and submit the form as well */}
+        <form className="sign_in_form" onSubmit={submitFormData}>
           <input
             type="text"
             className="input_field"
@@ -65,12 +93,12 @@ const SignUp = () => {
 
           {showPass ? (
             <AiFillEyeInvisible
-              className="invisible_pass"
+              className="invisible_pass_sign_up"
               onClick={() => setShowPass((prevState) => !prevState)}
             />
           ) : (
             <AiFillEye
-              className="visible_pass"
+              className="visible_pass_sign_up"
               onClick={() => setShowPass((prevState) => !prevState)}
             />
           )}
@@ -85,10 +113,9 @@ const SignUp = () => {
           </div>
 
           <div className="form_buttons">
-            <NavLink to="/SignUp">
               <button type="submit">SignUp</button>
-            </NavLink>
           </div>
+
         </form>
 
         <OAuth />
@@ -98,3 +125,5 @@ const SignUp = () => {
 };
 
 export default SignUp;
+
+

@@ -93,11 +93,8 @@ const SignIn = () => {
           </div>
 
           <div className="form_buttons">
-            <NavLink to="/SignUp">
               <button type="submit">SignIn</button>
-            </NavLink>
           </div>
-          
         </form>
 
         <OAuth />
