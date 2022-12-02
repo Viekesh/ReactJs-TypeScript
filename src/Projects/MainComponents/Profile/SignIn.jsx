@@ -4,8 +4,9 @@ import TopNavigation from "../Navigation/TopNavigation";
 import PortfolioLinks from "../PorfolioLinks/PortfolioLinks";
 import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
 import "./SignIn.scss";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import OAuth from "../OAuth/OAuth";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
 const SignIn = () => {
   const [showPass, setShowPass] = useState(false);
@@ -19,6 +20,8 @@ const SignIn = () => {
   // to access the "formData" we need to destructure it
   // to destructure the form data (email and password) we can add a bracket then assign the form data to the properties of that backet
   const { email, password } = formData;
+
+  const afterClickSignIn = useNavigate();
 
   // the parameter "event" gives us all the information that we are typing in the form
   const handleFormData = (event) => {
@@ -43,6 +46,22 @@ const SignIn = () => {
     console.log(formData);
   };
 
+  const submitSignInForm = async (event) => {
+    event.preventDefault();
+    try {
+      const auth = getAuth();
+      const userCredential = await signInWithEmailAndPassword(auth, email, password)
+
+      // if the "userCredential.user" is true and it exist then we can just go to the home page
+      if(userCredential.user) {
+        alert("You Are Successfully SignIn");
+        afterClickSignIn("/");
+      }
+    } catch (error) {
+      alert(error.message);
+    }
+  }
+
   return (
     <>
       <TopNavigation />
@@ -53,7 +72,7 @@ const SignIn = () => {
           <h3>SignIn</h3>
         </div>
 
-        <form action="" className="sign_in_form">
+        <form action="" className="sign_in_form" onSubmit={submitSignInForm}>
           <input
             type="text"
             className="input_field"
@@ -93,7 +112,7 @@ const SignIn = () => {
           </div>
 
           <div className="form_buttons">
-              <button type="submit">SignIn</button>
+            <button type="submit">SignIn</button>
           </div>
         </form>
 
