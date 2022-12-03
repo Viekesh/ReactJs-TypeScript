@@ -16,13 +16,23 @@ const TopNavigation = () => {
   return (
     <nav className="top_navigation x_y_axis_center">
       <div className="for_smartphone">
-        <div className="logo">
-          <NavLink to="/" className="x_y_axis_center">
-            <img src={ReactIcon} alt="react logo" />
-          </NavLink>
-        </div>
-
         <div className="nav_elements">
+          <div className="menu_icon x_y_axis_center">
+            <div className="only-mobile mobile-menu-button-wrapper">
+              <button
+                className={`hamburger hamburger--3dx x_y_axis_center ${
+                  showMenu ? "is-active" : ""
+                }`}
+                type="button"
+                onClick={toggleMobileMenu}
+              >
+                <span className="hamburger-box">
+                  <span className="hamburger-inner"></span>
+                </span>
+              </button>
+            </div>
+          </div>
+
           <div className="github_icon x_y_axis_center">
             <a
               href="https://www.github.com/Viekesh"
@@ -66,22 +76,12 @@ const TopNavigation = () => {
               </NavLink>
             </div>
           </div>
+        </div>
 
-          <div className="menu_icon x_y_axis_center">
-            <div className="only-mobile mobile-menu-button-wrapper">
-              <button
-                className={`hamburger hamburger--3dx x_y_axis_center ${
-                  showMenu ? "is-active" : ""
-                }`}
-                type="button"
-                onClick={toggleMobileMenu}
-              >
-                <span className="hamburger-box">
-                  <span className="hamburger-inner"></span>
-                </span>
-              </button>
-            </div>
-          </div>
+        <div className="logo">
+          <NavLink to="/" className="x_y_axis_center">
+            <img src={ReactIcon} alt="react logo" />
+          </NavLink>
         </div>
       </div>
     </nav>

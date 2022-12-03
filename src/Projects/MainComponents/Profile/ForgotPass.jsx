@@ -5,6 +5,7 @@ import PortfolioLinks from "../PorfolioLinks/PortfolioLinks";
 import "./SignIn.scss";
 import { NavLink } from "react-router-dom";
 import OAuth from "../OAuth/OAuth";
+import { getAuth, sendPasswordResetEmail } from 'firebase/auth';
 
 const ForgotPass = () => {
 
@@ -13,6 +14,17 @@ const ForgotPass = () => {
   const handleFormData = (event) => {
     setEmail(event.target.value);
   };
+
+  const forgotPassForm = async (event) => {
+    event.preventDefault();
+    try {
+      const auth = getAuth();
+      await sendPasswordResetEmail(auth, email);
+      alert("Password Reset Email Sent. Check Your Email Inbox");
+    } catch (error) {
+      alert(error.message);
+    }
+  }
 
   return (
     <>
@@ -24,7 +36,7 @@ const ForgotPass = () => {
           <h3>Forgot Password</h3>
         </div>
 
-        <form action="" className="sign_in_form">
+        <form action="" className="sign_in_form" onSubmit={forgotPassForm}>
           <input
             type="text"
             className="input_field"
@@ -44,10 +56,9 @@ const ForgotPass = () => {
           </div>
 
           <div className="form_buttons">
-            <NavLink to="/SignUp">
               <button type="submit">Send Reset Password</button>
-            </NavLink>
           </div>
+
         </form>
 
         <OAuth />
