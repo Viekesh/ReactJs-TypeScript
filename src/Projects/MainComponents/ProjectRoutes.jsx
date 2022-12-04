@@ -12,6 +12,7 @@ import EC2LandingPage from "../ECommerce/EC2/EC2LandingPage";
 import Offers from "../ECommerce/EC2/Pages/Offers";
 
 import HomePage from "../FoodDeliveryApp1/Pages/HomePage";
+import PrivateRoute from "./PrivateRoute/PrivateRoute";
 // import { signOut } from "firebase/auth";
 // import { useState } from "react";
 // import { auth } from "../../firebaseConfig";
@@ -68,6 +69,12 @@ const ProjectRoutes = () => {
                 <BrowserRouter>
                     <Routes>
                         <Route exact path="/" element={<LandingPage />}></Route>
+
+                        {/* this private route is going to cover this */}
+                        {/* if the person signing, its going to render inside which is profile by using the outlet here */}
+                        <Route exact path="/Profile" element={<PrivateRoute />}>
+                            <Route exact path="/Profile" element={<Profile />}></Route>
+                        </Route>
                         <Route exact path="/TechStack" element={<TechStack />}></Route>
                         <Route exact path="/Profile" element={<Profile />}></Route>
                         <Route exact path="/SignIn" element={<SignIn />}></Route>
