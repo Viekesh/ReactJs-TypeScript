@@ -71,7 +71,6 @@ const ProjectRoutes = () => {
                         <Route exact path="/" element={<LandingPage />}></Route>
 
                         {/* this private route is going to cover this */}
-                        {/* if the person signing, its going to render inside which is profile by using the outlet here */}
                         <Route exact path="/Profile" element={<PrivateRoute />}>
                             <Route exact path="/Profile" element={<Profile />}></Route>
                         </Route>

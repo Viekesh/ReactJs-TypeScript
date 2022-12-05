@@ -70,7 +70,7 @@ $redColor: red;
     border-radius: 1vw;
     padding: 0 3vw;
     height: 6vh;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Source-Code-Pro', monospace;
     font-style: italic;
     font-size: 4vw;
     font-weight: 700;
@@ -224,6 +224,7 @@ $redColor: red;
     }
 
     .navigation_section_elements a h5 {
+        font-weight: 500;
         font-size: 3vw;
     }
 }
@@ -246,7 +247,7 @@ $redColor: red;
     }
 
     .navigation_section_elements a h5 {
-        font-size: 3vw;
+        font-weight: 500;
     }
 }
 
@@ -272,16 +273,6 @@ $redColor: red;
     .log_in_icon {
         width: 50px;
     }
-
-    .navigation_section_elements a h5 {
-        font-size: 3vw;
-    }
-
-    /* hamburger-inner,
-    .hamburger-inner::before,
-    .hamburger-inner::after {
-        height: 5px;
-    } */
 }
 
 @media only screen and (min-width: 1100px) {
@@ -304,7 +295,7 @@ $redColor: red;
         padding: 0 3vw;
         height: 6vh;
         font-size: 1vw;
-        font-weight: 900;
+        font-weight: 700;
     }
 }
 
