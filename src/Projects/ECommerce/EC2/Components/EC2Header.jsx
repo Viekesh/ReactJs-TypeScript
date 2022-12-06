@@ -1,9 +1,25 @@
-import React from 'react';
+import { getAuth, onAuthStateChanged } from 'firebase/auth';
+import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import EC2Logo from "../EC2Images/ec2logo.png";
 import "../Styles/EC2Header.scss";
 
 const EC2Header = () => {
+
+  const [pageState, setPageState] = useState("SignIn");
+
+  const auth = getAuth();
+
+  // here we use the "useEffect" to check the changes of "auth"
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      if(user) {
+        setPageState("Profile")
+      } else {
+        setPageState("SignIn")
+      }
+    })
+  }, [auth])
 
   const menuLinkLocation = useLocation();
   // the useLocation hook returns the location object that represent the current url, you think about it like
@@ -13,7 +29,7 @@ const EC2Header = () => {
 
   // we can use this navigate to navigate between our website, this is the fast routing that react gives us
   // without refreshing the page we can go between routes 
-  const ec2Navigate = useNavigate("/EC2LandingPage");
+  const ec2Navigate = useNavigate();
 
   // we add "pathMathchRoute" function and we just say if the path, if the "route" is equal to the forward slash 
   const pathMatchRoute = (route) => {
@@ -39,7 +55,7 @@ const EC2Header = () => {
             {/* we can use "useNavigate" function to navigate inside the website */}
             <li className={` ${pathMatchRoute("/EC2LandingPage") && "home_link"}`} onClick={() => ec2Navigate("/EC2LandingPage")}>Home</li>
             <li className={` ${pathMatchRoute("/Offers") && "home_link"}`} onClick={() => ec2Navigate("/Offers")}>Offers</li>
-            <li className={` ${pathMatchRoute("/SignIn") && "home_link"}`} onClick={() => ec2Navigate("/SignIn")}>SignIn</li>
+            <li className={` ${(pathMatchRoute("/SignIn") || pathMatchRoute("/Profile")) && "home_link"}`} onClick={() => ec2Navigate("/Profile")}>{pageState}</li>
           </ul>
         </div>
       </div>

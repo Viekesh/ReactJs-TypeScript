@@ -1,5 +1,6 @@
 import React from 'react'
 import { Navigate, Outlet } from 'react-router-dom';
+import Spinner from '../../ECommerce/EC2/Components/Spinner';
 import { UseAuthStatus } from '../Hook/UseAuthStatus';
 
 const PrivateRoute = () => {
@@ -11,7 +12,7 @@ const PrivateRoute = () => {
     const {loggedIn, checkingStatus } = UseAuthStatus();
 
     if(checkingStatus) {
-        return <h3>Loading...</h3>
+        return <><Spinner /></>
     }
 
     // if the person signing, its going to render inside which is profile by using the outlet here otherwise
