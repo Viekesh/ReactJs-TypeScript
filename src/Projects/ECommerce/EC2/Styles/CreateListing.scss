@@ -1,0 +1,58 @@
+.create_listing_main {
+    border: 2px solid red;
+    margin: 3vw auto;
+    width: 90%;
+    padding: 0;
+}
+
+.create_listing_main>h1 {
+    text-align: center;
+    font-weight: 700;
+}
+
+.create_listing_form_elements {
+    border: 2px solid red;
+    margin: 3vw auto;
+}
+
+.create_listing_form_elements>p {
+    margin: 1vw 0;
+}
+
+.sell_rent_form_buttons {
+    justify-content: space-between;
+}
+
+.sell_rent_form_buttons>button {
+    border-radius: 9px;
+    width: 120px;
+    height: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    color: snow;
+}
+
+.create_listing_form_elements>.create_list_input_field {
+    border: 1px solid gray;
+    border-radius: 9px;
+    width: 100%;
+    padding: 12px;
+}
+
+.sell_button {
+    background: rgb(44, 111, 255);
+}
+
+.sell_background {
+    background-color: black;
+}
+
+.parent_box {
+    border: 2px solid green;
+}
+
+.parent_box>.box {
+    border: 2px solid blue;
+}
+
+

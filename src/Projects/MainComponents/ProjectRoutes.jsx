@@ -13,6 +13,7 @@ import Offers from "../ECommerce/EC2/Pages/Offers";
 
 import HomePage from "../FoodDeliveryApp1/Pages/HomePage";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
+import CreateListing from "../ECommerce/EC2/Pages/CreateListing";
 // import { signOut } from "firebase/auth";
 // import { useState } from "react";
 // import { auth } from "../../firebaseConfig";
@@ -129,6 +130,7 @@ const ProjectRoutes = () => {
                         {/* EC2 */}
                         <Route path="/EC2LandingPage" element={<EC2LandingPage />}></Route>
                         <Route exact path="/Offers" element={<Offers />}></Route>
+                        <Route exact path="/CreateListing" element={<CreateListing />}></Route>
 
                     </Routes>
                 </BrowserRouter>

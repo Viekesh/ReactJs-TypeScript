@@ -1,12 +1,13 @@
 import { getAuth, updateProfile } from "firebase/auth";
 import { doc, updateDoc } from "firebase/firestore";
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { database } from "../../../firebaseConfig";
 import BottomNavigation from "../Navigation/BottomNavigation";
 import TopNavigation from "../Navigation/TopNavigation";
 import PortfolioLinks from "../PorfolioLinks/PortfolioLinks";
 import "./Profile.scss";
+import { FaCar } from "react-icons/fa";
 
 const Profile = () => {
   const auth = getAuth();
@@ -100,6 +101,14 @@ const Profile = () => {
             </div>
           </div>
         </form>
+
+        <div className="sell_or_rent_button">
+          <Link to="/CreateListing">
+            <button type="submit y_axis_center">
+              <FaCar /> Sell Or Rent Your Car
+            </button>
+          </Link>
+        </div>
       </section>
     </>
   );

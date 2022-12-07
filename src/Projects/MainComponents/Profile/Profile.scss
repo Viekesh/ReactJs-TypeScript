@@ -1,3 +1,7 @@
+// .my_profile {
+//     border: 2px solid red;
+// }
+
 .edit_template {
     margin: 3vw 0 0 0;
     width: 100%;
@@ -22,7 +26,7 @@
     height: 5vh;
     background-color: transparent;
     font-family: 'Roboto', sans-serif;
-    font-size: 0.9vw;
+    font-size: 4vw;
     font-style: italic;
     font-weight: 500;
     text-transform: capitalize;
@@ -48,12 +52,26 @@
     font-style: italic;
     font-weight: 500;
     text-transform: capitalize;
-    // background: rgba(255, 255, 255, 0.25);
-    // box-shadow: 1px 9px 15px 0px rgba(0, 17, 255, 0.37);
-    // backdrop-filter: blur(4px);
-    // -webkit-backdrop-filter: blur(4px);
-    // border-radius: 10px;
-    // border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.sell_or_rent_button {
+    margin: 5vw auto;
+    width: 90%;
+}
+
+.sell_or_rent_button>a {
+    width: 100%;
+}
+
+.sell_or_rent_button>a>button {
+    border-radius: 9px;
+    padding: 9px;
+    width: 100%;
+    height: 39px;
+    font-size: 15px;
+    font-weight: bold;
+    background: rgb(44, 111, 255);
+    color: snow;
 }
 
 @media only screen and (min-width: 1200px) {
@@ -65,5 +83,22 @@
     .edit_template>button {
         margin: 0.3vw 0 0 0;
         width: 30%;
+    }
+
+    .edit_template_buttons>div {
+        font-size: 0.9vw;
+    }
+
+    .sell_or_rent_button {
+        margin: 2vw auto;
+        width: 50%;
+    }
+
+    .sell_or_rent_button>a {
+        width: fit-content;
+    }
+
+    .sell_or_rent_button>a>button {
+        width: 60%;
     }
 }
