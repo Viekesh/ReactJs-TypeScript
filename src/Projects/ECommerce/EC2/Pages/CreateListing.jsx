@@ -12,11 +12,29 @@ const CreateListing = () => {
     electric: false,
     petrol: false,
     diesel: false,
+    address: "",
+    description: "",
+    offer: true,
+    regularPrice: 0,
+    discountPrice: 0,
   });
 
   // destructure the initial values (formData information) which we have defined in the above "useState" (formData) hook otherwise
   // we will get error
-  const { type, name, mileage, price, electric, petrol, diesel } = formData;
+  const {
+    type,
+    name,
+    mileage,
+    price,
+    electric,
+    petrol,
+    diesel,
+    address,
+    description,
+    offer,
+    regularPrice,
+    discountPrice,
+  } = formData;
 
   const afterClickOnRentSellBtn = () => {};
 
@@ -107,23 +125,19 @@ const CreateListing = () => {
             <div className="sell_rent_form_buttons y_axis_center">
               <button
                 type="button"
-                value= {true}
-                id="type"
+                value={true}
+                id="electric"
                 onClick={afterClickOnRentSellBtn}
-                className={`${
-                  !electric ? "sell_button" : "sell_background"
-                }`}
+                className={`${!electric ? "sell_button" : "sell_background"}`}
               >
                 Yes
               </button>
               <button
                 type="button"
-                value="rent"
-                id="type"
+                value={false}
+                id="electric"
                 onClick={afterClickOnRentSellBtn}
-                className={`${
-                  type === "sell" ? "sell_button" : "sell_background"
-                }`}
+                className={`${electric ? "sell_button" : "sell_background"}`}
               >
                 No
               </button>
@@ -136,23 +150,19 @@ const CreateListing = () => {
             <div className="sell_rent_form_buttons y_axis_center">
               <button
                 type="button"
-                value="sell"
-                id="type"
+                value={true}
+                id="petrol"
                 onClick={afterClickOnRentSellBtn}
-                className={`${
-                  type === "rent" ? "sell_button" : "sell_background"
-                }`}
+                className={`${!petrol ? "sell_button" : "sell_background"}`}
               >
                 Yes
               </button>
               <button
                 type="button"
-                value="rent"
-                id="type"
+                value={false}
+                id="petrol"
                 onClick={afterClickOnRentSellBtn}
-                className={`${
-                  type === "sell" ? "sell_button" : "sell_background"
-                }`}
+                className={`${petrol ? "sell_button" : "sell_background"}`}
               >
                 No
               </button>
@@ -165,28 +175,139 @@ const CreateListing = () => {
             <div className="sell_rent_form_buttons y_axis_center">
               <button
                 type="button"
-                value="sell"
-                id="type"
+                value={true}
+                id="diesel"
                 onClick={afterClickOnRentSellBtn}
-                className={`${
-                  type === "rent" ? "sell_button" : "sell_background"
-                }`}
+                className={`${!diesel ? "sell_button" : "sell_background"}`}
               >
                 Yes
               </button>
               <button
                 type="button"
-                value="rent"
-                id="type"
+                value={false}
+                id="diesel"
                 onClick={afterClickOnRentSellBtn}
-                className={`${
-                  type === "sell" ? "sell_button" : "sell_background"
-                }`}
+                className={`${diesel ? "sell_button" : "sell_background"}`}
               >
                 No
               </button>
             </div>
           </div>
+
+          <div className="create_listing_form_elements">
+            <p>Address</p>
+            <textarea
+              type="text"
+              className="create_list_input_field"
+              placeholder="Address"
+              id="address"
+              value={address}
+              required
+              onChange={afterClickOnCreateListInput}
+            />
+          </div>
+
+          <div className="create_listing_form_elements">
+            <p>Description</p>
+            <textarea
+              type="text"
+              className="create_list_input_field"
+              placeholder="Description"
+              id="desription"
+              value={description}
+              required
+              onChange={afterClickOnCreateListInput}
+            />
+          </div>
+
+          <div className="create_listing_form_elements">
+            <p>Offers</p>
+            {/* we can try this button by id "type" */}
+            <div className="sell_rent_form_buttons y_axis_center">
+              <button
+                type="button"
+                value={true}
+                id="offer"
+                onClick={afterClickOnRentSellBtn}
+                className={`${!offer ? "sell_button" : "sell_background"}`}
+              >
+                Yes
+              </button>
+              <button
+                type="button"
+                value={false}
+                id="diesel"
+                onClick={afterClickOnRentSellBtn}
+                className={`${offer ? "sell_button" : "sell_background"}`}
+              >
+                No
+              </button>
+            </div>
+          </div>
+
+          <div className="create_listing_form_elements">
+            <p>Regular Price</p>
+            <div className="regular_price_input_field y_axis_center">
+              <input
+                type="number"
+                id="regularPrice"
+                value={regularPrice}
+                onChange={afterClickOnCreateListInput}
+                minLength="60"
+                maxLength="9000000"
+                required
+              />
+
+              {type === "rent" && (
+                <div>
+                  <p>$ / Months</p>
+                </div>
+              )}
+            </div>
+          </div>
+
+          {/* if offer is true then we can render this element */}
+          {offer && (
+            <div className="create_listing_form_elements">
+              <p>Discount Price</p>
+              <div className="regular_price_input_field y_axis_center">
+                <input
+                  type="number"
+                  id="discountPrice"
+                  value={discountPrice}
+                  onChange={afterClickOnCreateListInput}
+                  minLength="60"
+                  maxLength="9000000"
+                  required={offer}
+                />
+
+                {type === "rent" && (
+                  <div>
+                    <p>$ / Months</p>
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
+
+          <div className="create_listing_form_elements">
+            <p>Images</p>
+            <p>The First Image Will Cover (Max 6)</p>
+            <input
+              type="file"
+              id="images"
+              className="create_list_input_field"
+              onChange={afterClickOnCreateListInput}
+              accept=".jpg, .png, .jpeg"
+              multiple
+              required
+            />
+          </div>
+
+          <div className="form_buttons">
+            <button type="submit">Create Listing</button>
+          </div>
+
         </form>
       </main>
     </>

@@ -58,7 +58,8 @@
 }
 
 .for_mobile .test_carousel {
-    width: 100%;
+    margin: 0 auto;
+    width: 96%;
 }
 
 .for_mobile .test_carousel .carousel_info {
@@ -90,7 +91,6 @@
 
 
 @media only screen and (min-width: 768px) {
-
     .test {
         margin: 9vw auto 18vh auto;
     }

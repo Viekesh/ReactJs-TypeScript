@@ -13,10 +13,12 @@
 .create_listing_form_elements {
     border: 2px solid red;
     margin: 3vw auto;
+    position: relative;
 }
 
 .create_listing_form_elements>p {
     margin: 1vw 0;
+    font-weight: bold;
 }
 
 .sell_rent_form_buttons {
@@ -39,6 +41,17 @@
     padding: 12px;
 }
 
+.regular_price_input_field {
+    justify-content: space-between;
+}
+
+.regular_price_input_field>input {
+    border: 1px solid gray;
+    border-radius: 9px;
+    width: 70%;
+    padding: 12px;
+}
+
 .sell_button {
     background: rgb(44, 111, 255);
 }
@@ -55,4 +68,8 @@
     border: 2px solid blue;
 }
 
-
+@media only screen and (min-width: 1200px) {
+    .create_listing_main {
+        width: 30%;
+    }
+}
