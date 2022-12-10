@@ -1,8 +1,14 @@
 import React, { useState } from "react";
 import EC2Header from "../Components/EC2Header";
+import Spinner from "../Components/Spinner";
 import "../Styles/CreateListing.scss";
 
 const CreateListing = () => {
+  // this hook is for geolocation for adding the address (latitude and logitude)
+  const [geolocationEnable, setGeolocationEnable] = useState(true);
+
+  const [loading, setLoading] = useState(false);
+
   // this hook is created for form data
   const [formData, setFormData] = useState({
     type: "rent",
@@ -17,6 +23,9 @@ const CreateListing = () => {
     offer: false,
     regularPrice: 0,
     discountPrice: 0,
+    latitude: -90,
+    longitude: -180,
+    images:{}
   });
 
   // destructure the initial values (formData information) which we have defined in the above "useState" (formData) hook otherwise
@@ -34,6 +43,9 @@ const CreateListing = () => {
     offer,
     regularPrice,
     discountPrice,
+    latitude,
+    longitude,
+    images,
   } = formData;
 
   const afterClickOnCreateListInput = (event) => {
@@ -76,35 +88,60 @@ const CreateListing = () => {
     }
   };
 
+  const submitCreateListing = (event) => {
+
+    // first we need to prevent the defualt behavior of refreshing the page by just getting event here
+    event.preventDefault();
+    setLoading(true);
+
+    // the discounted price is always less than regular price if this is not happen then we can send error to
+    // the user, so for this we make a condition
+    if(discountPrice >= regularPrice) {
+      setLoading(false);
+      alert("Discounted Price Needs To Be Less Than Regular Price")
+      return;
+    }
+
+    // image length we want only 6
+    if(images.length > 6) {
+      setLoading(false);
+      alert("Maximum 6 Imaages Are Allowed");
+      return;
+    }
+
+  }
+
+  if(loading) {
+    return <Spinner />
+  }
+
   return (
     <>
       <EC2Header />
       <main className="create_listing_main">
         <h1>Create Listing</h1>
-        <form className="create_listing_form">
+        <form className="create_listing_form" onSubmit={submitCreateListing}>
           <div className="create_listing_form_elements">
             <p>Sell/Rent</p>
             {/* we can try this button by id "type" */}
             <div className="sell_rent_form_buttons y_axis_center">
               <button
                 type="button"
-                value="rent"
                 id="type"
+                value="rent"
                 onClick={afterClickOnCreateListInput}
-                className={`${
-                  type === "rent" ? "sell_button" : "sell_background"
-                }`}
+                className={`${type === "rent" ? "sell_button" : "sell_background"
+                  }`}
               >
                 Sell
               </button>
               <button
                 type="button"
-                value="sell"
                 id="type"
+                value="sell"
                 onClick={afterClickOnCreateListInput}
-                className={`${
-                  type === "sell" ? "sell_button" : "sell_background"
-                }`}
+                className={`${type === "sell" ? "sell_button" : "sell_background"
+                  }`}
               >
                 Rent
               </button>
@@ -120,8 +157,8 @@ const CreateListing = () => {
               placeholder="Name"
               id="name"
               value={name}
-              minLength="9"
-              maxLength="90"
+              min="9"
+              max="90"
               onChange={afterClickOnCreateListInput}
             />
           </div>
@@ -161,10 +198,10 @@ const CreateListing = () => {
             <div className="sell_rent_form_buttons y_axis_center">
               <button
                 type="button"
-                value={true}
                 id="electric"
+                value={true}
                 onClick={afterClickOnCreateListInput}
-                className={`${!electric ? "sell_button" : "sell_background"}`}
+                className={`${electric ? "sell_button" : "sell_background"}`}
               >
                 Yes
               </button>
@@ -173,7 +210,7 @@ const CreateListing = () => {
                 value={false}
                 id="electric"
                 onClick={afterClickOnCreateListInput}
-                className={`${electric ? "sell_button" : "sell_background"}`}
+                className={`${!electric ? "sell_button" : "sell_background"}`}
               >
                 No
               </button>
@@ -189,7 +226,7 @@ const CreateListing = () => {
                 value={true}
                 id="petrol"
                 onClick={afterClickOnCreateListInput}
-                className={`${!petrol ? "sell_button" : "sell_background"}`}
+                className={`${petrol ? "sell_button" : "sell_background"}`}
               >
                 Yes
               </button>
@@ -198,7 +235,7 @@ const CreateListing = () => {
                 value={false}
                 id="petrol"
                 onClick={afterClickOnCreateListInput}
-                className={`${petrol ? "sell_button" : "sell_background"}`}
+                className={`${!petrol ? "sell_button" : "sell_background"}`}
               >
                 No
               </button>
@@ -214,7 +251,7 @@ const CreateListing = () => {
                 value={true}
                 id="diesel"
                 onClick={afterClickOnCreateListInput}
-                className={`${!diesel ? "sell_button" : "sell_background"}`}
+                className={`${diesel ? "sell_button" : "sell_background"}`}
               >
                 Yes
               </button>
@@ -223,7 +260,7 @@ const CreateListing = () => {
                 value={false}
                 id="diesel"
                 onClick={afterClickOnCreateListInput}
-                className={`${diesel ? "sell_button" : "sell_background"}`}
+                className={`${!diesel ? "sell_button" : "sell_background"}`}
               >
                 No
               </button>
@@ -243,13 +280,45 @@ const CreateListing = () => {
             />
           </div>
 
+          {!geolocationEnable && (
+            <>
+              <div className="create_listing_form_elements">
+                <p>Latitude</p>
+                <input
+                  type="number"
+                  className="create_list_input_field"
+                  id="latitude"
+                  value={latitude}
+                  required
+                  min="-90"
+                  max="90"
+                  onChange={afterClickOnCreateListInput}
+                />
+              </div>
+
+              <div className="create_listing_form_elements">
+                <p>Longitude</p>
+                <input
+                  type="number"
+                  className="create_list_input_field"
+                  id="longitude"
+                  value={longitude}
+                  required
+                  min="-180"
+                  max="180"
+                  onChange={afterClickOnCreateListInput}
+                />
+              </div>
+            </>
+          )}
+
           <div className="create_listing_form_elements">
             <p>Description</p>
             <textarea
               type="text"
               className="create_list_input_field"
               placeholder="Description"
-              id="desription"
+              id="description"
               value={description}
               required
               onChange={afterClickOnCreateListInput}
@@ -262,19 +331,19 @@ const CreateListing = () => {
             <div className="sell_rent_form_buttons y_axis_center">
               <button
                 type="button"
-                value={true}
                 id="offer"
+                value={true}
                 onClick={afterClickOnCreateListInput}
-                className={`${!offer ? "sell_button" : "sell_background"}`}
+                className={`${offer ? "sell_button" : "sell_background"}`}
               >
                 Yes
               </button>
               <button
                 type="button"
+                id="offer"
                 value={false}
-                id="diesel"
                 onClick={afterClickOnCreateListInput}
-                className={`${offer ? "sell_button" : "sell_background"}`}
+                className={`${!offer ? "sell_button" : "sell_background"}`}
               >
                 No
               </button>
@@ -289,8 +358,8 @@ const CreateListing = () => {
                 id="regularPrice"
                 value={regularPrice}
                 onChange={afterClickOnCreateListInput}
-                minLength="60"
-                maxLength="9000000"
+                min="60"
+                max="9000000"
                 required
               />
 
@@ -312,8 +381,8 @@ const CreateListing = () => {
                   id="discountPrice"
                   value={discountPrice}
                   onChange={afterClickOnCreateListInput}
-                  minLength="60"
-                  maxLength="9000000"
+                  min="60"
+                  max="9000000"
                   required={offer}
                 />
 
@@ -351,4 +420,19 @@ const CreateListing = () => {
 
 export default CreateListing;
 
+// if you have have copy "CreateListing" link and if you signout we can still have access to that
+// page even without being authorised and we can submit the listing.....so we can prevent this by making it
+// a private route
+// go on to "PortfolioRoutes.jsx" and add it to the "PrivateRoutes.jsx".
 
+// in the form we want to also add latitude and logitude of google map,
+// for those who don't have a bank cards, they dont use the geolocation API of google, because geolocation
+// API needs your billing information
+// So in case we dont have a bank card, then we can add to the ability to manually add the latitude and
+// longitude of the address because now if you write down the address
+// now we just add the manually put our address and the latittude and logitude
+
+// so now in this page we add useState hook for geolocation, initially it is false by default but in case if
+// you dont have the bank cards you can set that initial value to true, so you be able to add it manually
+
+//
