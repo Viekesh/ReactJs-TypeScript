@@ -1,18 +1,17 @@
 .create_listing_main {
-    border: 2px solid red;
     margin: 3vw auto;
     width: 90%;
     padding: 0;
 }
 
 .create_listing_main>h1 {
+    margin: 9vw auto;
     text-align: center;
     font-weight: 700;
 }
 
 .create_listing_form_elements {
-    border: 2px solid red;
-    margin: 3vw auto;
+    margin: 6vw auto;
     position: relative;
 }
 
@@ -64,12 +63,20 @@
     border: 2px solid green;
 }
 
-.parent_box>.box {
-    border: 2px solid blue;
-}
+// .parent_box>.box {
+//     border: 2px solid blue;
+// }
 
 @media only screen and (min-width: 1200px) {
     .create_listing_main {
         width: 30%;
+    }
+
+    .create_listing_main>h1 {
+        margin: 3vw auto;
+    }
+
+    .create_listing_form_elements {
+        margin: 3vw auto;
     }
 }

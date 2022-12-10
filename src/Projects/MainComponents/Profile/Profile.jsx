@@ -105,7 +105,7 @@ const Profile = () => {
         <div className="sell_or_rent_button">
           <Link to="/CreateListing">
             <button type="submit y_axis_center">
-              <FaCar /> Sell Or Rent Your Car
+              <FaCar className="car_icon" /> Sell Or Rent Your Car
             </button>
           </Link>
         </div>

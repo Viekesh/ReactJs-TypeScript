@@ -14,7 +14,7 @@ const CreateListing = () => {
     diesel: false,
     address: "",
     description: "",
-    offer: true,
+    offer: false,
     regularPrice: 0,
     discountPrice: 0,
   });
@@ -36,9 +36,45 @@ const CreateListing = () => {
     discountPrice,
   } = formData;
 
-  const afterClickOnRentSellBtn = () => {};
+  const afterClickOnCreateListInput = (event) => {
+    // in this form we have some condition because we have true or false, we have number and files also
+    // and also text from the name and the address input
 
-  const afterClickOnCreateListInput = () => {};
+    // based on the input we are going to change this boolean true or false and use that boolean to change the state in the form data
+    let boolean = null;
+
+    // if the "event" (input or event.target.value) equal to "true" then we want this boolean equal to "true"
+    if (event.target.value === "true") {
+      boolean = true;
+    }
+
+    if (event.target.value === "false") {
+      boolean = false;
+    }
+
+    // if input is files, so in this case "setFormData"
+    if (event.target.files) {
+      // this is for files
+      // first here we get prvious state, so in case that we have the files, we want to set the images to either target that files
+      setFormData((prevState) => ({
+        ...prevState,
+        images: event.target.files,
+      }));
+    }
+
+    // this is for text or boolean or numbers
+    // but what if we dont have the images or files, then we "setFormData" and going to return an
+    // object
+    if (!event.target.files) {
+      setFormData((prevState) => ({
+        ...prevState,
+
+        // if the boolean is not null then put it into "event.target.id" but if its null just do "event.taraget.value"
+        // it is the boolean
+        [event.target.id]: boolean ?? event.target.value,
+      }));
+    }
+  };
 
   return (
     <>
@@ -52,9 +88,9 @@ const CreateListing = () => {
             <div className="sell_rent_form_buttons y_axis_center">
               <button
                 type="button"
-                value="sell"
+                value="rent"
                 id="type"
-                onClick={afterClickOnRentSellBtn}
+                onClick={afterClickOnCreateListInput}
                 className={`${
                   type === "rent" ? "sell_button" : "sell_background"
                 }`}
@@ -63,9 +99,9 @@ const CreateListing = () => {
               </button>
               <button
                 type="button"
-                value="rent"
+                value="sell"
                 id="type"
-                onClick={afterClickOnRentSellBtn}
+                onClick={afterClickOnCreateListInput}
                 className={`${
                   type === "sell" ? "sell_button" : "sell_background"
                 }`}
@@ -127,7 +163,7 @@ const CreateListing = () => {
                 type="button"
                 value={true}
                 id="electric"
-                onClick={afterClickOnRentSellBtn}
+                onClick={afterClickOnCreateListInput}
                 className={`${!electric ? "sell_button" : "sell_background"}`}
               >
                 Yes
@@ -136,7 +172,7 @@ const CreateListing = () => {
                 type="button"
                 value={false}
                 id="electric"
-                onClick={afterClickOnRentSellBtn}
+                onClick={afterClickOnCreateListInput}
                 className={`${electric ? "sell_button" : "sell_background"}`}
               >
                 No
@@ -152,7 +188,7 @@ const CreateListing = () => {
                 type="button"
                 value={true}
                 id="petrol"
-                onClick={afterClickOnRentSellBtn}
+                onClick={afterClickOnCreateListInput}
                 className={`${!petrol ? "sell_button" : "sell_background"}`}
               >
                 Yes
@@ -161,7 +197,7 @@ const CreateListing = () => {
                 type="button"
                 value={false}
                 id="petrol"
-                onClick={afterClickOnRentSellBtn}
+                onClick={afterClickOnCreateListInput}
                 className={`${petrol ? "sell_button" : "sell_background"}`}
               >
                 No
@@ -177,7 +213,7 @@ const CreateListing = () => {
                 type="button"
                 value={true}
                 id="diesel"
-                onClick={afterClickOnRentSellBtn}
+                onClick={afterClickOnCreateListInput}
                 className={`${!diesel ? "sell_button" : "sell_background"}`}
               >
                 Yes
@@ -186,7 +222,7 @@ const CreateListing = () => {
                 type="button"
                 value={false}
                 id="diesel"
-                onClick={afterClickOnRentSellBtn}
+                onClick={afterClickOnCreateListInput}
                 className={`${diesel ? "sell_button" : "sell_background"}`}
               >
                 No
@@ -228,7 +264,7 @@ const CreateListing = () => {
                 type="button"
                 value={true}
                 id="offer"
-                onClick={afterClickOnRentSellBtn}
+                onClick={afterClickOnCreateListInput}
                 className={`${!offer ? "sell_button" : "sell_background"}`}
               >
                 Yes
@@ -237,7 +273,7 @@ const CreateListing = () => {
                 type="button"
                 value={false}
                 id="diesel"
-                onClick={afterClickOnRentSellBtn}
+                onClick={afterClickOnCreateListInput}
                 className={`${offer ? "sell_button" : "sell_background"}`}
               >
                 No
@@ -307,7 +343,6 @@ const CreateListing = () => {
           <div className="form_buttons">
             <button type="submit">Create Listing</button>
           </div>
-
         </form>
       </main>
     </>
@@ -315,3 +350,5 @@ const CreateListing = () => {
 };
 
 export default CreateListing;
+
+

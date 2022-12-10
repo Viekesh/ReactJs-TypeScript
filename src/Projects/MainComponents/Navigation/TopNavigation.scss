@@ -72,8 +72,8 @@ $redColor: red;
     height: 6vh;
     font-family: 'Source-Code-Pro', monospace;
     font-style: italic;
-    font-size: 4vw;
-    font-weight: 700;
+    font-size: 3vw;
+    font-weight: bolder;
     text-transform: uppercase;
     color: snow;
     background-color: #142130;
@@ -224,7 +224,7 @@ $redColor: red;
     }
 
     .navigation_section_elements a h5 {
-        font-weight: 500;
+        font-weight: 900;
         font-size: 3vw;
     }
 }
@@ -247,7 +247,7 @@ $redColor: red;
     }
 
     .navigation_section_elements a h5 {
-        font-weight: 500;
+        font-weight: 900;
     }
 }
 
@@ -295,7 +295,8 @@ $redColor: red;
         padding: 0 3vw;
         height: 6vh;
         font-size: 1vw;
-        font-weight: 700;
+        font-weight: 900;
+        letter-spacing: 1px;
     }
 }
 
