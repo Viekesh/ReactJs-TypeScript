@@ -1,9 +1,16 @@
+import { getAuth } from "firebase/auth";
+import { getDownloadURL, getStorage, ref, uploadBytesResumable } from "firebase/storage";
 import React, { useState } from "react";
 import EC2Header from "../Components/EC2Header";
 import Spinner from "../Components/Spinner";
 import "../Styles/CreateListing.scss";
+import { v4 as uuidv4 } from "uuid";
+import { serverTimestamp } from "firebase/firestore";
 
 const CreateListing = () => {
+
+  const auth = getAuth();
+
   // this hook is for geolocation for adding the address (latitude and logitude)
   const [geolocationEnable, setGeolocationEnable] = useState(true);
 
@@ -25,7 +32,7 @@ const CreateListing = () => {
     discountPrice: 0,
     latitude: -90,
     longitude: -180,
-    images:{}
+    images: {}
   });
 
   // destructure the initial values (formData information) which we have defined in the above "useState" (formData) hook otherwise
@@ -88,7 +95,7 @@ const CreateListing = () => {
     }
   };
 
-  const submitCreateListing = (event) => {
+  const submitCreateListing = async (event) => {
 
     // first we need to prevent the defualt behavior of refreshing the page by just getting event here
     event.preventDefault();
@@ -96,22 +103,108 @@ const CreateListing = () => {
 
     // the discounted price is always less than regular price if this is not happen then we can send error to
     // the user, so for this we make a condition
-    if(discountPrice >= regularPrice) {
+    if (discountPrice >= regularPrice) {
       setLoading(false);
       alert("Discounted Price Needs To Be Less Than Regular Price")
       return;
     }
 
     // image length we want only 6
-    if(images.length > 6) {
+    if (images.length > 6) {
       setLoading(false);
       alert("Maximum 6 Imaages Are Allowed");
       return;
     }
 
+    // let geolocation = {};
+    // let location;
+    // if (geolocationEnable) {
+    //   const response = await fetch(`https://maps.googleapis.com/maps/api//geocode/json?address=${address}&key${process.env.REACT.APP.GEOCODE.API.KEY}`);
+    //   const data = await response.json();
+    //   console.log(data);
+    //   geolocation.latitude = data.results[0]?.geometry.location.lat ?? 0;
+    //   geolocation.longitude = data.results[0]?.geometry.location.lng ?? 0;
+
+    //   location = data.status === "ZERO_RESULTS" && undefined;
+
+    //   if (location === undefined || location.includes("undefined")) {
+    //     setLoading(false);
+    //     alert("Please Enter The Correct Address");
+    //     return;
+    //   }
+
+    // } else {
+    //   geolocation.lat = latitude;
+    //   geolocation.lng = longitude;
+    // }
+
+
+
+    // after the latitude and longitude we need to upload the images to the storage, we upload them one by one
+    // after that we're going to get the url of that image that is inside the storage
+    const storeImage = async (image) => {
+      return new Promise((resolve, reject) => {
+        const storage = getStorage();
+
+        // in order to keep image completly unique, for ex the person upload the same image two times then we
+        // add some random numbers and letters, in order to do that we use a package called "uuid".
+        const filename = `${auth.currentUser.uid}-${image.name}-${uuidv4()}`;
+        const storageRef = ref(storage, filename);
+        const uploadTask = uploadBytesResumable(storageRef, image);
+        uploadTask.on(
+          "state_changed",
+          (snapshot) => {
+            // Observe state change events such as progress, pause, and resume
+            // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
+            const progress =
+              (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+            console.log("Upload is " + progress + "% done");
+
+            // switch (snapshot.state) {
+            //   case "paused":
+            //     console.log("Upload is paused");
+            //     break;
+            //   case "running":
+            //     console.log("Upload is running");
+            //     break;
+            // }
+
+          },
+          (error) => {
+            // Handle unsuccessful uploads
+            reject(error);
+          },
+          () => {
+            // Handle successful uploads on complete
+            // For instance, get the download URL: https://firebasestorage.googleapis.com/...
+            getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
+              resolve(downloadURL);
+            });
+          }
+        );
+      })
+    }
+
+    const imgUrls = await Promise.all(
+      [...images].map((image) => storeImage(image))).catch((error) => {
+        setLoading(false);
+        alert("Images Not Uploaded");
+        console.log(error.message);
+        return;
+      }
+    )
+    // console.log(imgUrl);
+
+    const formDataCopy = {
+      ...formData,
+      imgUrls,
+      // geiolocation,
+      timestamp: serverTimestamp(),
+    }
   }
 
-  if(loading) {
+
+  if (loading) {
     return <Spinner />
   }
 
@@ -435,4 +528,4 @@ export default CreateListing;
 // so now in this page we add useState hook for geolocation, initially it is false by default but in case if
 // you dont have the bank cards you can set that initial value to true, so you be able to add it manually
 
-//
+
