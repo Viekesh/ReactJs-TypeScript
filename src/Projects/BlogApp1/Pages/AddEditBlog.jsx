@@ -70,6 +70,7 @@ const AddEditBlog = ({ active, setActive, user, setUser }) => {
           default:
             break;
         }
+        
       }, (error) => {
         console.log(error);
       }, () => {

@@ -59,7 +59,7 @@ const EC2Header = () => {
             {/* if you click any of the below link, then we want to navigate it to the associated link */}
             {/* "react-router-dom" is giving us this ability as well, by using "useNavigate" function */}
             {/* we can use "useNavigate" function to navigate inside the website */}
-            <Link to="/CreateListing">
+            <Link to="/CreateForm">
               <li
                 className={` ${pathMatchRoute("/CreateListing") && "home_link"
                   }`}

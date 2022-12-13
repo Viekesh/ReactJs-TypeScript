@@ -13,7 +13,8 @@ import Offers from "../ECommerce/EC2/Pages/Offers";
 
 import HomePage from "../FoodDeliveryApp1/Pages/HomePage";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
-import CreateListing from "../ECommerce/EC2/Pages/CreateListing";
+// import CreateListing from "../ECommerce/EC2/Pages/CreateListing";
+import CreateForm from "../ECommerce/EC2/Pages/CreateForm";
 // import { signOut } from "firebase/auth";
 // import { useState } from "react";
 // import { auth } from "../../firebaseConfig";
@@ -130,8 +131,9 @@ const ProjectRoutes = () => {
                     {/* EC2 */}
                     <Route path="/EC2LandingPage" element={<EC2LandingPage />}></Route>
                     <Route exact path="/Offers" element={<Offers />}></Route>
-                    <Route exact path="/CreateListing" element={<PrivateRoute />}>
-                        <Route exact path="/CreateListing" element={<CreateListing />}></Route>
+                    <Route exact path="/CreateForm" element={<PrivateRoute />}>
+                        {/* <Route exact path="/CreateListing" element={<CreateListing />}></Route> */}
+                        <Route exact path="/CreateForm" element={<CreateForm />}></Route>
                     </Route>
 
                 </Routes>

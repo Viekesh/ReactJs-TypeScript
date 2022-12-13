@@ -5,14 +5,19 @@ import EC2Header from "../Components/EC2Header";
 import Spinner from "../Components/Spinner";
 import "../Styles/CreateListing.scss";
 import { v4 as uuidv4 } from "uuid";
-import { serverTimestamp } from "firebase/firestore";
+import { addDoc, collection, serverTimestamp } from "firebase/firestore";
+import { database } from "../../../../firebaseConfig";
+
+
 
 const CreateListing = () => {
+
+
 
   const auth = getAuth();
 
   // this hook is for geolocation for adding the address (latitude and logitude)
-  const [geolocationEnable, setGeolocationEnable] = useState(true);
+  // const [geolocationEnable, setGeolocationEnable] = useState(true);
 
   const [loading, setLoading] = useState(false);
 
@@ -30,8 +35,8 @@ const CreateListing = () => {
     offer: false,
     regularPrice: 0,
     discountPrice: 0,
-    latitude: -90,
-    longitude: -180,
+    // latitude: -90,
+    // longitude: -180,
     images: {}
   });
 
@@ -50,8 +55,8 @@ const CreateListing = () => {
     offer,
     regularPrice,
     discountPrice,
-    latitude,
-    longitude,
+    // latitude,
+    // longitude,
     images,
   } = formData;
 
@@ -74,7 +79,8 @@ const CreateListing = () => {
     // if input is files, so in this case "setFormData"
     if (event.target.files) {
       // this is for files
-      // first here we get prvious state, so in case that we have the files, we want to set the images to either target that files
+      // first here we get prvious state, so in case that we have the files, we want to set the images to
+      // either target that files
       setFormData((prevState) => ({
         ...prevState,
         images: event.target.files,
@@ -95,15 +101,18 @@ const CreateListing = () => {
     }
   };
 
+
+
   const submitCreateListing = async (event) => {
 
     // first we need to prevent the defualt behavior of refreshing the page by just getting event here
     event.preventDefault();
+    
     setLoading(true);
 
     // the discounted price is always less than regular price if this is not happen then we can send error to
     // the user, so for this we make a condition
-    if (discountPrice >= regularPrice) {
+    if (+discountPrice >= +regularPrice) {
       setLoading(false);
       alert("Discounted Price Needs To Be Less Than Regular Price")
       return;
@@ -167,6 +176,8 @@ const CreateListing = () => {
             //   case "running":
             //     console.log("Upload is running");
             //     break;
+
+            //     default :
             // }
 
           },
@@ -200,19 +211,32 @@ const CreateListing = () => {
       imgUrls,
       // geiolocation,
       timestamp: serverTimestamp(),
+      useRef: auth.currentUser.uid,
     }
-  }
 
+    delete formDataCopy.images;
+    !formDataCopy.offer && delete formDataCopy.discountPrice;
+
+    // Now we have to submit this "formData" form, formDataCopy to the database, for this we create "docRef"
+    const docRef = await addDoc(collection(database, "listing"), formDataCopy);
+    // here we setLoading false
+    setLoading(false);
+    alert("Form Successfully Submitted");
+    // navigate(`/category/${formDataCopy.type}/${docRef.id}`);
+  }
 
   if (loading) {
     return <Spinner />
   }
+
+
 
   return (
     <>
       <EC2Header />
       <main className="create_listing_main">
         <h1>Create Listing</h1>
+
         <form className="create_listing_form" onSubmit={submitCreateListing}>
           <div className="create_listing_form_elements">
             <p>Sell/Rent</p>
@@ -373,7 +397,7 @@ const CreateListing = () => {
             />
           </div>
 
-          {!geolocationEnable && (
+          {/* {!geolocationEnable && (
             <>
               <div className="create_listing_form_elements">
                 <p>Latitude</p>
@@ -403,7 +427,7 @@ const CreateListing = () => {
                 />
               </div>
             </>
-          )}
+          )} */}
 
           <div className="create_listing_form_elements">
             <p>Description</p>
