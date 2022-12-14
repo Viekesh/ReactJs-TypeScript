@@ -10,23 +10,23 @@ import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
 
 
 // This is our initial state, we take this all properties from the html input element
-const initialState = {
-    type: "rent",
-    name: "",
-    mileage: "",
-    price: "",
-    electric: false,
-    petrol: false,
-    diesel: false,
-    address: "",
-    description: "",
-    offer: false,
-    regularPrice: 0,
-    discountPrice: 0,
-    // latitude: -90,
-    // longitude: -180,
-    images: {}
-}
+// const initialState = {
+//     type: "rent",
+//     name: "",
+//     mileage: "",
+//     price: "",
+//     electric: false,
+//     petrol: false,
+//     diesel: false,
+//     address: "",
+//     description: "",
+//     offer: false,
+//     regularPrice: 0,
+//     discountPrice: 0,
+//     // latitude: -90,
+//     // longitude: -180,
+//     images: {}
+// }
 
 
 
@@ -34,7 +34,23 @@ const CreateForm = () => {
 
     // we create this hook to get initial state of the form, after user fill the data in this form then we
     // update that data and send them by using the "useState" function (setFormData);
-    const [formData, setFormData] = useState({ initialState });
+    const [formData, setFormData] = useState({
+        type: "rent",
+        name: "",
+        mileage: "",
+        price: "",
+        electric: false,
+        petrol: false,
+        diesel: false,
+        address: "",
+        description: "",
+        offer: false,
+        regularPrice: 0,
+        discountPrice: 0,
+        // latitude: -90,
+        // longitude: -180,
+        images: {}
+    });
 
     // this hook is for geolocation for adding the address (latitude and logitude)
     // const [geolocationEnable, setGeolocationEnable] = useState(true);
@@ -195,7 +211,7 @@ const CreateForm = () => {
         !formDataCopy.offer && delete formDataCopy.discountPrice;
 
         try {
-            await addDoc(collection(database, "ecform"), {
+            await addDoc(collection(database, "listings"), {
                 ...formDataCopy,
             });
 
@@ -499,7 +515,7 @@ const CreateForm = () => {
                             id="images"
                             className="create_list_input_field"
                             onChange={afterClickOnCreateListInput}
-                            accept=".jpg, .png, .jpeg"
+                            // accept=".jpg, .png, .jpeg"
                             multiple
                             required
                         />
