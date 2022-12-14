@@ -6,32 +6,13 @@ import { v4 as uuidv4 } from "uuid";
 import { auth, database, storage } from '../../../../firebaseConfig';
 import Spinner from '../Components/Spinner';
 import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
-
-
-
-// This is our initial state, we take this all properties from the html input element
-// const initialState = {
-//     type: "rent",
-//     name: "",
-//     mileage: "",
-//     price: "",
-//     electric: false,
-//     petrol: false,
-//     diesel: false,
-//     address: "",
-//     description: "",
-//     offer: false,
-//     regularPrice: 0,
-//     discountPrice: 0,
-//     // latitude: -90,
-//     // longitude: -180,
-//     images: {}
-// }
+import { useNavigate } from 'react-router-dom';
 
 
 
 const CreateForm = () => {
 
+    const navigate = useNavigate();
     // we create this hook to get initial state of the form, after user fill the data in this form then we
     // update that data and send them by using the "useState" function (setFormData);
     const [formData, setFormData] = useState({
@@ -130,6 +111,8 @@ const CreateForm = () => {
 
         // the discounted price is always less than regular price if this is not happen then we can send error to
         // the user, so for this we make a condition
+        // sometimes in the form the number is considered as a string, so here we use "+" sign to prevent that
+        // problem by converting it string into number
         if (+discountPrice >= +regularPrice) {
             setLoading(false);
             alert("Discounted Price Needs To Be Less Than Regular Price")
@@ -209,17 +192,24 @@ const CreateForm = () => {
 
         delete formDataCopy.images;
         !formDataCopy.offer && delete formDataCopy.discountPrice;
+        // delete formDataCopy.latitude;
+        // delete formDataCopy.longitude;
 
         try {
-            await addDoc(collection(database, "listings"), {
+            const docRef = await addDoc(collection(database, "listings"), {
                 ...formDataCopy,
             });
 
             setLoading(false);
             alert("Form Successfully Submitted");
+            navigate(`/category/${formDataCopy.type}/${docRef.id}`);
         } catch (error) {
             console.log(error.message);
         }
+
+        // we just navigate the user to this url and the url is dynamic because we want the url to be based
+        // on the listing id
+        // we check here there is a "rent" or "sale" 
     }
 
     if (loading) {
@@ -245,7 +235,7 @@ const CreateForm = () => {
                                 className={`${type === "rent" ? "sell_button" : "sell_background"
                                     }`}
                             >
-                                Sell
+                                Rent
                             </button>
                             <button
                                 type="button"
@@ -255,7 +245,7 @@ const CreateForm = () => {
                                 className={`${type === "sell" ? "sell_button" : "sell_background"
                                     }`}
                             >
-                                Rent
+                                Sell
                             </button>
                         </div>
                     </div>
