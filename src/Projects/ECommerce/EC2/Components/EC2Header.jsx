@@ -61,7 +61,7 @@ const EC2Header = () => {
             {/* we can use "useNavigate" function to navigate inside the website */}
             <Link to="/CreateForm">
               <li
-                className={` ${pathMatchRoute("/CreateListing") && "home_link"
+                className={` ${pathMatchRoute("/CreateForm") && "home_link"
                   }`}
                 id="list"
               ></li>
