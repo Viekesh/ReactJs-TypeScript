@@ -79,6 +79,15 @@ button>.car_icon {
     width: 36px;
 }
 
+.user_listing {
+    border: 3px solid blue;
+    height: 9vh;
+}
+
+.user_listing>h2 {
+    font-size: 40px;
+}
+
 @media only screen and (min-width: 1200px) {
     .edit_template {
         margin: 0.3vw 0 0 0;

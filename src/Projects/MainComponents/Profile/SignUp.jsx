@@ -92,7 +92,7 @@ const SignUp = () => {
       // whatever inside the "formDataCopy" we want to save it inside this collection with the  uid ("user.uid")
       //
     } catch (error) {
-      console.log(error);
+      console.log(error.message);
       alert("There Is Some Error While SignUp The Form");
     }
   };
