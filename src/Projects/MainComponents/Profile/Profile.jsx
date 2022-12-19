@@ -189,7 +189,7 @@ const Profile = () => {
       </section>
 
       <div className="user_listing">
-        {!loading && listings.length > 0 && (
+        {!loading && listings.length >= 0 && (
           <>
           <h2>My Listings</h2>
           <ul>

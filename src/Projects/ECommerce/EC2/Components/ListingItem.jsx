@@ -3,7 +3,7 @@ import React from 'react'
 const ListingItem = ({listing, id}) => {
   return (
     <div>
-        {listing.name}
+        <p>{listing.name}</p>
     </div>
   )
 }

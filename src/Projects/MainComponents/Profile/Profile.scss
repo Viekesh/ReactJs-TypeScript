@@ -85,6 +85,7 @@ button>.car_icon {
 }
 
 .user_listing>h2 {
+    border: 2px solid red;
     font-size: 40px;
 }
 
@@ -114,5 +115,16 @@ button>.car_icon {
 
     .sell_or_rent_button>a>button {
         width: 60%;
+    }
+
+    .user_listing>h2 {
+        margin: 0 auto;
+        width: 50%;
+    }
+
+    .user_listing>ul {
+        border: 2px solid blue;
+        margin: 0 auto;
+        width: 50%;
     }
 }
