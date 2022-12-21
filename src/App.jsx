@@ -1,6 +1,5 @@
-import React from "react";
 import "./App.css";
-import ProjectRoutes from "./Projects/MainComponents/ProjectRoutes";
+import ProjectRoutes from "./Projects/ProjectRoutes";
 
 
 

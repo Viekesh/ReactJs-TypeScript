@@ -32,3 +32,5 @@ export default PrivateRoute;
 
 
 // we need to put these private route in "ProjectRoutes.jsx"
+
+
