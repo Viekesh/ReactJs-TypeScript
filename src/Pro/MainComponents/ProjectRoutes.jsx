@@ -15,6 +15,7 @@ import HomePage from "../FoodDeliveryApp1/Pages/HomePage";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
 // import CreateListing from "../ECommerce/EC2/Pages/CreateListing";
 import CreateForm from "../ECommerce/EC2/Pages/CreateForm";
+import YTApp from "../YoutubeCl/YTApp";
 // import { signOut } from "firebase/auth";
 // import { useState } from "react";
 // import { auth } from "../../firebaseConfig";
@@ -135,6 +136,8 @@ const ProjectRoutes = () => {
                         {/* <Route exact path="/CreateListing" element={<CreateListing />}></Route> */}
                         <Route exact path="/CreateForm" element={<CreateForm />}></Route>
                     </Route>
+
+                    <Route exact path="/YTApp" element={<YTApp />}></Route>
 
                 </Routes>
             </BrowserRouter>

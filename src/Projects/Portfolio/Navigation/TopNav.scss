@@ -72,7 +72,7 @@ $redColor: red;
     margin: 12px auto;
     padding: 6px;
     justify-content: space-between;
-    background-color: rgb(61, 61, 61);
+    background-color: rgb(36, 36, 36);
 }
 
 // .category_button {
@@ -104,7 +104,11 @@ $redColor: red;
     color: snow;
     font-family: 'Kanit', sans-serif;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 15px;
+}
+
+.about_btn {
+    display: none;
 }
 
 .menu_icon {

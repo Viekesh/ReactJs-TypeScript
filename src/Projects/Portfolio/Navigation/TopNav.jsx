@@ -111,9 +111,9 @@ const TopNav = () => {
                 </div>
 
                 <div className="category_button">
-                  <div className="button_icon"></div>
-                  <div className="button_icon"></div>
-                  <div className="button_icon"></div>
+                  <div className="button_icon about_btn"></div>
+                  <div className="button_icon about_btn"></div>
+                  <div className="button_icon about_btn"></div>
                 </div>
               </NavLink>
 
