@@ -1,0 +1,57 @@
+.crud_links {
+    width: 15vw;
+    height: 18vh;
+    position: fixed;
+    right: 9vw;
+    bottom: 12vh;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.crud_links>.link {
+    border: 2px solid black;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    color: snow;
+    background-color: transparent;
+    font-size: 18px;
+    box-shadow: 1px 1px 6px 1px rgb(78, 78, 78);
+
+    animation: animate 0.3s;
+    transition: 0.3s;
+    z-index: 999;
+}
+
+.crud_links>.update_link {
+    width: 40px;
+    height: 40px;
+}
+
+.crud_links>.update_link>.MuiSvgIcon-root {
+    font-size: 24px;
+}
+
+.crud_links>.link:active {
+    transform: scale(0.8);
+}
+
+.crud_links a>.MuiSvgIcon-root {
+    font-size: 30px;
+    color: black;
+}
+
+@media only screen and (min-width: 768px) {
+    .crud_links {
+        width: auto;
+
+        position: fixed;
+        right: 24vw;
+        bottom: 12vh;
+    }
+
+    .link {
+        border: 6px solid red;
+        box-shadow: 1px 3px 12px 1px black;
+    }
+}

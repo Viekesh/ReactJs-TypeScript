@@ -3,7 +3,7 @@ import { useState } from 'react';
 import EC2Header from '../Components/EC2Header';
 import "../Styles/CreateListing.scss";
 import { v4 as uuidv4 } from "uuid";
-import { auth, database, storage } from '../../../../firebaseConfig';
+import { auth, database, storage } from '../../../../firebaseCon';
 import Spinner from '../Components/Spinner';
 import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
 import { useNavigate } from 'react-router-dom';

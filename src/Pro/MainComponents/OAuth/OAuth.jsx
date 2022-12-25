@@ -3,7 +3,7 @@ import { doc, getDoc, serverTimestamp, setDoc } from "firebase/firestore";
 import React from "react";
 import { FcGoogle } from "react-icons/fc";
 import { useNavigate } from "react-router-dom";
-import { database } from "../../../firebaseConfig";
+import { database } from "../../../firebaseCon";
 import "./OAuth.scss";
 
 

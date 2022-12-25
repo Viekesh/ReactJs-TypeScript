@@ -1,0 +1,178 @@
+// .sign_in {
+//     border: 2px solid black;
+// }
+
+.auth {
+    flex-direction: column;
+}
+
+.page_heading {
+    margin: 12vh auto 3vh auto;
+    width: 90%;
+}
+
+.page_heading>h3 {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 9vw;
+    font-weight: 900;
+    text-transform: capitalize;
+    color: red;
+    text-shadow: 1px 1px 3px blue;
+}
+
+.sign_in_form {
+    position: relative;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.input_field {
+    border: 1px solid gray;
+    border-radius: 9px;
+    margin: 6px auto;
+    padding: 9px;
+    width: 100%;
+    height: 39px;
+    font-size: 15px;
+    outline: none;
+}
+
+.invisible_pass {
+    position: absolute;
+    right: 3vw;
+    top: 19vw;
+}
+
+.visible_pass {
+    position: absolute;
+    right: 3vw;
+    top: 19vw;
+}
+
+// for signup page
+
+.invisible_pass_register {
+    position: absolute;
+    right: 3vw;
+    bottom: 19vh;
+}
+
+.visible_pass_register {
+    position: absolute;
+    right: 3vw;
+    bottom: 19vh;
+}
+
+// signup page complete
+
+.another_form_links {
+    margin: 18px auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.another_form_links a>button {
+    border: 1px solid gray;
+    border-radius: 9px;
+    padding: 1px;
+    width: 130px;
+    height: 33px;
+    font-size: 15px;
+    background-color: transparent;
+}
+
+.form_buttons {
+    margin: 18px 0;
+    width: 100%;
+    height: 45px;
+}
+
+.form_buttons>button {
+    border: 1px solid gray;
+    border-radius: 9px;
+    padding: 3px;
+    width: 100%;
+    height: 100%;
+    font-size: 15px;
+    color: snow;
+    background: rgb(44, 111, 255);
+}
+
+@media only screen and (min-width: 1200px) {
+    .sign_in_form {
+        border: 0px;
+        width: 50%;
+    }
+
+    .input_field {
+        width: 60%;
+        font-size: 15px;
+    }
+
+    .invisible_pass {
+        position: absolute;
+        top: 4.9vw;
+        right: 21vw;
+    }
+
+    .visible_pass {
+        position: absolute;
+        top: 4.9vw;
+        right: 21vw;
+    }
+
+    .another_form_links {
+        border: 0px solid blue;
+        margin: 18px 0;
+        width: 60%;
+    }
+
+    .form_buttons {
+        border: 0px solid red;
+        margin: 18px 0;
+        width: 60%;
+        height: 45px;
+    }
+
+    .form_buttons a>button {
+        border: 1px solid gray;
+        border-radius: 9px;
+        padding: 1px;
+        width: 100%;
+        height: 100%;
+        font-size: 15px;
+        color: snow;
+        background: rgb(44, 111, 255);
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .form_buttons{
+        margin: 3px 0;
+        width: 60%;
+    }
+
+    .page_heading {
+        margin: 14vh auto 3vh auto;
+        width: 49%;
+    }
+
+    .page_heading>h3 {
+        font-size: 3vw;
+    }
+
+    .invisible_pass_register {
+        position: absolute;
+        right: 21vw;
+        bottom: 21vh;
+    }
+    
+    .visible_pass_register {
+        position: absolute;
+        right: 21vw;
+        bottom: 21vh;
+    }
+}
+
+

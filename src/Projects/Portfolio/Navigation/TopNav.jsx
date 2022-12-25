@@ -100,7 +100,7 @@ const TopNav = () => {
                 </div>
               </NavLink>
 
-              <NavLink className="navigation_categories y_axis_center">
+              <NavLink to="/About" className="navigation_categories y_axis_center">
                 <div className="category_icon_name y_axis_center">
                   <div className="category_icon y_axis_center">
                     <FcAbout className="icon" />

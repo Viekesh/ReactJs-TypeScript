@@ -4,7 +4,7 @@ import { getDownloadURL, ref, uploadBytesResumable } from 'firebase/storage';
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
-import { database, storage } from '../../../firebaseConfig';
+import { database, storage } from '../../../firebaseCon';
 import Navigation from '../Components/Navigation';
 import "./Stylesheets/AddEditBlog.scss";
 

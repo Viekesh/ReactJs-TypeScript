@@ -1,8 +1,11 @@
-import React from 'react'
+import BlogHeader from '../Components/BlogHeader';
 
 const Blogs = () => {
+
   return (
-    <div>Blogs</div>
+    <div>
+      <BlogHeader />
+    </div>
   )
 }
 

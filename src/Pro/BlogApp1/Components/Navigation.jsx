@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import { NavLink, useNavigate } from 'react-router-dom';
-import { auth } from "../../../firebaseConfig";
+import { auth } from "../../../firebaseCon";
 import { signOut } from "firebase/auth";
 import "./Stylesheets/Navigation.css";
 

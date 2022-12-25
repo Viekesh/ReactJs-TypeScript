@@ -6,7 +6,7 @@ import Spinner from "../Components/Spinner";
 import "../Styles/CreateListing.scss";
 import { v4 as uuidv4 } from "uuid";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
-import { database } from "../../../../firebaseConfig";
+import { database } from "../../../../firebaseCon";
 
 
 

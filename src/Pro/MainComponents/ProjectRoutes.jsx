@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LandingPage from "./LandingPage/LandingPage";
-import About from "./About/About";
+import About from "../../Projects/Portfolio/About/About";
 import Profile from "./Profile/Profile";
 import ForgotPass from "./Profile/ForgotPass";
 import SignIn from "./Profile/SignIn";

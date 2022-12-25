@@ -1,15 +1,12 @@
-import React from "react";
-import BottomNavigation from "../Navigation/BottomNavigation";
-import TopNavigation from "../Navigation/TopNavigation";
-import PortfolioLinks from "../PorfolioLinks/PortfolioLinks";
+import BottomNav from "../Navigation/BottomNav";
+import TopNav from "../Navigation/TopNav";
 import "./About.scss";
 
 const About = () => {
   return (
     <>
-      <TopNavigation />
-      <PortfolioLinks />
-      <BottomNavigation />
+      <TopNav />
+      <BottomNav />
       <div className="about">
         <div className="page_heading">
           <h3>about</h3>
@@ -40,3 +37,5 @@ const About = () => {
 };
 
 export default About;
+
+

@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
-import RssFeedIcon from '@mui/icons-material/RssFeed';
-import AssignmentIcon from '@mui/icons-material/Assignment';
+import DeveloperModeIcon from '@mui/icons-material/DeveloperMode';
+import ArticleIcon from '@mui/icons-material/Article';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import "./BottomNav.scss";
 
@@ -11,16 +11,16 @@ const BottomNav = () => {
       <div className="for_smartphone">
         <div className="tech_icon x_y_axis_center">
           <NavLink to="/Blogs" className="x_y_axis_center">
-            <RssFeedIcon />
+            <ArticleIcon />
           </NavLink>
         </div>
         <div className="blog_icon x_y_axis_center">
           <NavLink to="/Blog" className="x_y_axis_center">
-            <AssignmentIcon />
+            <DeveloperModeIcon />
           </NavLink>
         </div>
         <div className="profile_icon x_y_axis_center">
-          <NavLink to="/SignIn" className="x_y_axis_center">
+          <NavLink to="/Auth" className="x_y_axis_center">
             <AccountCircleIcon />
           </NavLink>
         </div>

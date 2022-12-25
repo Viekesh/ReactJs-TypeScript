@@ -1,6 +1,6 @@
 import { collection, onSnapshot } from 'firebase/firestore';
 import React, { useEffect, useState } from 'react';
-import { database } from '../../../firebaseConfig';
+import { database } from '../../../firebaseCon';
 import BlogSection from '../Components/BlogSection';
 import "./Stylesheets/Home.scss";
 

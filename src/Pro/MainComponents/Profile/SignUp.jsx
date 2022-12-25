@@ -6,7 +6,7 @@ import PortfolioLinks from "../PorfolioLinks/PortfolioLinks";
 import BottomNavigation from "../Navigation/BottomNavigation";
 import OAuth from "../OAuth/OAuth";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
-import { auth, database } from "../../../firebaseConfig";
+import { auth, database } from "../../../firebaseCon";
 import {
   doc,
   serverTimestamp,

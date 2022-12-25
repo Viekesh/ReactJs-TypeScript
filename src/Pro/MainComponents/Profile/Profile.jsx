@@ -10,7 +10,7 @@ import {
 } from "firebase/firestore";
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { auth, database } from "../../../firebaseConfig";
+import { auth, database } from "../../../firebaseCon";
 import BottomNavigation from "../Navigation/BottomNavigation";
 import TopNavigation from "../Navigation/TopNavigation";
 import PortfolioLinks from "../PorfolioLinks/PortfolioLinks";
