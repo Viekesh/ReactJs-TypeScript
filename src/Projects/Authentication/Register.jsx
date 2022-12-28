@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { doc, serverTimestamp, setDoc } from "firebase/firestore";
 import { useState } from "react";
 import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
@@ -12,7 +12,8 @@ const Register = () => {
   const [showPass, setShowPass] = useState(false);
 
   const [formData, setFormData] = useState({
-    name: "",
+    firstname: "",
+    lastname: "",
     mobile: "",
     email: "",
     password: "",
@@ -21,7 +22,7 @@ const Register = () => {
 
   const userNavigateaftersignup = useNavigate();
 
-  const { name, mobile, email, password, confirmPass } = formData;
+  const { firstname, lastname, mobile, email, password, confirmPass } = formData;
 
   const handleFormData = (event) => {
     setFormData((previousState) => ({
@@ -46,7 +47,7 @@ const Register = () => {
         return alert("Password Not Match");
       }
 
-      if (name && mobile && email && password && confirmPass) {
+      if (firstname && lastname && mobile && email && password && confirmPass) {
         const userCredential = await createUserWithEmailAndPassword(
           auth,
           email,
@@ -54,6 +55,8 @@ const Register = () => {
         );
 
         const user = userCredential.user;
+
+        await updateProfile(user, {displayName : `${firstname}` });
 
         // Here we create the copy of our formData, we want to get all the things inside, so this is going
         // to be an object and we are going to spread the "formData" so we can get everything inside  from
@@ -106,7 +109,7 @@ const Register = () => {
       <TopNav />
       <BottomNav />
       <div className="page_heading">
-        <h3>Sign-Up</h3>
+        <h3>SignUp</h3>
       </div>
 
       {/* the form is going to call a function after calling and submit the form as well */}
@@ -114,9 +117,17 @@ const Register = () => {
         <input
           type="text"
           className="input_field"
-          id="name"
-          value={name}
-          placeholder="Enter Your Full Name"
+          id="firstname"
+          value={firstname}
+          placeholder="Firstname"
+          onChange={handleFormData}
+        />
+        <input
+          type="text"
+          className="input_field"
+          id="lastname"
+          value={lastname}
+          placeholder="Lastname"
           onChange={handleFormData}
         />
         <input
@@ -182,3 +193,5 @@ const Register = () => {
 };
 
 export default Register;
+
+

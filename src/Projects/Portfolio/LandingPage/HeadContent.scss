@@ -1,0 +1,105 @@
+.greet {
+    border: 2px solid red;
+    margin: 0vw auto 0vw auto;
+    width: 90vw;
+    height: 40vh;
+    position: fixed;
+    top: 30%;
+    left: 3%;
+}
+
+.for_smartphones h3 {
+    border: 2px solid blue;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 24px;
+    font-weight: 900;
+    text-transform: capitalize;
+    color: red;
+    text-shadow: 1px 1px 3px rgb(1, 1, 255);
+}
+
+.for_smartphones>.heading1 {
+    position: absolute;
+    left: -6vw;
+    opacity: 0;
+    transition: 0.9s;
+    letter-spacing: -2px;
+}
+
+.for_smartphones>.heading2 {
+    position: absolute;
+    top: 24vw;
+    opacity: 0;
+    transition: 1s;
+}
+
+.for_smartphones h1 {
+    border: 2px solid blue;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 16px;
+    font-weight: 600;
+    font-style: italic;
+    text-transform: capitalize;
+    color: blue;
+    position: absolute;
+    bottom: 15vw;
+}
+
+.for_desktops {
+    display: none;
+}
+
+@media only screen and (min-width: 768px) {
+    .greet {
+        margin: 0vw auto 0 24vw;
+        width: 40vw;
+    }
+
+    .for_smartphones {
+        display: none;
+    }
+
+    .for_desktops {
+        display: block;
+    }
+
+    .for_desktops h3 {
+        font-family: 'Source Code Pro', monospace;
+        font-size: 33px;
+        font-weight: 900;
+        line-height: 40px;
+        letter-spacing: -1px;
+        text-transform: capitalize;
+
+        background: linear-gradient(to right, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8890d6, #7686cc, #647cc1, #4d5ca4, #383e87, #242069, #11014c);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .for_desktops>.heading3 {
+        position: absolute;
+        left: -3vw;
+        opacity: 0;
+        transition: 2s;
+    }
+
+    .for_desktops>.heading4 {
+        position: absolute;
+        top: 5vw;
+        opacity: 0;
+        transition: 1s;
+    }
+
+    .for_desktops h1 {
+        font-family: 'Source Code Pro', monospace;
+        font-size: 18px;
+        font-weight: 600;
+        font-style: italic;
+        text-transform: capitalize;
+        color: blue;
+        position: absolute;
+        bottom: 3vw;
+    }
+}
+
+

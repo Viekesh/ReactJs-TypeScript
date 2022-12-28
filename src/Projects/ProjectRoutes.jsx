@@ -1,12 +1,15 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Auth from "./Authentication/Auth";
 import NotFound from "./Authentication/NotFound";
+import Profile from "./Authentication/Profile";
 import Register from "./Authentication/Register";
 import About from "./Portfolio/About/About";
 import AddUpdateBlog from "./Portfolio/Blogs/Pages/AddUpdateBlog";
 import Blogs from "./Portfolio/Blogs/Pages/Blogs";
 import Details from "./Portfolio/Blogs/Pages/Details";
 import LandingPage from "./Portfolio/LandingPage/LandingPage";
+
+
 
 const ProjectRoutes = () => {
   return (
@@ -21,7 +24,8 @@ const ProjectRoutes = () => {
           {/* Authentication */}
           <Route exact path="/Register" element={<Register />}></Route>
           <Route exact path="/Auth" element={<Auth />}></Route>
-          <Route exact path="/NotFound" element={<NotFound />}></Route>
+          <Route exact path="/Profile" element={<Profile />}></Route>
+          <Route exact path="*" element={<NotFound />}></Route>
 
           {/* Blogs Page */}
           <Route exact path="/Blogs" element={<Blogs />}></Route>

@@ -79,7 +79,7 @@ const Profile = () => {
       alert(error.message);
     }
   };
-  
+
 
 
   // this "useEffect" we use to fetch user listing (created by "CreateForm" page)
@@ -186,6 +186,7 @@ const Profile = () => {
             </button>
           </Link>
         </div>
+        
       </section>
 
       <div className="user_listing">
@@ -200,8 +201,11 @@ const Profile = () => {
           </>
         )}
       </div>
+      
     </>
   );
 };
 
 export default Profile;
+
+

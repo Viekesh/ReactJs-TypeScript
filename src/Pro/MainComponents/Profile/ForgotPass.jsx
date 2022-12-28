@@ -7,6 +7,8 @@ import { NavLink } from "react-router-dom";
 import OAuth from "../OAuth/OAuth";
 import { getAuth, sendPasswordResetEmail } from 'firebase/auth';
 
+
+
 const ForgotPass = () => {
 
   const [email, setEmail] = useState("");
@@ -68,3 +70,5 @@ const ForgotPass = () => {
 }
 
 export default ForgotPass;
+
+
