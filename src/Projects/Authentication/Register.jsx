@@ -54,14 +54,18 @@ const Register = () => {
           password
         );
 
-        const user = userCredential.user;
 
-        await updateProfile(user, {displayName : `${firstname}` });
+        // This is for added the name in "email and password authentication"
+        await updateProfile(auth.currentUser, {displayName : `${firstname}` });
+
+        const user = userCredential.user;
 
         // Here we create the copy of our formData, we want to get all the things inside, so this is going
         // to be an object and we are going to spread the "formData" so we can get everything inside  from
         // "formData" and we can put it inside the variable "formDataCopy"
         const formDataCopy = { ...formData };
+
+        // console.log(formData);
 
         // Now we can remove the password, we just use delete one user information that is a "password"
         delete formDataCopy.password;
@@ -179,7 +183,7 @@ const Register = () => {
           <NavLink to="/Auth">
             <button>SignIn</button>
           </NavLink>
-          <NavLink to="/ForgotPass">
+          <NavLink to="/ForgotPassword">
             <button>Forgot Password</button>
           </NavLink>
         </div>

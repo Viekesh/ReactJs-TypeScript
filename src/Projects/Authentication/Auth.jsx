@@ -44,7 +44,7 @@ const Auth = () => {
       [event.target.id]: event.target.value,
     }));
 
-    console.log(formData);
+    // console.log(formData);
   };
 
   
@@ -63,9 +63,11 @@ const Auth = () => {
         // if the "userCredential.user" is true and it exist then we can just go to the home page
         if (userCredential.user) {
           alert("You Are Successfully SignIn");
+          console.log(userCredential.user);
           userNavigateAfterSignIn("/");
         }
       }
+
     } catch (error) {
       alert(error.message);
       console.log(error.message);
@@ -115,7 +117,7 @@ const Auth = () => {
           <NavLink to="/Register">
             <button>Register</button>
           </NavLink>
-          <NavLink to="/ForgotPass">
+          <NavLink to="/ForgotPassword">
             <button>Forgot Password</button>
           </NavLink>
         </div>

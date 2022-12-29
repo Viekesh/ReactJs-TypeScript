@@ -1,5 +1,4 @@
 .greet {
-    border: 2px solid red;
     margin: 0vw auto 0vw auto;
     width: 90vw;
     height: 40vh;
@@ -9,13 +8,18 @@
 }
 
 .for_smartphones h3 {
-    border: 2px solid blue;
     font-family: 'Source Code Pro', monospace;
     font-size: 24px;
     font-weight: 900;
+    font-style: italic;
     text-transform: capitalize;
+    color: blue;
+    text-shadow: 1px 1px 3px rgb(71, 71, 71);
+}
+
+.for_smartphones h3:first-child {
     color: red;
-    text-shadow: 1px 1px 3px rgb(1, 1, 255);
+    font-style: italic;
 }
 
 .for_smartphones>.heading1 {
@@ -34,7 +38,6 @@
 }
 
 .for_smartphones h1 {
-    border: 2px solid blue;
     font-family: 'Source Code Pro', monospace;
     font-size: 16px;
     font-weight: 600;
@@ -101,5 +104,3 @@
         bottom: 3vw;
     }
 }
-
-

@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Auth from "./Authentication/Auth";
+import ForgotPassword from "./Authentication/ForgotPassword";
 import NotFound from "./Authentication/NotFound";
 import Profile from "./Authentication/Profile";
 import Register from "./Authentication/Register";
@@ -24,6 +25,7 @@ const ProjectRoutes = () => {
           {/* Authentication */}
           <Route exact path="/Register" element={<Register />}></Route>
           <Route exact path="/Auth" element={<Auth />}></Route>
+          <Route exact path="/ForgotPassword" element={<ForgotPassword />}></Route>
           <Route exact path="/Profile" element={<Profile />}></Route>
           <Route exact path="*" element={<NotFound />}></Route>
 

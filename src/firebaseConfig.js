@@ -2,6 +2,8 @@ import { initializeApp } from "firebase/app";
 
 // This "getAuth" is gives us many many information about the user which is we want to authenticate
 import { getAuth } from "firebase/auth";
+
+// This is for database
 import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 

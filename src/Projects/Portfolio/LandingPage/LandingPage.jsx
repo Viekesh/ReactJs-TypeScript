@@ -17,7 +17,6 @@ const LandingPage = () => {
     auth.onAuthStateChanged((authUser) => {
       if(authUser) {
         setUsersName(authUser);
-        console.log(authUser);
       } else {
         setUsersName(null);
       }
@@ -27,8 +26,9 @@ const LandingPage = () => {
   const userId = usersname?.uid;
   const name = usersname?.displayName;
 
-  console.log("userId", userId);
+  // console.log("userId", userId);
   console.log("name", name);
+  // console.log(auth.currentUser);
 
   return (
     <>

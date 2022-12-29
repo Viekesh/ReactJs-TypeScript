@@ -35,17 +35,17 @@ const heading3 = () => {
   display();
 };
 
-// const heading4 = () => {
-//   document.getElementById("heading4").style.top = 3 + "vw";
-//   const display = () => {
-//     document.getElementById("heading4").style.opacity = 1;
-//   };
-//   display();
-// };
+const heading4 = () => {
+  document.getElementById("heading4").style.top = 3 + "vw";
+  const display = () => {
+    document.getElementById("heading4").style.opacity = 1;
+  };
+  display();
+};
 
 const headingTimeD = () => {
   setTimeout(heading3, 900);
-  // setTimeout(heading4, 2500);
+  setTimeout(heading4, 2500);
 };
 
 // Text animaion for desktop end
@@ -61,11 +61,11 @@ const Greet = () => {
       <div className="greet">
         <div className="for_smartphones">
           <h3 className="heading1" id="heading1">
-            hello, welcome here
-            <br />
+            welcome here,
+          </h3>
+          <h3 className="heading2" id="heading2">
             is there anything i can help you with today
           </h3>
-          <h3 className="heading2" id="heading2"></h3>
           <h1 className="instruction">
             work on web application and mobile development. checkout my github
             profile and projects.
@@ -74,16 +74,14 @@ const Greet = () => {
 
         <div className="for_desktops">
           <h3 className="heading3" id="heading3">
-            hello, welcome here
-            <br />
+            welcome here,
+          </h3>
+          <h3 className="heading4" id="heading4">
             is there anything i can help you with today
           </h3>
-          {/* <h3 className="heading4" id="heading4">
-            by adopting digital emerging technologies
-          </h3> */}
           <h1 className="instruction">
-            work on web application and mobile development. go around, check the entire porfolio
-            if you need any assistance then contact me.
+            work on web application and mobile development. go around, check the
+            entire porfolio if you need any assistance then contact me.
           </h1>
         </div>
       </div>
