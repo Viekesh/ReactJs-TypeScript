@@ -12,6 +12,7 @@ const PrivateRoute = () => {
 
   const { loggedIn, checkingStatus } = UseAuthStatus();
 
+  // if the checkingStatus is true, then we return loading
   if (checkingStatus) {
     return <div className='private_route'><Spinner /></div>
   }

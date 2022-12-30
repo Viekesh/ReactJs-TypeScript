@@ -56,7 +56,7 @@ const Register = () => {
 
 
         // This is for added the name in "email and password authentication"
-        await updateProfile(auth.currentUser, {displayName : `${firstname}` });
+        await updateProfile(auth.currentUser, {displayName : `${firstname} ${lastname}` });
 
         const user = userCredential.user;
 

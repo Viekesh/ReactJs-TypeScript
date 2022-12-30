@@ -17,8 +17,8 @@ const ForgotPassword = () => {
   const forgotPassForm = async (event) => {
     event.preventDefault();
     try {
-      //   const auth = auth;
-      await sendPasswordResetEmail(auth, email);
+        const authenticate = auth;
+      await sendPasswordResetEmail(authenticate, email);
       alert("Password Reset Email Sent. Check Your Email Inbox");
     } catch (error) {
       alert(error.message);

@@ -52,10 +52,12 @@ const Auth = () => {
 
     event.preventDefault();
 
+    const authenticate = auth;
+
     try {
       if(email && password) {
         const userCredential = await signInWithEmailAndPassword(
-          auth,
+          authenticate,
           email,
           password
         );

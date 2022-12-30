@@ -1,4 +1,9 @@
-import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import {
+  getRedirectResult,
+  GoogleAuthProvider,
+  signInWithPopup,
+  signInWithRedirect,
+} from "firebase/auth";
 import { doc, getDoc, serverTimestamp, setDoc } from "firebase/firestore";
 import React from "react";
 import { FcGoogle } from "react-icons/fc";
@@ -7,16 +12,17 @@ import { auth, database } from "../../FirebaseConfig";
 import "./GAuth.scss";
 
 const GAuth = () => {
-
   const navigateAfterSignInWithGoogle = useNavigate();
-  
+
+  // for android
+
   const onGoogleClick = async () => {
     try {
       const authenticate = auth;
       const provider = new GoogleAuthProvider();
       const result = await signInWithPopup(authenticate, provider);
       const user = result.user;
-      console.log(user);
+      // console.log(user);
 
       // first here we check the user is available or not
       // so we need to create a reference for it, because we need to have the address or the users unique id
@@ -50,9 +56,49 @@ const GAuth = () => {
     }
   };
 
+  // for android complete
+
+  const onGoogleClickOnAndi = async () => {
+    try {
+      const authenticate = auth;
+      const provider = new GoogleAuthProvider();
+      const result = await signInWithRedirect(authenticate, provider);
+      const res = await getRedirectResult(authenticate, provider);
+      // const user = result.user;
+      const user = res.user
+      console.log(user);
+
+      const docRef = doc(database, "portfolioUsers", user.uid);
+
+      const docSnap = await getDoc(docRef);
+
+      if (!docSnap.exists()) {
+        await setDoc(docRef, {
+          name: user.displayName,
+          email: user.email,
+          timeStamp: serverTimestamp(),
+        });
+      }
+
+      console.log(user);
+      alert("Registered Successfully");
+      navigateAfterSignInWithGoogle("/");
+
+    } catch (error) {
+      console.log(error.message);
+      console.log(error.code);
+    }
+  };
+
   return (
     <>
-      <div className="oauth">
+      <div className="oauth for_android">
+        <button type="button" onClick={onGoogleClickOnAndi}>
+          <FcGoogle className="oauth_icon" />
+          &nbsp; Continue With Google
+        </button>
+      </div>
+      <div className="oauth for_desktop">
         <button type="button" onClick={onGoogleClick}>
           <FcGoogle className="oauth_icon" />
           &nbsp; Continue With Google
@@ -63,3 +109,5 @@ const GAuth = () => {
 };
 
 export default GAuth;
+
+
