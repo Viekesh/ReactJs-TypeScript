@@ -89,6 +89,21 @@ button>.car_icon {
     font-size: 40px;
 }
 
+.profile_name input {
+    border: none;
+    font-size: 2vw;
+    text-transform: capitalize;
+}
+
+.profile_name>.profile_email {
+    text-transform: initial;
+}
+
+.profile_name>.edit_template>p {
+    font-size: 1.6vw;
+    font-weight: bold;
+}
+
 @media only screen and (min-width: 1200px) {
     .edit_template {
         margin: 0.3vw 0 0 0;
@@ -126,6 +141,15 @@ button>.car_icon {
         border: 2px solid blue;
         margin: 0 auto;
         width: 50%;
+    }
+
+    .profile_name input {
+        border: none;
+        font-size: 1.3vw;
+    }
+
+    .profile_name>.edit_template>p {
+        font-size: 1.3vw;
     }
 }
 

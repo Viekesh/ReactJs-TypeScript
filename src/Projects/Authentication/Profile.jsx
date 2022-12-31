@@ -3,6 +3,9 @@ import { doc, updateDoc } from "firebase/firestore";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { auth, database } from "../../FirebaseConfig";
+import BottomNav from "../Portfolio/Navigation/BottomNav";
+import TopNav from "../Portfolio/Navigation/TopNav";
+import "./Profile.scss";
 
 const Profile = () => {
   const authenticate = auth;
@@ -10,11 +13,11 @@ const Profile = () => {
   const afterSignOut = useNavigate();
 
   const [formData, setFormData] = useState({
-    name: authenticate.currentUser.displayName,
+    firstname: authenticate.currentUser.displayName,
     email: authenticate.currentUser.email,
   });
 
-  const { name, email } = formData;
+  const { firstname, email } = formData;
 
   // this is for logOut feature
   const onLogout = () => {
@@ -35,17 +38,16 @@ const Profile = () => {
 
   const clickHereToEditName = async () => {
     try {
-      if (authenticate.currentUser.displayName !== name) {
-        
+      if (authenticate.currentUser.displayName !== `${firstname}`) {
         // update display name in the firebase authentication
         await updateProfile(authenticate.currentUser, {
-          displayName: name,
+          displayName: `${firstname}`,
         });
 
         // update name in the firestore storage
-        const docRef = doc(database, "users", authenticate.currentUser.uid);
+        const docRef = doc(database, "portfolioUsers", authenticate.currentUser.uid);
         await updateDoc(docRef, {
-          name,
+          firstname,
         });
 
         alert("Profile Name Updated");
@@ -56,45 +58,52 @@ const Profile = () => {
   };
 
   return (
-    <section className="my_profile">
-      <div className="page_heading">
-        <h3>My Profile</h3>
-      </div>
-
-      <form className="sign_in_form">
-        <input
-          type="text"
-          className={`input_field ${changeDetail && "edit_name"}`}
-          id="name"
-          value={name}
-          disabled={!changeDetail}
-          onChange={editName}
-        />
-        <input
-          type="text"
-          className="input_field"
-          id="email"
-          value={email}
-          disabled
-        />
-
-        <div className="edit_template">
-          <p>do you want to change your name and username</p>
-          <div className="edit_template_buttons">
-            <div
-              onClick={() => {
-                changeDetail && clickHereToEditName();
-                setChangeDetail((prevState) => !prevState);
-              }}
-            >
-              {changeDetail ? "Apply Change" : "Edit"}
-            </div>
-            <button onClick={onLogout}>sign out</button>
-          </div>
+    <>
+    <TopNav />
+    <BottomNav />
+      <section className="my_profile">
+        <div className="page_heading">
+          <h3>My Profile</h3>
         </div>
-      </form>
-    </section>
+
+        <form className="sign_in_form profile_name">
+          <input
+            type="text"
+            className={`input_field ${changeDetail && "edit_name"}`}
+            id="firstname"
+            value={firstname}
+            disabled={!changeDetail}
+            onChange={editName}
+          />
+          <input
+            type="text"
+            className="input_field profile_email"
+            id="email"
+            value={email}
+            disabled={!changeDetail}
+            onChange={editName}
+          />
+
+          <div className="edit_template">
+            <p>do you want to change your name and username</p>
+            <div className="edit_template_buttons">
+              <div
+                onClick={() => {
+                  changeDetail && clickHereToEditName();
+                  setChangeDetail((prevState) => !prevState);
+                }}
+              >
+                {changeDetail ? "Apply Change" : "Edit"}
+              </div>
+              <button onClick={onLogout}>sign out</button>
+            </div>
+          </div>
+        </form>
+      </section>
+    </>
   );
 };
 
 export default Profile;
+
+
