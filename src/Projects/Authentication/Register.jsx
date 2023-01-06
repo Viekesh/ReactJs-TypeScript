@@ -4,6 +4,7 @@ import { useState } from "react";
 import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
 import { NavLink, useNavigate } from "react-router-dom";
 import { auth, database } from "../../FirebaseConfig";
+import PageHeading from "../Portfolio/LandingPage/PageHeading";
 import BottomNav from "../Portfolio/Navigation/BottomNav";
 import TopNav from "../Portfolio/Navigation/TopNav";
 import "./Auth.scss";
@@ -22,7 +23,8 @@ const Register = () => {
 
   const userNavigateaftersignup = useNavigate();
 
-  const { firstname, lastname, mobile, email, password, confirmPass } = formData;
+  const { firstname, lastname, mobile, email, password, confirmPass } =
+    formData;
 
   const handleFormData = (event) => {
     setFormData((previousState) => ({
@@ -42,7 +44,6 @@ const Register = () => {
 
     // now we need authenticate the user
     try {
-
       if (password !== confirmPass) {
         return alert("Password Not Match");
       }
@@ -54,9 +55,10 @@ const Register = () => {
           password
         );
 
-
         // This is for added the name in "email and password authentication"
-        await updateProfile(auth.currentUser, {displayName : `${firstname} ${lastname}` });
+        await updateProfile(auth.currentUser, {
+          displayName: `${firstname} ${lastname}`,
+        });
 
         const user = userCredential.user;
 
@@ -94,108 +96,100 @@ const Register = () => {
         alert("Registration Successful");
 
         userNavigateaftersignup("/");
-
       } else {
-
         return alert("All Fields Are Mandatory");
-
       }
-
     } catch (error) {
       console.log(error.message);
       alert("There Is Some Error While SignUp The Form");
     }
-
   };
 
   return (
-    <section className="sign_in">
+    <>
       <TopNav />
+      <PageHeading heading="Register" />
       <BottomNav />
-      <div className="page_heading">
-        <h3>SignUp</h3>
-      </div>
-
-      {/* the form is going to call a function after calling and submit the form as well */}
-      <form className="sign_in_form" onSubmit={submitFormData}>
-        <input
-          type="text"
-          className="input_field"
-          id="firstname"
-          value={firstname}
-          placeholder="Firstname"
-          onChange={handleFormData}
-        />
-        <input
-          type="text"
-          className="input_field"
-          id="lastname"
-          value={lastname}
-          placeholder="Lastname"
-          onChange={handleFormData}
-        />
-        <input
-          type="number"
-          className="input_field"
-          id="mobile"
-          value={mobile}
-          placeholder="Enter Your Mobile No."
-          onChange={handleFormData}
-        />
-        <input
-          type="email"
-          className="input_field"
-          id="email"
-          value={email}
-          placeholder="Enter Your Email"
-          onChange={handleFormData}
-        />
-        <input
-          type={showPass ? "text" : "password"}
-          className="input_field"
-          id="password"
-          value={password}
-          placeholder="Enter Your Password"
-          onChange={handleFormData}
-        />
-        <input
-          type="password"
-          className="input_field"
-          id="confirmPass"
-          placeholder="Confirm The Password"
-          value={confirmPass}
-          onChange={handleFormData}
-        />
-
-        {showPass ? (
-          <AiFillEyeInvisible
-            className="invisible_pass_register"
-            onClick={() => setShowPass((prevState) => !prevState)}
+      <section className="sign_in">
+        {/* the form is going to call a function after calling and submit the form as well */}
+        <form className="sign_in_form" onSubmit={submitFormData}>
+          <input
+            type="text"
+            className="input_field"
+            id="firstname"
+            value={firstname}
+            placeholder="Firstname"
+            onChange={handleFormData}
           />
-        ) : (
-          <AiFillEye
-            className="visible_pass_register"
-            onClick={() => setShowPass((prevState) => !prevState)}
+          <input
+            type="text"
+            className="input_field"
+            id="lastname"
+            value={lastname}
+            placeholder="Lastname"
+            onChange={handleFormData}
           />
-        )}
+          <input
+            type="number"
+            className="input_field"
+            id="mobile"
+            value={mobile}
+            placeholder="Enter Your Mobile No."
+            onChange={handleFormData}
+          />
+          <input
+            type="email"
+            className="input_field"
+            id="email"
+            value={email}
+            placeholder="Enter Your Email"
+            onChange={handleFormData}
+          />
+          <input
+            type={showPass ? "text" : "password"}
+            className="input_field"
+            id="password"
+            value={password}
+            placeholder="Enter Your Password"
+            onChange={handleFormData}
+          />
+          <input
+            type="password"
+            className="input_field"
+            id="confirmPass"
+            placeholder="Confirm The Password"
+            value={confirmPass}
+            onChange={handleFormData}
+          />
 
-        <div className="another_form_links">
-          <NavLink to="/Auth">
-            <button>SignIn</button>
-          </NavLink>
-          <NavLink to="/ForgotPassword">
-            <button>Forgot Password</button>
-          </NavLink>
-        </div>
+          {/* {showPass ? (
+            <AiFillEyeInvisible
+              className="invisible_pass_register"
+              onClick={() => setShowPass((prevState) => !prevState)}
+            />
+          ) : (
+            <AiFillEye
+              className="visible_pass_register"
+              onClick={() => setShowPass((prevState) => !prevState)}
+            />
+          )} */}
 
-        <div className="form_buttons">
-          <button type="submit">SignUp</button>
-        </div>
-      </form>
-    </section>
+          <div className="another_form_links">
+            <NavLink to="/Auth">
+              <button>SignIn</button>
+            </NavLink>
+            <NavLink to="/ForgotPassword">
+              <button>Forgot Password</button>
+            </NavLink>
+          </div>
+
+          <div className="form_buttons">
+            <button type="submit">SignUp</button>
+          </div>
+        </form>
+      </section>
+    </>
   );
 };
 
 export default Register;
-
-

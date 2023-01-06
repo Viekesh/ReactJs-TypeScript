@@ -6,6 +6,7 @@ import BottomNav from "../Portfolio/Navigation/BottomNav";
 import TopNav from "../Portfolio/Navigation/TopNav";
 import GAuth from "./GAuth";
 import "./Auth.scss";
+import PageHeading from "../Portfolio/LandingPage/PageHeading";
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState("");
@@ -28,11 +29,9 @@ const ForgotPassword = () => {
   return (
     <>
       <TopNav />
+      <PageHeading heading = "Forgot Password" />
       <BottomNav />
       <section className="sign_in">
-        <div className="page_heading">
-          <h3>Forgot Password</h3>
-        </div>
 
         <form action="" className="sign_in_form" onSubmit={forgotPassForm}>
           <input

@@ -90,8 +90,10 @@ button>.car_icon {
 }
 
 .profile_name input {
+    outline: none;
     border: none;
-    font-size: 2vw;
+    background-color: transparent;
+    font-size: 4vw;
     text-transform: capitalize;
 }
 
@@ -100,7 +102,7 @@ button>.car_icon {
 }
 
 .profile_name>.edit_template>p {
-    font-size: 1.6vw;
+    font-size: 3vw;
     font-weight: bold;
 }
 

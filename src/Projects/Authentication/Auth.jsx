@@ -7,6 +7,7 @@ import "./Auth.scss";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../FirebaseConfig";
 import GAuth from "./GAuth";
+import PageHeading from "../Portfolio/LandingPage/PageHeading";
 
 const Auth = () => {
   // the initial value of the "useState" hook is an object which is an empty string
@@ -79,11 +80,12 @@ const Auth = () => {
   return (
     <section className="auth y_axis_center">
       <TopNav />
+      <PageHeading heading = "SignIn" />
       <BottomNav />
 
-      <div className="page_heading">
+      {/* <div className="page_heading">
         <h3>SignIn</h3>
-      </div>
+      </div> */}
 
       <form action="" className="sign_in_form" onSubmit={submitSignInForm}>
         <input
@@ -103,7 +105,7 @@ const Auth = () => {
           onChange={handleFormData}
         />
 
-        {showPass ? (
+        {/* {showPass ? (
           <AiFillEyeInvisible
             className="invisible_pass"
             onClick={() => setShowPass((prevState) => !prevState)}
@@ -113,7 +115,7 @@ const Auth = () => {
             className="visible_pass"
             onClick={() => setShowPass((prevState) => !prevState)}
           />
-        )}
+        )} */}
 
         <div className="another_form_links">
           <NavLink to="/Register">

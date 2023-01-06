@@ -1,4 +1,19 @@
 .about_page_info {
+    margin: 0 auto;
+    width: 90vw;
     height: 50vh;
     overflow-x: scroll;
+}
+
+.about_page_info>h3 {
+    text-transform: capitalize;
+    font-family: 'Kanit', sans-serif;
+    font-style: italic;
+    font-weight: 200;
+}
+
+@media only screen and (min-width: 768px) {
+    .about_page_info {
+        width: 50vw;
+    }
 }

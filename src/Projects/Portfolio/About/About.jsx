@@ -1,3 +1,4 @@
+import PageHeading from "../LandingPage/PageHeading";
 import BottomNav from "../Navigation/BottomNav";
 import TopNav from "../Navigation/TopNav";
 import "./About.scss";
@@ -8,15 +9,17 @@ const About = () => {
       <TopNav />
       <BottomNav />
       <div className="about">
-        <div className="page_heading">
-          <h3>about</h3>
-        </div>
+        <PageHeading heading = "About" />
 
-        <div className="page_info about_page_info">
+        <div className="about_page_info">
           <h3>hi there,</h3>
+          <br />
+          <br />
           <h3>
             first thank you for reached out here and for giving me your precious time.
           </h3>
+          <br />
+          <br />
           <h3>
             I am Vikesh Gaikwad, theoretically an electrical engineer and practically a full stack
             developer, means I am developed the websites and application. This is not the part of my college

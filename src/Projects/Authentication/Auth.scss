@@ -3,12 +3,8 @@
 // }
 
 .auth {
+    border: 2px solid red;
     flex-direction: column;
-}
-
-.page_heading {
-    margin: 12vh auto 3vh auto;
-    width: 90%;
 }
 
 .page_heading>h3 {
@@ -22,8 +18,9 @@
 
 .sign_in_form {
     position: relative;
-    margin: 0 auto;
+    margin: 3vh auto 0 auto;
     width: 90%;
+    height: 120vh;
 }
 
 .input_field {

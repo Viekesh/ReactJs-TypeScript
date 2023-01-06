@@ -13,12 +13,11 @@
     font-weight: 900;
     font-style: italic;
     text-transform: capitalize;
-    color: blue;
+    color: red;
     text-shadow: 1px 1px 3px rgb(71, 71, 71);
 }
 
 .for_smartphones h3:first-child {
-    color: red;
     font-style: italic;
 }
 
@@ -55,7 +54,7 @@
 @media only screen and (min-width: 768px) {
     .greet {
         margin: 0vw auto 0 24vw;
-        width: 40vw;
+        width: 45vw;
     }
 
     .for_smartphones {
@@ -68,7 +67,7 @@
 
     .for_desktops h3 {
         font-family: 'Source Code Pro', monospace;
-        font-size: 33px;
+        font-size: 36px;
         font-weight: 900;
         line-height: 40px;
         letter-spacing: -1px;
@@ -104,3 +103,5 @@
         bottom: 3vw;
     }
 }
+
+

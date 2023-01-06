@@ -3,8 +3,28 @@ import DeveloperModeIcon from '@mui/icons-material/DeveloperMode';
 import ArticleIcon from '@mui/icons-material/Article';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import "./BottomNav.scss";
+import { useEffect, useState } from "react";
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from "../../../FirebaseConfig";
+import Profile from "../../Authentication/Profile";
 
 const BottomNav = () => {
+
+  const [userName, setUsersName] = useState(null);
+
+  useEffect(() => {
+    auth.onAuthStateChanged((authUser) => {
+      if (authUser) {
+        setUsersName(authUser)
+      } else {
+        setUsersName(null);
+      }
+    })
+  })
+
+  const userId = userName?.uid;
+
+  console.log("userId", userId);
 
   return (
     <div className="bottom_navigation x_y_axis_center">
@@ -20,9 +40,16 @@ const BottomNav = () => {
           </NavLink>
         </div>
         <div className="profile_icon x_y_axis_center">
-          <NavLink to="/Auth" className="x_y_axis_center">
-            <AccountCircleIcon />
-          </NavLink>
+
+          {userId ? (
+            <NavLink to="/Profile" className="x_y_axis_center">
+              <AccountCircleIcon />
+            </NavLink>
+          ) : (
+            <NavLink to="/Auth" className="x_y_axis_center">
+              <AccountCircleIcon />
+            </NavLink>
+          )}
         </div>
       </div>
     </div>

@@ -1,0 +1,36 @@
+.page_head {
+    margin: 9vh auto 0 auto;
+    width: 100vw;
+    height: 15vh;
+    background: url(../Data/Images/mainpagebg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 1px 1px 12px 1px gray;
+}
+
+.page_head h3 {
+    width: 90vw;
+    font-size: 6vw;
+    color: red;
+    font-family: 'Kanit', sans-serif;
+    font-style: italic;
+}
+
+@media only screen and (min-width: 768px) {
+    .page_head {
+        margin: 9vh auto 6vh auto;
+        height: 18vh;
+        background: url(../Data/Images/bg4.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100% 200%;
+    }
+
+    .page_head h3 {
+        width: 50vw;
+        font-size: 2.3vw;
+    }
+}
+
+
