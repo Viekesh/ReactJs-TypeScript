@@ -3,6 +3,7 @@ import { doc, updateDoc } from "firebase/firestore";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { auth, database } from "../../FirebaseConfig";
+import PageHeading from "../Portfolio/LandingPage/PageHeading";
 import BottomNav from "../Portfolio/Navigation/BottomNav";
 import TopNav from "../Portfolio/Navigation/TopNav";
 import "./Profile.scss";
@@ -59,12 +60,10 @@ const Profile = () => {
 
   return (
     <>
-    <TopNav />
-    <BottomNav />
+      <TopNav />
+      <BottomNav />
       <section className="my_profile">
-        <div className="page_heading">
-          <h3>My Profile</h3>
-        </div>
+        <PageHeading heading="Profile" />
 
         <form className="sign_in_form profile_name">
           <input

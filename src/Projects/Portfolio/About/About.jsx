@@ -12,13 +12,13 @@ const About = () => {
         <PageHeading heading = "About" />
 
         <div className="about_page_info">
-          <h3>hi there,</h3>
           <br />
+          <br />
+          <h3>hi there,</h3>
           <br />
           <h3>
             first thank you for reached out here and for giving me your precious time.
           </h3>
-          <br />
           <br />
           <h3>
             I am Vikesh Gaikwad, theoretically an electrical engineer and practically a full stack
@@ -28,11 +28,13 @@ const About = () => {
             development yet so far but I like to keep trying things on my own like creating websites
             for different scenarios.
           </h3>
+          <br />
           <h3>
             Now I am looking an opportunities to work with the professionals, check out my portfolio
             if you think i can do something for you then contact me we will definitely do something 
             good together.
           </h3>
+          <br />
         </div>
       </div>
     </>

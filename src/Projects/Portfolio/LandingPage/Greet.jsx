@@ -67,8 +67,8 @@ const Greet = () => {
             is there anything i can help you with today
           </h3>
           <h1 className="instruction">
-            work on web application and mobile development. checkout my github
-            profile and projects.
+            work on web application and mobile development. go around, check the
+            entire porfolio if you need any assistance then contact me.
           </h1>
         </div>
 

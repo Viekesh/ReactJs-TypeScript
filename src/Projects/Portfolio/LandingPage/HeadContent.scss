@@ -13,7 +13,9 @@
     font-weight: 900;
     font-style: italic;
     text-transform: capitalize;
-    color: red;
+    background: linear-gradient(to right, blue, red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     text-shadow: 1px 1px 3px rgb(71, 71, 71);
 }
 
@@ -42,9 +44,11 @@
     font-weight: 600;
     font-style: italic;
     text-transform: capitalize;
-    color: blue;
+    background: linear-gradient(to right, red, blue, );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     position: absolute;
-    bottom: 15vw;
+    bottom: 1vh;
 }
 
 .for_desktops {
@@ -98,10 +102,10 @@
         font-weight: 600;
         font-style: italic;
         text-transform: capitalize;
-        color: blue;
+        background: linear-gradient(to right, red, blue, );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
         position: absolute;
         bottom: 3vw;
     }
 }
-
-

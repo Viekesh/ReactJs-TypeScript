@@ -1,0 +1,77 @@
+.form {
+    // border: 2px solid red;
+    width: 90%;
+    margin: 3vh auto;
+}
+
+.f_control_child {
+    border: 1px solid gray;
+    border-radius: 1.6vw;
+    margin: 1vh auto;
+    width: 100%;
+    padding: 3vw;
+    font-size: 4.3vw;
+}
+
+.for_trending {
+    margin: 2vh auto;
+    justify-content: space-between;
+}
+
+.for_trending p {
+    font-size: 4.3vw;
+    text-transform: capitalize;
+}
+
+.for_tag {
+    border: 1px solid gray;
+    border-radius: 1.6vw;
+    margin: 1vh auto;
+    width: 100%;
+    padding: 3vw;
+    font-size: 4.3vw;
+}
+
+.blog_form_button>button {
+    border: 1px solid gray;
+    border-radius: 1.6vw;
+    margin: 1vh auto;
+    width: 100%;
+    padding: 3vw;
+    font-size: 4.3vw;
+    background-color: rgb(60, 112, 255);
+    color: snow;
+}
+
+.empty {
+    height: 15vh;
+}
+
+
+@media only screen and (min-width: 1200px) {
+    .form {
+        width: 30%;
+    }
+
+    .f_control_child {
+        border-radius: 0.6vw;
+        padding: 0.6vw;
+        font-size: 1vw;
+    }
+
+    .for_tag {
+        border-radius: 0.6vw;
+        padding: 0.6vw;
+        font-size: 1vw;
+    }
+
+    .for_trending>p {
+        font-size: 1vw;
+    }
+
+    .blog_form_button>button {
+        border-radius: 0.6vw;
+        padding: 0.6vw;
+        font-size: 1vw;
+    }
+}
