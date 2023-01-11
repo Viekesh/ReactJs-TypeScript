@@ -82,7 +82,7 @@ const AddEditBlog = ({ active, setActive, user, setUser }) => {
     }
 
     file && uploadFile();
-  }, [file])
+  }, [file]);
 
   // "e" means event
   const handleChange = (e) => {

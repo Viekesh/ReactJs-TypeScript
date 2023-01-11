@@ -7,7 +7,7 @@ import BottomNav from "../../Navigation/BottomNav";
 import TopNav from "../../Navigation/TopNav";
 import { v4 as uuidv4 } from "uuid";
 import "./FormStyleSheet.scss";
-import { ref, uploadBytesResumable } from "firebase/storage";
+import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 
 const categoryOption = [
   "Fashion",
@@ -35,35 +35,54 @@ const AddUpdateBlog = ({ crudActive, setCrudActive }) => {
 
   const [progress, setProgress] = useState(null);
 
+
+
   useEffect(() => {
-    const uploadFile = async (image) => {
-      return new Promise((resolve, reject) => {
+    const uploadFile = () => {
 
-        // in order to keep image completly unique, for ex the person upload the same image two times then we
-        // add some random numbers and letters, in order to do that we use a package called "uuid".
-        const fileName = `${auth.currentUser.uid}-${image.name}-${uuidv4()}`;
+      const storageRef = ref(storage, file.name);
 
-        const storageRef = ref(storage, fileName);
+      const uploadTask = uploadBytesResumable(storageRef, file);
 
-        const uploadTask = uploadBytesResumable(storageRef, image);
+      uploadTask.on("state_changed", (snapshot) => {
 
-        uploadTask.on("state_changed", (snapshot) => {
+        const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
 
-          // Observe state change events such as progress, pause, and resume
-          // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
-          
-        })
-      })
+        console.log("Upload is progress" + progress + ", % is done");
+
+        setProgress(progress);
+
+        switch (snapshot.state) {
+          case "paused":
+            console.log("Upload is paused");
+            break;
+          case "running":
+            console.log("Upload is running");
+            break;
+          default:
+            break;
+        }
+        
+      }, (error) => {
+        console.log(error);
+      }, () => {
+        getDownloadURL(uploadTask.snapshot.ref).then((downloadUrl) => {
+          alert("Image Uploaded In Firebase Successfully");
+          setFormData((prev) => ({ ...prev, imageUrl: downloadUrl }));
+        });
+      });
     }
-  })
 
-  const afterClickOnCreateBlogInput = () => { }
+    file && uploadFile();
+  }, [file]);
 
-  const handleTags = () => { }
+  const handleSubmit = () => {};
 
-  const handleTrending = () => { }
+  const handleTags = () => {};
 
-  const onCategoryChange = () => { }
+  const handleTrending = () => {};
+
+  const onCategoryChange = () => {};
 
   return (
     <>
@@ -72,7 +91,6 @@ const AddUpdateBlog = ({ crudActive, setCrudActive }) => {
       <BottomNav />
 
       <section className="form">
-
         <form>
           <div className="for_title ">
             <input
@@ -81,7 +99,7 @@ const AddUpdateBlog = ({ crudActive, setCrudActive }) => {
               className="f_control_child"
               id="title"
               value={title}
-              onChange={afterClickOnCreateBlogInput}
+              onChange={handleSubmit}
             />
           </div>
 
@@ -104,9 +122,7 @@ const AddUpdateBlog = ({ crudActive, setCrudActive }) => {
               checked={trending === "yes"}
               onChange={handleTrending}
             />
-
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
             <label htmlFor="radioOption">No &nbsp;</label>
             <input
               type="radio"
@@ -127,10 +143,7 @@ const AddUpdateBlog = ({ crudActive, setCrudActive }) => {
             >
               <option value="">Please Select Category</option>
               {categoryOption.map((option, index) => (
-                <option
-                  value={option || ""}
-                  key={index}
-                >
+                <option value={option || ""} key={index}>
                   {option}
                 </option>
               ))}
@@ -146,9 +159,8 @@ const AddUpdateBlog = ({ crudActive, setCrudActive }) => {
               rows="9"
               placeholder="Start From Here"
               value={description}
-              onChange={afterClickOnCreateBlogInput}
-            >
-            </textarea>
+              onChange={handleSubmit}
+            ></textarea>
           </div>
 
           <div className="for_img ">
@@ -160,11 +172,8 @@ const AddUpdateBlog = ({ crudActive, setCrudActive }) => {
           </div>
 
           <div className="blog_form_button ">
-            <button type="submit">
-              Submit
-            </button>
+            <button type="submit">Submit</button>
           </div>
-
         </form>
       </section>
       <div className="empty"></div>
