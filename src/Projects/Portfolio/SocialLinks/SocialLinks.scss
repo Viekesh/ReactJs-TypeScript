@@ -5,7 +5,7 @@
     color: snow;
     background-color: black;
     font-size: 18px;
-    box-shadow: 1px 0px 6px 1px blue;
+    box-shadow: 1px 0px 6px 1px rgb(90, 90, 90);
 
     position: fixed;
     right: 9vw;
@@ -24,6 +24,35 @@
     font-size: 30px;
 }
 
+// for social network links in top nav component
+
+.social_network_links {
+    margin: 9vw auto;
+    width: 90%;
+    font-family: 'Kanit', sans-serif;
+    font-style: italic;
+}
+
+.social_network_links a {
+    border: 1px solid snow;
+    border-radius: 3vw;
+    margin: 2vw 0;
+    padding: 2vw;
+    display: flex;
+    align-items: center;
+    color: snow;
+    font-family: 'Kanit', sans-serif;
+    font-style: italic;
+}
+
+.social_network_links a img {
+    border-radius: 30%;
+    margin: 0 2vw 0 0;
+    width: 24px;
+    height: 24px;
+    background-color: snow;
+}
+
 
 @media only screen and (min-width: 768px) {
     .links {
@@ -31,6 +60,21 @@
         right: 23vw;
         bottom: 15vh;
         box-shadow: 1px 3px 12px 1px black;
+    }
+
+    .social_network_links {
+        margin: 3vw auto;
+    }
+
+    .social_network_links a {
+        border-radius: 1vw;
+        margin: 1vw 0;
+        padding: 0.6vw;
+    }
+
+    .social_network_links a img {
+        // width: 18px;
+        // height: 18px;
     }
 }
 

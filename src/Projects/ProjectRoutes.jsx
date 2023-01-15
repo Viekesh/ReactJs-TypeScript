@@ -10,6 +10,7 @@ import AddUpdateBlog from "./Portfolio/Blogs/Pages/AddUpdateBlog";
 import Blogs from "./Portfolio/Blogs/Pages/Blogs";
 import Details from "./Portfolio/Blogs/Pages/Details";
 import LandingPage from "./Portfolio/LandingPage/LandingPage";
+import Projects from "./Portfolio/Projects/Projects";
 
 const ProjectRoutes = () => {
   return (
@@ -18,6 +19,7 @@ const ProjectRoutes = () => {
         <Routes>
           {/* Portfolio */}
           <Route exact path="/" element={<LandingPage />}></Route>
+          <Route exact path="/Projects" element={<Projects />}></Route>
           <Route exact path="/About" element={<About />}></Route>
 
           {/* Authentication */}

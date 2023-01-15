@@ -1,10 +1,38 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./TopNav.scss";
+import "../SocialLinks/SocialLinks.scss"
 import ReactIcon from "../Data/Images/React-icon.svg";
 // import GitHubIcon from "../Data/Images/githublink.svg";
 import { FaProjectDiagram } from 'react-icons/fa';
 import { FcAbout } from 'react-icons/fc';
+import linkedInLogo from "../../Images/linkedInLogo.png";
+import gmaillogo from "../../Images/Gmail-Logo.jpg";
+import whtLogo from "../../Images/WhatsApp.svg.webp";
+
+
+const lnkin = "../../Images/linkedInLogo.png";
+
+const socialNetData = [
+  {
+    id : 1,
+    name : "LinkedIn",
+    img : "https://cdn-icons-png.flaticon.com/512/174/174857.png",
+    link: "https://www.linkedin.com/in/vikesh-gaikwad-994872194"
+  },
+  {
+    id : 1,
+    name : "GMail",
+    img : "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/1024px-Gmail_icon_%282020%29.svg.png",
+    link: "mailto:vikesh.g99@gmail.com"
+  },
+  {
+    id : 1,
+    name : "WhatsApp",
+    img : "https://cdn-icons-png.flaticon.com/512/174/174879.png",
+    link: " https://wa.me/[+917620174776]"
+  }
+]
 
 
 
@@ -72,24 +100,7 @@ const TopNav = () => {
                     <FaProjectDiagram className="icon" />
                   </div>
                   <div className="category_name">
-                    <h3>Projects</h3>
-                  </div>
-                </div>
-
-                <div className="category_button">
-                  <div className="button_icon"></div>
-                  <div className="button_icon"></div>
-                  <div className="button_icon"></div>
-                </div>
-              </NavLink>
-
-              <NavLink to="/YTClone" className="navigation_categories y_axis_center">
-                <div className="category_icon_name y_axis_center">
-                  <div className="category_icon y_axis_center">
-                    <FaProjectDiagram className="icon" />
-                  </div>
-                  <div className="category_name">
-                    <h3>YouTube Clone</h3>
+                    <h3>Tutorials</h3>
                   </div>
                 </div>
 
@@ -117,6 +128,12 @@ const TopNav = () => {
                 </div>
               </NavLink>
 
+            </div>
+
+            <div className="social_network_links">
+              { socialNetData.map((getData) => {
+                return <a href={getData.link} key={getData.id}><img src={getData.img} />{getData.name}</a>
+              })}
             </div>
           </div>
         </div>

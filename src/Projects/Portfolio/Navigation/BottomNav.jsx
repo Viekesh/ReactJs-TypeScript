@@ -6,7 +6,6 @@ import "./BottomNav.scss";
 import { useEffect, useState } from "react";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "../../../FirebaseConfig";
-import Profile from "../../Authentication/Profile";
 
 const BottomNav = () => {
 
@@ -35,12 +34,11 @@ const BottomNav = () => {
           </NavLink>
         </div>
         <div className="blog_icon x_y_axis_center">
-          <NavLink to="/Blog" className="x_y_axis_center">
+          <NavLink to="/Projects" className="x_y_axis_center">
             <DeveloperModeIcon />
           </NavLink>
         </div>
         <div className="profile_icon x_y_axis_center">
-
           {userId ? (
             <NavLink to="/Profile" className="x_y_axis_center">
               <AccountCircleIcon />

@@ -1,8 +1,15 @@
 import React from 'react'
+import PageHeading from '../LandingPage/PageHeading';
+import BottomNav from '../Navigation/BottomNav';
+import TopNav from '../Navigation/TopNav';
 
 const Projects = () => {
   return (
-    <div>Projects</div>
+    <>
+    <TopNav />
+    <PageHeading heading = "Projects" />
+    <BottomNav />
+    </>
   )
 }
 

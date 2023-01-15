@@ -35,6 +35,8 @@ const About = () => {
             good together.
           </h3>
           <br />
+          <br />
+          <br />
         </div>
       </div>
     </>

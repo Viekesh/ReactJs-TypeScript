@@ -1,0 +1,38 @@
+.greet {
+    border: 2px solid red;
+    height: 100vh;
+}
+
+.for_mobile_device {
+    // border: 2px solid blue;
+    width: 90vw;
+    height: 30vh;
+    margin: 24vh auto;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.for_mobile_device .heading1 {
+    // border: 2px solid red;
+    font-size: 24px;
+    font-family: 'Source Code Pro', monospace;
+    font-style: italic;
+    text-transform: capitalize;
+    background: linear-gradient(to right, red, blue, blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.for_mobile_device .heading2 {
+    // border: 2px solid green;
+    font-size: 18px;
+    font-family: 'Source Code Pro', monospace;
+    font-style: italic;
+    text-transform: capitalize;
+    background: linear-gradient(to right, blue, red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
