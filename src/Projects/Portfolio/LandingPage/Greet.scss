@@ -4,7 +4,6 @@
 }
 
 .for_mobile_device {
-    // border: 2px solid blue;
     width: 90vw;
     height: 30vh;
     margin: 24vh auto;
@@ -33,6 +32,13 @@
     background: linear-gradient(to right, blue, red);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+@media only screen and (min-width: 1200px) {
+    .for_mobile_device {
+        margin: 30vh auto;
+        width: 50%;
+    }
 }
 
 
