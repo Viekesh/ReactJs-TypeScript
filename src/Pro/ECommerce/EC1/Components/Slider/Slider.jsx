@@ -15,7 +15,6 @@ import "swiper/css/navigation";
 const Slider = () => {
     return (
         <div className='carousel'>
-            <h3>Products</h3>
             <div className="smartphone_slider">
                 <Swiper
                 slidesPerView={1}
