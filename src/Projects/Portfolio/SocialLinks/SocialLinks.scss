@@ -27,7 +27,7 @@
 // for social network links in top nav component
 
 .social_network_links {
-    margin: 9vw auto;
+    margin: 45vw auto 0 auto;
     width: 90%;
     font-family: 'Kanit', sans-serif;
     font-style: italic;
@@ -41,12 +41,13 @@
     display: flex;
     align-items: center;
     color: snow;
+    font-size: 4vw;
     font-family: 'Kanit', sans-serif;
     font-style: italic;
 }
 
 .social_network_links a img {
-    border-radius: 30%;
+    border-radius: 50%;
     margin: 0 2vw 0 0;
     width: 24px;
     height: 24px;
@@ -67,14 +68,15 @@
     }
 
     .social_network_links a {
-        border-radius: 1vw;
+        border-radius: 0.6vw;
         margin: 1vw 0;
         padding: 0.6vw;
+        font-size: 0.9vw;
     }
 
     .social_network_links a img {
-        // width: 18px;
-        // height: 18px;
+        width: 18px;
+        height: 18px;
     }
 }
 

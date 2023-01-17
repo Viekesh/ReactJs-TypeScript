@@ -2,7 +2,7 @@ import { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import BottomNav from "../Portfolio/Navigation/BottomNav";
 import TopNav from "../Portfolio/Navigation/TopNav";
-import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
+// import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
 import "./Auth.scss";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../FirebaseConfig";
@@ -48,7 +48,7 @@ const Auth = () => {
     // console.log(formData);
   };
 
-  
+
   const submitSignInForm = async (event) => {
 
     event.preventDefault();
@@ -56,7 +56,7 @@ const Auth = () => {
     const authenticate = auth;
 
     try {
-      if(email && password) {
+      if (email && password) {
         const userCredential = await signInWithEmailAndPassword(
           authenticate,
           email,
@@ -80,7 +80,7 @@ const Auth = () => {
   return (
     <section className="auth y_axis_center">
       <TopNav />
-      <PageHeading heading = "SignIn" />
+      <PageHeading heading="SignIn" />
       <BottomNav />
 
       {/* <div className="page_heading">
@@ -129,9 +129,9 @@ const Auth = () => {
         <div className="form_buttons">
           <button type="submit">SignIn</button>
         </div>
+        <GAuth />
       </form>
 
-      <GAuth />
     </section>
   );
 };
