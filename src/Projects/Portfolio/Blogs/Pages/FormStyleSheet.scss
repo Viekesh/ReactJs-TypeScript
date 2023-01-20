@@ -1,77 +1,69 @@
-.form {
-    // border: 2px solid red;
-    width: 90%;
+// .blog_create {
+//     border: 2px solid red;
+// }
+
+form {
+    // border: 2px solid green;
     margin: 3vh auto;
+    width: 90%;
 }
 
-.f_control_child {
+form .form_control {
     border: 1px solid gray;
-    border-radius: 1.6vw;
-    margin: 1vh auto;
+    border-radius: 1vw;
+    margin: 1vh 0;
+    padding: 2vh;
     width: 100%;
-    padding: 3vw;
-    font-size: 4.3vw;
 }
 
 .for_trending {
-    margin: 2vh auto;
-    justify-content: space-between;
-}
-
-.for_trending p {
-    font-size: 4.3vw;
+    // border: 2px solid black;
+    padding: 1vh;
     text-transform: capitalize;
 }
 
-.for_tag {
-    border: 1px solid gray;
-    border-radius: 1.6vw;
-    margin: 1vh auto;
-    width: 100%;
-    padding: 3vw;
-    font-size: 4.3vw;
+.for_img {
+    // border: 2px solid black;
+    padding: 1vh;
+    text-transform: capitalize;
 }
 
-.blog_form_button>button {
-    border: 1px solid gray;
-    border-radius: 1.6vw;
-    margin: 1vh auto;
-    width: 100%;
-    padding: 3vw;
-    font-size: 4.3vw;
-    background-color: rgb(60, 112, 255);
-    color: snow;
-}
-
-.empty {
+.three_vh {
     height: 15vh;
 }
 
+.submit_button {
+    margin: 1vh 0;
+    width: 100%;
+}
 
-@media only screen and (min-width: 1200px) {
-    .form {
-        width: 30%;
+.submit_button button {
+    border-radius: 1vw;
+    margin: 1vh 0;
+    padding: 2vh;
+    width: 100%;
+    background-color: rgb(89, 114, 255);
+    color: snow;
+}
+
+@media only screen and (min-width: 768px) {
+    .blog_create {
+        margin: 0 auto;
+        width: 50vw;
     }
 
-    .f_control_child {
+    form {
+        margin: 0;
+        width: 50%;
+    }
+
+    form .form_control {
         border-radius: 0.6vw;
-        padding: 0.6vw;
-        font-size: 1vw;
     }
 
-    .for_tag {
+    .submit_button button {
         border-radius: 0.6vw;
-        padding: 0.6vw;
-        font-size: 1vw;
-    }
-
-    .for_trending>p {
-        font-size: 1vw;
-    }
-
-    .blog_form_button>button {
-        border-radius: 0.6vw;
-        padding: 0.6vw;
-        font-size: 1vw;
     }
 }
+
+

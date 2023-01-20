@@ -16,6 +16,9 @@ const LandingPage = () => {
           <main>
             <Greet />
             <SocialLinks />
+
+            {/* we use below ReactJs props, props is a properties and it is a way of passing data from parent */}
+            {/* component to child component */}
             <SubHeading heading = "Projects" />
             <Slider />
           </main>

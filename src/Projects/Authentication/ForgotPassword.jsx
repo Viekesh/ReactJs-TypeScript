@@ -55,9 +55,9 @@ const ForgotPassword = () => {
           <div className="form_buttons">
             <button type="submit">Send Reset Password</button>
           </div>
+        <GAuth />
         </form>
 
-        <GAuth />
       </section>
     </>
   );

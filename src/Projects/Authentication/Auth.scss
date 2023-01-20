@@ -19,7 +19,7 @@
     position: relative;
     margin: 3vh auto 0 auto;
     width: 90%;
-    height: 80vh;
+    height: 60vh;
 }
 
 .input_field {
@@ -108,8 +108,8 @@
     }
 
     .sign_in_form {
-        border: 0px;
         width: 50%;
+        height: fit-content;
     }
 
     .input_field {
