@@ -4,17 +4,29 @@ import "./TopNav.scss";
 import "../SocialLinks/SocialLinks.scss"
 import ReactIcon from "../Data/Images/React-icon.svg";
 // import GitHubIcon from "../Data/Images/githublink.svg";
-import { FaProjectDiagram } from 'react-icons/fa';
-import { FcAbout } from 'react-icons/fc';
-import ReactWhatsApp from "react-whatsapp";
+// import { FaProjectDiagram } from 'react-icons/fa';
+// import { FcAbout } from 'react-icons/fc';
+// import ReactWhatsApp from "react-whatsapp";
 // import linkedInLogo from "../../Images/linkedInLogo.png";
 // import gmaillogo from "../../Images/Gmail-Logo.jpg";
 // import whtLogo from "../../Images/WhatsApp.svg.webp";
 
 
-const lnkin = "../../Images/linkedInLogo.png";
+// const lnkin = "../../Images/linkedInLogo.png";
 
 const socialNetData = [
+  {
+    id: 1,
+    name: "LeetCode",
+    img: "https://leetcode.com/_next/static/images/logo-ff2b712834cf26bf50a5de58ee27bcef.png",
+    link: "https://leetcode.com/Viekesh/"
+  },
+  {
+    id: 1,
+    name: "HackerEarth",
+    img: "https://avatars.githubusercontent.com/u/3033794?s=280&v=4",
+    link: "https://www.hackerearth.com/@vikesh70"
+  },
   {
     id: 1,
     name: "LinkedIn",
@@ -31,7 +43,7 @@ const socialNetData = [
     id : 3,
     name : "WhatsApp",
     img : "https://cdn-icons-png.flaticon.com/512/174/174879.png",
-    link: " https://wa.me/+917620174776"
+    link: " https://wa.me/+919766940948"
   }
 ]
 
@@ -78,6 +90,7 @@ const TopNav = () => {
             <a
               href="https://www.github.com/Viekesh"
               className="x_y_axis_center"
+              target="_blanc"
             >
               <svg
                 height="32"
@@ -101,7 +114,7 @@ const TopNav = () => {
               }`}
             id="Navigation"
           >
-            <div className="navigation_section_elements">
+            {/* <div className="navigation_section_elements">
 
               <NavLink className="navigation_categories y_axis_center">
                 <div className="category_icon_name y_axis_center">
@@ -137,11 +150,11 @@ const TopNav = () => {
                 </div>
               </NavLink>
 
-            </div>
+            </div> */}
 
             <div className="social_network_links">
               {socialNetData.map((getData) => {
-                return <a href={getData.link} key={getData.id}><img src={getData.img} />{getData.name}</a>
+                return <a href={getData.link} key={getData.id} target="_blanc"><img src={getData.img} />{getData.name}</a>
               })}
 
             </div>

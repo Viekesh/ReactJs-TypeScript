@@ -5,6 +5,7 @@ import NotFound from "./Authentication/NotFound";
 import PrivateRoutes from "./Authentication/PrivateRoutes";
 import Profile from "./Authentication/Profile";
 import Register from "./Authentication/Register";
+import Calculator from "./Calculator/Components/Calculator";
 import About from "./Portfolio/About/About";
 import AddUpdateBlog from "./Portfolio/Blogs/Pages/AddUpdateBlog";
 import Blogs from "./Portfolio/Blogs/Pages/Blogs";
@@ -38,6 +39,9 @@ const ProjectRoutes = () => {
           <Route exact path="/Create" element={<AddUpdateBlog />}></Route>
           <Route exact path="/Update/:id" element={<AddUpdateBlog />}></Route>
           <Route exact path="/Details/:id" element={<Details />}></Route>
+
+          {/* Calculator */}
+          <Route exact path="/Calculator" element={<Calculator />}></Route>
         </Routes>
       </BrowserRouter>
     </>
