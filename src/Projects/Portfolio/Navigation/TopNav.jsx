@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./TopNav.scss";
-import "../SocialLinks/SocialLinks.scss"
+import "../SocialLinks/SocialLinks.scss";
 import ReactIcon from "../Data/Images/React-icon.svg";
 // import GitHubIcon from "../Data/Images/githublink.svg";
 // import { FaProjectDiagram } from 'react-icons/fa';
@@ -11,7 +11,6 @@ import ReactIcon from "../Data/Images/React-icon.svg";
 // import gmaillogo from "../../Images/Gmail-Logo.jpg";
 // import whtLogo from "../../Images/WhatsApp.svg.webp";
 
-
 // const lnkin = "../../Images/linkedInLogo.png";
 
 const socialNetData = [
@@ -19,34 +18,33 @@ const socialNetData = [
     id: 1,
     name: "LeetCode",
     img: "https://leetcode.com/_next/static/images/logo-ff2b712834cf26bf50a5de58ee27bcef.png",
-    link: "https://leetcode.com/Viekesh/"
+    link: "https://leetcode.com/Viekesh/",
   },
   {
     id: 1,
     name: "HackerEarth",
     img: "https://avatars.githubusercontent.com/u/3033794?s=280&v=4",
-    link: "https://www.hackerearth.com/@vikesh70"
+    link: "https://www.hackerearth.com/@vikesh70",
   },
   {
     id: 1,
     name: "LinkedIn",
     img: "https://toppng.com//public/uploads/preview/linkedin-logo-transparent-116602552215dpnc1i8cu.png",
-    link: "https://www.linkedin.com/in/vikesh-gaikwad-994872194"
+    link: "https://www.linkedin.com/in/vikesh-gaikwad-994872194",
   },
   {
     id: 2,
     name: "GMail",
     img: "https://downloadr2.apkmirror.com/wp-content/uploads/2020/10/Gmail_round.png",
-    link: "mailto:vikesh.g99@gmail.com"
+    link: "mailto:vikesh.g99@gmail.com",
   },
   {
-    id : 3,
-    name : "WhatsApp",
-    img : "https://cdn-icons-png.flaticon.com/512/174/174879.png",
-    link: " https://wa.me/+919766940948"
-  }
-]
-
+    id: 3,
+    name: "WhatsApp",
+    img: "https://cdn-icons-png.flaticon.com/512/174/174879.png",
+    link: " https://wa.me/+919766940948",
+  },
+];
 
 // https://api.whatsapp.com/send?phone=+917620174776
 
@@ -55,10 +53,7 @@ const socialNetData = [
 //   window.open("https://api.whatsapp.com/send?phone=+917620174776");
 // }
 
-
-
 const TopNav = () => {
-
   const [showMenu, setShowMenu] = useState(false);
 
   const toggleMobileMenu = () => {
@@ -70,12 +65,12 @@ const TopNav = () => {
     <nav className="top_navigation x_y_axis_center">
       <div className="for_smartphone">
         <div className="nav_elements">
-
           <div className="menu_icon x_y_axis_center">
             <div className="only-mobile mobile-menu-button-wrapper">
               <button
-                className={`hamburger hamburger--3dx x_y_axis_center ${showMenu ? "is-active" : ""
-                  }`}
+                className={`hamburger hamburger--3dx x_y_axis_center ${
+                  showMenu ? "is-active" : ""
+                }`}
                 type="button"
                 onClick={toggleMobileMenu}
               >
@@ -110,8 +105,9 @@ const TopNav = () => {
           </div>
 
           <div
-            className={`navigation_section navigation_style ${showMenu ? "overlay" : ""
-              }`}
+            className={`navigation_section navigation_style ${
+              showMenu ? "overlay" : ""
+            }`}
             id="Navigation"
           >
             {/* <div className="navigation_section_elements">
@@ -154,10 +150,15 @@ const TopNav = () => {
 
             <div className="social_network_links">
               {socialNetData.map((getData) => {
-                return <a href={getData.link} key={getData.id} target="_blanc"><img src={getData.img} />{getData.name}</a>
+                return (
+                  <a href={getData.link} key={getData.id} target="_blanc">
+                    {getData.name}
+                    <img src={getData.img} />
+                  </a>
+                );
               })}
-
             </div>
+            
           </div>
         </div>
 
@@ -166,12 +167,9 @@ const TopNav = () => {
             <img src={ReactIcon} alt="react logo" />
           </NavLink>
         </div>
-
       </div>
     </nav>
   );
 };
 
 export default TopNav;
-
-

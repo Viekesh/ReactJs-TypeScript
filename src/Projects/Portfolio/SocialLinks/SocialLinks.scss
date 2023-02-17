@@ -40,6 +40,7 @@
     padding: 2vw;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     color: snow;
     font-size: 4vw;
     font-family: 'Kanit', sans-serif;
@@ -64,7 +65,8 @@
     }
 
     .social_network_links {
-        margin: 3vw auto;
+        border: 2px solid red;
+        margin: 6vw auto;
     }
 
     .social_network_links a {
