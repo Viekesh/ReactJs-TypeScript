@@ -6,7 +6,7 @@ export const CalcContainer = styled.div`
   justify-content: center;
   align-content: center;
   width: 400px;
-  min-height: 400px;
+  min-height: 500px;
   margin: 40px auto;
   grid-template-columns: repeat(4, 100px);
   grid-template-rows: minmax(100px, auto) repeat(5, 80px);
@@ -43,11 +43,31 @@ export const CalcCurrent = styled.div`
 
 export const CalcButton = styled.button`
   cursor: pointer;
-  font-size: 2rem;
+  color: snow;
+  font-size: 1rem;
+  font-weight: bold;
   outline: none;
-  border: 1px outset white;
-  background-color: rgba(255, 255, 255, 0.75);
+  border: 2px outset white;
+  border-radius: 30%;
+  background-color: black;
   &:hover {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: red;
   }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  ${({gridSpan}) => {
+    if(gridSpan) {
+      return `grid-column: span ${gridSpan}`
+    }
+  }}
+
+  ${({operation}) => {
+    return operation && `background-color: blue;`
+  }}
+
+  ${({control}) => {
+    return control && `background-color: blue;`
+  }}
 `;
+
