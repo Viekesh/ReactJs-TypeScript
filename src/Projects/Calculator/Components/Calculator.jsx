@@ -1,18 +1,49 @@
 import {useState} from "react";
-import { CalcContainer, CalcScreen, CalcPrevious, CalcCurrent, CalcButton } from "../Styles/CalcMain";
+import "./Calculator.scss";
+
 
 const Calculator = () => {
 
   const [calcCurrentV, setCalcCurrentV] = useState("");
 
   const appendValueHandler = (el) => {
-    const value = el.target.getAttribute("data");
-    console.log(value);
+    const value = el.target.value;
+    setCalcCurrentV(value);
   }
 
   return (
     <>
-    <div className='calc'>
+    <div className="calc">
+      <div className="calc_elements">
+
+        <div className="calc_screen">
+          <div className="calc_previous">11</div>
+          <div className="calc_current">{calcCurrentV}</div>
+        </div>
+
+        <div className="calc_buttons">
+          <button className="calc_button control" onClick={appendValueHandler}>AC</button>
+          <button className="calc_button" onClick={appendValueHandler}>DEL</button>
+          <button className="calc_button" onClick={appendValueHandler}>/</button>
+          <button className="calc_button" onClick={appendValueHandler}>7</button>
+          <button className="calc_button" onClick={appendValueHandler}>8</button>
+          <button className="calc_button" onClick={appendValueHandler}>9</button>
+          <button className="calc_button" onClick={appendValueHandler}>*</button>
+          <button className="calc_button" onClick={appendValueHandler}>4</button>
+          <button className="calc_button" onClick={appendValueHandler}>5</button>
+          <button className="calc_button" onClick={appendValueHandler}>6</button>
+          <button className="calc_button" onClick={appendValueHandler}>+</button>
+          <button className="calc_button" onClick={appendValueHandler}>1</button>
+          <button className="calc_button" onClick={appendValueHandler}>2</button>
+          <button className="calc_button" onClick={appendValueHandler}>3</button>
+          <button className="calc_button" onClick={appendValueHandler}>-</button>
+          <button className="calc_button" onClick={appendValueHandler}>.</button>
+          <button className="calc_button" onClick={appendValueHandler}>0</button>
+          <button className="calc_button control" onClick={appendValueHandler}>=</button>
+        </div>
+      </div>
+    </div>
+    {/* <div className='calc'>
         <CalcContainer>
             <CalcScreen>
                 <CalcPrevious>10</CalcPrevious>
@@ -37,7 +68,7 @@ const Calculator = () => {
             <CalcButton onClick={appendValueHandler}>0</CalcButton>
             <CalcButton gridSpan={2}>=</CalcButton>
         </CalcContainer>
-    </div>
+    </div> */}
     </>
   )
 }
