@@ -225,6 +225,65 @@ $redColor: red;
 // Menu Icon End
 
 
+// for social network links in top nav component
+
+.social_network_links {
+    margin: 45vw auto 0 auto;
+    width: 70%;
+    font-family: 'Kanit', sans-serif;
+    font-style: italic;
+    font-weight:300;
+}
+
+.social_network_links a {
+    border: 1px solid snow;
+    border-radius: 3vw;
+    margin: 1em 0;
+    padding: .3em .6em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: snow;
+    font-size: 15px;
+    font-family: 'Kanit', sans-serif;
+    font-style: italic;
+}
+
+.social_network_links a img {
+    border-radius: 50%;
+    margin: 0 2vw 0 0;
+    width: 24px;
+    height: 24px;
+    background-color: snow;
+}
+
+@media only screen and (min-width: 768px) {
+    .links {
+        position: fixed;
+        right: 23vw;
+        bottom: 15vh;
+        box-shadow: 1px 3px 12px 1px black;
+    }
+
+    .social_network_links {
+        margin: 6vw auto;
+    }
+
+    .social_network_links a {
+        border-radius: 0.6vw;
+        // margin: 1vw 0;
+        // padding: 0.6vw;
+        font-size: 0.9vw;
+    }
+
+    .social_network_links a img {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+// complete 
+
 
 @media only screen and (min-width: 600px) {
     .navigation {

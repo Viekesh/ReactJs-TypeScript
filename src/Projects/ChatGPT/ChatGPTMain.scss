@@ -1,0 +1,43 @@
+.main_screen {
+    border: 2px solid blue;
+    height: 100vh;
+    position: relative;
+    color: snow;
+    background-color: #1A232E;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    font-family: "Eudoxus Sans", sans-serif;
+    font-style: italic;
+    scroll-behavior: smooth;
+}
+
+.header {
+    padding: .3em;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.gradient_1 {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    background: #ca00ff;
+    filter: blur(180px);
+}
+
+.gradient_2 {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: -6rem;
+    right: 0;
+    background: #ca00ff;
+    filter: blur(180px);
+}

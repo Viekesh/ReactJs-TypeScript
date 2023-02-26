@@ -23,7 +23,7 @@ const LandingPage = () => {
             <SubHeading heading = "Projects" />
             <Slider />
 
-            <ContributionGraph username="Viekesh" />
+            {/* <ContributionGraph username="Viekesh" /> */}
           </main>
           <BottomNav />
         </div>

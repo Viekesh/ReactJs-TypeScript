@@ -1,0 +1,126 @@
+.music_nav {
+    background: linear-gradient(to right, darkred, black, darkblue, );
+    padding: .6em 0;
+}
+
+.music_smartphone {
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.music_for_desktop {
+    display: none;
+}
+
+.music_nav_elements {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.music_menu_icon {
+    z-index: 9;
+}
+
+.music_logo {
+    padding: .3em;
+    position: relative;
+}
+
+// .music_circle {
+//     border: 3px solid rgb(255, 187, 0);
+//     border-radius: 50%;
+//     width: 40px;
+//     height: 40px;
+//     position: absolute;
+//     margin-left: auto;
+//     margin-right: auto;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     text-align: center;
+//     z-index: 1;
+// }
+
+.music_logo h3 {
+    color: snow;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+// .music_about {
+//     border: 3px solid snow;
+//     border-radius: 50%;
+// }
+
+.music_about>a .MuiSvgIcon-root {
+    font-size: 30px;
+    font-weight: 900;
+    color: snow;
+}
+
+.music_navigation_section {
+    width: 60vw;
+    height: 100vh;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    transition: transform 0.2s ease-in-out 0s;
+    z-index: 4;
+}
+
+.music_navigation_section.ovverlay {
+    transform: translateX(0px);
+}
+
+.music_navigation_element {
+    border: 2px solid snow;
+    height: 60px;
+    padding: 0 1em;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.empty_element {
+    border: 0px;
+}
+
+.music_navigation_element a {
+    color: snow;
+}
+
+@media only screen and (min-width: 768px) {
+
+    .music_smartphone {
+        width: 80%;
+    }
+    
+    .music_menu_icon {
+        display: none;
+    }
+
+    .music_about {
+        display: none;
+    }
+
+    .music_for_desktop {
+        width: 45%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .music_for_desktop a {
+        color: snow;
+    }
+}
+
+

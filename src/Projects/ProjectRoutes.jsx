@@ -6,6 +6,8 @@ import PrivateRoutes from "./Authentication/PrivateRoutes";
 import Profile from "./Authentication/Profile";
 import Register from "./Authentication/Register";
 import Calculator from "./Calculator/Components/Calculator";
+import ChatGPTMain from "./ChatGPT/ChatGPTMain";
+import MusicLandingPage from "./Music/MusicLandingPage";
 import About from "./Portfolio/About/About";
 import AddUpdateBlog from "./Portfolio/Blogs/Pages/AddUpdateBlog";
 import Blogs from "./Portfolio/Blogs/Pages/Blogs";
@@ -40,8 +42,14 @@ const ProjectRoutes = () => {
           <Route exact path="/Update/:id" element={<AddUpdateBlog />}></Route>
           <Route exact path="/Details/:id" element={<Details />}></Route>
 
+          {/* Chat GPT */}
+          <Route exact path="/ChatGPTMain" element={<ChatGPTMain />}></Route>
+
           {/* Calculator */}
           <Route exact path="/Calculator" element={<Calculator />}></Route>
+
+          {/* Music */}
+          <Route exact path="/MusicLandingPage" element={<MusicLandingPage />}></Route>
         </Routes>
       </BrowserRouter>
     </>

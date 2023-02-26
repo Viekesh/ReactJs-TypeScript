@@ -1,0 +1,28 @@
+.music_for_mob {
+    height: 90vh;
+    background: url(../Images/Abstract-Wallpaper.jpg);
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+}
+
+.music_for_mob img {
+    border: 2px solid blue;
+    width: 260px;
+    height: 520px;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+}
+
+.landing_page_circle {
+    border: 2px solid snow;
+    border-radius: 50%;
+    background-color: snow;
+    width: 280px;
+    height: 280px;
+    position: absolute;
+    bottom: 8em;
+    right: 0.1em;
+}
