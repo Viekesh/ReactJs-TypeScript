@@ -66,6 +66,7 @@ const TopNav = () => {
       <div className="for_smartphone">
         <div className="nav_elements">
           <div className="menu_icon x_y_axis_center">
+
             <div className="only-mobile mobile-menu-button-wrapper">
               <button
                 className={`hamburger hamburger--3dx x_y_axis_center ${
@@ -79,6 +80,7 @@ const TopNav = () => {
                 </span>
               </button>
             </div>
+            
           </div>
 
           <div className="github_icon x_y_axis_center">
@@ -153,7 +155,7 @@ const TopNav = () => {
                 return (
                   <a href={getData.link} key={getData.id} target="_blanc">
                     {getData.name}
-                    <img src={getData.img} />
+                    <img src={getData.img} alt="img" />
                   </a>
                 );
               })}

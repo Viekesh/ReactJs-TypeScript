@@ -4,7 +4,7 @@ import ArticleIcon from '@mui/icons-material/Article';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import "./BottomNav.scss";
 import { useEffect, useState } from "react";
-import { onAuthStateChanged } from "firebase/auth";
+// import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "../../../FirebaseConfig";
 
 const BottomNav = () => {

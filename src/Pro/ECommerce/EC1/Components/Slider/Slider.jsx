@@ -27,7 +27,7 @@ const Slider = () => {
                 navigation={true}
                 >
                     {SliderProducts.map((slide, i) => (
-                        <SwiperSlide>
+                        <SwiperSlide key={i.id}>
                             <div className="left_s">
                                 <img src={slide.img} alt="Product" className='img_p' />
                                 <div className="name">

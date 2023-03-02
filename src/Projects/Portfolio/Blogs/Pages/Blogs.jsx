@@ -12,7 +12,7 @@ const Blogs = () => {
   // Initially it will be null
   const [user, setUser] = useState(null);
 
-  const [active, setActive] = useState();
+  // const [active, setActive] = useState();
 
   useEffect(() => {
 

@@ -3,9 +3,9 @@ import MusicHeader from './Components/MusicHeader';
 
 const MusicLandingPage = () => {
   return (
-    <div>
+    <>
       <MusicHeader />
-    </div>
+    </>
   )
 }
 

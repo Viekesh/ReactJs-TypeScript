@@ -1,6 +1,11 @@
+.music_background {
+    border: 2px solid transparent;
+    background-color: rgb(241, 220, 191);
+}
+
 .music_for_mob {
     height: 90vh;
-    background: url(../Images/Abstract-Wallpaper.jpg);
+    background: url(../Images/bgPage3.jpg);
     background-position:center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -8,21 +13,75 @@
 }
 
 .music_for_mob img {
-    border: 2px solid blue;
-    width: 260px;
-    height: 520px;
+    width: 280px;
+    height: 550px;
     position: absolute;
-    right: 0;
+    right: .3em;
+    bottom: 5em;
     z-index: 1;
+    opacity: 0;
+    transition: 1s;
 }
 
 .landing_page_circle {
-    border: 2px solid snow;
+    border-top: 3px solid #FCA311;
+    border-left: 4px solid #FCA311;
+    border-right: 4px solid #FCA311;
+    border-bottom: 12px solid #FCA311;
     border-radius: 50%;
-    background-color: snow;
-    width: 280px;
-    height: 280px;
+    // border-top-left-radius: 50%;
+    // border-top-right-radius: 30%;
+    // border-bottom-right-radius: 40%;
+    // border-bottom-left-radius: 30%;
+    background: linear-gradient(to bottom, rgb(255, 73, 103), pink );
+    width: 290px;
+    height: 290px;
     position: absolute;
-    bottom: 8em;
+    bottom: 9em;
     right: 0.1em;
+    opacity: 0;
+    transition: .6s;
 }
+
+.musichead1 {
+    width: 90%;
+    position: absolute;
+    top: 6em;
+    left: .2em;
+    z-index: 3;
+
+    background: linear-gradient(to right, cyan, darkblue, blue);
+    text-shadow: 1px 3px 1px snow;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+    text-transform: uppercase;
+    font-family: 'Shantell Sans', cursive;
+    font-size: 40px;
+    font-style: italic;
+    font-weight: 900;
+    transition: .6s;
+}
+
+.musichead2 {
+    width: 90%;
+    position: absolute;
+    top: 10em;
+    left: 1em;
+    z-index: 3;
+
+    background: linear-gradient(to right, cyan, darkblue, darkblue);
+    // text-shadow: 1px 3px 1px snow;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+
+    text-transform: uppercase;
+    font-family: 'Tilt Prism', cursive;
+    font-size: 40px;
+    font-style: italic;
+    font-weight: 900;
+    transition: 3s;
+}
+
+

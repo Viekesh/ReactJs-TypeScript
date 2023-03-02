@@ -1,5 +1,5 @@
 import Slider from "../ApplicationLinks/Slider";
-import ContributionGraph from "../GitHub/ContributionGraph";
+// import ContributionGraph from "../GitHub/ContributionGraph";
 import BottomNav from "../Navigation/BottomNav";
 import TopNav from "../Navigation/TopNav";
 import SocialLinks from "../SocialLinks/SocialLinks";

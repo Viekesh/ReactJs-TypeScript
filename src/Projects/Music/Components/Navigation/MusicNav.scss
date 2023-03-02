@@ -1,6 +1,7 @@
 .music_nav {
-    background: linear-gradient(to right, darkred, black, darkblue, );
+    background: linear-gradient(to right, snow );
     padding: .6em 0;
+    z-index: 9;
 }
 
 .music_smartphone {
@@ -46,7 +47,7 @@
 // }
 
 .music_logo h3 {
-    color: snow;
+    color: gray;
     text-transform: uppercase;
     text-align: center;
     font-size: 12px;
@@ -61,13 +62,15 @@
 .music_about>a .MuiSvgIcon-root {
     font-size: 30px;
     font-weight: 900;
-    color: snow;
+    color: gray;
 }
 
 .music_navigation_section {
+    padding: 3em 0;
     width: 60vw;
     height: 100vh;
-    background-color: black;
+    // background-color: #FCA311;
+    background-color: antiquewhite;
     position: fixed;
     top: 0;
     left: 0;
@@ -81,9 +84,12 @@
 }
 
 .music_navigation_element {
-    border: 2px solid snow;
-    height: 60px;
-    padding: 0 1em;
+    border-radius: .6em;
+    margin: 1em auto;
+    width: 180px;
+    height: 40px;
+    background-color: transparent;
+    padding: 0em .6em;
     display: flex;
     align-items: center;
     justify-content: right;
@@ -91,18 +97,66 @@
 
 .empty_element {
     border: 0px;
+    background-color: transparent;
 }
 
 .music_navigation_element a {
-    color: snow;
+    // color: #FCA311;
+    color: gray;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-style: italic;
 }
+
+.music_links {
+    border-radius: 100%;
+    width: 60px;
+    height: 60px;
+    color: snow;
+    // background-color: #FCA311;
+    background-color: gray;
+    font-size: 18px;
+    box-shadow: 1px 0px 12px 1px snow;
+
+    position: fixed;
+    right: 9vw;
+    bottom: 12vh;
+
+    animation: animate 0.3s;
+    transition: 0.3s;
+    z-index: 999;
+}
+
+
+// menu icon
+
+.music_menu_icon .hamburger.is-active .hamburger-inner,
+.music_menu_icon .hamburger.is-active .hamburger-inner::before,
+.music_menu_icon .hamburger.is-active .hamburger-inner::after {
+    background-color: gray;
+}
+
+.music_menu_icon .hamburger-inner,
+.music_menu_icon .hamburger-inner::before,
+.music_menu_icon .hamburger-inner::after {
+    width: 21px;
+    height: 3px;
+    background-color: gray;
+    border-radius: 3px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+}
+
+
 
 @media only screen and (min-width: 768px) {
 
     .music_smartphone {
         width: 80%;
     }
-    
+
     .music_menu_icon {
         display: none;
     }

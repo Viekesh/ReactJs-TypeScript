@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import CallIcon from "@mui/icons-material/Call";
 import { NavLink } from "react-router-dom";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import "./MusicNav.scss";
@@ -15,8 +16,8 @@ const MusicNav = () => {
     <div className="music_nav">
       <div className="music_smartphone">
         <div className="music_nav_elements">
-
           <div className="music_menu_icon x_y_axis_center">
+
             <div className="only-mobile mobile-menu-button-wrapper">
               <button
                 className={`hamburger hamburger--3dx x_y_axis_center ${
@@ -30,9 +31,14 @@ const MusicNav = () => {
                 </span>
               </button>
             </div>
+            
           </div>
 
-          <div className={`music_navigation_section ${musicMenu ? "ovverlay" : ""}`}>
+          <div
+            className={`music_navigation_section ${
+              musicMenu ? "ovverlay" : ""
+            }`}
+          >
             <div className="music_navigation_element empty_element">
               <NavLink to="/Home"></NavLink>
             </div>
@@ -97,6 +103,15 @@ const MusicNav = () => {
               <AccountCircleIcon />
             </NavLink>
           </div>
+        </div>
+
+        <div className="call_animate x_y_axis_center">
+          <a
+            href="tel:+918999677343"
+            className="music_links call x_y_axis_center"
+          >
+            <CallIcon />
+          </a>
         </div>
       </div>
     </div>
