@@ -30,7 +30,7 @@ $redColor: red;
 }
 
 .nav_elements {
-    width: 27vw;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -236,10 +236,11 @@ $redColor: red;
 }
 
 .social_network_links a {
-    border: 1px solid snow;
+    border: 2px solid snow;
     border-radius: 3vw;
     margin: 1em 0;
     padding: .3em .6em;
+    background-color: black;
     display: flex;
     align-items: center;
     justify-content: space-between;

@@ -83,10 +83,6 @@ const Auth = () => {
       <PageHeading heading="SignIn" />
       <BottomNav />
 
-      {/* <div className="page_heading">
-        <h3>SignIn</h3>
-      </div> */}
-
       <form action="" className="sign_in_form" onSubmit={submitSignInForm}>
         <input
           type="email"
