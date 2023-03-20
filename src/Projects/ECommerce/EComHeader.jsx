@@ -1,6 +1,6 @@
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { useEffect, useState } from "react";
-import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import "./EComHeader.scss";
 
 const EComHeader = () => {
@@ -14,12 +14,17 @@ const EComHeader = () => {
 
 
 
+  // here we use useState because to make "SignIn" and "Profile" element dynamic
+  // if user has sign in then in the menu section you will see "Profile" but if user sign out then you will see
+  // in the menu "SignIn"
   const [pageState, setPageState] = useState("SignIn");
 
   const auth = getAuth();
 
   // here we use the "useEffect" to check the changes of "auth"
   useEffect(() => {
+
+    // we use here "onAuthStateChanged" to track the changes in the authentication
     onAuthStateChanged(auth, (user) => {
       if (user) {
         setPageState("Profile");
@@ -101,39 +106,40 @@ const EComHeader = () => {
             id="Navigation"
           >
             <ul className="e_com_menu">
-            {/* we add "pathMathchRoute" function and we just say if the path, if the "route" is equal to the forward slash */}
+              {/* we add "pathMathchRoute" function and we just say if the path, if the "route" is equal to the forward slash */}
 
-            {/* if you click any of the below link, then we want to navigate it to the associated link */}
-            {/* "react-router-dom" is giving us this ability as well, by using "useNavigate" function */}
-            {/* we can use "useNavigate" function to navigate inside the website */}
-            <Link to="/CreateForm">
+              {/* if you click any of the below link, then we want to navigate it to the associated link */}
+              {/* "react-router-dom" is giving us this ability as well, by using "useNavigate" function */}
+              {/* we can use "useNavigate" function to navigate inside the website */}
               <li
                 className={` ${pathMatchRoute("/CreateForm") && "home_link"
                   }`}
+                onClick={() => ec2Navigate("/CreateForm")}
                 id="list"
-              ></li>
-            </Link>
-            <li
-              className={` ${pathMatchRoute("/EComHeader") && "home_link"}`}
-              onClick={() => ec2Navigate("/EComHeader")}
-            >
-              Home
-            </li>
-            <li
-              className={` ${pathMatchRoute("/Offers") && "home_link"}`}
-              onClick={() => ec2Navigate("/Offers")}
-            >
-              Offers
-            </li>
-            <li
-              className={` ${(pathMatchRoute("/Auth") || pathMatchRoute("/Profile")) &&
-                "home_link"
-                }`}
-              onClick={() => ec2Navigate("/Profile")}
-            >
-              {pageState}
-            </li>
-          </ul>
+              >
+                Create Form
+              </li>
+              <li
+                className={` ${pathMatchRoute("/EComHeader") && "home_link"}`}
+                onClick={() => ec2Navigate("/EComHeader")}
+              >
+                Home
+              </li>
+              <li
+                className={` ${pathMatchRoute("/Offers") && "home_link"}`}
+                onClick={() => ec2Navigate("/Offers")}
+              >
+                Offers
+              </li>
+              <li
+                className={` ${(pathMatchRoute("/Auth") || pathMatchRoute("/Profile")) &&
+                  "home_link"
+                  }`}
+                onClick={() => ec2Navigate("/Profile")}
+              >
+                {pageState}
+              </li>
+            </ul>
           </div>
         </div>
 
@@ -143,3 +149,5 @@ const EComHeader = () => {
 }
 
 export default EComHeader;
+
+
