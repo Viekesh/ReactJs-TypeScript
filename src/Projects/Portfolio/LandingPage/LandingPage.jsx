@@ -1,4 +1,5 @@
-import Slider from "../ApplicationLinks/Slider";
+import ApplicationLinks from "../ApplicationLinks/ApplicationLinks";
+// import Slider from "../ApplicationLinks/Slider";
 import BottomNav from "../Navigation/BottomNav";
 import TopNav from "../Navigation/TopNav";
 import SocialLinks from "../SocialLinks/SocialLinks";
@@ -22,13 +23,13 @@ const LandingPage = () => {
         {/* we use below ReactJs props, props is a properties and it is a way of passing data from parent
             component to child component */}
         <SubHeading heading="Projects" />
-        <Slider />
+        {/* <Slider /> */}
+        <ApplicationLinks />
       </main>
     </>
   );
 };
 
 export default LandingPage;
-
 
 

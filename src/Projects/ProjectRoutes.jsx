@@ -7,6 +7,7 @@ import Profile from "./Authentication/Profile";
 import Register from "./Authentication/Register";
 import Calculator from "./Calculator/Components/Calculator";
 import ChatGPTMain from "./ChatGPT/ChatGPTMain";
+import EComHeader from "./ECommerce/EComHeader";
 import MusicLandingPage from "./Music/MusicLandingPage";
 import About from "./Portfolio/About/About";
 import AddUpdateBlog from "./Portfolio/Blogs/Pages/AddUpdateBlog";
@@ -31,10 +32,15 @@ const ProjectRoutes = () => {
             path="/ForgotPassword"
             element={<ForgotPassword />}
           ></Route>
+
+          {/* Private Route */}
           <Route exact path="/Profile" element={<PrivateRoutes />}>
             <Route exact path="/Profile" element={<Profile />}></Route>
           </Route>
           <Route exact path="*" element={<NotFound />}></Route>
+
+          {/* ECommerce */}
+          <Route path="/EComHeader" element={<EComHeader />}></Route>
 
           {/* Blogs Page */}
           <Route exact path="/Blogs" element={<Blogs />}></Route>

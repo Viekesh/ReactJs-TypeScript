@@ -27,8 +27,8 @@ const TopNav = () => {
     <nav className="top_navigation x_y_axis_center">
       <div className="for_smartphone">
         <div className="nav_elements">
-          <div className="menu_icon x_y_axis_center">
 
+          <div className="menu_icon x_y_axis_center">
             <div className="only-mobile mobile-menu-button-wrapper">
               <button
                 className={`hamburger hamburger--3dx x_y_axis_center ${showMenu ? "is-active" : ""
@@ -89,9 +89,12 @@ const TopNav = () => {
 
           </div>
         </div>
+        
       </div>
     </nav>
   );
 };
 
 export default TopNav;
+
+

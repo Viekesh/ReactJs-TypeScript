@@ -162,7 +162,7 @@ const Register = () => {
             onChange={handleFormData}
           />
 
-          {/* {showPass ? (
+          {showPass ? (
             <AiFillEyeInvisible
               className="invisible_pass_register"
               onClick={() => setShowPass((prevState) => !prevState)}
@@ -172,7 +172,7 @@ const Register = () => {
               className="visible_pass_register"
               onClick={() => setShowPass((prevState) => !prevState)}
             />
-          )} */}
+          )}
 
           <div className="another_form_links">
             <NavLink to="/Auth">
@@ -193,3 +193,5 @@ const Register = () => {
 };
 
 export default Register;
+
+
