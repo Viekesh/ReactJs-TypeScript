@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { auth } from '../../../../FirebaseConfig';
-import PageHeading from '../../LandingPage/PageHeading';
+import PageHeading from '../../../Components/PageHeading/PageHeading';
 import BottomNav from '../../Navigation/BottomNav';
 import TopNav from '../../Navigation/TopNav';
 import BlogHeader from '../Components/BlogHeader';

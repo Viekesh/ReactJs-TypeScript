@@ -3,7 +3,7 @@ import ReactTagInput from "@pathofdev/react-tag-input";
 import "./FormStyleSheet.scss";
 import TopNav from "../../Navigation/TopNav";
 import BottomNav from "../../Navigation/BottomNav";
-import PageHeading from "../../LandingPage/PageHeading";
+import PageHeading from "../../../Components/PageHeading/PageHeading";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 import { auth, database, storage } from "../../../../FirebaseConfig";
 import { useNavigate, useParams } from "react-router-dom";

@@ -4,7 +4,7 @@ import { useState } from "react";
 import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
 import { NavLink, useNavigate } from "react-router-dom";
 import { auth, database } from "../../FirebaseConfig";
-import PageHeading from "../Portfolio/LandingPage/PageHeading";
+import PageHeading from "../Components/PageHeading/PageHeading";
 import BottomNav from "../Portfolio/Navigation/BottomNav";
 import TopNav from "../Portfolio/Navigation/TopNav";
 import "./Auth.scss";

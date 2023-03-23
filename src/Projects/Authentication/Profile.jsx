@@ -1,12 +1,14 @@
 import { updateProfile } from "firebase/auth";
 import { doc, updateDoc } from "firebase/firestore";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { auth, database } from "../../FirebaseConfig";
-import PageHeading from "../Portfolio/LandingPage/PageHeading";
+import PageHeading from "../Components/PageHeading/PageHeading";
 import BottomNav from "../Portfolio/Navigation/BottomNav";
 import TopNav from "../Portfolio/Navigation/TopNav";
 import "./Profile.scss";
+
+
 
 const Profile = () => {
   const authenticate = auth;
@@ -98,6 +100,12 @@ const Profile = () => {
             </div>
           </div>
         </form>
+
+        <div className="e_com_create_listing_button">
+          <NavLink to="/CreateListing">
+            <button type="submit">SELL/RENT</button>
+          </NavLink>
+        </div>
       </section>
     </>
   );

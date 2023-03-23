@@ -40,8 +40,8 @@ const CreateForm = () => {
 
     const [progress, setProgress] = useState(null);
 
-    // destructure the initial values (formData information) which we have defined in the above "useState" hook otherwise
-    // we will get error
+    // destructure the initial values (formData information) which we have defined in the above 
+    // "useState" hook otherwise we will get error
     const {
         type,
         name,

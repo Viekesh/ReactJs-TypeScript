@@ -6,7 +6,7 @@ import BottomNav from "../Portfolio/Navigation/BottomNav";
 import TopNav from "../Portfolio/Navigation/TopNav";
 import GAuth from "./GAuth";
 import "./Auth.scss";
-import PageHeading from "../Portfolio/LandingPage/PageHeading";
+import PageHeading from "../Components/PageHeading/PageHeading";
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState("");

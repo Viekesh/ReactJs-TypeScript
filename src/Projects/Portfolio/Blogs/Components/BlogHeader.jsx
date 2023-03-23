@@ -5,7 +5,7 @@ import CreateIcon from "@mui/icons-material/Create";
 import "./BlogHeader.scss";
 import { useEffect, useState } from "react";
 import { auth } from "../../../../FirebaseConfig";
-import PageHeading from "../../LandingPage/PageHeading";
+import PageHeading from "../../../Components/PageHeading/PageHeading";
 
 
 

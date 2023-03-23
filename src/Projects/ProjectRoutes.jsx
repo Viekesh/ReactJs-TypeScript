@@ -7,6 +7,7 @@ import Profile from "./Authentication/Profile";
 import Register from "./Authentication/Register";
 import Calculator from "./Calculator/Components/Calculator";
 import ChatGPTMain from "./ChatGPT/ChatGPTMain";
+import CreateListing from "./ECommerce/Components/CreateListing/CreateListing";
 import EComHeader from "./ECommerce/EComHeader";
 import MusicLandingPage from "./Music/MusicLandingPage";
 import About from "./Portfolio/About/About";
@@ -41,6 +42,7 @@ const ProjectRoutes = () => {
 
           {/* ECommerce */}
           <Route path="/EComHeader" element={<EComHeader />}></Route>
+          <Route path="/CreateListing" element={<CreateListing />}></Route>
 
           {/* Blogs Page */}
           <Route exact path="/Blogs" element={<Blogs />}></Route>

@@ -1,0 +1,96 @@
+// page heading
+
+.page_heading {
+    margin: 12vh auto 0 auto;
+    width: 90%;
+    font-family: monospace;
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.page_heading h2 {
+    font-family: monospace;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+// form
+
+.e_com_form {
+    margin: 3em auto;
+    width: 90%;
+}
+
+.list_properties {
+    width: 100%;
+    height: auto;
+}
+
+.list_element {
+    border-radius: 1em;
+    margin: 1em auto;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.list_element input {
+    border: 1px solid rgb(255, 0, 0, 0.3);
+    border-radius: 1em;
+    padding: .9em;
+    width: 100%;
+    height: 100%;
+    color: rgb(255, 0, 0, 0.3);
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.list_element textarea {
+    border: 1px solid rgb(255, 0, 0, 0.3);
+    border-radius: 1em;
+    padding: .6em;
+    width: 100%;
+    height: 100%;
+    color: rgb(255, 0, 0, 0.3);
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.sell_rent_form_buttons {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: red;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+// buttons
+
+.sell_rent_form_buttons>button {
+    border: none;
+    outline: none;
+    border-radius: 1em;
+    padding: 1em;
+    width: 9em;
+
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 12px;
+    color: snow;
+}
+
+// sell button
+
+.sell_button {
+    background-color: rgb(255, 0, 0, 0.3);
+}
+
+.sell_background {
+    background-color: rgb(104, 104, 255);
+}
+
+

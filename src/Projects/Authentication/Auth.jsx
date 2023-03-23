@@ -7,7 +7,7 @@ import "./Auth.scss";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../FirebaseConfig";
 import GAuth from "./GAuth";
-import PageHeading from "../Portfolio/LandingPage/PageHeading";
+import PageHeading from "../Components/PageHeading/PageHeading";
 
 const Auth = () => {
   // the initial value of the "useState" hook is an object which is an empty string

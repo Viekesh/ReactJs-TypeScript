@@ -54,56 +54,28 @@
     text-transform: capitalize;
 }
 
-.sell_or_rent_button {
-    margin: 5vw auto;
+.e_com_create_listing_button {
+    margin: 2em auto;
+    display: flex;
+    align-items: center;
+}
+
+.e_com_create_listing_button a {
+    margin: 0 auto;
     width: 90%;
 }
 
-.sell_or_rent_button>a {
+.e_com_create_listing_button>a>button {
+    border: none;
+    outline: none;
+    border-radius: .6em;
+    margin: 0 auto;
+    padding: 1em;
     width: 100%;
-}
-
-.sell_or_rent_button>a>button {
-    border-radius: 9px;
-    padding: 9px;
-    width: 100%;
-    height: 40px;
     font-size: 15px;
     font-weight: bold;
-    background: rgb(44, 111, 255);
+    background-color: rgb(124, 124, 255);
     color: snow;
-}
-
-button>.car_icon {
-    // border: 2px solid snow;
-    width: 36px;
-}
-
-.user_listing {
-    border: 3px solid blue;
-    height: 9vh;
-}
-
-.user_listing>h2 {
-    border: 2px solid red;
-    font-size: 40px;
-}
-
-.profile_name input {
-    outline: none;
-    border: none;
-    background-color: transparent;
-    font-size: 4vw;
-    text-transform: capitalize;
-}
-
-.profile_name>.profile_email {
-    text-transform: initial;
-}
-
-.profile_name>.edit_template>p {
-    font-size: 3vw;
-    font-weight: bold;
 }
 
 @media only screen and (min-width: 1200px) {
@@ -119,39 +91,6 @@ button>.car_icon {
 
     .edit_template_buttons>div {
         font-size: 0.9vw;
-    }
-
-    .sell_or_rent_button {
-        margin: 2vw auto;
-        width: 50%;
-    }
-
-    .sell_or_rent_button>a {
-        width: fit-content;
-    }
-
-    .sell_or_rent_button>a>button {
-        width: 60%;
-    }
-
-    .user_listing>h2 {
-        margin: 0 auto;
-        width: 50%;
-    }
-
-    .user_listing>ul {
-        border: 2px solid blue;
-        margin: 0 auto;
-        width: 50%;
-    }
-
-    .profile_name input {
-        border: none;
-        font-size: 1.3vw;
-    }
-
-    .profile_name>.edit_template>p {
-        font-size: 1.3vw;
     }
 }
 

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./TopNav.scss";
 import "../SocialLinks/SocialLinks.scss";
-import ReactIcon from "../Data/Images/React-icon.svg";
+import ReactIcon from "../../Components/Asset/Images/React-icon.svg";
 import { socialNetData } from "../Data/NavigationData";
 // import GitHubIcon from "../Data/Images/githublink.svg";
 // import { FaProjectDiagram } from 'react-icons/fa';

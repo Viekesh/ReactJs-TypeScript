@@ -1,4 +1,4 @@
-import PageHeading from "../LandingPage/PageHeading";
+import PageHeading from "../../Components/PageHeading/PageHeading";
 import BottomNav from "../Navigation/BottomNav";
 import TopNav from "../Navigation/TopNav";
 import "./About.scss";

@@ -29,7 +29,7 @@ import YTApp from "../YoutubeCl/YTApp";
 
 // import LogIn from "../Profile/LogIn";
 // import Profile from "../Profile/Profile";
-// import ProtectedRoute from "../Profile/ProtectedRoutes";
+import ProtectedRoute from "../Profile/ProtectedRoutes";
 // import SignUp from "../Profile/SignUp";
 // import "./LandingPage/Styles/Profile.css";
 
@@ -84,13 +84,13 @@ const ProjectRoutes = () => {
                     <Route exact path="/ForgotPass" element={<ForgotPass />}></Route>
                     <Route exact path="/About" element={<About />}></Route>
 
-                    {/* <Route path="/SignUp" element={<SignUp />}></Route>
+                    <Route path="/SignUp" element={<SignUp />}></Route>
                     <Route path="/LogIn" element={<LogIn />}></Route>
                     <Route path="/Profile" element={
                         <ProtectedRoute><Profile /></ProtectedRoute>
-                    }></Route> */}
+                    }></Route>
 
-                    <Route path="/FoodDeliverApp1" element={<HomePage />}></Route>
+                    {/* <Route path="/FoodDeliverApp1" element={<HomePage />}></Route> */}
 
                     {/* <Route
                             path="/BlogLandingPage"

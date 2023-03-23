@@ -1,19 +1,23 @@
 .e_com_header {
     height: 9vh;
+    width: 100vw;
 
     background: rgba(101, 111, 248, 0.25);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(4px);
+    // box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(4px);
     border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    // border: 1px solid rgba(255, 255, 255, 0.18);
+    position: fixed;
+    top: 0;
+    z-index: 9999 !important;
 }
 
 .e_com_header .for_smartphone .nav_elements .navigation_section {
     background: rgba(255, 150, 150, 0.466);
     // box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.6);
-    backdrop-filter: blur(30px);
-    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(90px);
+    -webkit-backdrop-filter: blur(90px);
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
 }

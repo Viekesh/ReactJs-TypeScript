@@ -112,25 +112,19 @@ const EComHeader = () => {
               {/* "react-router-dom" is giving us this ability as well, by using "useNavigate" function */}
               {/* we can use "useNavigate" function to navigate inside the website */}
               <li
-                className={` ${pathMatchRoute("/CreateForm") && "home_link"
-                  }`}
-                onClick={() => ec2Navigate("/CreateForm")}
-                id="list"
-              >
-                Create Form
-              </li>
-              <li
                 className={` ${pathMatchRoute("/EComHeader") && "home_link"}`}
                 onClick={() => ec2Navigate("/EComHeader")}
               >
                 Home
               </li>
+
               <li
                 className={` ${pathMatchRoute("/Offers") && "home_link"}`}
                 onClick={() => ec2Navigate("/Offers")}
               >
                 Offers
               </li>
+
               <li
                 className={` ${(pathMatchRoute("/Auth") || pathMatchRoute("/Profile")) &&
                   "home_link"
@@ -138,6 +132,15 @@ const EComHeader = () => {
                 onClick={() => ec2Navigate("/Profile")}
               >
                 {pageState}
+              </li>
+
+              <li
+                className={` ${pathMatchRoute("/CreateListing") && "home_link"
+                  }`}
+                onClick={() => ec2Navigate("/CreateListing")}
+                id="list"
+              >
+                Create Form
               </li>
             </ul>
           </div>
