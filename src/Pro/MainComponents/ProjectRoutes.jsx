@@ -11,7 +11,7 @@ import EC1LandingPage from "../ECommerce/EC1/EC1LandingPage";
 import EC2LandingPage from "../ECommerce/EC2/EC2LandingPage";
 import Offers from "../ECommerce/EC2/Pages/Offers";
 
-import HomePage from "../FoodDeliveryApp1/Pages/HomePage";
+// import HomePage from "../FoodDeliveryApp1/Pages/HomePage";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
 // import CreateListing from "../ECommerce/EC2/Pages/CreateListing";
 import CreateForm from "../ECommerce/EC2/Pages/CreateForm";
@@ -27,7 +27,7 @@ import YTApp from "../YoutubeCl/YTApp";
 // import NotFound from "../BlogApp1/Pages/NotFound";
 // import { AuthContextProvider } from "../Context/AuthContext";
 
-// import LogIn from "../Profile/LogIn";
+import LogIn from "../Profile/LogIn";
 // import Profile from "../Profile/Profile";
 import ProtectedRoute from "../Profile/ProtectedRoutes";
 // import SignUp from "../Profile/SignUp";

@@ -1,6 +1,12 @@
 import "./CreateListing.scss";
 import EComHeader from '../../EComHeader';
 import { useState } from "react";
+import Spinner from "../../../Components/Spinner/Spinner";
+import { auth, database, storage } from "../../../../FirebaseConfig";
+import { v4 as uuidv4 } from "uuid";
+import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
+import { addDoc, collection, serverTimestamp } from "firebase/firestore";
+import { useNavigate } from "react-router-dom";
 
 const CreateListing = () => {
 
@@ -19,7 +25,7 @@ const CreateListing = () => {
     offer: false,
     regularPrice: "",
     discountPrice: "",
-    // images: {},
+    images: [],
   });
 
   // destructure the initial values (formData information) which we have defined in the above 
@@ -37,7 +43,7 @@ const CreateListing = () => {
     offer,
     regularPrice,
     discountPrice,
-    // images,
+    images,
   } = formData;
 
   // in this form we have some condition because we have true or false, we have number and files also
@@ -70,7 +76,7 @@ const CreateListing = () => {
     }
 
 
-    // this is for booleans
+    // this is for booleans/text/numbers
     // if we don't have the images/files and the boolean values, then with the help of "useState" function "setFormData"
     // we going to return an object
     if (!event.target.files) {
@@ -81,18 +87,140 @@ const CreateListing = () => {
         [event.target.id]: boolean ?? event.target.value
       }))
     }
+
   }
 
+
+
+
+  const navigate = useNavigate();
 
   const [loading, setLoading] = useState(false);
 
+  const [progress, setProgress] = useState(null);
+
   const submitCreateListing = async (event) => {
 
+    // first we need to prevent the defualt behavior of refreshing the page by just getting event here
     event.preventDefault();
 
     setLoading(true);
+
+    // the discounted price is always less than regular price if this is not happen then we can send error to
+    // the user, so for this we make a condition
+    // sometimes in the form the number is considered as a string, so here we use "+" sign to prevent that
+    // problem by converting it string into number
+    if (+discountPrice >= +regularPrice) {
+      setLoading(false);
+      alert("Discounted Price Needs To Be Less Than Regular Price")
+      return;
+    }
+
+    // we want only 6 images so we write this condition
+    if (images.length > 6) {
+      setLoading(false);
+      alert("Maximum 6 Images Are Allowed");
+      return;
+    }
+
+    const storeImage = async (image) => {
+      return new Promise((resolve, reject) => {
+
+        // in order to keep image completly unique, for ex the person upload the same image two times then we
+        // add some random numbers and letters, in order to do that we use a package called "uuid".
+
+        const fileName = `${auth.currentUser.uid}-${image.name}-${uuidv4()}`;
+        const storageRef = ref(storage, fileName);
+        const uploadTask = uploadBytesResumable(storageRef, image);
+        uploadTask.on("state_changed", (snapshot) => {
+          // Observe state change events such as progress, pause, and resume
+          // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
+          const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+
+          console.log("Upload is " + progress + "% done");
+
+          setProgress(progress);
+
+          switch (snapshot.state) {
+            case "paused":
+              console.log("Upload is paused");
+              break;
+            case "running":
+              console.log("Upload is running");
+              break;
+            default:
+              break;
+          }
+        },
+          (error) => {
+            // Handle unsuccessful uploads
+            reject(error);
+          },
+          () => {
+            // Handle successful uploads on complete
+            // For instance, get the download URL: https://firebasestorage.googleapis.com/...
+            getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
+              resolve(downloadURL);
+              console.log("image uploaded");
+            });
+          }
+        )
+      })
+    }
+
+    const imgUrls = await Promise.all(
+
+      // [...images]
+      //   .map((image) => storeImage(image))
+      //   .catch((error) => {
+      //     setLoading(false);
+      //     alert("Images Not Uploaded");
+      //     console.log(error.message)
+      //     return;
+      //   })
+      [...images].map((image) => storeImage(image))).catch((error) => {
+        setLoading(false);
+        alert("Images Not Uploaded");
+        console.log(error.message);
+        return;
+      }
+    )
+
+    console.log(imgUrls);
+
+    const formDataCopy = {
+      ...formData,
+      imgUrls,
+      // geiolocation,
+      timestamp: serverTimestamp(),
+      useRef: auth.currentUser.uid,
+    }
+
+    delete formDataCopy.images;
+    !formDataCopy.offer && delete formDataCopy.discountPrice;
+    // delete formDataCopy.latitude;
+    // delete formDataCopy.longitude;
+
+    try {
+      const docRef = await addDoc(collection(database, "listings"), {
+        ...formDataCopy,
+      });
+
+      setLoading(false);
+      alert("Form Successfully Submitted");
+      navigate(`/category/${formDataCopy.type}/${docRef.id}`);
+    } catch (error) {
+      console.log(error.message);
+    }
+
+    // we just navigate the user to this url and the url is dynamic because we want the url to be based
+    // on the listing id
+    // we check here there is a "rent" or "sale"
   }
 
+  if (loading) {
+    return <Spinner />
+  }
 
 
 
@@ -138,7 +266,7 @@ const CreateListing = () => {
               placeholder="Enter Name"
               id="name"
               value={name}
-              onClick={afterClickOnCreateListInput}
+              onChange={afterClickOnCreateListInput}
               minLength="9"
               maxLength="90"
               required
@@ -151,7 +279,7 @@ const CreateListing = () => {
               placeholder="Mileage"
               id="mileage"
               value={mileage}
-              onClick={afterClickOnCreateListInput}
+              onChange={afterClickOnCreateListInput}
               min="90"
               max="900"
               required
@@ -164,9 +292,9 @@ const CreateListing = () => {
               placeholder="Price"
               id="price"
               value={price}
-              onClick={afterClickOnCreateListInput}
+              onChange={afterClickOnCreateListInput}
               minLength="12"
-              maxLengt="99"
+              maxLength="99"
               required
             />
           </div>
@@ -255,7 +383,7 @@ const CreateListing = () => {
               placeholder="Enter Your Address"
               id="address"
               value={address}
-              onClick={afterClickOnCreateListInput}
+              onChange={afterClickOnCreateListInput}
             ></textarea>
           </div>
 
@@ -297,7 +425,7 @@ const CreateListing = () => {
               placeholder="Description"
               id="description"
               value={description}
-              onClick={afterClickOnCreateListInput}
+              onChange={afterClickOnCreateListInput}
             ></textarea>
           </div>
 
@@ -333,8 +461,10 @@ const CreateListing = () => {
                 type="number"
                 id="regularPrice"
                 value={regularPrice}
-                onClick={afterClickOnCreateListInput}
+                onChange={afterClickOnCreateListInput}
                 placeholder="Regular Price"
+                minLength="60"
+                maxLength="9000000"
               />
               <div>
                 <p>$ / Months</p>
@@ -349,10 +479,10 @@ const CreateListing = () => {
                   type="number"
                   id="discountPrice"
                   value={discountPrice}
-                  onClick={afterClickOnCreateListInput}
+                  onChange={afterClickOnCreateListInput}
                   placeholder="Discount Price"
-                  min="60"
-                  max="9000000"
+                  minLength="60"
+                  maxLength="9000000"
                   required={offer}
                 />
 
@@ -376,6 +506,10 @@ const CreateListing = () => {
             />
           </div>
 
+          <div className="e_com_form_submit_button">
+            <button type="submit">Submit Form</button>
+          </div>
+
         </form>
       </div>
     </div>
@@ -385,3 +519,13 @@ const CreateListing = () => {
 export default CreateListing;
 
 
+
+
+
+// The above code is a React component for creating a listing. It includes a form that the user fills in with details about the listing, such as its type (rent or sale), name, mileage, price, fuel type, address, description, offer, and prices (regular and discounted). The component also handles image uploads for the listing.
+
+// The component uses useState to keep track of the form data and loading state. It also imports several functions and objects from Firebase, such as auth, database, storage, and v4 from uuid.
+
+// The function afterClickOnCreateListInput is triggered when the user clicks on an input field, and updates the form data accordingly based on the input value. If the input is a file, the images property in the form data is set to the selected files. If the input is a boolean, its value is set to true or false. If it's not a file or boolean, its value is set to the target value.
+
+// The function submitCreateListing is triggered when the user submits the form. It first prevents the default behavior of refreshing the page, then checks the validity of the form data. If the discounted price is greater than or equal to the regular price, an error is displayed. If there are more than 6 images, an error is displayed. If the data is valid, the images are uploaded to Firebase storage with unique file names generated using uuidv4. After the images are uploaded, the listing details and image URLs are stored in the Firebase Firestore database using the addDoc function. Finally, the user is navigated to a different page using the useNavigate hook.

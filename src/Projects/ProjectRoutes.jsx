@@ -42,7 +42,9 @@ const ProjectRoutes = () => {
 
           {/* ECommerce */}
           <Route path="/EComHeader" element={<EComHeader />}></Route>
-          <Route path="/CreateListing" element={<CreateListing />}></Route>
+          <Route path="/CreateListing" element={<PrivateRoutes />}>
+            <Route path="/CreateListing" element={<CreateListing />}></Route>
+          </Route>
 
           {/* Blogs Page */}
           <Route exact path="/Blogs" element={<Blogs />}></Route>

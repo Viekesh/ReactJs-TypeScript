@@ -166,6 +166,7 @@ const CreateForm = () => {
                         // For instance, get the download URL: https://firebasestorage.googleapis.com/...
                         getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
                             resolve(downloadURL);
+                            console.log(downloadURL);
                         });
                     }
                 );
