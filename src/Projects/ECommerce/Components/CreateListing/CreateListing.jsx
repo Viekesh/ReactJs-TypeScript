@@ -164,14 +164,15 @@ const CreateListing = () => {
             // For instance, get the download URL: https://firebasestorage.googleapis.com/...
             getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
               resolve(downloadURL);
-              console.log(downloadURL);
+              // console.log(downloadURL);
+              // alert("Images Successfully Uploaded");
             });
           }
         );
       })
     }
 
-    console.log(storeImage);
+    // console.log(storeImage);
 
     const imgUrls = await Promise.all(
       [...images].map((image) => storeImage(image))).catch((error) => {
@@ -192,6 +193,8 @@ const CreateListing = () => {
     }
 
     delete formDataCopy.images;
+
+    // if the offer is not available
     !formDataCopy.offer && delete formDataCopy.discountPrice;
     // delete formDataCopy.latitude;
     // delete formDataCopy.longitude;
@@ -203,7 +206,9 @@ const CreateListing = () => {
 
       setLoading(false);
       alert("Form Successfully Submitted");
-      navigate(`/category/${formDataCopy.type}/${docRef.id}`);
+
+      // we use here dynamic url because we want to show the listing of that particular user
+      // navigate(`/category/${formDataCopy.type}/${docRef.id}`);
     } catch (error) {
       console.log(error.message);
     }
