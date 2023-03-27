@@ -99,8 +99,9 @@ const CreateListing = () => {
 
   const [progress, setProgress] = useState(null);
 
-  const submitCreateListing = async (event) => {
+  // const [user, setUser] = useState(null);
 
+  const SubmitCreateListing = async (event) => {
     // first we need to prevent the defualt behavior of refreshing the page by just getting event here
     event.preventDefault();
 
@@ -116,23 +117,24 @@ const CreateListing = () => {
       return;
     }
 
-    // we want only 6 images so we write this condition
+    // image length we want only 6
     if (images.length > 6) {
       setLoading(false);
-      alert("Maximum 6 Images Are Allowed");
+      alert("Maximum 6 Imaages Are Allowed");
       return;
     }
 
     const storeImage = async (image) => {
       return new Promise((resolve, reject) => {
+        // const storage = getStorage();
 
         // in order to keep image completly unique, for ex the person upload the same image two times then we
         // add some random numbers and letters, in order to do that we use a package called "uuid".
-
-        const fileName = `${auth.currentUser.uid}-${image.name}-${uuidv4()}`;
-        const storageRef = ref(storage, fileName);
+        const filename = `${auth.currentUser.uid}-${image.name}-${uuidv4()}`;
+        const storageRef = ref(storage, filename);
         const uploadTask = uploadBytesResumable(storageRef, image);
         uploadTask.on("state_changed", (snapshot) => {
+
           // Observe state change events such as progress, pause, and resume
           // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
           const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
@@ -151,6 +153,7 @@ const CreateListing = () => {
             default:
               break;
           }
+
         },
           (error) => {
             // Handle unsuccessful uploads
@@ -161,32 +164,24 @@ const CreateListing = () => {
             // For instance, get the download URL: https://firebasestorage.googleapis.com/...
             getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
               resolve(downloadURL);
-              console.log("image uploaded");
+              console.log(downloadURL);
             });
           }
-        )
+        );
       })
     }
 
-    const imgUrls = await Promise.all(
+    console.log(storeImage);
 
-      // [...images]
-      //   .map((image) => storeImage(image))
-      //   .catch((error) => {
-      //     setLoading(false);
-      //     alert("Images Not Uploaded");
-      //     console.log(error.message)
-      //     return;
-      //   })
+    const imgUrls = await Promise.all(
       [...images].map((image) => storeImage(image))).catch((error) => {
         setLoading(false);
         alert("Images Not Uploaded");
         console.log(error.message);
         return;
       }
-    )
-
-    console.log(imgUrls);
+      )
+    // console.log(imgUrls);
 
     const formDataCopy = {
       ...formData,
@@ -215,7 +210,7 @@ const CreateListing = () => {
 
     // we just navigate the user to this url and the url is dynamic because we want the url to be based
     // on the listing id
-    // we check here there is a "rent" or "sale"
+    // we check here there is a "rent" or "sale" 
   }
 
   if (loading) {
@@ -232,7 +227,7 @@ const CreateListing = () => {
       </div>
 
       <div className="e_com_form">
-        <form className="list_properties" onSubmit={submitCreateListing}>
+        <form className="list_properties" onSubmit={SubmitCreateListing}>
 
           <div className="list_element">
             <div className="sell_rent_form_buttons">
@@ -500,6 +495,7 @@ const CreateListing = () => {
               type="file"
               id="images"
               // accept=".jpg, .png, .jpeg"
+              onChange={afterClickOnCreateListInput}
               multiple
               required
               className="type_file"
@@ -507,7 +503,10 @@ const CreateListing = () => {
           </div>
 
           <div className="e_com_form_submit_button">
-            <button type="submit">Submit Form</button>
+            <button
+              type="submit"
+              disabled={progress !== null && progress < 100}
+            >Submit Form</button>
           </div>
 
         </form>
