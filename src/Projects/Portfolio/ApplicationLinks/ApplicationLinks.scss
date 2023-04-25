@@ -1,16 +1,42 @@
 .app_links {
+    border: 3px solid blue;
+    margin: 3vw auto 30vw auto;
+    width: 100vw;
+}
+
+.swiper {
+    border: 3px solid red;
+    border-radius: 3vw;
+    width: 100%;
+    height: 27vh;
+    padding: 5vw;
+}
+
+.swiper-slide {
+    border: 3px solid black;
+    background-color: snow;
+    box-sizing: border-box;
+    overflow: hidden;
+    width: 90%;
+}
+
+// .link_images {
+//     border: 3px solid greenyellow;
+//     width: 24vw;
+//     height: 30vh;
+
+//     transform: rotate(-20deg);
+//     position: absolute;
+//     right: 0;
+//     bottom: -9vw;
+// }
+
+.link_images {
     border: 2px solid red;
-    margin: 9em auto;
-}
-
-.mySwiper {
-    border: 5px solid blue;
-}
-
-.e_com_swiper {
-    border: 3px solid green;
-    height: 18vh;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
+

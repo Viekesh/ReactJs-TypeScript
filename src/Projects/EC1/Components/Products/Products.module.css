@@ -1,0 +1,230 @@
+.product {
+    margin: 9vw auto 30vw auto;
+    width: 98vw;
+}
+
+.product h3 {
+    margin: 3vw 0 6vw 3vw;
+    font-family: "Monsterrat", sans-serif;
+    font-size: 30px;
+    font-weight: 900;
+    color: snow;
+
+    display: flex;
+    align-items: center;
+}
+
+/* .product .container {
+    border: 2px solid blue;
+} */
+
+.container .product_categories {
+    display: grid;
+    width: 100%;
+    grid-template-columns: initial;
+}
+
+.menu {
+    border-top: 2px solid snow;
+    border-bottom: 2px solid snow;
+    margin: 0 auto;
+    width: 96%;
+    padding: 0 3vw;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 3vw;
+    overflow-y: hidden;
+}
+
+.menu>li {
+    border-radius: 3vw;
+    margin: 3vw auto;
+    width: 33vw;
+    height: 5vh;
+    font-family: "Monsterrat", sans-serif;
+    overflow-x: scroll;
+    font-size: 5vw;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+    transition: 0.3s;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(253, 1, 148, 0.37);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(9px);
+}
+
+.menu>li:hover {
+    color: snow;
+    cursor: pointer;
+}
+
+.list {
+    padding: 3vw 0;
+    display: grid;
+    align-items: center;
+    justify-content: space-around;
+    grid-template-columns: auto auto;
+    grid-column-gap: 3vw;
+    grid-row-gap: 3vw;
+
+    height: 70vh;
+
+    overflow-y: scroll;
+}
+
+.left_s {
+    border: 2px solid blue;
+    padding: 3vw;
+    width: 40vw;
+    height: 30vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(253, 1, 148, 0.37);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(9px);
+
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.img_p {
+    width: 18vw;
+    height: 30vh;
+}
+
+.name {
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (min-width: 768px) {
+    .product {
+        margin: 6vw auto 3vw auto;
+        width: 66vw;
+    }
+
+    .product h3 {
+        margin: 2vw 0 2vw 0;
+        font-family: "Monsterrat", sans-serif;
+        font-size: 30px;
+        font-weight: 900;
+        color: snow;
+        display: flex;
+        align-items: center;
+    }
+
+    /* .product .container {
+        border: 2px solid blue;
+    } */
+
+    .container .product_categories {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 21% auto;
+    }
+
+    .menu {
+        border-top: none;
+        border-bottom: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .menu>li {
+        padding: .6vw;
+        border-radius: 3vw;
+        margin: 0;
+        width: initial;
+        height: initial;
+        font-family: "Monsterrat", sans-serif;
+        overflow-x: scroll;
+        font-size: 1vw;
+        font-weight: bold;
+        text-align: center;
+        color: black;
+        transition: 0.3s;
+    }
+
+    .menu>li:hover {
+        color: rgb(255, 0, 140);
+        cursor: pointer;
+    }
+
+    .list {
+        border: none;
+        padding: 1vw;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-column-gap: 1vw;
+        grid-row-gap: 1vw;
+
+        height: 50vh;
+
+        overflow-y: scroll;
+        justify-content: space-between;
+    }
+
+    .left_s {
+        border: 2px solid snow;
+        padding: 2vw 0;
+        border-radius: 18px;
+        width: 15vw;
+        height: 18vh;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+
+        background: rgba(255, 255, 255, 0.3);
+        box-shadow: 0 8px 32px 0 rgba(1, 18, 253, 0.37);
+        backdrop-filter: blur(3px);
+        -webkit-backdrop-filter: blur(3px);
+
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .img_p {
+        width: 6vw;
+        height: 30vh;
+
+        transform: rotate(-20deg);
+        position: absolute;
+        right: 0;
+        bottom: -5vw;
+    }
+
+    .name {
+        margin: 0 0 0 -6vw;
+        font-size: 12px;
+        font-weight: 600;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}

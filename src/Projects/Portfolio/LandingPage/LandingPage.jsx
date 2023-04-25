@@ -12,20 +12,21 @@ const LandingPage = () => {
   return (
     <>
       <header>
-          <TopNav />
-          <BottomNav />
-      </header>
+        <TopNav />
+        <BottomNav />
 
-      <main>
-        <Greet />
-        <SocialLinks />
+        <main>
+          <Greet />
+          <SocialLinks />
 
-        {/* we use below ReactJs props, props is a properties and it is a way of passing data from parent
+          {/* we use below ReactJs props, props is a properties and it is a way of passing data from parent
             component to child component */}
-        <SubHeading heading="Projects" />
-        {/* <Slider /> */}
-        <ApplicationLinks />
-      </main>
+          <SubHeading heading="Projects" />
+          {/* <Slider /> */}
+          <ApplicationLinks />
+        </main>
+
+      </header>
     </>
   );
 };

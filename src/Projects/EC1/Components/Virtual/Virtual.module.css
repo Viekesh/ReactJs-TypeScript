@@ -1,0 +1,103 @@
+.virtual_page {
+    margin: 33vw auto 30vw auto;
+    width: 98vw;
+}
+
+.Virtual {
+    display: block;
+}
+
+.Virtual .left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+    color: snow;
+}
+
+.Virtual .left>:nth-child(1) {
+    font-family: "Monsterrat", sans-serif;
+    font-size: 21px;
+    font-weight: 900;
+    color: snow;
+}
+
+.Virtual .left>:nth-child(2) {
+    margin: 1vw auto;
+    font-family: "Monsterrat", sans-serif;
+    font-size: 15px;
+    font-weight: lighter;
+    text-align: center;
+    text-transform: uppercase;
+    color: snow;
+}
+
+.Virtual .left>:nth-child(3) {
+    font-family: "Monsterrat", sans-serif;
+    font-size: 15px;
+    font-weight: lighter;
+    text-align: center;
+    text-transform: uppercase;
+    color: snow;
+}
+
+.Virtual .left img {
+    width: 50%;
+}
+
+.Virtual .right .wrapper {
+    width: 100%;
+}
+
+
+@media only screen and (min-width: 768px) {
+    .virtual_page {
+        margin: 9vw auto 3vw auto;
+        width: 66vw;
+    }
+
+    .Virtual {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .Virtual .left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-transform: capitalize;
+        color: snow;
+        line-height: 2vw;
+    }
+
+    .Virtual .left>:nth-child(1) {
+        font-family: "Monsterrat", sans-serif;
+        font-size: 18px;
+        font-weight: 900;
+        color: snow;
+    }
+
+    .Virtual .left>:nth-child(2) {
+        font-family: "Monsterrat", sans-serif;
+        font-size: 18px;
+        font-weight: lighter;
+        text-align: center;
+        text-transform: uppercase;
+        color: snow;
+    }
+
+    .Virtual .left>:nth-child(3) {
+        color: snow;
+    }
+
+    .Virtual .left img {
+        width: 10vw;
+    }
+
+    .Virtual .right .wrapper {
+        width: 36vw;
+    }
+}
