@@ -1,12 +1,11 @@
 .greet {
-    border: 2px solid transparent;
-    height: 100vh;
+    border: 3px solid transparent;
 }
 
 .for_mobile_device {
     width: 90vw;
     height: 30vh;
-    margin: 24vh auto;
+    margin: 30vh auto;
     position: relative;
     flex-direction: column;
     justify-content: space-around;
@@ -15,9 +14,10 @@
 .for_mobile_device .heading1 {
     // border: 2px solid red;
     margin: 9vw 0;
-    font-size: 24px;
-    font-family: 'Source Code Pro', monospace;
+    font-size: 21px;
+    font-family: 'Roboto', monospace;
     font-style: italic;
+    font-weight: 900;
     text-transform: capitalize;
     background: linear-gradient(to right, red, blue, blue);
     -webkit-background-clip: text;

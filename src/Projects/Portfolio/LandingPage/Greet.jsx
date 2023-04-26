@@ -66,7 +66,7 @@ const Greet = () => {
         </h3>
 
         <h1 className="heading2" id="heading2">
-          looking for a full stack engineer who builds featured, stunning, secured websites and applications!
+          want to build featured, stunning, secured websites and applications!
           then you are at right place. go around, check the entire porfolio and hit the call button if you need
           any assistance.
         </h1>
