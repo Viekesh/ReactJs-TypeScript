@@ -1,0 +1,276 @@
+.music_nav {
+    // background: linear-gradient(to top, rgb(250, 90, 90), red, red, red, rgb(250, 90, 90));
+    background: linear-gradient(to bottom, rgb(250, 145, 145), rgb(253, 0, 253));
+    width: 100vw;
+    height: 60px;
+    position: fixed;
+    box-shadow: 1px 1px 9px gray;
+    z-index: 9;
+}
+
+.music_smartphone {
+    margin: 0 auto;
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.music_nav_elements {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.music_for_desktop {
+    display: none;
+}
+
+
+.music_menu_icon {
+    z-index: 9;
+}
+
+
+// menu icon
+
+.hamburger {
+    display: inline-block;
+    cursor: pointer;
+    transition-property: opacity, filter;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    font: inherit;
+    color: inherit;
+    text-transform: none;
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    overflow: visible;
+}
+
+.hamburger:hover {
+    opacity: 1;
+}
+
+.hamburger.is-active:hover {
+    opacity: 0.9;
+}
+
+.music_menu_icon .hamburger.is-active .hamburger-inner,
+.music_menu_icon .hamburger.is-active .hamburger-inner::before,
+.music_menu_icon .hamburger.is-active .hamburger-inner::after {
+    background-color: snow;
+    transition: .6s;
+}
+
+.hamburger-box {
+    outline: 0px;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hamburger-inner {
+    display: block;
+    top: 50%;
+}
+
+.music_menu_icon .hamburger-inner,
+.music_menu_icon .hamburger-inner::before,
+.music_menu_icon .hamburger-inner::after {
+    width: 18px;
+    height: 3px;
+    background-color: snow;
+    border-radius: 3px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+}
+
+.hamburger-inner::before,
+.hamburger-inner::after {
+    content: "";
+    display: block;
+}
+
+.hamburger-inner::before {
+    top: -9px;
+}
+
+.hamburger-inner::after {
+    bottom: -9px;
+}
+
+
+.hamburger--3dx .hamburger-box {
+    perspective: 90px;
+}
+
+.hamburger--3dx .hamburger-inner {
+    transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1),
+        background-color 0s 0.15s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.hamburger--3dx .hamburger-inner::before,
+.hamburger--3dx .hamburger-inner::after {
+    transition: transform 0s 0.15s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.hamburger--3dx.is-active .hamburger-inner {
+    background-color: transparent !important;
+    transform: rotateY(180deg);
+}
+
+.hamburger--3dx.is-active .hamburger-inner::before {
+    transform: translate3d(0, 9px, 0) rotate(45deg);
+}
+
+.hamburger--3dx.is-active .hamburger-inner::after {
+    transform: translate3d(0, -9px, 0) rotate(-45deg);
+}
+
+// menu end
+
+
+
+// logo
+
+.music_logo {
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.music_logo h3 {
+    width: fit-content;
+    color: snow;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 12px;
+}
+
+.music_logo h4 {
+    color: snow;
+    font-family: "Roboto", sans-serif;
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    color: greenyellow;
+}
+
+.music_about>a .MuiSvgIcon-root {
+    font-size: 30px;
+    font-weight: 900;
+    color: snow;
+}
+
+.music_navigation_section {
+    border: 2px solid snow;
+    // border: 2px solid blue;
+    padding: 3em 0;
+    width: 100vw;
+    height: 100vh;
+    // background-color: #FCA311;
+    // background-color: antiquewhite;
+    -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
+    background: linear-gradient(to bottom, #de6161, #df467b, #ce389f, #a25ebd, #a242c8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateY(-800px);
+    transition: transform 0.2s ease-in-out 0s;
+    z-index: 3;
+}
+
+.music_navigation_section.ovverlay {
+    transform: translateY(0px);
+}
+
+.music_navigation_element {
+    border-radius: .6em;
+    margin: 1em auto;
+    width: 180px;
+    height: 40px;
+    background-color: transparent;
+    padding: 0em .6em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.empty_element {
+    border: 0px;
+    background-color: transparent;
+}
+
+.music_navigation_element a {
+    // color: #FCA311;
+    color: snow;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.music_links {
+    border-radius: 100%;
+    width: 60px;
+    height: 60px;
+    color: snow;
+    // background-color: #FCA311;
+    // background: linear-gradient(to top, rgb(250, 90, 90), red, red, red, rgb(250, 90, 90));
+    background: linear-gradient(to bottom, rgb(250, 145, 145), rgb(253, 0, 253));
+    font-size: 18px;
+    box-shadow: 1px 1px 12px 1px gray;
+
+    position: fixed;
+    right: 9vw;
+    bottom: 12vh;
+
+    animation: animate 0.3s;
+    transition: 0.3s;
+    z-index: 999;
+}
+
+
+
+
+@media only screen and (min-width: 768px) {
+
+    .music_smartphone {
+        width: 80%;
+    }
+
+    .music_menu_icon {
+        display: none;
+    }
+
+    .music_about {
+        display: none;
+    }
+
+    .music_for_desktop {
+        width: 45%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .music_for_desktop a {
+        color: snow;
+    }
+}

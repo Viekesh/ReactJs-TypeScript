@@ -1,7 +1,7 @@
 export const appLinks = [
     {
         id:1,
-        link:"/EComHeader"
+        link:"/LandPage"
     },
     {
         id:2,

@@ -15,6 +15,7 @@ import AddUpdateBlog from "./Portfolio/Blogs/Pages/AddUpdateBlog";
 import Blogs from "./Portfolio/Blogs/Pages/Blogs";
 import Details from "./Portfolio/Blogs/Pages/Details";
 import LandingPage from "./Portfolio/LandingPage/LandingPage";
+import LandPage from "./EEE/LandPage";
 
 const ProjectRoutes = () => {
   return (
@@ -60,6 +61,9 @@ const ProjectRoutes = () => {
 
           {/* Music */}
           <Route exact path="/MusicLandingPage" element={<MusicLandingPage />}></Route>
+
+          {/* EEE */}
+          <Route exact path="/LandPage" element={<LandPage />}></Route>
         </Routes>
       </BrowserRouter>
     </>

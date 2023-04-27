@@ -1,0 +1,320 @@
+.landing_page {
+    position: relative;
+    padding-bottom: 200px;
+}
+
+// Welcome Note
+
+.wlcm_note {
+    border: 0px solid red;
+    margin: 0 auto;
+    width: 80%;
+    height: 80vh;
+    background-color: rgb(255, 244, 244);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    word-spacing: 24px;
+}
+
+.wlcm_note h4 {
+    text-align: center;
+}
+
+.wlcm_note h4 .span1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    color: snow;
+    text-shadow: 1px 1px 9px gray;
+}
+
+.wlcm_note h4 .span2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    background: linear-gradient(to right, rgb(250, 145, 145), rgb(253, 0, 253));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    color: violet;
+    text-shadow: 1px 1px 12px gray;
+}
+
+.wlcm_note h5 {
+    border: 0px solid green;
+    margin: 1em auto;
+    color: snow;
+    text-transform: uppercase;
+    text-align: justify;
+    text-shadow: 1px 1px 9px gray;
+}
+
+
+
+// page heading
+
+.page_head {
+    padding: 2em 1.5em;
+    background-color: black;
+}
+
+.page_head h2 {
+    font-family: "Roboto", sans-serif;
+    font-style: italic;
+    font-weight: 900;
+    background: linear-gradient(to right, rgb(198, 255, 255), cyan, darkblue, darkblue, darkblue, darkblue, darkblue);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    color: violet;
+    text-shadow: 1px 1px 12px snow;
+}
+
+
+// paragraphs
+
+.para {
+    margin: 1em auto;
+    width: 100%;
+}
+
+.para p {
+    padding: 2em;
+    text-transform: uppercase;
+    text-align: justify;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    background: linear-gradient(to right, darkblue, rgb(0, 255, 0), blue);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    text-shadow: 1px 1px 12px rgb(174, 174, 250);
+}
+
+
+
+// section 1 course details
+
+.section_one {
+    padding: 3em 0;
+    width: 100vw;
+    // background: url(../../Data/Images/background-image.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.section_one .relative_div {
+    border: 2px solid transparent;
+    margin: -9em 0 0 0;
+}
+
+.courses_details {
+    border-radius: 1em;
+    margin: 0em auto 6em auto;
+    padding: 1em;
+    width: 80%;
+    background: linear-gradient(to top, #ffa047, #5e007a);
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
+}
+
+.courses_details:hover {
+    background: linear-gradient(to top, rgb(59, 0, 0), black);
+}
+
+.courses_details h2 {
+    margin: 0 0 1em 0;
+    text-transform: capitalize;
+    text-align: justify;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-size: 30px;
+
+    background: linear-gradient(to right, rgb(250, 145, 145), rgb(253, 0, 253));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.courses_details h3 {
+    color: snow;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    text-transform: capitalize;
+    text-align: justify;
+}
+
+.courses_details .course_button>button {
+    border-radius: 1em;
+    margin: 2em 0 1em 0;
+    padding: .9em;
+    color: snow;
+    background-color: rgb(250, 145, 145);
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+}
+
+
+
+// section 2 heading
+
+.lp_heading {
+    border: 0px solid black;
+    margin: 6em auto 2em auto;
+    width: 90%;
+    text-align: center;
+}
+
+.lp_heading h3 {
+    color: rgb(0, 119, 255) !important;
+    font-family: 'Roboto', sans-serif;
+    font-size: 21px;
+    font-weight: 600;
+    word-spacing: 6px;
+}
+
+.second_heading {
+    border: 2px solid black;
+    margin: 0 auto;
+    padding: 2em;
+    width: 94%;
+    text-align: center;
+}
+
+
+// questions and answers
+
+.qna {
+    margin: 2em auto 0 auto;
+    width: 80%;
+    // position: relative;
+}
+
+.question {
+    // position: relative;
+    // padding: 10px 20px;
+    // background: #fff;
+    // margin: 3px;
+    // border-radius: 5px;
+
+    border-radius: .6em;
+    margin: .6em auto;
+    padding: 1em;
+    text-transform: uppercase;
+    text-align: justify;
+    font-family: "Roboto", sans-serif;
+    font-style: italic;
+    font-size: 12px;
+    font-weight: 600;
+    color: snow;
+    background-color: rgb(255, 196, 0);
+    box-shadow: 1px 1px 9px 1px gray;
+}
+
+// .question::after {
+//     content: "";
+//     position: absolute;
+//     top: 0;
+//     right: 0;
+//     bottom: 0;
+//     left: 0;
+//     z-index: -1;
+//     margin: -3px;
+//     border-radius: inherit;
+//     // background-image: linear-gradient(45deg, purple, orange);
+//     background: linear-gradient(to top,rgb(0, 0, 53), darkblue, darkblue, darkblue, rgb(0, 0, 53));
+// }
+
+.answer {
+    border-radius: .6em;
+    width: 100%;
+    padding: 1em;
+    text-align: justify;
+    height: 0%;
+    font-size: 0%;
+    transition: .1s;
+    text-transform: uppercase;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    color: snow;
+    background: linear-gradient(to right, rgb(250, 145, 145), rgb(253, 0, 253));
+    box-shadow: 1px 1px 9px 1px gray;
+    line-height: 0px;
+}
+
+.answer.overlay {
+    height: 100%;
+    font-size: 80%;
+    line-height: 18px;
+}
+
+
+// contact form
+
+.music_contact_form {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.music_contact_form .music_form {
+    // border: 1px solid violet;
+    border-radius: .6em;
+    outline: none;
+    margin: .6em auto;
+    padding: 1.3em;
+    width: 100%;
+    color: violet;
+    background-color: antiquewhite;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+textarea {
+    border: none;
+    outline: none !important;
+}
+
+.form_submit_button {
+    border: none !important;
+    background-color: rgb(0, 119, 255) !important;
+    color: snow !important;
+    font-weight: 600 !important;
+}
+
+
+
+
+// about page
+
+.about_page {
+    padding-top: 8.3vh;
+}
+
+.about_page_para {
+    margin: 1em auto;
+    height: 50vh;
+    overflow-x: scroll;
+}
+
+.about_page p {
+    padding: 0 2em;
+    font-style: italic;
+    font-weight: 900;
+    font-size: 15px;
+
+    background: linear-gradient(to right, rgb(250, 145, 145), rgb(253, 0, 253));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    color: violet;
+    text-shadow: 1px 1px 12px gray;
+
+    line-height: 21px;
+    text-transform: none;
+    text-align: justify;
+}
