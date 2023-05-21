@@ -12,6 +12,7 @@ const CreateListing = () => {
 
   // we create this hook to get initial state of the form, after user fill the data in this form then we
   // update that data and send them by using the "useState" function (setFormData);
+  
   const [formData, setFormData] = useState({
     type: "rent",
     name: "",
