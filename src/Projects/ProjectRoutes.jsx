@@ -11,11 +11,11 @@ import CreateListing from "./ECommerce/Components/CreateListing/CreateListing";
 import EComHeader from "./ECommerce/EComHeader";
 import MusicLandingPage from "./Music/MusicLandingPage";
 import About from "./Portfolio/About/About";
-import AddUpdateBlog from "./Portfolio/Blogs/Pages/AddUpdateBlog";
 import Blogs from "./Portfolio/Blogs/Pages/Blogs";
 import Details from "./Portfolio/Blogs/Pages/Details";
 import LandingPage from "./Portfolio/LandingPage/LandingPage";
 import LandPage from "./EEE/LandPage";
+import AddUpdateBlog from "./Portfolio/Blogs/Pages/AddUpdateBlog";
 
 const ProjectRoutes = () => {
   return (
@@ -29,11 +29,7 @@ const ProjectRoutes = () => {
           {/* Authentication */}
           <Route exact path="/Register" element={<Register />}></Route>
           <Route exact path="/Auth" element={<Auth />}></Route>
-          <Route
-            exact
-            path="/ForgotPassword"
-            element={<ForgotPassword />}
-          ></Route>
+          <Route exact path="/ForgotPassword" element={<ForgotPassword />}></Route>
 
           {/* Private Route */}
           <Route exact path="/Profile" element={<PrivateRoutes />}>
@@ -49,7 +45,9 @@ const ProjectRoutes = () => {
 
           {/* Blogs Page */}
           <Route exact path="/Blogs" element={<Blogs />}></Route>
-          <Route exact path="/Create" element={<AddUpdateBlog />}></Route>
+          <Route path="/Create" element={<PrivateRoutes />}>
+            <Route path="/Create" element={<AddUpdateBlog />}></Route>
+          </Route>
           <Route exact path="/Update/:id" element={<AddUpdateBlog />}></Route>
           <Route exact path="/Details/:id" element={<Details />}></Route>
 

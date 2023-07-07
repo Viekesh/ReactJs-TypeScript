@@ -37,8 +37,7 @@ const GAuth = () => {
       // and if its available we get it inside the "docSnap"
       const docSnap = await getDoc(docRef);
 
-      // now we check the "uid" is available or not, if it doesn't exist in "docSnap", so we're going add it to the
-      // database
+      // now we check the "uid" is available or not, if it doesn't exist in "docSnap", so we're going add it to the database
       if (!docSnap.exists()) {
         // for adding we use "setDoc" method provided by firebase/firestore
         // "setDoc" is going to get address as well, which is the same address we have here (these address which is hold by a "docRef")
@@ -62,7 +61,7 @@ const GAuth = () => {
     try {
       const authenticate = auth;
       const provider = new GoogleAuthProvider();
-      const result = await signInWithRedirect(authenticate, provider);
+      // const result = await signInWithRedirect(authenticate, provider);
       const res = await getRedirectResult(authenticate, provider);
       // const user = result.user;
       const user = res.user

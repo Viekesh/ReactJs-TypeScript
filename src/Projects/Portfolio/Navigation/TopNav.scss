@@ -3,10 +3,11 @@ $blueColor: blue;
 $redColor: red;
 
 .top_navigation {
+    // border: 3px solid green;
     width: 100vw;
-    height: 9vh;
+    height: 60px;
     background-color: black;
-    // box-shadow: 1px 1px 10px 0px black;
+    box-shadow: 1px 1px 10px 0px black;
 
     position: fixed;
     top: 0;
@@ -26,7 +27,7 @@ $redColor: red;
 }
 
 .logo a>img {
-    width: 12vw;
+    width: 45px;
 }
 
 .nav_elements {
@@ -44,7 +45,8 @@ $redColor: red;
 }
 
 .github_icon a>svg {
-    width: 6vw;
+    // border: 3px solid blue;
+    width: 21px;
 }
 
 .navigation_section {

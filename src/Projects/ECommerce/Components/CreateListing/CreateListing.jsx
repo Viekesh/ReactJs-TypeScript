@@ -12,7 +12,7 @@ const CreateListing = () => {
 
   // we create this hook to get initial state of the form, after user fill the data in this form then we
   // update that data and send them by using the "useState" function (setFormData);
-  
+
   const [formData, setFormData] = useState({
     type: "rent",
     name: "",
@@ -28,6 +28,7 @@ const CreateListing = () => {
     discountPrice: "",
     images: [],
   });
+
 
   // destructure the initial values (formData information) which we have defined in the above 
   // "useState" hook otherwise we will get error
@@ -47,7 +48,7 @@ const CreateListing = () => {
     images,
   } = formData;
 
-  // in this form we have some condition because we have true or false, we have number and files also
+  // In this form we have some condition because we have true or false, we have number and files also
   // and also text from the name and the address input
   const afterClickOnCreateListInput = (event) => {
 
@@ -64,7 +65,6 @@ const CreateListing = () => {
       boolean = false;
     }
 
-
     // this is for files
     // if input is files so in this case "setFormData"
     if (event.target.files) {
@@ -75,7 +75,6 @@ const CreateListing = () => {
         images: event.target.files
       }))
     }
-
 
     // this is for booleans/text/numbers
     // if we don't have the images/files and the boolean values, then with the help of "useState" function "setFormData"

@@ -4,6 +4,12 @@
     width: 100vw;
 }
 
+@media only screen and (min-width: 500px) {
+    .app_links {
+        display: none;
+    }
+}
+
 .swiper {
     border: 3px solid red;
     border-radius: 3vw;
