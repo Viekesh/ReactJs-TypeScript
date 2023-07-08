@@ -28,10 +28,22 @@ const Blogs = () => {
         <div>
             <TopNav />
             <BottomNav />
-            <PageHeading heading="Blogs" />
+            <PageHeading heading="Articles" />
             <BlogHeader />
 
-            <div className="blog_container"></div>
+            <div className="blog_container">
+                <div className="sub_container">
+                    <div className="row_container">
+                        <h2>trending</h2>
+                        <section className="blog_section"></section>
+                        <section className="tag_section">
+                            <h2>tags</h2>
+                            <h2>most popular</h2>
+                        </section>
+                    </div>
+                </div>
+            </div>
+
         </div>
     )
 }
