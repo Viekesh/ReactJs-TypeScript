@@ -4,6 +4,7 @@ import PageHeading from '../../../Components/PageHeading/PageHeading';
 import BlogHeader from '../Components/BlogHeader';
 import { useEffect, useState } from 'react';
 import { auth } from '../../../../FirebaseConfig';
+import BlogSec from '../Components/BlogSec';
 
 const Blogs = () => {
 
@@ -35,7 +36,9 @@ const Blogs = () => {
                 <div className="sub_container">
                     <div className="row_container">
                         <h2>trending</h2>
-                        <section className="blog_section"></section>
+                        <section className="blog_section">
+                            <BlogSec />
+                        </section>
                         <section className="tag_section">
                             <h2>tags</h2>
                             <h2>most popular</h2>
