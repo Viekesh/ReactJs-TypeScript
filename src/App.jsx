@@ -1,17 +1,14 @@
+import LandingPage from "./Components/Pages/LandingPage/LandingPage";
 import "./App.css";
-// import ProjectRoutes from "./Pro/MainComponents/ProjectRoutes";
-import ProjectRoutes from "./Projects/ProjectRoutes";
 
 
 
 const App = () => {
-  return (
-    <>
-      <ProjectRoutes />
-    </>
-  )
+    return (
+        <>
+            <LandingPage />
+        </>
+    )
 };
 
 export default App;
-
-

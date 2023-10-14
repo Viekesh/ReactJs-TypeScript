@@ -24,7 +24,7 @@ const LandPage = () => {
         </div>
       </main>
       
-      {/* <section className="section_three">
+      <section className="section_three">
         <EEEHeading heading="ANY DOUBTS" />
         <QnA
           question="how many classes are you held in a week and how you structure it?"
@@ -62,7 +62,7 @@ const LandPage = () => {
           question="in which language will the classes will held?"
           answer="hindi, english and marathi."
         />
-      </section> */}
+      </section>
       <Footer />
     </div>
   );

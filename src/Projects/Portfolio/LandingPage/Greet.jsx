@@ -3,26 +3,26 @@ import "./Greet.scss";
 
 // Text animation for mobile start
 
-// const heading1 = () => {
-//   document.getElementById("heading1").style.left = "0";
-//   const display = () => {
-//     document.getElementById("heading1").style.opacity = 1;
-//   };
-//   display();
-// };
+const heading1 = () => {
+  document.getElementById("heading1").style.left = "0";
+  const display = () => {
+    document.getElementById("heading1").style.opacity = 1;
+  };
+  display();
+};
 
-// const heading2 = () => {
-//   document.getElementById("heading2").style.top = 18 + "vw";
-//   const display = () => {
-//     document.getElementById("heading2").style.opacity = 1;
-//   };
-//   display();
-// };
+const heading2 = () => {
+  document.getElementById("heading2").style.bottom = -3 + "vw";
+  const display = () => {
+    document.getElementById("heading2").style.opacity = 1;
+  };
+  display();
+};
 
-// const headingTime = () => {
-//   setTimeout(heading1, 1000);
-//   setTimeout(heading2, 2500);
-// };
+const headingTime = () => {
+  setTimeout(heading1, 1000);
+  setTimeout(heading2, 2500);
+};
 
 // Text animation for mobile end
 
@@ -51,25 +51,24 @@ import "./Greet.scss";
 
 // Text animaion for desktop end
 
-// const textAnime = () => {
-//   headingTime();
-//   headingTimeD();
-// };
+const textAnime = () => {
+  headingTime();
+  // headingTimeD();
+};
 
 const Greet = () => {
   return (
     <div className="greet">
 
       <div className="for_mobile_device x_axis_center">
-        <h3 className="heading1" id="heading1">
-          welcome here,
-        </h3>
 
-        <h1 className="heading2" id="heading2">
-          want to build featured, stunning, secured websites and applications!
-          then you are at right place. go around, check the entire porfolio and hit the call button if you need
-          any assistance.
+        <h1 className="heading1" id="heading1" onLoad={textAnime()}>
+          want to build featured, stunning, secured web and mobile applications!!!
         </h1>
+        <h2 className="heading2" id="heading2" onLoad={textAnime()}>
+          what it takes to become a consistently profitable entrepreneur by using digital emerging technologies...?
+        </h2>
+
       </div>
 
     </div>
