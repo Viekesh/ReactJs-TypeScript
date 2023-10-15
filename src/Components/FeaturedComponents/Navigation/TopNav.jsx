@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./TopNav.css";
+import "./DesktopNav.css";
 import logo from "../../../Assets/Images/logo.png";
 import { BsJournalCode } from "react-icons/bs";
 import { LiaBloggerB } from "react-icons/lia";
