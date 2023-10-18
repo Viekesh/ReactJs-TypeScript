@@ -10,6 +10,7 @@ import { PiQrCodeBold } from "react-icons/pi";
 import { LuContact2 } from "react-icons/lu";
 import { FcAbout } from "react-icons/fc";
 import { BiUserCircle } from "react-icons/bi";
+import { Link, NavLink } from "react-router-dom";
 
 const TopNav = () => {
     const [showMenu, setShowMenu] = useState(false);
@@ -31,8 +32,8 @@ const TopNav = () => {
                         </div>
                         <div className="company_name x_y_axis_center">
                             <h1>
-                                <span className="logo_techset">techSet</span>
-                                <span className="logo_code">Code</span>
+                                <span className="logo_techset">tech</span>
+                                <span className="logo_code">Talk</span>
                             </h1>
                         </div>
                     </div>
@@ -83,12 +84,12 @@ const TopNav = () => {
                         id="Navigation"
                     >
                         <div className="nav_links">
-                            <div className="nav_sub_section y_axis_center">
+                            <Link to="/LogIn" className="nav_sub_section y_axis_center">
                                 <div className="section_icon x_y_axis_center">
                                     <BiUserCircle />
                                 </div>
                                 <h1 className="section_name">LogIn</h1>
-                            </div>
+                            </Link>
                             <div className="nav_sub_section y_axis_center">
                                 <div className="section_icon x_y_axis_center">
                                     <BsJournalCode />
@@ -113,12 +114,18 @@ const TopNav = () => {
                                 </div>
                                 <h1 className="section_name">Contact</h1>
                             </div>
-                            <div className="nav_sub_section y_axis_center">
+                            <NavLink to="/About" className="nav_sub_section y_axis_center">
                                 <div className="section_icon x_y_axis_center">
                                     <FcAbout />
                                 </div>
                                 <h1 className="section_name">About</h1>
-                            </div>
+                            </NavLink>
+                            <NavLink to="/HomePage" className="nav_sub_section y_axis_center">
+                                <div className="section_icon x_y_axis_center">
+                                    <FcAbout />
+                                </div>
+                                <h1 className="section_name">ECommerce</h1>
+                            </NavLink>
                         </div>
                     </div>
                 </div>

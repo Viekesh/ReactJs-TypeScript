@@ -20,9 +20,8 @@ const TopNavigation = () => {
           <div className="menu_icon x_y_axis_center">
             <div className="only-mobile mobile-menu-button-wrapper">
               <button
-                className={`hamburger hamburger--3dx x_y_axis_center ${
-                  showMenu ? "is-active" : ""
-                }`}
+                className={`hamburger hamburger--3dx x_y_axis_center ${showMenu ? "is-active" : ""
+                  }`}
                 type="button"
                 onClick={toggleMobileMenu}
               >
@@ -56,9 +55,8 @@ const TopNavigation = () => {
           </div>
 
           <div
-            className={`navigation_section navigation_style ${
-              showMenu ? "overlay" : ""
-            }`}
+            className={`navigation_section navigation_style ${showMenu ? "overlay" : ""
+              }`}
             id="Navigation"
           >
             <div className="navigation_section_elements">

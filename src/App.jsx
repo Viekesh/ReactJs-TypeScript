@@ -1,12 +1,12 @@
-import LandingPage from "./Components/Pages/LandingPage/LandingPage";
 import "./App.css";
+import ReactRouter from "./ReactRouterDOM/ReactRouter";
 
 
 
 const App = () => {
     return (
         <>
-            <LandingPage />
+            <ReactRouter />
         </>
     )
 };

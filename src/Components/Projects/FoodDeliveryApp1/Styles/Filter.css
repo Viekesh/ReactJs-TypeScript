@@ -1,0 +1,13 @@
+.filter {
+    margin: 15px auto;
+    justify-content: space-between;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media only screen and (min-width: 1020px) {
+    .filter {
+        max-width: 900px;
+    }
+}

@@ -1,0 +1,95 @@
+.header {
+    border-radius: 6px;
+    margin: 15px auto;
+    padding: 3px;
+    justify-content: space-between;
+    box-shadow: 1px 1px 6px 3px rgb(180, 180, 180);
+}
+
+.logo_food_delivery {
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    background: url(../Images/logo.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+.search_elements {
+    margin: 0 auto;
+    width: 500px;
+    justify-content: space-between;
+}
+
+.location_for_mobile {
+    margin: 0 3px;
+}
+
+.location_for_desktop {
+    display: none;
+}
+
+.inputs {
+    outline: none;
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 6px;
+    margin: 0 auto;
+    padding: 9px;
+    width: 230px;
+    color: rgb(100, 100, 100);
+    font-family: "Poppins", sans-serif;
+}
+
+.log_in {
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 50%;
+}
+
+@media only screen and (min-width: 768px) {
+    .inputs {
+        width: 430px;
+    }
+}
+
+@media only screen and (min-width: 1020px) {
+
+    .header {
+        max-width: 900px;
+        padding: 0 9px;
+    }
+    
+    .logo_food_delivery {
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        background: url(../Images/logo.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+    }
+    
+    .search_elements {
+        margin: 0 auto;
+        width: 600px;
+    }
+
+    .location_for_mobile {
+        display: none;
+    }
+    
+    .location_for_desktop {
+        display: flex;
+    }
+    
+    .inputs {
+        outline: none;
+        border: 1px solid rgb(100, 100, 100);
+        border-radius: 6px;
+        margin: 0 auto;
+        padding: 6px;
+        width: 260px;
+        color: rgb(100, 100, 100);
+        font-family: "Poppins", sans-serif;
+    }   
+}

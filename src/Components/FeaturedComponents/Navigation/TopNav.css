@@ -16,7 +16,7 @@
 /* logo start */
 .nav_elements .logo {
     /* border: 3px solid green; */
-    width: 144px;
+    width: 108px;
     justify-content: space-between;
 }
 
@@ -275,7 +275,11 @@
 /* For Ipad, Laptop And Desktop */
 
 @media only screen and (min-width : 768px) {
+    .nav_elements {
+        width: 66%;
+    }
+
     .top_nav {
-        display: none;
+        background-color: crimson;
     }
 }

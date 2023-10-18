@@ -9,7 +9,7 @@ const About = () => {
       <TopNav />
       <BottomNav />
       <div className="about">
-        <PageHeading heading = "About" />
+        <PageHeading heading="About" />
 
         <div className="about_page_info">
           <br />
@@ -31,7 +31,7 @@ const About = () => {
           <br />
           <h3>
             Now I am looking an opportunities to work with the professionals, check out my portfolio
-            if you think i can do something for you then contact me we will definitely do something 
+            if you think i can do something for you then contact me we will definitely do something
             good together.
           </h3>
           <br />
