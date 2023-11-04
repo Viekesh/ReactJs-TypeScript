@@ -1,5 +1,47 @@
 @media only screen and (min-width : 768px) {
+
+    .top_nav {
+        border: 3px solid snow;
+        background-color: rgb(255, 250, 250);
+        padding: 6px;
+
+        background: rgba(255, 255, 255, 0.6);
+        box-shadow: 0 8px 32px 0 rgba(255, 254, 254, 0.37);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
     .nav_elements {
-        display: none;
+        border: 3px solid red;
+        border-radius: 9px;
+        background-color: red;
+        width: 66%;
+        padding: 0 9px;
+    }
+
+    .nav_elements .logo {
+        width: 120px;
+    }
+
+    .logo .company_name h1 {
+        font-family: Oswald, sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    .logo_techset {
+        font-family: Oswald, sans-serif;
+        font-size: 18px;
+        font-weight: 900;
+        color: snow;
+    }
+
+    .logo_code {
+        font-family: Oswald, sans-serif;
+        font-size: 18px;
+        font-weight: 900;
+        color: rgb(0, 0, 0);
     }
 }

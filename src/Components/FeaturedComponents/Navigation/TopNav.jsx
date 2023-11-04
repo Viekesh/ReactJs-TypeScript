@@ -32,8 +32,8 @@ const TopNav = () => {
                         </div>
                         <div className="company_name x_y_axis_center">
                             <h1>
-                                <span className="logo_techset">tech</span>
-                                <span className="logo_code">Talk</span>
+                                <span className="logo_techset">techSet</span>
+                                <span className="logo_code">Code</span>
                             </h1>
                         </div>
                     </div>
@@ -77,57 +77,57 @@ const TopNav = () => {
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
 
-                    <div
-                        className={`navigation_section navigation_style ${showMenu ? "overlay" : ""
-                            }`}
-                        id="Navigation"
-                    >
-                        <div className="nav_links">
-                            <Link to="/LogIn" className="nav_sub_section y_axis_center">
-                                <div className="section_icon x_y_axis_center">
-                                    <BiUserCircle />
-                                </div>
-                                <h1 className="section_name">LogIn</h1>
-                            </Link>
-                            <div className="nav_sub_section y_axis_center">
-                                <div className="section_icon x_y_axis_center">
-                                    <BsJournalCode />
-                                </div>
-                                <h1 className="section_name">Case Studies</h1>
-                            </div>
-                            <div className="nav_sub_section y_axis_center">
-                                <div className="section_icon x_y_axis_center">
-                                    <LiaBloggerB />
-                                </div>
-                                <h1 className="section_name">Blogs</h1>
-                            </div>
-                            <div className="nav_sub_section y_axis_center">
-                                <div className="section_icon x_y_axis_center">
-                                    <PiQrCodeBold />
-                                </div>
-                                <h1 className="section_name">Projects</h1>
-                            </div>
-                            <div className="nav_sub_section y_axis_center">
-                                <div className="section_icon x_y_axis_center">
-                                    <LuContact2 />
-                                </div>
-                                <h1 className="section_name">Contact</h1>
-                            </div>
-                            <NavLink to="/About" className="nav_sub_section y_axis_center">
-                                <div className="section_icon x_y_axis_center">
-                                    <FcAbout />
-                                </div>
-                                <h1 className="section_name">About</h1>
-                            </NavLink>
-                            <NavLink to="/HomePage" className="nav_sub_section y_axis_center">
-                                <div className="section_icon x_y_axis_center">
-                                    <FcAbout />
-                                </div>
-                                <h1 className="section_name">ECommerce</h1>
-                            </NavLink>
+            <div
+                className={`navigation_section navigation_style ${showMenu ? "overlay" : ""
+                    }`}
+                id="Navigation"
+            >
+                <div className="nav_links">
+                    <Link to="/LogIn" className="nav_sub_section y_axis_center">
+                        <div className="section_icon x_y_axis_center">
+                            <BiUserCircle />
                         </div>
+                        <h1 className="section_name">LogIn</h1>
+                    </Link>
+                    <div className="nav_sub_section y_axis_center">
+                        <div className="section_icon x_y_axis_center">
+                            <BsJournalCode />
+                        </div>
+                        <h1 className="section_name">Case Studies</h1>
                     </div>
+                    <div className="nav_sub_section y_axis_center">
+                        <div className="section_icon x_y_axis_center">
+                            <LiaBloggerB />
+                        </div>
+                        <h1 className="section_name">Blogs</h1>
+                    </div>
+                    <div className="nav_sub_section y_axis_center">
+                        <div className="section_icon x_y_axis_center">
+                            <PiQrCodeBold />
+                        </div>
+                        <h1 className="section_name">Projects</h1>
+                    </div>
+                    <div className="nav_sub_section y_axis_center">
+                        <div className="section_icon x_y_axis_center">
+                            <LuContact2 />
+                        </div>
+                        <h1 className="section_name">Contact</h1>
+                    </div>
+                    <NavLink to="/About" className="nav_sub_section y_axis_center">
+                        <div className="section_icon x_y_axis_center">
+                            <FcAbout />
+                        </div>
+                        <h1 className="section_name">About</h1>
+                    </NavLink>
+                    <NavLink to="/HomePage" className="nav_sub_section y_axis_center">
+                        <div className="section_icon x_y_axis_center">
+                            <FcAbout />
+                        </div>
+                        <h1 className="section_name">ECommerce</h1>
+                    </NavLink>
                 </div>
             </div>
         </>
