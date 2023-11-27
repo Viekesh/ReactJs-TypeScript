@@ -70,7 +70,7 @@ const AddEditBlog = ({ active, setActive, user, setUser }) => {
           default:
             break;
         }
-        
+
       }, (error) => {
         console.log(error);
       }, () => {
@@ -94,11 +94,11 @@ const AddEditBlog = ({ active, setActive, user, setUser }) => {
   };
 
   const handleTrending = (e) => {
-    setForm({...form, trending : e.target.value})
+    setForm({ ...form, trending: e.target.value })
   };
 
   const onCategoryChange = (e) => {
-    setForm({...form, category : e.target.value})
+    setForm({ ...form, category: e.target.value })
   }
 
   const navigate = useNavigate();
@@ -109,16 +109,16 @@ const AddEditBlog = ({ active, setActive, user, setUser }) => {
     // Here we check whether each value is provided by our user or not
     // If user have the value in different different input field then only this code can
     // allowed to create a blog
-    if(category && tags && title && file && description && trending) {
+    if (category && tags && title && file && description && trending) {
 
       try {
         await addDoc(collection(database, "BlogApp1Data"), {
           ...form,
-          timestamp : serverTimestamp(),
-          author : user.displayName,
-          id : user.uid
+          timestamp: serverTimestamp(),
+          author: user.displayName,
+          id: user.uid
         })
-      } catch(error) {
+      } catch (error) {
         console.log(error.message);
       }
 

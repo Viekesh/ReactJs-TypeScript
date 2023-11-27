@@ -1,7 +1,8 @@
 import { useState } from "react";
 import "./TopNav.css";
 import "./DesktopNav.css";
-import logo from "../../../Assets/Images/logo.png";
+import logo from "../../../Assets/Images/logo.png"
+// import logo from "../../../Assets/Images/logo.png";
 import { BsJournalCode } from "react-icons/bs";
 import { LiaBloggerB } from "react-icons/lia";
 // import { GrProjects } from "react-icons/gr";
@@ -25,17 +26,20 @@ const TopNav = () => {
             <div className="top_nav">
                 <div className="nav_elements y_axis_center">
                     <div className="logo x_y_axis_center">
+
                         <div className="icon x_y_axis_center">
                             <div className="icon_box .x_y_axis_center">
                                 <img src={logo} alt="logo_icon" />
                             </div>
                         </div>
+
                         <div className="company_name x_y_axis_center">
                             <h1>
                                 <span className="logo_techset">techSet</span>
                                 <span className="logo_code">Code</span>
                             </h1>
                         </div>
+
                     </div>
 
                     <div className="github_n_nav_icon">

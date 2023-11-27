@@ -28,6 +28,4 @@ const storage = getStorage(app);
 
 
 
-export {auth, database, storage};
-
-
+export { auth, database, storage };

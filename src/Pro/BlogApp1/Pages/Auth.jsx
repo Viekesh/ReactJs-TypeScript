@@ -15,7 +15,7 @@ const initialState = {
   confirmPass: "",
 }
 
-const Auth = ({active, user, setActive, setUser }) => {
+const Auth = ({ active, user, setActive, setUser }) => {
 
   const [state, setState] = useState(initialState);
 
@@ -43,7 +43,7 @@ const Auth = ({active, user, setActive, setUser }) => {
     if (!signUp) {
 
       if (email && password) {
-        
+
         const { user } = await signInWithEmailAndPassword(auth, email, password);
 
         setUser(user);

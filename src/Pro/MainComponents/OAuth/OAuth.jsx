@@ -47,6 +47,7 @@ const OAuth = () => {
 
       alert("Registered Successfully");
       signInAfter("/");
+
     } catch (error) {
       alert(error.message);
     }

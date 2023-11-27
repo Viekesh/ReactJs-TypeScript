@@ -1,12 +1,11 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-import { Navigation, Pagination } from 'swiper';
-
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import "./ApplicationLinks.scss";
 import { appLinks } from '../../Data/ECommerceData/EComData';
+import { Navigation, Pagination } from 'swiper';
 
 const ApplicationLinks = () => {
     return (

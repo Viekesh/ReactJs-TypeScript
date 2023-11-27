@@ -5,7 +5,7 @@ const SocialLinks = () => {
   return (
     <>
       <div className="portfolio_links x_y_axis_center">
-        
+
         <div className="call_animate x_y_axis_center">
           <a href="tel:+919766940948" className="links call x_y_axis_center">
             <CallIcon />

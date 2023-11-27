@@ -31,7 +31,8 @@ const Auth = () => {
     // console.log(event.target.value);
 
     // we use this previous state to keep the previous information (it is used to get the previous data)
-    // we have more than one input hence we use event.target.id, because we just say this input id is email or password
+    // we have more than one input hence we use event.target.id, because we just say this input id is email
+    // or password
     setFormData((previousState) => ({
       // here we just get the previous state (preState) and just add the new one
       // here we have two input one is email and other is password

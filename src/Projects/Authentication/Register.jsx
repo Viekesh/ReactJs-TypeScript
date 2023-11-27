@@ -9,6 +9,8 @@ import BottomNav from "../Portfolio/Navigation/BottomNav";
 import TopNav from "../Portfolio/Navigation/TopNav";
 import "./Auth.scss";
 
+
+
 const Register = () => {
   const [showPass, setShowPass] = useState(false);
 
