@@ -3,6 +3,7 @@ import { getCategories, getQuote } from "./ServiceDB/QuoteDB";
 import Categories from "./Component/Categories";
 import Quote from "./Component/Quote";
 import "./UseEffectHook.css";
+import StocksAPI from "./StocksAPI";
 
 
 
@@ -38,15 +39,19 @@ const UseEffectHook = () => {
     }, [selected]);
 
     return (
-        <div className="quote_master">
-            <Categories
-                categories={categories}
-                selected={selected}
-                onSelected={category => setSelected(category)}
-            />
+        <>
+            <div className="quote_master">
+                <Categories
+                    categories={categories}
+                    selected={selected}
+                    onSelected={category => setSelected(category)}
+                />
 
-            {quote && <Quote quote={quote.quote} author={quote.author} />}
-        </div>
+                {quote && <Quote quote={quote.quote} author={quote.author} />}
+            </div>
+
+            <StocksAPI />
+        </>
     );
 };
 
