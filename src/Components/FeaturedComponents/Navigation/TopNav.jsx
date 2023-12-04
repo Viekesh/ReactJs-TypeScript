@@ -39,7 +39,6 @@ const TopNav = () => {
                                 <span className="logo_code">Code</span>
                             </h1>
                         </div>
-
                     </div>
 
                     <div className="github_n_nav_icon">
