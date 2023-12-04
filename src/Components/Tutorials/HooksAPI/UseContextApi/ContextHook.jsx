@@ -5,7 +5,8 @@ import ThemeCtx from "./Component/CTX/ThemeCTX";
 import UserCtx from "./Component/CTX/UserCTX";
 import StatsCtx from "./Component/CTX/StatsCTX";
 import "./ContextHook.css";
-
+import RestaurantCard from "./Component/RestaurantCard";
+import { dataSet } from "./DataSource";
 
 
 const userData = {
@@ -36,6 +37,19 @@ const ContextHook = () => {
                         </StatsCtx.Provider>
                     </ThemeCtx.Provider>
                 </UserCtx.Provider>
+            </div>
+
+            <div className="container2">
+                {dataSet.map(({ resId, resName,
+                    resOpen,
+                    resScore }) => (
+                    <RestaurantCard
+                        key={resId}
+                        name={resName}
+                        isOpen={resOpen}
+                        score={resScore}
+                    />
+                ))}
             </div>
         </>
     )

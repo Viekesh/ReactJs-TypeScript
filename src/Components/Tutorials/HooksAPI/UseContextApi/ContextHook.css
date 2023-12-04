@@ -147,3 +147,85 @@ body {
     font-weight: normal;
     bottom: 80px;
 }
+
+
+
+
+
+
+
+
+* {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+        "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container2 {
+    position: absolute;
+    width: 400px;
+    height: 258px;
+    border: 1px solid;
+    top: 900px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.restaurant {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.05);
+    height: 60px;
+    margin-bottom: 2px;
+}
+
+.res-name {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    font-size: 24px;
+}
+
+.res-open {
+    position: absolute;
+    top: 35px;
+    left: 10px;
+    font-size: 10px;
+    background-color: rgb(13, 114, 0);
+    color: rgb(255, 255, 255);
+    padding: 2px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.res-closed {
+    position: absolute;
+    top: 35px;
+    left: 10px;
+    font-size: 10px;
+    background-color: rgb(172, 11, 11);
+    color: rgb(255, 255, 255);
+    padding: 2px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.res-score {
+    position: absolute;
+    width: 20px;
+    text-align: center;
+    font-weight: bold;
+    background-color: rgb(13, 114, 0);
+    color: rgb(255, 255, 255);
+    padding: 6px;
+    font-size: 12px;
+    right: 10px;
+    top: 18px;
+    border-radius: 6px;
+}
