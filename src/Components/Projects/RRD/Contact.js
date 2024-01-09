@@ -1,5 +1,10 @@
+// brings in a tool for storing data locally in the browser, like a mini-database.
 import localforage from "localforage";
+
+//  gets a function for sorting items based on how well they match a search query.
 import { matchSorter } from "match-sorter";
+
+// imports a function for sorting items by specific properties.
 import sortBy from "sort-by";
 
 export async function getContacts(query) {

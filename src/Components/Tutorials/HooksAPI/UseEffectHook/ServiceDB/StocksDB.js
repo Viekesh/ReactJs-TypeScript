@@ -45,6 +45,10 @@ const dataSet = [
     }
 ];
 
+
+
+// This function promises to return a list of all the stocks in the dataSet, but it only includes the stock's ID, 
+// symbol, name, and current price.
 export const getRates = () => Promise.resolve(
     dataSet.map(d => {
         return {
@@ -56,6 +60,10 @@ export const getRates = () => Promise.resolve(
     })
 );
 
+
+
+// This function takes a stock symbol (like "TSLA") as input and promises to return the details of that specific 
+// stock from the dataSet.
 export const getDetails = sym => Promise.resolve(
     dataSet.filter(d => d.sym === sym)
 );

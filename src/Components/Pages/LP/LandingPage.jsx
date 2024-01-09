@@ -1,31 +1,64 @@
 import React from "react";
-import "./LandingPage.css";
-import TopNav from "../../FeaturedComponents/Navigation/TopNav";
-import ContentLandingPage from "./ContentLandingPage";
-import Content from "../ContentDB/ContentDB";
+import Counter from "../../Tutorials/Components/ClassComponents/Counter";
+import TextArea from "../../Tutorials/Components/ClassComponents/TextArea";
+import ParentCard from "../../Tutorials/Components/FunctionalComponents/ParentCard";
+// import UseEffectHook from "../../Tutorials/HooksAPI/UseEffectHook/UseEffectHook";
 
 
 
 const LandingPage = () => {
     return (
         <>
-            <div className="landing_page">
-                <TopNav />
-                {
-                    Content.map(({ landingPage }) => {
-                        return (
-                            <ContentLandingPage
-                                landingPage={landingPage}
-                            />
-                        )
-                    })
-                }
-            </div>
+            {/* <UseEffectHook /> */}
+            <Counter />
+            <TextArea />
+            <ParentCard />
+            <header></header>
+            <main></main>
+            <footer></footer>
         </>
-    );
-};
+    )
+}
+
+
 
 export default LandingPage;
+
+
+
+
+
+
+
+
+// import React from "react";
+// import "./LandingPage.css";
+// import TopNav from "../../FeaturedComponents/Navigation/TopNav";
+// import ContentLandingPage from "./ContentLandingPage";
+// import Content from "../ContentDB/ContentDB";
+
+
+
+// const LandingPage = () => {
+//     return (
+//         <>
+//             <div className="landing_page">
+//                 <TopNav />
+//                 {
+//                     Content.map(({ landingPage }) => {
+//                         return (
+//                             <ContentLandingPage
+//                                 landingPage={landingPage}
+//                             />
+//                         )
+//                     })
+//                 }
+//             </div>
+//         </>
+//     );
+// };
+
+// export default LandingPage;
 
 // import React from "react";
 // import "./LandingPage.css";
