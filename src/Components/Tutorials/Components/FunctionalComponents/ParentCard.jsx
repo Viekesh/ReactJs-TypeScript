@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Card from "./Card";
+import "./ParentCard.css";
 
 
 
@@ -28,3 +29,8 @@ class ParentCard extends Component {
 
 
 export default ParentCard;
+
+
+
+// In above code "extends", "return" and different values of the post is made possible using the babel compiler
+// that forms the part of "create-react-app" toolchain.
