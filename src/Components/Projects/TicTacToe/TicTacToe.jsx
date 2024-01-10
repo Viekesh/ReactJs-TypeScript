@@ -77,6 +77,7 @@ const TicTacToe = () => {
     const renderBoxes = () => {
         return boxes.map((value, index) => { })
     }
+
     return (
         <>
             <header className="tictactoe_navigation">

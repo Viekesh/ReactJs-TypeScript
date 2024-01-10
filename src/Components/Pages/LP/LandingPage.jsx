@@ -1,7 +1,9 @@
 import React from "react";
-import Counter from "../../Tutorials/Components/ClassComponents/Counter";
-import TextArea from "../../Tutorials/Components/ClassComponents/TextArea";
-import ParentCard from "../../Tutorials/Components/FunctionalComponents/ParentCard";
+import "./LandingPage.css";
+import TopNav from "../../FeaturedComponents/Navigation/TopNav";
+// import Counter from "../../Tutorials/Components/ClassComponents/Counter";
+// import TextArea from "../../Tutorials/Components/ClassComponents/TextArea";
+// import ParentCard from "../../Tutorials/Components/FunctionalComponents/ParentCard";
 // import UseEffectHook from "../../Tutorials/HooksAPI/UseEffectHook/UseEffectHook";
 
 
@@ -10,10 +12,12 @@ const LandingPage = () => {
     return (
         <>
             {/* <UseEffectHook /> */}
-            <Counter />
-            <TextArea />
-            <ParentCard />
-            <header></header>
+            {/* <Counter /> */}
+            {/* <TextArea /> */}
+            {/* <ParentCard /> */}
+            <header className="landing_page y_axis_center">
+                <TopNav />
+            </header>
             <main></main>
             <footer></footer>
         </>

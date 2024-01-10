@@ -78,7 +78,7 @@
 }
 
 .github_icon {
-    border: 3px solid snow;
+    border: 2px solid black;
     border-radius: 100%;
     width: 27px;
     height: 27px;
@@ -96,10 +96,6 @@
 
 .nav_icon {
     border: 3px solid transparent;
-    width: 24px;
-    height: 24px;
-
-    z-index: 9;
 }
 
 .hamburger {
@@ -107,8 +103,8 @@
     display: inline-block;
     cursor: pointer;
     transition-property: opacity, filter;
-    transition-duration: 0.15s;
-    transition-timing-function: linear;
+    /* transition-duration: 0.01s; */
+    /* transition-timing-function: linear; */
     font: inherit;
     color: inherit;
     text-transform: none;
@@ -154,7 +150,7 @@
     border-radius: 3px;
     position: absolute;
     transition-property: transform;
-    transition-duration: 1s;
+    /* transition-duration: 1s; */
     transition-timing-function: ease;
 }
 
@@ -178,13 +174,13 @@
 }
 
 .hamburger--3dx .hamburger-inner {
-    transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1),
-        background-color 0s 0.15s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: transform 0.01s cubic-bezier(0.645, 0.045, 0.355, 1),
+        background-color 0s 0.01s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .hamburger--3dx .hamburger-inner::before,
 .hamburger--3dx .hamburger-inner::after {
-    transition: transform 0s 0.15s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: transform 0s 0.01s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .hamburger--3dx.is-active .hamburger-inner {
@@ -208,7 +204,7 @@
 
 .navigation_section {
     /* border: 3px solid snow; */
-    width: 180px;
+    width: 100%;
     height: 100vh;
     padding: 9vh 0 0 0;
     background-color: rgb(242, 242, 255);
@@ -217,12 +213,14 @@
     top: 0;
     right: 0;
 
-    transform: translateX(180px);
-    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    /* transform: translateX(180px); */
+    /* transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55); */
+    display: none;
 }
 
 .navigation_section.overlay {
-    transform: translateX(0px);
+    /* transform: translateX(0px); */
+    display: block;
 }
 
 /* Navigation Section End */
@@ -266,4 +264,11 @@
     font-size: 15px;
     font-weight: bolder;
     color: blue;
+}
+
+
+
+.logo h1 {
+    font-family: "Kanit", sans-serif;
+    font-weight: 600;
 }
