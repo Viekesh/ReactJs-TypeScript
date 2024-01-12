@@ -1,6 +1,7 @@
 import React from "react";
 import "./LandingPage.css";
-import TopNav from "../../FeaturedComponents/Navigation/TopNav";
+// import TopNav from "../../FeaturedComponents/Navigation/TopNav";
+import Notification from "../../Tutorials/Components/ClassComponents/Notification";
 // import Counter from "../../Tutorials/Components/ClassComponents/Counter";
 // import TextArea from "../../Tutorials/Components/ClassComponents/TextArea";
 // import ParentCard from "../../Tutorials/Components/FunctionalComponents/ParentCard";
@@ -15,9 +16,12 @@ const LandingPage = () => {
             {/* <Counter /> */}
             {/* <TextArea /> */}
             {/* <ParentCard /> */}
-            <header className="landing_page y_axis_center">
+            {/* <header className="landing_page y_axis_center">
                 <TopNav />
-            </header>
+            </header> */}
+            <Notification
+                text="All databases will be upgraded to support the latest features on Sunday. Please ensure you have a backup of your data."
+            />
             <main></main>
             <footer></footer>
         </>
