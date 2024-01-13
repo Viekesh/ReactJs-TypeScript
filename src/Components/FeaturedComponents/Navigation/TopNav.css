@@ -1,74 +1,25 @@
-.top_nav {
-    border: 3px solid red;
-    background-color: red;
-    position: fixed;
-    width: 100vw;
-}
-
-.nav_elements {
-    /* border: 3px solid blue; */
-    margin: 0 auto;
-    width: 93%;
-    height: 9vh;
-    justify-content: space-between;
-
-    position: relative;
-}
-
-/* logo start */
-.nav_elements .logo {
-    /* border: 3px solid green; */
-    width: 108px;
-    justify-content: space-between;
-}
-
-.nav_elements .logo .icon {
+nav {
     border: 3px solid snow;
-    border-radius: 50%;
-    width: 27px;
-    height: 27px;
+    margin: 0 auto;
+    width: 80%;
+    background-color: snow;
+    justify-content: space-between;
+    /* padding: 0 36px; */
 }
 
-.nav_elements .logo .icon .icon_box {
-    /* border: 1px solid black; */
-    border-radius: 50%;
-    width: 18px;
-    height: 18px;
+.nav_option {
+    border: 1px solid transparent;
+    margin: 9vh auto 0 auto;
+    width: 80%;
+
+    display: flex;
+    flex-direction: column;
 }
 
-.nav_elements .logo .icon img {
-    border: 1px solid snow;
-    border-radius: 18px;
-    width: 100%;
+.nav_option a {
+    margin: 1vh 2vh;
+    font-weight: bold;
 }
-
-/* .logo .company_name {
-    border: 2px solid snow;
-} */
-
-.logo .company_name h1 {
-    font-family: 'Kanit', sans-serif;
-    font-size: 18px;
-    font-weight: 900;
-}
-
-.logo_techset {
-    font-family: 'Kanit', sans-serif;
-    font-size: 18px;
-    font-weight: 900;
-    color: snow;
-}
-
-.logo_code {
-    font-family: 'Kanit', sans-serif;
-    font-size: 18px;
-    font-weight: 900;
-    color: blue;
-}
-
-/* logo end */
-
-
 
 .github_n_nav_icon {
     /* border: 3px solid blue; */
@@ -95,7 +46,7 @@
 /* Menu Icon Start */
 
 .nav_icon {
-    border: 3px solid transparent;
+    z-index: 999 !important;
 }
 
 .hamburger {
@@ -167,7 +118,6 @@
 .hamburger-inner::after {
     bottom: -9px;
 }
-
 
 .hamburger--3dx .hamburger-box {
     perspective: 90px;
