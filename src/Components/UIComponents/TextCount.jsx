@@ -11,6 +11,7 @@ class TextCount extends Component {
     render() {
         return (
             <div className="textarea">
+                <h1>Text Count</h1>
                 <textarea
                     name=""
                     id="TEXTAREA"

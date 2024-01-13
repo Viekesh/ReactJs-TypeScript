@@ -1,0 +1,50 @@
+.login_component {
+    border: 1px solid black;
+    border-radius: 18px;
+    margin: 18vh auto;
+    padding: 9px;
+    width: 90%;
+
+    background-color: rgb(223, 223, 223);
+    overflow: hidden;
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+#title {
+    border-bottom: 6px solid black;
+    border-radius: 9px;
+    margin: 9px auto;
+    background-color: rgb(231, 72, 72);
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    font-size: 19px;
+    box-sizing: border-box;
+    display: block;
+}
+
+.form-field-holder {
+    border-bottom: 6px solid black;
+    border-radius: 9px;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    margin-bottom: 5px;
+}
+
+.form-field-holder>input {
+    font-size: 20px;
+    padding: 6px;
+    border: none;
+    outline: none;
+}
+
+.form-field-holder>button {
+    border-radius: 9px;
+    position: relative;
+    font-size: 15px;
+    background-color: rgb(172, 67, 67);
+    color: rgb(255, 255, 255);
+    padding: 9px;
+    outline: none;
+    width: 100px;
+}

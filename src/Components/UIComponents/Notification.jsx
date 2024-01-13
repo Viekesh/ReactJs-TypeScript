@@ -22,6 +22,7 @@ class Notification extends Component {
         return (
             <>
                 <div className="ntfctn">
+                    <h1>Notification Bar</h1>
                     <div className="notification_widget">
                         <div className="toggle_btn" onClick={this.toggleDisplay}>
                             N

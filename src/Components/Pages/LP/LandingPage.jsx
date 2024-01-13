@@ -7,7 +7,7 @@ import TopNav from "../../FeaturedComponents/Navigation/TopNav";
 const LandingPage = () => {
     return (
         <>
-            <header className="landing_page">
+            <header className="nav_component">
                 <TopNav />
             </header>
             <main></main>

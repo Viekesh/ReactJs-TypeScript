@@ -1,0 +1,15 @@
+.list_elements {
+    border: 1px solid black;
+    border-radius: 18px;
+    margin: 18vh auto;
+    padding: 9px;
+    width: 90%;
+}
+
+.fruit {
+    background-color: rgba(0, 200, 0, 0.9);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    margin: 10px;
+}
