@@ -4,7 +4,7 @@ import "./Notification.css";
 
 
 const NotificationText = ({ text }) => (
-    <div className="notification-text">{text || "No Notifications"}</div>
+    <div className="notification_text">{text || "No Notifications"}</div>
 );
 
 class Notification extends Component {
@@ -23,13 +23,13 @@ class Notification extends Component {
             <>
                 <div className="ntfctn">
                     <div className="notification_widget">
+                        <div className="toggle_btn" onClick={this.toggleDisplay}>
+                            N
+                        </div>
+
                         {
                             this.state.show ? <NotificationText text={this.props.text} /> : null
                         }
-
-                        <div className="toggle_btn" onClick={this.toggleDisplay}>
-                            Notification
-                        </div>
                     </div>
                 </div>
             </>

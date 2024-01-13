@@ -1,0 +1,43 @@
+.textarea {
+    border: 1px solid black;
+    border-radius: 18px;
+    margin: 18vh auto;
+    padding: 9px;
+    width: 90%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#TEXTAREA {
+    border: 1px solid black;
+    border-radius: 18px;
+    margin: 1vh auto;
+    padding: 12px;
+    width: 96%;
+}
+
+#CHARCOUNT {
+    border: 1px solid transparent;
+    border-radius: 9px;
+    margin: 1vh auto;
+    padding: 6px;
+    width: 40%;
+
+    background-color: darkviolet;
+    color: snow;
+    font-weight: bold;
+}
+
+#WORDCOUNT {
+    border: 1px solid transparent;
+    border-radius: 9px;
+    margin: 1vh auto;
+    padding: 6px;
+    width: 40%;
+
+    background-color: darkviolet;
+    color: snow;
+    font-weight: bold;
+}

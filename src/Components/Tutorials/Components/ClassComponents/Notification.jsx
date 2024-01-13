@@ -18,6 +18,8 @@ class Notification extends Component {
         })
     }
 
+    // render method is mandatory to define JSX template which generates react elements 
+    // when the component render.
     render() {
         return (
             <>
