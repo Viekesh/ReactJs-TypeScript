@@ -8,6 +8,21 @@ class StateAndProps extends Component {
         items: []
     }
 
+    add = e => {
+        if (e.keyCode === 13) {
+            this.setState({
+                items: [
+                    ...this.state.items,
+                    {
+                        name: e.target.value,
+                        id: new Date().getTime()
+                    }
+                ]
+            });
+            e.target.value = "";
+        }
+    };
+
     render() {
         return (
             <>
