@@ -1,0 +1,7 @@
+.toggle_button {
+    border: 1px solid black;
+    border-radius: 18px;
+    margin: 18vh auto;
+    padding: 9px;
+    width: 90%;
+}

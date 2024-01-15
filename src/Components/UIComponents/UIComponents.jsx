@@ -4,6 +4,7 @@ import TextCount from "./TextCount";
 import UserPosts from "./UserPosts";
 import ListElements from "./ListElements";
 import LoginComponent from "./LoginComponent";
+import ToggleButton from "./ToggleButton";
 // import BooksList from "./Books";
 
 
@@ -17,6 +18,7 @@ const UIComponents = () => {
                 <UserPosts />
                 <ListElements />
                 <LoginComponent />
+                <ToggleButton />
                 {/* <BooksList /> */}
             </section>
         </>
