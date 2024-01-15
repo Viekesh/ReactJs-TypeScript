@@ -30,3 +30,10 @@ class ListElements extends Component {
 
 
 export default ListElements;
+
+
+
+// When using class component state management is a built -in feature.
+// You can create and manage state variables directly with no extra tools needed.
+// The first thing that need to do is declare and initialize state properties.This can be done either in the
+// constructor method of class component or using the create react app based workflow.

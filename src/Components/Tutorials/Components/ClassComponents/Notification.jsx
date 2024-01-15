@@ -42,3 +42,15 @@ class Notification extends Component {
 
 
 export default Notification;
+
+
+
+// In react the actual data can comes from the top level component.
+// And these data gets pass through in a one way data flow to all the nested child components
+// typically using "props" which acts like inlets of a component.
+
+// Stateful components describe visuals elements with data. As you change and modify this data
+// the component will automatically re-renders to reflect the change.
+
+// React features unidirectional data flow architecture.
+// Event listeners in JSX allow you to capture user events such as mouse clicks, keyboard events and more.
