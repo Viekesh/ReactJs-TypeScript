@@ -20,3 +20,10 @@ const Card = ({ post }) => {
 
 
 export default Card;
+
+
+
+// Funtional component are inherently stateless component with no state management.
+// Functional component is a standard JavaScript functions that accepts a single props argument and returns a
+// react element to render.
+// 
