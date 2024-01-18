@@ -19,7 +19,7 @@ class StatefulHook extends Component {
                         }
                     </div>
 
-                    <CodeInput onSet={value => this.setStae({ code: value })} />
+                    <CodeInput onSet={value => this.setState({ code: value })} />
                 </div>
             </>
         )

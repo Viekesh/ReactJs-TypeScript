@@ -6,26 +6,27 @@ const CodeInput = ({ onSet }) => {
 
     const [code, setCode] = useState();
 
-    const onSetCode = ({ val }) => {
+    const onSetCode = (val) => {
         onSet(val);
         setCode(val);
     };
 
     return (
         <>
-            <div className="code_input"></div>
+            <div className="code_input">
 
-            <input
-                type="text"
-                value={code}
-                onChange={e => onSetCode()}
-            />
+                <input
+                    type="text"
+                    value={code}
+                    onChange={e => onSetCode()}
+                />
 
-            <button
-                onClick={() => onSetCode(parseInt(Math.random() * 100000000))}
-            >
-                Generate
-            </button>
+                <button
+                    onClick={() => onSetCode(parseInt(Math.random() * 100000000))}
+                >
+                    Generate
+                </button>
+            </div>
         </>
     )
 }

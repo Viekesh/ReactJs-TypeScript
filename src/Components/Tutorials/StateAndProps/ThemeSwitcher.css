@@ -1,0 +1,43 @@
+.theme_switcher {
+    position: relative;
+    border: 1px solid black;
+    border-radius: 18px;
+    margin: 18vh auto;
+    padding: 9px;
+    width: 90%;
+
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+.theme_buttons {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.096);
+    padding: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+
+#lightTheme {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border: 1px solid;
+    cursor: pointer;
+    margin: 10px;
+    display: inline-block;
+}
+
+#darkTheme {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(39, 39, 39);
+    border: 1px solid;
+    cursor: pointer;
+    margin: 10px;
+    display: inline-block;
+}

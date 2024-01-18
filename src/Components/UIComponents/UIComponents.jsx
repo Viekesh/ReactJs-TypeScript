@@ -6,6 +6,7 @@ import ListElements from "./ListElements";
 import LoginComponent from "./LoginComponent";
 import ToggleButton from "./ToggleButton";
 import StatefulHook from "./StatefulHook";
+import ThemeSwitcher from "../Tutorials/StateAndProps/ThemeSwitcher";
 // import BooksList from "./Books";
 
 
@@ -21,6 +22,7 @@ const UIComponents = () => {
                 <LoginComponent />
                 <ToggleButton />
                 <StatefulHook />
+                <ThemeSwitcher />
                 {/* <BooksList /> */}
             </section>
         </>
