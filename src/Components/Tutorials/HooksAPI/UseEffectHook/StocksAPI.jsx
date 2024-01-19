@@ -8,12 +8,16 @@ import StockDetails from "./Component/StockDetails";
 
 const StocksAPI = () => {
 
+    // An array to store stock information (initialized as empty).
     const [stocks, setStocks] = useState([]);
 
+    // A boolean to control whether to show detailed stock information (initially false).
     const [showDetails, setShowDetails] = useState(false);
 
+    // A string to store the symbol of the selected stock (initially empty).
     const [selected, setSelected] = useState("");
 
+    // An object to store detailed information about the selected stock (initially empty).
     const [details, setDetails] = useState({});
 
 
