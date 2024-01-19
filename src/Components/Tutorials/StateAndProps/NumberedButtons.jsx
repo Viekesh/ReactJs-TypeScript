@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 
 
@@ -24,6 +25,12 @@ const NumberedButtons = ({ num }) => {
             </div>
         </>
     )
+}
+
+
+
+NumberedButtons.propTypes = {
+    num: PropTypes.number
 }
 
 

@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 
 
@@ -21,6 +22,17 @@ const StudentCard = ({ student }) => {
             </div>
         </>
     )
+}
+
+
+
+StudentCard.propTypes = {
+    student: PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        id: PropTypes.number.isRequired,
+        active: PropTypes.bool.isRequired,
+        courses: PropTypes.array.isRequired,
+    })
 }
 
 

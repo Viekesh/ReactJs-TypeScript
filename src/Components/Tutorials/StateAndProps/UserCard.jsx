@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 
 
@@ -20,6 +21,15 @@ const UserCard = ({ name, photo, designation, isAdmin }) => {
             </div>
         </>
     )
+}
+
+
+
+UserCard.propTypes = {
+    name: PropTypes.string.isRequired,
+    designation: PropTypes.string.isRequired,
+    photo: PropTypes.string.isRequired,
+    isAdmin: PropTypes.bool.isRequired,
 }
 
 

@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types"
 
 
 
@@ -14,6 +15,12 @@ const Notification = ({ messages }) => {
             </ul>
         </>
     )
+}
+
+
+
+Notification.propTypes = {
+    messages: PropTypes.array
 }
 
 
