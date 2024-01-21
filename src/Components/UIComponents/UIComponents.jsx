@@ -9,6 +9,8 @@ import StatefulHook from "./StatefulHook";
 import ThemeSwitcher from "../Tutorials/StateAndProps/ThemeSwitcher";
 import Props from "../Tutorials/StateAndProps/Props";
 import PropCheck from "../Tutorials/StateAndProps/PropTypeCheck";
+import RenderingList from "../Tutorials/RenderingLists/RenderingList";
+import MovieCard from "../Tutorials/RenderingLists/MovieCard";
 // import BooksList from "./Books";
 
 
@@ -27,6 +29,8 @@ const UIComponents = () => {
                 <ThemeSwitcher />
                 <Props />
                 <PropCheck />
+                <RenderingList />
+                <MovieCard />
                 {/* <BooksList /> */}
             </section>
         </>
