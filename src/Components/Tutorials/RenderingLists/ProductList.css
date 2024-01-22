@@ -1,0 +1,73 @@
+.add_product {
+    border-radius: 15px;
+    padding: 9px;
+    background-color: rgb(252, 230, 230);
+    position: relative;
+}
+
+.add_product>select {
+    margin: 1vh auto;
+    font-size: 20px;
+    width: 90%;
+}
+
+.add_product>button {
+    font-size: 20px;
+}
+
+.products_list {
+    position: relative;
+}
+
+.product {
+    border-radius: 15px;
+    margin: 1vh auto;
+    padding: 9px;
+    width: 90%;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+}
+
+.product_name {
+    position: relative;
+    width: 350px;
+    font-size: 16px;
+}
+
+.product-qty {
+    border: 1px solid gray;
+    width: 100%;
+}
+
+.product-qty>input {
+    font-size: 18px;
+    text-align: center;
+    outline: none;
+}
+
+.product_cost {
+    position: relative;
+    width: 100%;
+    font-size: 16px;
+}
+
+.product-total-cost {
+    position: relative;
+    font-size: 16px;
+}
+
+.totals {
+    position: absolute;
+    width: 600px;
+    height: 40px;
+    background-color: rgb(252, 230, 230);
+    bottom: 2px;
+}
+
+.totals-v {
+    position: absolute;
+    font-size: 15px;
+    font-weight: bold;
+    bottom: 10px;
+    left: 430px;
+}

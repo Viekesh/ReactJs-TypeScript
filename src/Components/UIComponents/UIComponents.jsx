@@ -11,6 +11,7 @@ import Props from "../Tutorials/StateAndProps/Props";
 import PropCheck from "../Tutorials/StateAndProps/PropTypeCheck";
 import RenderingList from "../Tutorials/RenderingLists/RenderingList";
 import MovieCard from "../Tutorials/RenderingLists/MovieCard";
+// import ProductList from "../Tutorials/RenderingLists/ProductList";
 // import BooksList from "./Books";
 
 
@@ -31,6 +32,7 @@ const UIComponents = () => {
                 <PropCheck />
                 <RenderingList />
                 <MovieCard />
+                {/* <ProductList /> */}
                 {/* <BooksList /> */}
             </section>
         </>
