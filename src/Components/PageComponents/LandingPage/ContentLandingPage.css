@@ -1,27 +1,14 @@
 .content_landing_page {
-    /* border: 3px solid snow; */
-    height: 90vh;
-    padding: 27vh 0 0 0;
+    text-transform: capitalize;
 }
 
-.content_landing_page>h1 {
-    /* border: 3px solid red; */
-    width: 90vw;
-    color: snow;
-    font-family: Dela Gothic One, sans-serif;
-    font-size: 24px;
+.content_landing_page h1 {
+    font-family: "Kanit", sans-serif;
+    font-weight: 600;
 }
 
-@media only screen and (min-width: 768px) {
-    .content_landing_page {
-        /* border: 3px solid snow; */
-        margin: 0 auto;
-        width: 63%;
-    }
-
-    .content_landing_page>h1 {
-        /* border: 3px solid snow; */
-        width: 90%;
-        font-size: 30px;
-    }
+.content_landing_page p {
+    font-family: "Kanit", sans-serif;
+    font-weight: 300;
+    text-align: justify;
 }

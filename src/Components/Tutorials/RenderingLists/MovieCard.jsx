@@ -10,8 +10,8 @@ const MovieCard = () => {
         <>
             <div className="movie_card_container">
                 {
-                    movies.map(({ movie_title, movie_genre }) => (
-                        <MovieDetails title={movie_title} genre={movie_genre} />
+                    movies.map(({ id, movie_title, movie_genre }) => (
+                        <MovieDetails title={movie_title} genre={movie_genre} key={id} />
                     ))
                 }
             </div>

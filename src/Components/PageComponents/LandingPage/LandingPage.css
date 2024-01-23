@@ -2,3 +2,9 @@
     border: 1px solid snow;
     background-color: snow;
 }
+
+main {
+    border: 1px solid transparent;
+    margin: 18vh auto;
+    width: 80%;
+}

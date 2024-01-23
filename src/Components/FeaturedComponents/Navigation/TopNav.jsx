@@ -17,9 +17,11 @@ const TopNav = () => {
         <>
             <nav className="y_axis_center">
                 <div className="logo">
-                    <h1>
-                        Vikesh <br /> Gaikwad
-                    </h1>
+                    <NavLink to="/">
+                        <h1>
+                            Vikesh <br /> Gaikwad
+                        </h1>
+                    </NavLink>
                 </div>
 
                 <div className="x_y_axis_center">

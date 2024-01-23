@@ -3,7 +3,7 @@ import MovieGenre from "./MovieGenre";
 
 
 
-const MovieDetails = ({ title, genre }) => {
+const MovieDetails = ({ id, title, genre }) => {
     return (
         <>
             <div className="movie_card">
@@ -11,7 +11,7 @@ const MovieDetails = ({ title, genre }) => {
                 <div className="genre">
                     {
                         genre.split("|").map((gen) => (
-                            <MovieGenre label={gen} />
+                            <MovieGenre key={id} label={gen} />
                         ))
                     }
                 </div>

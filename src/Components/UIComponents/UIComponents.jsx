@@ -11,6 +11,7 @@ import Props from "../Tutorials/StateAndProps/Props";
 import PropCheck from "../Tutorials/StateAndProps/PropTypeCheck";
 import RenderingList from "../Tutorials/RenderingLists/RenderingList";
 import MovieCard from "../Tutorials/RenderingLists/MovieCard";
+import SuperTunes from "./SuperTunes/SuperTunes";
 // import ProductList from "../Tutorials/RenderingLists/ProductList";
 // import BooksList from "./Books";
 
@@ -20,6 +21,7 @@ const UIComponents = () => {
     return (
         <>
             <section className="ui_components">
+                <SuperTunes />
                 <Notification text="Notification goes here..." />
                 <TextCount />
                 <UserPosts />

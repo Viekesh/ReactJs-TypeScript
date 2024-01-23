@@ -1,6 +1,8 @@
 import React from "react";
 import "./LandingPage.css";
 import TopNav from "../../FeaturedComponents/Navigation/TopNav";
+import { LandingPageContent } from "./ContentDB";
+import ContentLandingPage from "./ContentLandingPage";
 
 
 
@@ -10,7 +12,13 @@ const LandingPage = () => {
             <header className="nav_component">
                 <TopNav />
             </header>
-            <main></main>
+            <main>
+                {
+                    LandingPageContent.map(c => (
+                        <ContentLandingPage heading={c.heading} para={c.para} />
+                    ))
+                }
+            </main>
             <footer></footer>
         </>
     )

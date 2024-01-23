@@ -3,11 +3,13 @@ import "./ContentLandingPage.css";
 
 
 
-const ContentLandingPage = ({ landingPage }) => {
+const ContentLandingPage = ({ heading, para }) => {
     return (
         <>
-            <div className="content_landing_page x_y_axis_center">
-                <h1>{landingPage}</h1>
+            <div className="content_landing_page">
+                <h1>{heading}</h1>
+                <br />
+                <p>{para}</p>
             </div>
         </>
     )
