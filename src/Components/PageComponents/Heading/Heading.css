@@ -1,0 +1,8 @@
+.heading {
+    border: 1px solid transparent;
+    margin: 24vh auto 3vh auto;
+    width: 100%;
+
+    font-family: "Kanit", sans-serif;
+    font-size: 21px;
+}

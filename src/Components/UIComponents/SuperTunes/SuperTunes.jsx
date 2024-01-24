@@ -27,9 +27,11 @@ class SuperTunes extends Component {
             <>
                 <section className="super_tunes">
                     <div id="superTunes">
-                        <h2 id="stTitle">Super Tunes</h2>
-                        <button className="st_button" onClick={this.sortByTitle}>Sort By Title</button>
-                        <button className="st_button" onClick={this.sortByRating}>Sort By Ratings</button>
+                        {/* <h2 id="stTitle">Super Tunes</h2> */}
+                        <div className="st_btns">
+                            <button className="st_button" onClick={this.sortByTitle}>Sort By Title</button>
+                            <button className="st_button" onClick={this.sortByRating}>Sort By Ratings</button>
+                        </div>
                         <div id="songList">
                             {
                                 this.state.songs.map(song => (

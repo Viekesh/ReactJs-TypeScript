@@ -8,14 +8,9 @@ const STRatings = ({ stars }) => {
         <>
             {
                 [...new Array(Math.round(stars <= 5 ? stars : 0)).keys()].map(v => (
-                    <div className="star">{v}</div>
+                    <div className="star">{v.Rating}</div>
                 ))
             }
-            {/* {stars > 0 && (
-                Array.from({ length: Math.round(stars <= 5 ? stars : 0) }).map((v) => (
-                    <div key={v} className="star"></div>
-                ))
-            )} */}
         </>
     )
 }

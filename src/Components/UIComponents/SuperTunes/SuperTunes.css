@@ -4,4 +4,63 @@
     margin: 18vh auto;
     padding: 9px;
     width: 90%;
+    height: 60vh;
+
+    background-color: black;
+    overflow-y: scroll;
+}
+
+.st_btns {
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.st_btns button {
+    border-radius: 12px;
+    outline: none;
+    padding: 9px;
+}
+
+/* Song Card */
+
+.song_card {
+    border: 1px solid snow;
+    border-radius: 12px;
+    margin: 3vh auto;
+    padding: 9px;
+    background-color: snow;
+
+    display: flex;
+    align-items: center;
+}
+
+.song_card img {
+    border-radius: 50%;
+}
+
+.song_title {
+    border: 1px solid transparent;
+    width: 100%;
+    text-align: right;
+    position: relative;
+}
+
+/* STRating */
+
+.rating {
+    border: 1px solid transparent;
+    width: -moz-fit-content;
+    width: fit-content;
+    display: flex;
+}
+
+.star {
+    margin: 3px;
+    width: 18px;
+    height: 18px;
+    background-image: url(../../../Assets/Images/starRating.png);
+    background-size: 100%;
+    background-position: center;
 }

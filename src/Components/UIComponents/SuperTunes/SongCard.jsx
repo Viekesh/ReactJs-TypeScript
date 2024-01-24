@@ -13,9 +13,11 @@ const SongCard = ({ data }) => {
                 <img src={thumb} alt={title} />
                 <div className="song_title">
                     {title} by {artist}
-                </div>
 
-                <STRatings stars={rating} />
+                    <div className="rating">
+                        <STRatings stars={rating} />
+                    </div>
+                </div>
             </div>
         </>
     )
