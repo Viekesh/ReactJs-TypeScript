@@ -15,3 +15,27 @@
     padding: 18px;
     height: 18vh;
 }
+
+:root {
+    --swiper-navigation-size: 12px !important;
+    --swiper-navigation-color: black;
+    font-weight: 900 !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    border: 3px solid black !important;
+    border-radius: 50%;
+    padding: 9px;
+    background-color: black;
+    color: snow !important;
+    font-weight: 900 !important;
+}
+
+
+
+@media only screen and (min-width: 768px) {
+    .project_carausel {
+        display: none;
+    }
+}

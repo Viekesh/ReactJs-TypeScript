@@ -1,0 +1,44 @@
+.tictactoe_navigation {
+    border: 1px solid black;
+    margin: 1vh auto;
+    padding: 1vh;
+    width: 90vw;
+    background-color: black;
+}
+
+.logo h1 {
+    padding: 0 3vh;
+    background-color: snow;
+}
+
+.game_zone {
+    border: 1px solid transparent;
+    margin: 3vh auto;
+    width: 90%;
+}
+
+
+
+/* Board */
+
+.game_container {
+    border: 1px solid transparent;
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(3, 18vh);
+    grid-template-columns: repeat(3, 18vh);
+}
+
+.game_container .box {
+    border: 1px solid gray;
+    margin: 0 auto;
+    width: 60%;
+    height: 60%;
+    font-size: 18px;
+}
+
+.game_container .box:hover {
+    background-color: black;
+    color: lightgreen;
+    cursor: pointer;
+}

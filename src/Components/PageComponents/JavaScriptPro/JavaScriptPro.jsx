@@ -10,7 +10,7 @@ import { NavLink } from "react-router-dom";
 const JavaScriptPro = () => {
     return (
         <>
-            <Heading head="JavaScript Projects :" />
+            <Heading head="JavaScript Practises :" />
             <div className="project_carausel">
                 <Swiper
                     slidesPerView={1}

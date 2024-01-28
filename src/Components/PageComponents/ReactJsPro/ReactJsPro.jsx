@@ -14,7 +14,7 @@ import 'swiper/css/pagination';
 const ReactJsPro = () => {
     return (
         <>
-            <Heading head="ReactJs Projects :" />
+            <Heading head="ReactJs Practices :" />
             <div className="project_carausel">
                 <Swiper
                     slidesPerView={1}

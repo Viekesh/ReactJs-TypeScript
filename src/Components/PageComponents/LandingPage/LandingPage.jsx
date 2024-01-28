@@ -4,7 +4,6 @@ import TopNav from "../../FeaturedComponents/Navigation/TopNav";
 import { LandingPageContent } from "./ContentDB";
 import ContentLandingPage from "./ContentLandingPage";
 import ReactJsPro from "../ReactJsPro/ReactJsPro";
-import JavaScriptPro from "../JavaScriptPro/JavaScriptPro";
 
 
 
@@ -23,8 +22,6 @@ const LandingPage = () => {
 
                 <section className="react-projects">
                     <ReactJsPro />
-
-                    <JavaScriptPro />
                 </section>
             </main>
             <footer></footer>
