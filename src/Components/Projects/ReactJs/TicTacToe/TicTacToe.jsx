@@ -197,6 +197,8 @@
 import "./TicTacToe.css";
 import Board from "./Board";
 import { useState } from "react";
+import "./Assets/music.mp3";
+import Strike from "./Strike";
 
 
 
@@ -210,6 +212,12 @@ const TicTacToe = () => {
 
     const [playerTurn, setPlayerTurn] = useState(Player_X);
 
+    const [isGameOver, setIsGameOver] = useState(false);
+
+    const [initialTurn, setInitialTurn] = useState(Player_X);
+
+    const [audioTune, setAudioTune] = useState(new Audio("./Assets/ting.mp3"));
+
     const renderBoxes = () => {
         return (
             boxes.map((value, index) => (
@@ -222,8 +230,17 @@ const TicTacToe = () => {
         )
     }
 
+    const changeTurn = () => {
+        return initialTurn === "X" ? "O" : "X";
+    };
+
     const onBoxClick = (index) => {
-        return console.log(index);
+        const newBoxes = [...boxes];
+        newBoxes[index] = playerTurn;
+        setBoxes(newBoxes);
+        playerTurn === Player_X ? setPlayerTurn(Player_O) : setPlayerTurn(Player_X);
+        setInitialTurn(changeTurn());
+        audioTune.play();
     };
 
     return (
@@ -241,6 +258,7 @@ const TicTacToe = () => {
                 </div>
             </section >
 
+            <Strike />
         </>
     )
 };

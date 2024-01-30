@@ -42,3 +42,74 @@
     color: lightgreen;
     cursor: pointer;
 }
+
+.x_hover:hover::after {
+    content: "X";
+    opacity: 0.3;
+}
+
+.o_hover:hover::after {
+    content: "O";
+    opacity: 0.3;
+}
+
+.strike {
+    margin: 5.3vh auto 0 5vh;
+    position: absolute;
+    background-color: darkorange;
+}
+
+.strike-row-1 {
+    width: 80%;
+    height: 4px;
+    top: 15%;
+}
+
+.strike-row-2 {
+    width: 80%;
+    height: 4px;
+    top: 33%;
+}
+
+.strike-row-3 {
+    width: 80%;
+    height: 4px;
+    top: 56%;
+}
+
+.strike-column-1 {
+    height: 37%;
+    width: 4px;
+    top: 15%;
+    left: 6%;
+}
+
+.strike-column-2 {
+    height: 37%;
+    width: 4px;
+    top: 15%;
+    left: 40%;
+}
+
+.strike-column-3 {
+    height: 37%;
+    width: 4px;
+    top: 15%;
+    left: 74%;
+}
+
+.strike-diagonal-1 {
+    width: 70%;
+    height: 4px;
+    top: 36%;
+    left: 5%;
+    transform: skewY(45deg);
+}
+
+.strike-diagonal-2 {
+    width: 70%;
+    height: 4px;
+    top: 36%;
+    left: 5%;
+    transform: skewY(-45deg);
+}

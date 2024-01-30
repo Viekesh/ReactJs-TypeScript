@@ -7,7 +7,7 @@ const Board = ({ boxes, onBoxClick }) => {
     const renderBoxes = () => {
         return (
             boxes.map((value, index) => (
-                <div className="box x_y_axis_center" key={index} onClick={() => onBoxClick("X")}>
+                <div className="box x_y_axis_center" key={index} onClick={() => onBoxClick(index)}>
                     {
                         value && <span className="box_text x_y_axis_center">{value}</span>
                     }

@@ -5,7 +5,7 @@ import React from "react";
 const Strike = () => {
     return (
         <>
-            <div></div>
+            <div className="strike strike-diagonal-2"></div>
         </>
     )
 }
