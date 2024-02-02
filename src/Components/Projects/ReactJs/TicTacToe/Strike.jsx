@@ -2,10 +2,10 @@ import React from "react";
 
 
 
-const Strike = () => {
+const Strike = ({ strikeClass }) => {
     return (
         <>
-            <div className="strike strike-diagonal-2"></div>
+            <div className={`strike ${strikeClass}`}></div>
         </>
     )
 }
