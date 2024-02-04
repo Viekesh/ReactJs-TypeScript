@@ -13,7 +13,7 @@ export const SliderContent1 = [
         navLink: "/Calculator"
     },
     {
-        id: 2,
+        id: 3,
         projectTitle: "EEE",
         navLink: "/EEE"
     }

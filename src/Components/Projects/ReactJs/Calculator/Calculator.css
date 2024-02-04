@@ -1,0 +1,10 @@
+.calculator {
+    border: 3px solid blue;
+    height: 100vh;
+    position: relative;
+}
+
+.calc_nav {
+    border: 1px solid red;
+    position: relative;
+}
