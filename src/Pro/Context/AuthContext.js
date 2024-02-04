@@ -5,7 +5,7 @@ import {
     signOut,
     onAuthStateChanged
 } from "firebase/auth";
-import {auth} from "../../firebaseCon";
+import { auth } from "../../firebaseCon";
 
 
 
@@ -39,7 +39,7 @@ export const AuthContextProvider = ({ children }) => {
     }, []);
 
     return (
-        <UserContext.Provider value={{createUser, user,signIn, logOut}}>
+        <UserContext.Provider value={{ createUser, user, signIn, logOut }}>
             {children}
         </UserContext.Provider>
     )

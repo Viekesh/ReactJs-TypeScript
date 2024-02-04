@@ -182,7 +182,7 @@ const TicTacToe = () => {
                 </div>
             </section>
 
-            <div>
+            <div className="info_text">
                 <span className="info">{infoText}</span>
             </div>
 
@@ -194,7 +194,9 @@ const TicTacToe = () => {
 
             <GameOver gameState={gameState} />
 
-            <Reset gameState={gameState} onReset={handleReset} />
+            <div className="reset_component x_y_axis_center">
+                <Reset gameState={gameState} onReset={handleReset} />
+            </div>
         </>
     )
 };

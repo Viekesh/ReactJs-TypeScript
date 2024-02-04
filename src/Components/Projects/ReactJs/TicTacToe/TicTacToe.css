@@ -1,7 +1,7 @@
 .tictactoe_navigation {
     border: 1px solid black;
     margin: 1vh auto;
-    padding: 1vh;
+    padding: 18px;
     width: 90vw;
     background-color: black;
 }
@@ -64,39 +64,39 @@
 .strike-row-1 {
     width: 80%;
     height: 4px;
-    top: 21%;
+    top: 25%;
 }
 
 .strike-row-2 {
     width: 80%;
     height: 4px;
-    top: 40%;
+    top: 45%;
 }
 
 .strike-row-3 {
     width: 80%;
     height: 4px;
-    top: 60%;
+    top: 65%;
 }
 
 .strike-column-1 {
     height: 40%;
     width: 4px;
-    top: 21%;
+    top: 26%;
     left: 6%;
 }
 
 .strike-column-2 {
     height: 40%;
     width: 4px;
-    top: 21%;
+    top: 26%;
     left: 40%;
 }
 
 .strike-column-3 {
     height: 40%;
     width: 4px;
-    top: 21%;
+    top: 26%;
     left: 74%;
 }
 
@@ -116,6 +116,12 @@
     transform: skewY(-45deg);
 }
 
+.info_text {
+    border: 1px solid transparent;
+    margin: 2vh auto;
+    width: fit-content;
+}
+
 .game_over {
     text-align: center;
     border: #5468ff 8px;
@@ -125,9 +131,15 @@
     font-size: 1.5em;
 }
 
+.reset_component {
+    border: 1px solid transparent;
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
+}
+
 .reset_button {
     border: 1px solid transparent;
-    margin: 0 0 0 18px;
     width: 90%;
     padding: 18px;
     background-color: black;
