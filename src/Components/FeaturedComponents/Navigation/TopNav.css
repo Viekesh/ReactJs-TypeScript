@@ -22,7 +22,7 @@ nav {
 }
 
 .github_n_nav_icon {
-    /* border: 3px solid blue; */
+    border: 3px solid transparent;
     width: 54px;
     display: flex;
     justify-content: space-between;
@@ -31,14 +31,18 @@ nav {
 .github_icon {
     border: 2px solid black;
     border-radius: 100%;
-    width: 27px;
-    height: 27px;
+    width: 30px;
+    height: 30px;
     background-color: snow;
+}
+
+.github_icon a {
+    border: 2px solid transparent;
 }
 
 .github_icon a>svg {
     /* border: 3px solid blue; */
-    width: 18px;
+    width: 21px;
 }
 
 

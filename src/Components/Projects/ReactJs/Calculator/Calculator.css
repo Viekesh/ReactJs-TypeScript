@@ -6,5 +6,144 @@
 
 .calc_nav {
     border: 1px solid red;
-    position: relative;
+    padding: 0 15px;
+    width: 99.3vw;
+    height: 9vh;
+    position: absolute;
+    justify-content: space-between;
+}
+
+.git_link {
+    border: 2px solid blue;
+    width: fit-content;
+}
+
+.git_link .github_icon {
+    border: 3px solid snow;
+    padding: 3px;
+}
+
+.light_mode {
+    border: 2px solid green;
+    width: 30px;
+    height: 30px;
+}
+
+
+
+/* Calc Header */
+
+.calc_header {
+    border: 2px solid green;
+    border-radius: 15px;
+    margin: 1vh auto;
+    padding: 15px;
+    width: 93vw;
+    height: 30vh;
+    background-color: black;
+}
+
+.header_history {
+    border: 1px solid transparent;
+    height: 16vh;
+    font-size: 1rem;
+    line-height: 1.875rem;
+    color: gray;
+    display: flex;
+    justify-content: flex-end;
+    overflow-y: scroll;
+}
+
+.header_expression {
+    border: 1px solid transparent;
+    font-size: 1rem;
+    line-height: 1.875rem;
+    width: 100%;
+    min-height: 30px;
+    color: snow;
+    display: flex;
+    justify-content: flex-start;
+    white-space: nowrap;
+    overflow-x: scroll;
+}
+
+.header_result {
+    border: 1px solid transparent;
+    width: 100%;
+    height: 30px;
+    font-weight: bold;
+    font-size: 30px;
+    color: snow;
+    white-space: nowrap;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+
+/* Calc Keypad */
+
+.calc_keypad {
+    border: 2px solid green;
+    border-radius: 15px;
+    margin: 1vh auto;
+    padding: 15px;
+    width: 93vw;
+    height: 66vh;
+    background-color: rgb(29, 29, 29);
+    display: flex;
+}
+
+.keypad p {
+    line-height: 1.875rem;
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 200ms;
+    user-select: none;
+    cursor: pointer;
+    color: var(--text-color-2);
+}
+
+.keypad_keys p:active {
+    background-color: rgba(0, 0, 0, 0.14);
+}
+
+.keypad_keys {
+    flex: 3;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.keypad_keys p {
+    width: 33%;
+    height: 25%;
+}
+
+.keypad_symbols {
+    flex: 1;
+}
+
+.keypad_symbols p {
+    color: #89a5f1;
+    width: 100%;
+    height: 20%;
+}
+
+.custom_scroll::-webkit-scrollbar {
+    height: 5px;
+    width: 5px;
+}
+
+.custom_scroll::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.custom_scroll::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.14);
+}
+
+.custom_scroll::-webkit-scrollbar-thumb:hover {
+    background-color: gray;
 }
