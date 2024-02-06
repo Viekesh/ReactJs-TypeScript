@@ -2,21 +2,55 @@ import { useState } from "react";
 import "./Calculator.css";
 import CalcHeader from "./CalcHeader";
 import CalcKeypad from "./CalcKeypad";
-// import { light } from "@mui/material/styles/createPalette";
 
 
+
+const usedKeyCodes = [
+    48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 96, 97, 98, 99, 100, 101, 102, 103,
+    104, 105, 8, 13, 190, 187, 189, 191, 56, 111, 106, 107, 109,
+];
+
+const numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+
+const operators = ["-", "+", "*", "/"];
 
 const Calculator = () => {
 
     const [isLightMode, setIsLightMode] = useState();
 
+    const [expression, setExpression] = useState("");
+
+    const [result, setResult] = useState("");
+
     const convertDarkMode = () => {
         setIsLightMode(!isLightMode)
     }
 
+    const handleKeyPress = (keyCode, key) => {
+        // console.log(keycode, key);
+
+        if (!keyCode) {
+            return;
+        }
+
+        if (!usedKeyCodes.includes(keyCode)) {
+            return;
+        }
+
+        if (numbers.includes(key)) {
+            console.log("Number");
+        } else if (operators.includes(key)) {
+            console.log("Operator");
+        } else if (keyCode === 8) {
+            console.log("Backspace");
+        } else if (keyCode === 13) {
+            console.log("Enter");
+        }
+    }
+
     return (
         <>
-            <section className="calculator">
+            <section className="calculator" onKeyDown={(event) => handleKeyPress(event.keycode, event.key)}>
                 <div className="calc_nav y_axis_center">
                     <div className="git_link">
                         <div className="github_icon x_y_axis_center">
@@ -52,7 +86,7 @@ const Calculator = () => {
                 </div>
 
                 <CalcHeader />
-                <CalcKeypad />
+                <CalcKeypad handleKeyPress={handleKeyPress} />
             </section>
         </>
     )
