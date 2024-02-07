@@ -102,7 +102,7 @@ const CalcKeypad = (props) => {
                         symbols.map((item, index) => <p
                             key={index}
                             className="x_y_axis_center"
-                            onClick={() => props.handleKeyPress(item.keyCode, item.label)}
+                            onClick={() => props.handleKeyPress(item.keyCode, item.value)}
                         >
                             {item.label}
                         </p>)

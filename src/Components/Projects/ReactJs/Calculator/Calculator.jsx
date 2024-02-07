@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./Calculator.css";
 import CalcHeader from "./CalcHeader";
 import CalcKeypad from "./CalcKeypad";
@@ -14,6 +14,8 @@ const numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
 const operators = ["-", "+", "*", "/"];
 
+
+
 const Calculator = () => {
 
     const [isLightMode, setIsLightMode] = useState();
@@ -22,35 +24,86 @@ const Calculator = () => {
 
     const [result, setResult] = useState("");
 
+    const [history, setHistory] = useState(
+        JSON.parse(localStorage.getItem("calculator-app-history")) || []
+    );
+
     const convertDarkMode = () => {
         setIsLightMode(!isLightMode)
     }
 
     const handleKeyPress = (keyCode, key) => {
-        // console.log(keycode, key);
-
-        if (!keyCode) {
-            return;
-        }
-
-        if (!usedKeyCodes.includes(keyCode)) {
-            return;
-        }
+        if (!keyCode) return;
+        if (!usedKeyCodes.includes(keyCode)) return;
 
         if (numbers.includes(key)) {
-            console.log("Number");
+            if (key === "0") {
+                if (expression.length === 0) return;
+            }
+            calculateResult(expression + key);
+            setExpression(expression + key);
         } else if (operators.includes(key)) {
-            console.log("Operator");
+            if (!expression) return;
+
+            const lastChar = expression.slice(-1);
+            if (operators.includes(lastChar)) return;
+            if (lastChar === ".") return;
+
+            setExpression(expression + key);
+        } else if (key === ".") {
+            if (!expression) return;
+            const lastChar = expression.slice(-1);
+            if (!numbers.includes(lastChar)) return;
+
+            setExpression(expression + key);
         } else if (keyCode === 8) {
-            console.log("Backspace");
+            if (!expression) return;
+            calculateResult(expression.slice(0, -1));
+            setExpression(expression.slice(0, -1));
         } else if (keyCode === 13) {
-            console.log("Enter");
+            if (!expression) return;
+            calculateResult(expression);
+
+            let tempHistory = [...history];
+            if (tempHistory.length > 20) tempHistory = tempHistory.splice(0, 1);
+            tempHistory.push(expression);
+            setHistory(tempHistory);
         }
-    }
+    };
+
+
+
+    useEffect(() => {
+        localStorage.setItem("calculator-app-mode", JSON.stringify(isLightMode));
+    }, [isLightMode]);
+
+
+
+    useEffect(() => {
+        localStorage.setItem("calculator-app-history", JSON.stringify(history));
+    }, [history]);
+
+
+
+    const calculateResult = (exp) => {
+        if (!exp) {
+            setResult("");
+            return;
+        }
+        const lastChar = exp.slice(-1);
+        if (!numbers.includes(lastChar)) exp = exp.slice(0, -1);
+
+        const answer = eval(exp).toFixed(2) + "";
+        setResult(answer);
+    };
 
     return (
         <>
-            <section className="calculator" onKeyDown={(event) => handleKeyPress(event.keycode, event.key)}>
+            <section
+                className="calculator"
+                onKeyDown={(event) => handleKeyPress(event.keycode, event.key)}
+            >
+
                 <div className="calc_nav y_axis_center">
                     <div className="git_link">
                         <div className="github_icon x_y_axis_center">
@@ -85,7 +138,7 @@ const Calculator = () => {
                     </div>
                 </div>
 
-                <CalcHeader />
+                <CalcHeader expression={expression} result={result} history={history} />
                 <CalcKeypad handleKeyPress={handleKeyPress} />
             </section>
         </>

@@ -135,14 +135,15 @@
 
 .keypad_symbols {
     border: 2px solid transparent;
+    padding: 9px 0;
     width: 30%;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .keypad_symbols p {
     border: 2px solid transparent;
-    border-radius: 36%;
+    /* border-radius: 36%; */
     margin: 0 auto;
     width: 45px;
     height: 27px;

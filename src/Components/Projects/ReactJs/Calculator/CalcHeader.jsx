@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 
 
 
-const CalcHeader = () => {
+const CalcHeader = ({ expression, result, history }) => {
 
     const resultRef = useRef();
 
@@ -10,25 +10,36 @@ const CalcHeader = () => {
 
     useEffect(() => {
         resultRef.current.scrollIntoView({ behavior: "smooth" });
-    }, [resultRef]);
+    }, [result]);
+
+    useEffect(() => {
+        expressionRef.current.scrollLeft = expressionRef.current.scrollWidth;
+    }, [expression]);
 
     return (
         <>
             <section className="calc_header">
-                <div className="header_history custom_scroll">123<br />123<br />123<br />123<br />123<br />123<br />123<br />123<br />123<br />123<br />123<br /></div>
+                <div className="header_history custom_scroll">
+                    {
+                        history &&
+                        history?.map((item) => (
+                            <p key={item + "" + Math.random() * 44}>{item}</p>
+                        ))
+                    }
+                </div>
 
                 <div
                     className="header_expression custom_scroll"
                     ref={expressionRef}
                 >
-                    <span className="custom_scroll">custom_scrollcustom_scrollcustom_scrollcustom_scrollcustom_scrollcustom_scroll</span>
+                    <span className="custom_scroll">{expression}</span>
                 </div>
 
                 <div
                     className="header_result"
                     ref={resultRef}
                 >
-                    35
+                    {result}
                 </div>
             </section>
         </>
