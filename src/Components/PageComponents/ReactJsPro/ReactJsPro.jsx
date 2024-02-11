@@ -2,7 +2,7 @@ import React from "react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Heading from "../Heading/Heading";
-import { Slider1Content } from "./ReactProContent";
+import { Slider1Content, Slider2Content } from "./ReactProContent";
 import { NavLink } from "react-router-dom";
 import "./ReactJsPro.css";
 import 'swiper/css';
@@ -65,11 +65,11 @@ const ReactJsPro = () => {
 
                 >
                     {
-                        Slider1Content.map((proData) => {
+                        Slider2Content.map((proData) => {
                             return (
                                 <SwiperSlide className="inner_slide">
                                     <NavLink to={proData.navLink} key={proData.id}>
-                                        <div className="sld">
+                                        <div className={`sld ${proData.className}`}>
                                             <h3>{proData.projectTitle}</h3>
                                         </div>
                                     </NavLink>

@@ -1,19 +1,50 @@
 .project_carausel_1 {
     border: 1px solid transparent;
+    border-radius: 30px;
     margin: 0 auto;
     width: 100%;
+    box-shadow: 3px 1px 15px gray;
 }
 
 .inner_slide {
-    border: 1px solid black;
+    border: 1px solid transparent;
     border-radius: 30px;
 }
 
 .sld {
-    border: 1px solid blue;
+    border: 1px solid transparent;
     border-radius: 30px;
     padding: 18px;
     height: 18vh;
+}
+
+.sld h3 {
+    color: snow;
+    text-shadow: 3px 3px 15px black;
+}
+
+.food_delivery {
+    background-image: url(../../../Assets/Images/slide2img1.PNG);
+    background-position: center;
+    background-size: 100%;
+}
+
+.real_estate {
+    background-image: url(../../../Assets/Images/slide2img2.PNG);
+    background-position: center;
+    background-size: 100%;
+}
+
+.edutech {
+    background-image: url(../../../Assets/Images/slide2img3.PNG);
+    background-position: center;
+    background-size: 100%;
+}
+
+.eee {
+    background-image: url(../../../Assets/Images/slide2img4.PNG);
+    background-position: center;
+    background-size: 100%;
 }
 
 :root {
