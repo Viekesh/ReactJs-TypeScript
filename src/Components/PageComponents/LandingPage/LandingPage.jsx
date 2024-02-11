@@ -4,6 +4,7 @@ import TopNav from "../../FeaturedComponents/Navigation/TopNav";
 import { LandingPageContent } from "./ContentDB";
 import ContentLandingPage from "./ContentLandingPage";
 import ReactJsPro from "../ReactJsPro/ReactJsPro";
+import SocialLinks from "../../FeaturedComponents/SocialLinks/SocialLinks";
 
 
 
@@ -13,6 +14,7 @@ const LandingPage = () => {
             <header className="nav_component">
                 <TopNav />
             </header>
+
             <main>
                 {
                     LandingPageContent.map(c => (
@@ -20,10 +22,17 @@ const LandingPage = () => {
                     ))
                 }
 
-                <section className="react-projects">
+                <div className="for_desktop_view">
+                    this portfolio is developed for mobile view only. please checks it in mobile...
+                </div>
+
+                <section className="react_projects">
                     <ReactJsPro />
                 </section>
+
+                <SocialLinks />
             </main>
+
             <footer></footer>
         </>
     )

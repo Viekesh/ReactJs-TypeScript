@@ -15,7 +15,7 @@
     border: 1px solid transparent;
     border-radius: 30px;
     padding: 18px;
-    height: 18vh;
+    height: 21vh;
 }
 
 .sld h3 {
@@ -26,25 +26,25 @@
 .food_delivery {
     background-image: url(../../../Assets/Images/slide2img1.PNG);
     background-position: center;
-    background-size: 100%;
+    background-size: 100% 100%;
 }
 
 .real_estate {
     background-image: url(../../../Assets/Images/slide2img2.PNG);
     background-position: center;
-    background-size: 100%;
+    background-size: 100% 100%;
 }
 
 .edutech {
     background-image: url(../../../Assets/Images/slide2img3.PNG);
     background-position: center;
-    background-size: 100%;
+    background-size: 100% 100%;
 }
 
 .eee {
     background-image: url(../../../Assets/Images/slide2img4.PNG);
     background-position: center;
-    background-size: 100%;
+    background-size: 100% 100%;
 }
 
 :root {

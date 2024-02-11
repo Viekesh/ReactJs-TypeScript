@@ -19,7 +19,7 @@ const TopNav = () => {
                 <div className="logo">
                     <NavLink to="/">
                         <h1>
-                            Vikesh <br /> Gaikwad
+                            Vikesh's <br /> Portfolio
                         </h1>
                     </NavLink>
                 </div>

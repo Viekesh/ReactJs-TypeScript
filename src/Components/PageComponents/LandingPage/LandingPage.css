@@ -8,3 +8,44 @@ main {
     margin: 18vh auto;
     width: 72%;
 }
+
+.for_desktop_view {
+    display: none;
+}
+
+.react_projects {
+    display: block;
+}
+
+footer {
+    border: 1px solid transparent;
+    margin: 0vh auto;
+    padding: 0px;
+}
+
+
+
+@media only screen and (min-width: 768px) {
+
+    main {
+        margin: 24vh auto;
+        width: 54%;
+    }
+
+    .for_desktop_view {
+        border: 1px solid transparent;
+        margin: 6vh auto;
+        display: block;
+        text-transform: capitalize;
+    }
+
+    .react_projects {
+        display: none;
+        text-transform: capitalize;
+    }
+
+    footer {
+        margin: 3vh auto;
+        padding: 10px
+    }
+}
