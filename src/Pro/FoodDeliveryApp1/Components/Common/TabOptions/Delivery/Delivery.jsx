@@ -52,7 +52,7 @@ const Delivery = () => {
       <Filter filterList={deliveryFilters} />
       <DeliveryCollections />
       <TopBrands />
-      <ExploreSection list = {restaurantList} collectionNam = "Delivery Restaurants In Nagpur" />
+      <ExploreSection list={restaurantList} collectionNam="Delivery Restaurants In Nagpur" />
     </>
   );
 };

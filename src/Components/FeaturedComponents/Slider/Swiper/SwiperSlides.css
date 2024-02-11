@@ -1,9 +1,3 @@
-.project_carausel_1 {
-    border: 1px solid transparent;
-    margin: 0 auto;
-    width: 100%;
-}
-
 .inner_slide {
     border: 1px solid black;
     border-radius: 30px;
@@ -30,12 +24,4 @@
     background-color: black;
     color: snow !important;
     font-weight: 900 !important;
-}
-
-
-
-@media only screen and (min-width: 768px) {
-    .project_carausel {
-        display: none;
-    }
 }
