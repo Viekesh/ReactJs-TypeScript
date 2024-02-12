@@ -16,6 +16,13 @@ nav {
     flex-direction: column;
 }
 
+.logo h1 {
+    font-family: "Kanit", sans-serif;
+    font-weight: 900;
+    color: black;
+    text-align: left;
+}
+
 .nav_option a {
     margin: 1vh 2vh;
     font-weight: bold;
@@ -67,6 +74,7 @@ nav {
     border: 0;
     margin: 0;
     overflow: visible;
+    z-index: 999;
 }
 
 .hamburger:hover {
@@ -170,6 +178,7 @@ nav {
     /* transform: translateX(180px); */
     /* transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55); */
     display: none;
+    z-index: 998;
 }
 
 .navigation_section.overlay {
@@ -218,14 +227,6 @@ nav {
     font-size: 15px;
     font-weight: bolder;
     color: blue;
-}
-
-
-
-.logo h1 {
-    font-family: "Kanit", sans-serif;
-    font-weight: 900;
-    color: black;
 }
 
 

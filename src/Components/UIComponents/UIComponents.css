@@ -1,0 +1,9 @@
+.ui_components>nav {
+    width: 90%;
+}
+
+.ui_components>.content_landing_page {
+    border: 1px solid transparent;
+    margin: 15vh auto 6vh auto;
+    width: 86%;
+}
