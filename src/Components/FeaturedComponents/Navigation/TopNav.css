@@ -1,10 +1,10 @@
 nav {
     border: 3px solid snow;
     margin: 0 auto;
-    width: 80%;
+    padding: 0 9px 0 0;
+    width: 83%;
     background-color: snow;
     justify-content: space-between;
-    /* padding: 0 36px; */
 }
 
 .nav_option {

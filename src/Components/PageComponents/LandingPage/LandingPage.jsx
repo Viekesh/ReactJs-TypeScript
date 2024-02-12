@@ -5,6 +5,7 @@ import { LandingPageContent } from "./ContentDB";
 import ContentLandingPage from "./ContentLandingPage";
 import ReactJsPro from "../ReactJsPro/ReactJsPro";
 import SocialLinks from "../../FeaturedComponents/SocialLinks/SocialLinks";
+import Skills from "../Skills/Skills";
 
 
 
@@ -31,6 +32,10 @@ const LandingPage = () => {
                 </section>
 
                 <SocialLinks />
+
+                <Skills />
+
+                <ContentLandingPage para="to know more about me click on lnkedIn icon or just hit the call button. If you want to send any enquiry click on whats app icon. I'm always there for you." />
             </main>
 
             <footer></footer>

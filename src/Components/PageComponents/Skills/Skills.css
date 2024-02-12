@@ -1,0 +1,23 @@
+.skills_container {
+    border: 1px solid transparent;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skills_container>.pro {
+    border: 1px solid transparent;
+    border-radius: 100%;
+    margin: 5vh;
+    width: 54px;
+    height: 54px;
+    background-color: snow;
+    box-shadow: 3px 1px 15px gray;
+}
+
+.skills_container>.pro>img {
+    border-radius: 100%;
+    width: 72%;
+    height: 72%;
+}

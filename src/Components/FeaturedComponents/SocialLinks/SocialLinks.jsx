@@ -54,7 +54,7 @@ const SocialLinks = () => {
             <div className="portfolio_links x_y_axis_center">
 
                 <div style={whatsapp} id="Mail" className="whatsapp x_y_axis_center">
-                    <a href="https://wa.me/+917620174776/?text=Hello! I want to know about" className="x_y_axis_center">
+                    <a href="https://wa.me/+919766940948/?text=Hello!" className="x_y_axis_center">
                         <IoLogoWhatsapp />
                     </a>
                 </div>

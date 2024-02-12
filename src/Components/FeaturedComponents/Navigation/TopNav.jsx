@@ -75,10 +75,11 @@ const TopNav = () => {
                 >
                     <div className="nav_option">
                         <NavLink to="/UIComponent" className={`option1`}>UI Components</NavLink>
-                        <NavLink className={`option2`}>Projects</NavLink>
-                        <NavLink className={`option3`}>AboutMe</NavLink>
+                        <NavLink to="/Projects" className={`option2`}>Projects</NavLink>
+                        <NavLink to="/AboutMe" className={`option3`}>AboutMe</NavLink>
                     </div>
                 </div>
+
             </nav>
         </>
     )
