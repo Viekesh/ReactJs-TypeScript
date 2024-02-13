@@ -1,22 +1,51 @@
 import TopNav from "../FeaturedComponents/Navigation/TopNav";
 import "./Projects.css";
 import "../PageComponents/ReactJsPro/ReactJsPro.css";
-import { Slider2Content } from "./ProjectsInfoDB";
+import { Slider2Content, proPara } from "./ProjectsInfoDB";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import ContentLandingPage from "../PageComponents/LandingPage/ContentLandingPage";
 import SocialLinks from "../FeaturedComponents/SocialLinks/SocialLinks";
+import Heading from "../PageComponents/Heading/Heading";
+import Footer from "../PageComponents/LandingPage/Footer";
 
 
 
 const Projects = () => {
+
+    const proTextAnimate = () => {
+        document.getElementById("paraOne").style.paddingTop = 0 + "vh";
+
+        const display = () => {
+            document.getElementById("paraOne").style.opacity = 1;
+            document.getElementById("paraTwo").style.opacity = 1;
+        }
+
+        display();
+    }
+
+    const animateDelay = () => {
+        setTimeout(proTextAnimate, 1000);
+    }
+
     return (
         <>
             <TopNav />
             <SocialLinks />
-            <section className="project_container">
 
-                <ContentLandingPage para="I'm currently juggling some exciting projects, some live and others in development. While I have honed my skills in crafting e-commerce platforms, I'm passionate about tackling diverse challenges. Your unique project, regardless of its nature, gets me energized! Feel free to reach out and discuss your needs. Even if you just want to chat or explore potential collaborations, I'm always happy to connect!" />
+            <section className="project_container" onLoad={animateDelay()}>
+
+                {
+                    proPara.map((paraContent) => {
+                        return (
+                            <div className="para_content" id="paraOne">
+                                <p>{paraContent.para1}</p>
+                            </div>
+                        )
+                    })
+                }
+
+                <Heading head="Ongoing Projects :" />
 
                 {
                     Slider2Content.map((proData) => {
@@ -59,7 +88,21 @@ const Projects = () => {
                     })
                 }
 
+                {
+                    proPara.map((paraContent) => {
+                        return (
+                            <div className="para_content" id="paraTwo">
+                                <p>{paraContent.para2}</p>
+                            </div>
+                        )
+                    })
+                }
+
             </section>
+
+            <footer>
+                <Footer />
+            </footer>
         </>
     )
 }

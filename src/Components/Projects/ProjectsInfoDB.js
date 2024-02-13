@@ -1,3 +1,10 @@
+export const proPara = [
+    {
+        id: 1,
+        para1: "I'm currently juggling some exciting projects, some live and others in development. While I have honed my skills in crafting e-commerce platforms, I'm passionate about tackling diverse challenges. Your unique project, regardless of its nature, gets me energized!",
+        para2: "Feel free to reach out and discuss your needs. Even if you just want to chat or explore potential collaborations, I'm always happy to connect!"
+    }
+]
 
 
 
@@ -60,13 +67,13 @@ export const Slider2Content = [
         projectTitle: "EEE",
         navLink: "/Projects",
         className: "eee",
-        aboutpro: "This is my first and foremost project. initially it is a static one and gradually I have added auth feature, call to action, social media integration, admin panel. It is a single page app built using reactjs. right now it is not an online and code is not upload on gitHub repository. If you want checkout code please contact me."
+        aboutpro: "This is my first and foremost project. initially it is a static one and gradually I have added auth feature, call to action, social media integration, admin panel. It is a single page app built using reactjs. right now it is not an online and code is not upload on gitHub repository. If you want to checkout code please contact me."
     },
     {
         id: 4,
         projectId: "foodDel",
         projectTitle: "Edutech",
-        navLink: "/Edutech",
+        navLink: "https://edutech-6116f.web.app/",
         nextPage: "/Projects",
         className: "edutech",
         aboutpro: "This project is in its initial phase which i have build for library. it is an educational app. right now there is no any functionality added to this project.",

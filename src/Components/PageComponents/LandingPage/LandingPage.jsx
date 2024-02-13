@@ -1,18 +1,20 @@
 import React from "react";
 import "./LandingPage.css";
 import TopNav from "../../FeaturedComponents/Navigation/TopNav";
-import { LandingPageContent } from "./ContentDB";
+import { LandingPageContent, LandingPageContent2 } from "./ContentDB";
 import ContentLandingPage from "./ContentLandingPage";
 import ReactJsPro from "../ReactJsPro/ReactJsPro";
 import SocialLinks from "../../FeaturedComponents/SocialLinks/SocialLinks";
 import Skills from "../Skills/Skills";
+import Heading from "../Heading/Heading";
+import Footer from "./Footer";
 
 
 
 const LandingPage = () => {
     return (
         <>
-            <header className="nav_component">
+            <header className="nav_component x_y_axis_center">
                 <TopNav />
             </header>
 
@@ -33,12 +35,26 @@ const LandingPage = () => {
 
                 <SocialLinks />
 
-                <Skills />
+                <div className="skills_section">
+                    <Skills />
+                </div>
 
-                <ContentLandingPage para="to know more about me click on lnkedIn icon or just hit the call button. If you want to send any enquiry click on whats app icon. I'm always there for you." />
+                <Heading head="Get In Touch :" />
+                {
+                    LandingPageContent2.map((content) => {
+                        return (
+                            <div className="para_content">
+                                <p>{content.para1}</p>
+                                <p>{content.para2}</p>
+                            </div>
+                        )
+                    })
+                }
             </main>
 
-            <footer></footer>
+            <footer>
+                <Footer />
+            </footer>
         </>
     )
 }

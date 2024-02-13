@@ -4,8 +4,16 @@
     margin: 1vh auto;
 }
 
-.project_container>.content_landing_page {
-    margin: 12vh auto;
+.project_container>.para_content {
+    border: 1px solid transparent;
+    margin: 21vh auto;
+    padding-top: 6vh;
+    font-family: "Kanit", sans-serif;
+    font-weight: 300;
+    text-align: justify;
+    line-height: 21px;
+    opacity: 0;
+    transition: 0.9s;
 }
 
 .project_container>.project_info {

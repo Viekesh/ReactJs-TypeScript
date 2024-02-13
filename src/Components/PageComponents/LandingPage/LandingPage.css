@@ -1,12 +1,31 @@
 .nav_component {
-    border: 1px solid snow;
-    background-color: snow;
+    border: 1px solid transparent;
+    background-color: black;
+    width: 100vw;
+
+    position: fixed;
+    top: 0;
+    z-index: 997 !important;
 }
 
 main {
     border: 3px solid transparent;
-    margin: 18vh auto;
+    margin: 24vh auto;
     width: 72%;
+}
+
+.para_content {
+    border: 1px solid transparent;
+    margin: 3vh auto 9vh auto;
+}
+
+.para_content p {
+    margin: 0 auto 3vh auto;
+    text-align: justify;
+    text-transform: capitalize;
+    font-family: "Kanit", sans-serif;
+    font-weight: 300;
+    line-height: 21px;
 }
 
 .for_desktop_view {
@@ -17,10 +36,34 @@ main {
     display: block;
 }
 
-footer {
+.about p {
     border: 1px solid transparent;
+    margin: 18vh auto 9vh auto;
+    width: 76%;
+    text-align: justify;
+    text-transform: capitalize;
+    font-family: "Kanit", sans-serif;
+    font-weight: 300;
+    line-height: 21px;
+}
+
+footer {
+    border: 1px solid black;
     margin: 0vh auto;
-    padding: 0px;
+    padding: 3vh 0;
+    background-color: black;
+}
+
+.footer h3 {
+    margin: 0 auto;
+    width: 76%;
+    text-align: justify;
+    text-transform: capitalize;
+    font-size: 15px;
+    font-family: "Kanit", sans-serif;
+    font-weight: 600;
+    line-height: 21px;
+    color: gray;
 }
 
 

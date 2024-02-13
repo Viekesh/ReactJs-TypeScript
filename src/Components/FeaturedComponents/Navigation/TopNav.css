@@ -1,7 +1,7 @@
 nav {
-    border: 3px solid snow;
+    border: 1px solid transparent;
     margin: 0 auto;
-    padding: 0 9px 0 0;
+    padding: 0 2% 0 0;
     width: 83%;
     background-color: snow;
     justify-content: space-between;

@@ -13,6 +13,7 @@
   list-style-type: none;
   font-family: sans-serif;
   scroll-behavior: smooth;
+  transition: 2s;
 }
 
 a {

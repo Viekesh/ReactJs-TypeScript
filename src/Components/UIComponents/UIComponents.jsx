@@ -8,14 +8,15 @@ import SuperTunes from "./SuperTunes/SuperTunes";
 import TopNav from "../FeaturedComponents/Navigation/TopNav";
 import ContentLandingPage from "../PageComponents/LandingPage/ContentLandingPage";
 import SocialLinks from "../FeaturedComponents/SocialLinks/SocialLinks";
+import Footer from "../PageComponents/LandingPage/Footer";
 
 
 
 const UIComponents = () => {
     return (
         <>
+            <TopNav />
             <section className="ui_components">
-                <TopNav />
 
                 <ContentLandingPage
                     heading="UI Components"
@@ -30,6 +31,10 @@ const UIComponents = () => {
                 <ThemeSwitcher />
                 <RenderingList />
             </section >
+
+            <footer>
+                <Footer />
+            </footer>
         </>
     )
 }
