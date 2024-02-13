@@ -52,6 +52,8 @@ footer {
     margin: 0vh auto;
     padding: 3vh 0;
     background-color: black;
+    position: absolute;
+    bottom: 0;
 }
 
 .footer h3 {
