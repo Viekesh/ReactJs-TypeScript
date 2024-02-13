@@ -38,7 +38,7 @@ main {
 
 .about p {
     border: 1px solid transparent;
-    margin: 18vh auto 9vh auto;
+    margin: 18vh auto 33vh auto;
     width: 76%;
     text-align: justify;
     text-transform: capitalize;
@@ -52,8 +52,6 @@ footer {
     margin: 0vh auto;
     padding: 3vh 0;
     background-color: black;
-    position: absolute;
-    bottom: 0;
 }
 
 .footer h3 {
