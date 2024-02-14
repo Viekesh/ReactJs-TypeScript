@@ -37,7 +37,7 @@ const ReactJsPro = () => {
                                 <SwiperSlide className="inner_slide">
                                     <NavLink to={proData.navLink} key={proData.id}>
                                         <div className="sld">
-                                            <h3>{proData.projectTitle}</h3>
+                                            <h3 className="comic-neue-bold">{proData.projectTitle}</h3>
                                         </div>
                                     </NavLink>
                                 </SwiperSlide>

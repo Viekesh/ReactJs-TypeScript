@@ -22,8 +22,8 @@ export const Slider1Content = [
     },
     {
         id: 3,
-        projectTitle: "EEE",
-        navLink: "/EEE"
+        projectTitle: "Random Jokes API",
+        navLink: "/JokesAPISetup"
     }
 ]
 
