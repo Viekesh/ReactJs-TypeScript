@@ -43,7 +43,7 @@ class JokesAPISetup extends Component {
                     />
 
                     <div
-                        className={this.state.isLoading ? "title title_pulse" : "title"}
+                        className={this.state.isLoading ? "title title_pulse comic-neue-bold" : "title comic-neue-bold"}
                         onClick={this.getJoke}
                     >
                         JokeMachine

@@ -1,4 +1,3 @@
-import React from "react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Heading from "../Heading/Heading";
