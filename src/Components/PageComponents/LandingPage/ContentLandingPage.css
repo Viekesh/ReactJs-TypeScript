@@ -6,17 +6,29 @@
 .content_landing_page h1 {
     border: 1px solid transparent;
     margin: 0 0 0 -30px;
-    font-family: "Kanit", sans-serif;
-    font-weight: 600;
     opacity: 0;
     transition: 1s;
+}
+
+.rubik-maps-regular {
+    font-family: "Rubik Maps", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 36px;
+}
+
+.comic-neue-bold {
+    font-family: "Comic Neue", cursive;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 24px;
 }
 
 .content_landing_page p {
     border: 1px solid transparent;
     padding: 30px 0 0 0;
-    font-family: "Kanit", sans-serif;
-    font-weight: 300;
+    /* font-family: "Kanit", sans-serif; */
+    /* font-weight: 300; */
     text-align: justify;
     opacity: 0;
     transition: 0.6s;

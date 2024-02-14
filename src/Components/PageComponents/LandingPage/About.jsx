@@ -9,8 +9,9 @@ const About = () => {
         <>
             <TopNav />
             <SocialLinks />
-            <div className="about">
-                <p>
+            <div className="about comic-neue-bold">
+                <p className="comic-neue-bold
+                ">
                     to know more about me just connect me on linkedIn, chat with me on whats app and call me regarding with any discussion I'm happy to help you.
                 </p>
             </div>

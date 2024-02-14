@@ -38,8 +38,8 @@ const Projects = () => {
                 {
                     proPara.map((paraContent) => {
                         return (
-                            <div className="para_content" id="paraOne">
-                                <p>{paraContent.para1}</p>
+                            <div className="para_content comic-neue-bold" id="paraOne">
+                                <p className="comic-neue-bold">{paraContent.para1}</p>
                             </div>
                         )
                     })
@@ -52,9 +52,9 @@ const Projects = () => {
                         return (
                             <div className="project_info">
                                 <div className={`background_img ${proData.className}`}></div>
-                                <p className="about_pro">{proData.aboutpro}</p>
+                                <p className="about_pro comic-neue-bold">{proData.aboutpro}</p>
 
-                                <h4>{proData.contributionHeadline}</h4>
+                                {/* <h4>{proData.contributionHeadline}</h4> */}
                                 <div className="pro_links y_axis_center">
                                     <a href={proData.navLink} id={proData.projectId} className="x_y_axis_center">
                                         <FaExternalLinkAlt />
@@ -91,8 +91,9 @@ const Projects = () => {
                 {
                     proPara.map((paraContent) => {
                         return (
-                            <div className="para_content" id="paraTwo">
-                                <p>{paraContent.para2}</p>
+                            <div className="para_content comic-neue-bold" id="paraTwo">
+                                <h4 className="comic-neue-bold">{paraContent.contributionHeadline}</h4>
+                                <p className="comic-neue-bold">{paraContent.para2}</p>
                             </div>
                         )
                     })

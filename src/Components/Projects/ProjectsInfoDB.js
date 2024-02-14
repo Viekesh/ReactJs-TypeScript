@@ -2,7 +2,8 @@ export const proPara = [
     {
         id: 1,
         para1: "I'm currently juggling some exciting projects, some live and others in development. While I have honed my skills in crafting e-commerce platforms, I'm passionate about tackling diverse challenges. Your unique project, regardless of its nature, gets me energized!",
-        para2: "Feel free to reach out and discuss your needs. Even if you just want to chat or explore potential collaborations, I'm always happy to connect!"
+        para2: "Feel free to reach out and discuss your needs. Even if you just want to chat or explore potential collaborations, I'm always happy to connect!",
+        contributionHeadline: "Head over to my GitHub repository to explore the source code and contribute to this project!"
     }
 ]
 

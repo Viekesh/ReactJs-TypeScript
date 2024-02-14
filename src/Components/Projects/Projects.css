@@ -8,12 +8,19 @@
     border: 1px solid transparent;
     margin: 21vh auto;
     padding-top: 6vh;
-    font-family: "Kanit", sans-serif;
-    font-weight: 300;
     text-align: justify;
     line-height: 21px;
     opacity: 0;
     transition: 0.9s;
+}
+
+.project_container>.para_content>h4 {
+    margin: 3vh auto;
+}
+
+.project_container>.para_content>p {
+    margin: 3vh auto;
+    font-weight: 400;
 }
 
 .project_container>.project_info {
@@ -35,8 +42,7 @@
     margin: 3vh auto;
     text-transform: capitalize;
     text-align: justify;
-    font-family: "Kanit", sans-serif;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .project_container>.project_info>.pro_links {

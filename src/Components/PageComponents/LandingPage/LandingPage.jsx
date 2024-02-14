@@ -14,9 +14,7 @@ import Footer from "./Footer";
 const LandingPage = () => {
     return (
         <>
-            <header className="nav_component x_y_axis_center">
-                <TopNav />
-            </header>
+            <TopNav />
 
             <main>
                 {
@@ -44,8 +42,8 @@ const LandingPage = () => {
                     LandingPageContent2.map((content) => {
                         return (
                             <div className="para_content">
-                                <p>{content.para1}</p>
-                                <p>{content.para2}</p>
+                                <p className="comic-neue-bold">{content.para1}</p>
+                                <p className="comic-neue-bold">{content.para2}</p>
                             </div>
                         )
                     })

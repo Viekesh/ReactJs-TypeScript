@@ -24,9 +24,9 @@ const ContentLandingPage = ({ heading, para }) => {
     return (
         <>
             <div className="content_landing_page" onLoad={animateDelay()}>
-                <h1 id="landingPageHeading">{heading}</h1>
+                <h1 id="landingPageHeading" className="rubik-maps-regular">{heading}</h1>
                 <br />
-                <p id="landingPagePara">{para}</p>
+                <p id="landingPagePara" className="comic-neue-bold">{para}</p>
             </div>
         </>
     )
