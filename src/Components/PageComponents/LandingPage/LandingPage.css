@@ -83,8 +83,12 @@ footer {
         text-transform: capitalize;
     }
 
+    .para_content {
+        display: none;
+    }
+
     footer {
-        margin: 3vh auto;
+        margin: 3vh auto 0 auto;
         padding: 10px
     }
 }

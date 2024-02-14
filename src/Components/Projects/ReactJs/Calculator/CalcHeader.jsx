@@ -28,12 +28,16 @@ const CalcHeader = ({ expression, result, history }) => {
                     }
                 </div>
 
+
+
                 <div
                     className="header_expression custom_scroll"
                     ref={expressionRef}
                 >
                     <span className="custom_scroll">{expression}</span>
                 </div>
+
+
 
                 <div
                     className="header_result"
