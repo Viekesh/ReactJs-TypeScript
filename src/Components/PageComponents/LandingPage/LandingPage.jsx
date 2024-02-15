@@ -1,14 +1,14 @@
 import React from "react";
 import "./LandingPage.css";
 import TopNav from "../../FeaturedComponents/Navigation/TopNav";
-import { LandingPageContent, LandingPageContent2 } from "./ContentDB";
-import ContentLandingPage from "./ContentLandingPage";
 import ReactJsPro from "../ReactJsPro/ReactJsPro";
 import SocialLinks from "../../FeaturedComponents/SocialLinks/SocialLinks";
 import Skills from "../Skills/Skills";
 import Heading from "../Heading/Heading";
 import Footer from "./Footer";
 import { useNavigate } from "react-router-dom";
+import MainContent from "../../ServiceDB/MainContent";
+import { LandingPageContent, LandingPageContent2 } from "../../ServiceDB/ServiceDB";
 
 
 
@@ -17,8 +17,8 @@ const LandingPage = () => {
     const navigate = useNavigate();
 
     const handleLinkClick = () => {
-        navigate(`/Projects#Edu`)
-    }
+        navigate(`/Projects#Edu`);
+    };
 
     return (
         <>
@@ -27,7 +27,7 @@ const LandingPage = () => {
             <main>
                 {
                     LandingPageContent.map(c => (
-                        <ContentLandingPage heading={c.heading} para={c.para} />
+                        <MainContent heading={c.heading} para={c.para} />
                     ))
                 }
 

@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Para = ({para}) => {
+const Para = ({ para }) => {
   return (
     <div className='para'>
-        <p>{para}</p>
+      <p>{para}</p>
     </div>
   )
 }

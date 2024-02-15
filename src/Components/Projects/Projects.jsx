@@ -1,69 +1,48 @@
 import TopNav from "../FeaturedComponents/Navigation/TopNav";
 import "./Projects.css";
 import "../PageComponents/ReactJsPro/ReactJsPro.css";
-import { Slider2Content, proPara } from "./ProjectsInfoDB";
 import { FaExternalLinkAlt } from "react-icons/fa";
-import { NavLink } from "react-router-dom";
-import ContentLandingPage from "../PageComponents/LandingPage/ContentLandingPage";
 import SocialLinks from "../FeaturedComponents/SocialLinks/SocialLinks";
 import Heading from "../PageComponents/Heading/Heading";
 import Footer from "../PageComponents/LandingPage/Footer";
-import { useEffect, useRef } from "react";
+import { ProjectPageContent, Slider2Content } from "../ServiceDB/ServiceDB";
+import MainContent from "../ServiceDB/MainContent";
 
 
 
 const Projects = () => {
 
-    const proTextAnimate = () => {
-        document.getElementById("paraOne").style.paddingTop = 0 + "vh";
+    // const projectIdRef = useRef(null);
 
-        const display = () => {
-            document.getElementById("paraOne").style.opacity = 1;
-            document.getElementById("paraTwo").style.opacity = 1;
-        }
+    // useEffect(() => {
+    //     const scrollToSection = () => {
+    //         if (projectIdRef.current) {
+    //             window.scrollTo({ behavior: "smooth", top: projectIdRef.current.offsetTop });
+    //         }
+    //     }
 
-        display();
-    }
+    //     const hash = window.location.hash;
 
-    const animateDelay = () => {
-        setTimeout(proTextAnimate, 1000);
-    }
+    //     if (hash === "Edu") {
+    //         scrollToSection();
+    //     };
 
+    //     window.addEventListener("hashChange", scrollToSection);
 
-
-    const projectIdRef = useRef(null);
-
-    useEffect(() => {
-        const scrollToSection = () => {
-            if (projectIdRef.current) {
-                window.scrollTo({ behavior: "smooth", top: projectIdRef.current.offsetTop });
-            }
-        }
-
-        const hash = window.location.hash;
-
-        if (hash === "Edu") {
-            scrollToSection();
-        };
-
-        window.addEventListener("hashChange", scrollToSection);
-
-        return () => window.removeEventListener("hashChange", scrollToSection);
-    }, []);
+    //     return () => window.removeEventListener("hashChange", scrollToSection);
+    // }, []);
 
     return (
         <>
             <TopNav />
             <SocialLinks />
 
-            <section className="project_container" onLoad={animateDelay()}>
+            <section className="project_container">
 
                 {
-                    proPara.map((paraContent) => {
+                    ProjectPageContent.map((content) => {
                         return (
-                            <div className="para_content comic-neue-bold" id="paraOne">
-                                <p className="comic-neue-bold">{paraContent.para1}</p>
-                            </div>
+                            <MainContent heading={content.heading} para={content.para1} />
                         )
                     })
                 }
@@ -74,10 +53,11 @@ const Projects = () => {
                     Slider2Content.map((proData) => {
                         return (
                             <div className="project_info" >
+
                                 <div className={`background_img ${proData.className}`}></div>
+
                                 <p className="about_pro comic-neue-bold">{proData.aboutpro}</p>
 
-                                {/* <h4>{proData.contributionHeadline}</h4> */}
                                 <div className="pro_links y_axis_center">
                                     <a href={proData.navLink} id={proData.projectId} className="x_y_axis_center">
                                         <FaExternalLinkAlt />
@@ -112,11 +92,11 @@ const Projects = () => {
                 }
 
                 {
-                    proPara.map((paraContent) => {
+                    ProjectPageContent.map((content) => {
                         return (
-                            <div className="para_content comic-neue-bold" id="paraTwo">
-                                <h4 className="comic-neue-bold">{paraContent.contributionHeadline}</h4>
-                                <p className="comic-neue-bold">{paraContent.para2}</p>
+                            <div className="para_content comic-neue-bold">
+                                <h4 className="comic-neue-bold">{content.contributionHeadline}</h4>
+                                <p className="comic-neue-bold">{content.para2}</p>
                             </div>
                         )
                     })

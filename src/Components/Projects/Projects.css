@@ -4,23 +4,10 @@
     margin: 1vh auto;
 }
 
-.project_container>.para_content {
+.project_container>.content_page {
     border: 1px solid transparent;
-    margin: 33vh auto 15vh auto;
-    padding-top: 6vh;
-    text-align: justify;
-    line-height: 21px;
-    opacity: 0;
-    transition: 0.9s;
-}
-
-.project_container>.para_content>h4 {
-    margin: 3vh auto;
-}
-
-.project_container>.para_content>p {
-    margin: 3vh auto;
-    font-weight: 400;
+    margin: 30vh auto 9vh auto;
+    width: 100%;
 }
 
 .project_container>.project_info {
@@ -50,14 +37,6 @@
     justify-content: space-between;
 }
 
-.project_container>.project_info>h4 {
-    margin: 1vh auto;
-    text-transform: capitalize;
-    text-align: justify;
-    font-family: "Kanit", sans-serif;
-    font-weight: 600;
-}
-
 #foodDel {
     border: 3px solid black;
     border-radius: 100%;
@@ -68,6 +47,25 @@
 #foodDel>svg {
     font-size: 15px;
     color: black;
+}
+
+
+
+.project_container>.para_content {
+    border: 1px solid transparent;
+    padding-top: 6vh;
+    text-align: justify;
+    line-height: 21px;
+    opacity: 1;
+    transition: 0.9s;
+}
+
+.project_container>.para_content>p {
+    font-weight: 400;
+}
+
+.project_container>.para_content>h4 {
+    margin: 3vh auto;
 }
 
 @media only screen and (min-width: 768px) {

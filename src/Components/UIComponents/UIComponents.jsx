@@ -6,9 +6,9 @@ import ThemeSwitcher from "../Tutorials/StateAndProps/ThemeSwitcher";
 import RenderingList from "../Tutorials/RenderingLists/RenderingList";
 import SuperTunes from "./SuperTunes/SuperTunes";
 import TopNav from "../FeaturedComponents/Navigation/TopNav";
-import ContentLandingPage from "../PageComponents/LandingPage/ContentLandingPage";
 import SocialLinks from "../FeaturedComponents/SocialLinks/SocialLinks";
 import Footer from "../PageComponents/LandingPage/Footer";
+import MainContent from "../ServiceDB/MainContent";
 // import UseRefHook from "../Tutorials/HooksAPI/UseRef/UseRefHook";
 
 
@@ -19,7 +19,7 @@ const UIComponents = () => {
             <TopNav />
             <section className="ui_components">
 
-                <ContentLandingPage
+                <MainContent
                     heading="UI Components"
                     para="practice makes ouselves perfect!!! no... it's not encapsulate the entire equation but our consistent practice stayed us on track and helps to create new insights that's why I have daily practice code with react, sometimes it is a project or sometimes it's an UI components here you can see various UI components."
                 />

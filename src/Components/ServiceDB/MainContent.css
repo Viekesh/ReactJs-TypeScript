@@ -1,0 +1,20 @@
+.content_page {
+    border: 1px solid transparent;
+    margin: 6vh auto;
+    text-transform: capitalize;
+}
+
+.content_page h1 {
+    border: 1px solid transparent;
+    margin: 0 0 0 -30px;
+    opacity: 0;
+    transition: 1s;
+}
+
+.content_page p {
+    border: 1px solid transparent;
+    padding: 30px 0 0 0;
+    text-align: justify;
+    opacity: 0;
+    transition: 0.6s;
+}

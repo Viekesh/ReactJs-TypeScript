@@ -6,7 +6,7 @@ import "./ReactJsPro.css";
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { Slider1Content, Slider2Content } from "../../Projects/ProjectsInfoDB";
+import { Slider1Content, Slider2Content } from "../../ServiceDB/ServiceDB";
 
 
 

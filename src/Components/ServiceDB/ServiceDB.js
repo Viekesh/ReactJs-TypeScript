@@ -1,9 +1,18 @@
-export const proPara = [
+// landing page content
+
+export const LandingPageContent = [
     {
-        id: 1,
-        para1: "I'm currently juggling some exciting projects, some live and others in development. While I have honed my skills in crafting e-commerce platforms, I'm passionate about tackling diverse challenges. Your unique project, regardless of its nature, gets me energized!",
-        para2: "Feel free to reach out and discuss your needs. Even if you just want to chat or explore potential collaborations, I'm always happy to connect!",
-        contributionHeadline: "Head over to my GitHub repository to explore the source code and contribute to this project!"
+        heading: "hi, there!",
+        para: "thanks for giving me your precious time and reached out to my portfolio. I'm full stack software engineer specializing in JavaScript libraries and related technologies. here you'll get examples of my work showcasing my expertise in building real world projects."
+    }
+]
+
+
+
+export const LandingPageContent2 = [
+    {
+        para1: "Think of me as your personal coder or full stacker, your projects are important to me. Got an idea for an app? Need help debugging a project? Just want to chat tech over a virtual cup of coffee? I'm your guy! ☕️ I'm always happy to nerd out about code, brainstorm solutions, or simply connect.",
+        para2: "Don't forget to follow me on gitHub and linkedIn to stay updated on my latest projects and tech insights!"
     }
 ]
 
@@ -38,23 +47,12 @@ export const Slider2Content = [
         className: "food_delivery",
         nextPage: "/Projects",
         aboutpro: "This food delivery app offers a convenient and personalized dining experience, similar to popular e-commerce platforms. Users can easily browse menus, add items to their cart, and securely complete their orders through an intuitive interface.",
-        keyFeatures: [
-            {
-                feature: "User Authentication",
-            },
-            {
-                feature: "Integrated Payments",
-            },
-            {
-                feature: "Built with ReactJS for an engaging frontend and Firebase for a scalable backend."
-            },
-        ],
         githublink: "https://github.com/Viekesh/foodDeliveryApp",
         contributionHeadline: "Head over to my GitHub repository to explore the source code and contribute to this project!"
     },
     {
         id: 2,
-        projectId: "EEE",
+        projectId: "foodDel",
         projectTitle: "Real Estate",
         navLink: "https://landmarkhomes.co.nz/",
         className: "real_estate",
@@ -72,7 +70,7 @@ export const Slider2Content = [
     },
     {
         id: 4,
-        projectId: "Edu",
+        projectId: "foodDel",
         projectTitle: "Edutech",
         navLink: "https://edutech-6116f.web.app/",
         nextPage: "/Projects",
@@ -84,12 +82,14 @@ export const Slider2Content = [
 
 
 
-// {
-//     feature: "User Authentication",
-//             },
-// {
-//     feature: "Integrated Payments",
-//             },
-// {
-//     feature: "Built with ReactJS for an engaging frontend and Firebase for a scalable backend."
-// }
+// project page content
+
+export const ProjectPageContent = [
+    {
+        id: 1,
+        heading: "Hello!!!",
+        para1: "I'm currently juggling some exciting projects, some live and others in development. While I have honed my skills in crafting e-commerce platforms, I'm passionate about tackling diverse challenges. Your unique project, regardless of its nature, gets me energized!",
+        para2: "Feel free to reach out and discuss your needs. Even if you just want to chat or explore potential collaborations, I'm always happy to connect!",
+        contributionHeadline: "Head over to my GitHub repository to explore the source code and contribute to this project!"
+    }
+]
