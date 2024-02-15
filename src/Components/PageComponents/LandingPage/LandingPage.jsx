@@ -8,10 +8,18 @@ import SocialLinks from "../../FeaturedComponents/SocialLinks/SocialLinks";
 import Skills from "../Skills/Skills";
 import Heading from "../Heading/Heading";
 import Footer from "./Footer";
+import { useNavigate } from "react-router-dom";
 
 
 
 const LandingPage = () => {
+
+    const navigate = useNavigate();
+
+    const handleLinkClick = () => {
+        navigate(`/Projects#Edu`)
+    }
+
     return (
         <>
             <TopNav />
@@ -28,7 +36,7 @@ const LandingPage = () => {
                 </div>
 
                 <section className="react_projects">
-                    <ReactJsPro />
+                    <ReactJsPro handleLinkClick={handleLinkClick} />
                 </section>
 
                 <SocialLinks />

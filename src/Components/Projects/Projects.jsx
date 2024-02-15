@@ -8,6 +8,7 @@ import ContentLandingPage from "../PageComponents/LandingPage/ContentLandingPage
 import SocialLinks from "../FeaturedComponents/SocialLinks/SocialLinks";
 import Heading from "../PageComponents/Heading/Heading";
 import Footer from "../PageComponents/LandingPage/Footer";
+import { useEffect, useRef } from "react";
 
 
 
@@ -27,6 +28,28 @@ const Projects = () => {
     const animateDelay = () => {
         setTimeout(proTextAnimate, 1000);
     }
+
+
+
+    const projectIdRef = useRef(null);
+
+    useEffect(() => {
+        const scrollToSection = () => {
+            if (projectIdRef.current) {
+                window.scrollTo({ behavior: "smooth", top: projectIdRef.current.offsetTop });
+            }
+        }
+
+        const hash = window.location.hash;
+
+        if (hash === "Edu") {
+            scrollToSection();
+        };
+
+        window.addEventListener("hashChange", scrollToSection);
+
+        return () => window.removeEventListener("hashChange", scrollToSection);
+    }, []);
 
     return (
         <>
@@ -50,7 +73,7 @@ const Projects = () => {
                 {
                     Slider2Content.map((proData) => {
                         return (
-                            <div className="project_info">
+                            <div className="project_info" >
                                 <div className={`background_img ${proData.className}`}></div>
                                 <p className="about_pro comic-neue-bold">{proData.aboutpro}</p>
 

@@ -54,7 +54,7 @@ export const Slider2Content = [
     },
     {
         id: 2,
-        projectId: "foodDel",
+        projectId: "EEE",
         projectTitle: "Real Estate",
         navLink: "https://landmarkhomes.co.nz/",
         className: "real_estate",
@@ -72,7 +72,7 @@ export const Slider2Content = [
     },
     {
         id: 4,
-        projectId: "foodDel",
+        projectId: "Edu",
         projectTitle: "Edutech",
         navLink: "https://edutech-6116f.web.app/",
         nextPage: "/Projects",
