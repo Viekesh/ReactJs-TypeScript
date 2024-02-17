@@ -1,0 +1,8 @@
+.timer_instances {
+    border: 1px solid black;
+    border-radius: 18px;
+    margin: 3vh auto;
+    padding: 36px 12px;
+    width: 90%;
+    flex-direction: column;
+}

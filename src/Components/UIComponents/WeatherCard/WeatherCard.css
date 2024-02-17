@@ -1,0 +1,53 @@
+.weather_card {
+    border: 1px solid black;
+    border-radius: 18px;
+    margin: 3vh auto;
+    padding: 36px 12px;
+    width: 90%;
+    flex-direction: column;
+}
+
+.weather_card>#city {
+    border: 1px solid black;
+    border-radius: 18px;
+    margin: 0 auto 1vh auto;
+    padding: 1vh;
+    font-weight: 600;
+    font-size: 27px;
+}
+
+.weather_card>#conditions {
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.min_max {
+    width: 90%;
+    justify-content: space-between;
+}
+
+.weather_card>#currentTemp {
+    border: 1px solid transparent;
+    margin: 3vh auto;
+    font-weight: 200;
+    font-size: 54px;
+}
+
+
+
+
+.weather_app {
+    border: 1px solid black;
+    border-radius: 18px;
+    margin: 1vh auto;
+    padding: 3px;
+    width: 90%;
+    justify-content: space-between;
+}
+
+.getDataBtn {
+    border: 1px solid black;
+    border-radius: 18px;
+    padding: 9px;
+    font-size: 18px;
+}

@@ -24,6 +24,7 @@ main {
     text-align: justify;
     text-transform: capitalize;
     line-height: 21px;
+    font-weight: 400;
 }
 
 .for_desktop_view {
@@ -47,12 +48,14 @@ footer {
     border: 1px solid black;
     margin: 0vh auto;
     padding: 3vh 0;
+    text-align: center;
     background-color: black;
 }
 
 .footer h3 {
+    border: 1px solid transparent;
     margin: 0 auto;
-    width: 76%;
+    width: 72%;
     text-align: justify;
     text-transform: capitalize;
     font-size: 15px;
@@ -88,7 +91,15 @@ footer {
     }
 
     footer {
+        border: 3px solid transparent;
         margin: 3vh auto 0 auto;
-        padding: 10px
+        padding: 10px;
+    }
+
+    .footer h3 {
+        border: 3px solid transparent;
+        margin: 0 auto;
+        width: 50%;
+        text-align: center;
     }
 }

@@ -9,6 +9,7 @@ import TopNav from "../FeaturedComponents/Navigation/TopNav";
 import SocialLinks from "../FeaturedComponents/SocialLinks/SocialLinks";
 import Footer from "../PageComponents/LandingPage/Footer";
 import MainContent from "../ServiceDB/MainContent";
+import WeatherPanel from "./WeatherCard/WeatherPanel";
 // import UseRefHook from "../Tutorials/HooksAPI/UseRef/UseRefHook";
 
 
@@ -31,6 +32,7 @@ const UIComponents = () => {
                 <StatefulHook />
                 <ThemeSwitcher />
                 <RenderingList />
+                <WeatherPanel />
 
                 {/* Hooks */}
                 {/* <UseRefHook /> */}
