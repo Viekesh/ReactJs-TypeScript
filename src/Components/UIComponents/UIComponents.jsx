@@ -11,6 +11,7 @@ import Footer from "../PageComponents/LandingPage/Footer";
 import MainContent from "../ServiceDB/MainContent";
 import WeatherPanel from "./WeatherCard/WeatherPanel";
 import ManageEvents from "../Tutorials/ManageEvents/ManageEvents";
+import FetchAPI from "../Tutorials/FetchAPI/FetchAPI";
 // import UseRefHook from "../Tutorials/HooksAPI/UseRef/UseRefHook";
 
 
@@ -36,6 +37,8 @@ const UIComponents = () => {
                 <WeatherPanel />
 
                 <ManageEvents />
+
+                <FetchAPI />
 
                 {/* Hooks */}
                 {/* <UseRefHook /> */}

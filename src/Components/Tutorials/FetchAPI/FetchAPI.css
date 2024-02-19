@@ -1,0 +1,19 @@
+.fetch_api {
+    border: 1px solid black;
+    border-radius: 18px;
+    margin: 18vh auto;
+    padding: 9px;
+    width: 90%;
+    height: 50vh;
+    overflow-y: scroll;
+}
+
+.fetch_api>button {
+    width: 90px;
+    margin: 1vh auto;
+    padding: 1vh 2vh;
+}
+
+.fetch_api>pre {
+    font-size: 12px;
+}
