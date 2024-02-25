@@ -25,37 +25,39 @@ const LandingPage = () => {
             <TopNav />
 
             <main>
-                {
-                    LandingPageContent.map(c => (
-                        <MainContent heading={c.heading} para={c.para} />
-                    ))
-                }
+                <section className="main_container">
+                    {
+                        LandingPageContent.map(c => (
+                            <MainContent heading={c.heading} para={c.para} />
+                        ))
+                    }
 
-                <div className="for_desktop_view">
-                    this portfolio is developed for mobile view only. please checks it in mobile...
-                </div>
+                    <div className="for_desktop_view">
+                        this portfolio is developed for mobile view only. please checks it in mobile...
+                    </div>
 
-                <section className="react_projects">
-                    <ReactJsPro handleLinkClick={handleLinkClick} />
+                    <section className="react_projects">
+                        <ReactJsPro handleLinkClick={handleLinkClick} />
+                    </section>
+
+                    <SocialLinks />
+
+                    <div className="skills_section">
+                        <Skills />
+                    </div>
+
+                    <Heading head="Get In Touch :" />
+                    {
+                        LandingPageContent2.map((content) => {
+                            return (
+                                <div className="para_content">
+                                    <p className="comic-neue-bold">{content.para1}</p>
+                                    <p className="comic-neue-bold">{content.para2}</p>
+                                </div>
+                            )
+                        })
+                    }
                 </section>
-
-                <SocialLinks />
-
-                <div className="skills_section">
-                    <Skills />
-                </div>
-
-                <Heading head="Get In Touch :" />
-                {
-                    LandingPageContent2.map((content) => {
-                        return (
-                            <div className="para_content">
-                                <p className="comic-neue-bold">{content.para1}</p>
-                                <p className="comic-neue-bold">{content.para2}</p>
-                            </div>
-                        )
-                    })
-                }
             </main>
 
             <footer>

@@ -25,7 +25,6 @@ const SwiperSlides = ({ id, projectTitle, navLink }) => {
                     delay: 9000,
                     disableOnInteraction: false,
                 }}
-
             >
                 {
                     <SwiperSlide className="inner_slide">
