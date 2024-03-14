@@ -1,5 +1,10 @@
+$headingOne: darkblue;
+$paracolor: blue;
+
+
+
 .content_page {
-    border: 1px solid transparent;
+    border: 3px solid transparent;
     margin: 6vh auto;
     text-transform: capitalize;
 }
@@ -7,6 +12,8 @@
 .content_page h1 {
     border: 1px solid transparent;
     margin: 0 0 0 -30px;
+    font-weight: 900;
+    color: $headingOne;
     opacity: 0;
     transition: 1s;
 }
@@ -15,7 +22,9 @@
     border: 1px solid transparent;
     padding: 30px 0 0 0;
     text-align: justify;
+    font-weight: 500;
+    color: $paracolor;
+    line-height: 24px;
     opacity: 0;
     transition: 0.6s;
-    font-weight: 400;
 }

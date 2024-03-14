@@ -1,0 +1,73 @@
+.project_carausel_1 {
+    border: 3px solid transparent;
+    margin: 0 auto;
+    width: 100%;
+    box-shadow: 3px 1px 15px gray;
+}
+
+.inner_slide {
+    border: 1px solid transparent;
+
+    background-color: #fbfafc;
+    /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.4'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); */
+    position: relative;
+}
+
+.sld {
+    border: 1px solid transparent;
+    padding: 18px;
+    height: 24vh;
+}
+
+.sld h3 {
+    color: blue;
+    text-shadow: 3px 3px 15px black;
+}
+
+.food_delivery {
+    background-image: url(../../../Assets/Images/slide2img1.PNG);
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+.real_estate {
+    background-image: url(../../../Assets/Images/slide2img2.PNG);
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+.edutech {
+    background-image: url(../../../Assets/Images/slide2img3.PNG);
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+.eee {
+    background-image: url(../../../Assets/Images/MahaPowerTech.PNG);
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+:root {
+    --swiper-navigation-size: 12px !important;
+    --swiper-navigation-color: black;
+    font-weight: 900 !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    border: 3px solid black !important;
+    border-radius: 50%;
+    padding: 9px;
+    background-color: black;
+    color: snow !important;
+    font-weight: 900 !important;
+}
+
+
+
+@media only screen and (min-width: 768px) {
+    .project_carausel {
+        display: none;
+    }
+}

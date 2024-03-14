@@ -1,10 +1,19 @@
 nav {
-    border: 1px solid transparent;
-    margin: 0 auto;
-    padding: 0 2% 0 0;
-    width: 83%;
+    width: 100%;
     background-color: snow;
     justify-content: space-between;
+    background-color: lightgray;
+
+    position: fixed;
+}
+
+.nav_elements {
+    border: 1px solid lightgray;
+    margin: 0 auto;
+    padding: 1vh;
+    width: 80%;
+    justify-content: space-between;
+    background-color: snow;
 }
 
 .nav_option {
@@ -36,10 +45,10 @@ nav {
 }
 
 .github_icon {
-    border: 2px solid black;
+    border: 3px solid black;
     border-radius: 100%;
-    width: 30px;
-    height: 30px;
+    width: 36px;
+    height: 36px;
     background-color: snow;
 }
 
@@ -49,7 +58,33 @@ nav {
 
 .github_icon a>svg {
     /* border: 3px solid blue; */
-    width: 21px;
+    width: 24px;
+}
+
+
+.linked_in {
+    border: 3px solid rgb(0, 117, 252);
+    border-radius: 100%;
+    width: 36px;
+    height: 36px;
+}
+
+.linked_in a {
+    border-radius: 100%;
+    width: 24px;
+    height: 24px;
+    background-color: rgb(0, 117, 252);
+    font-size: 18px;
+
+    animation: animate 0.3s;
+    transition: 0.3s;
+    z-index: 999;
+
+    box-shadow: 3px 1px 15px gray;
+}
+
+.linked_in>a>svg {
+    color: snow;
 }
 
 
@@ -232,7 +267,12 @@ nav {
 
 
 @media only screen and (min-width : 768px) {
-    nav {
-        width: 58%;
+    .nav_elements {
+        padding: 1.6vh;
+        width: 50%;
+    }
+
+    .logo h1 {
+        font-size: 24px;
     }
 }

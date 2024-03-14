@@ -1,5 +1,4 @@
-import React from "react";
-import "./LandingPage.css";
+import "./LandingPage.scss";
 import TopNav from "../../FeaturedComponents/Navigation/TopNav";
 import ReactJsPro from "../ReactJsPro/ReactJsPro";
 import SocialLinks from "../../FeaturedComponents/SocialLinks/SocialLinks";
@@ -51,8 +50,8 @@ const LandingPage = () => {
                         LandingPageContent2.map((content) => {
                             return (
                                 <div className="para_content">
-                                    <p className="comic-neue-bold">{content.para1}</p>
-                                    <p className="comic-neue-bold">{content.para2}</p>
+                                    <p className="lexend">{content.para1}</p>
+                                    <p className="lexend">{content.para2}</p>
                                 </div>
                             )
                         })

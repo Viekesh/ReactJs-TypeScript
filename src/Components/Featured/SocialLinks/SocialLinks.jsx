@@ -38,13 +38,13 @@ const SocialLinks = () => {
     const HandleScroll = () => {
 
         if (window.scrollY > 3) {
-            setWhatsAppIconPos(41);
-            setMailIconPosition(32);
-            setLinkedInIconPos(23)
+            setWhatsAppIconPos(32);
+            setMailIconPosition(23);
+            // setLinkedInIconPos(23)
         } else {
             setWhatsAppIconPos(12);
             setMailIconPosition(12);
-            setLinkedInIconPos(12);
+            // setLinkedInIconPos(12);
         }
 
     };
@@ -62,12 +62,6 @@ const SocialLinks = () => {
                 <div style={mail} id="Mail" className="mail x_y_axis_center">
                     <a href="mailto:vikesh.g99@gmail.com" className="x_y_axis_center">
                         <BiLogoGmail />
-                    </a>
-                </div>
-
-                <div style={linkedIn} id="linkedIn" className="linked_in x_y_axis_center">
-                    <a href="https://www.linkedin.com/in/vikesh-gayakwad-994872194" className="x_y_axis_center">
-                        <FaLinkedinIn />
                     </a>
                 </div>
 

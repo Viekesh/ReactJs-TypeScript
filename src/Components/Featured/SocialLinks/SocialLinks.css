@@ -1,5 +1,5 @@
 .links {
-    border: 0px solid blue;
+    border: 5px solid blue;
     border-radius: 100%;
     width: 45px;
     height: 45px;
@@ -32,7 +32,7 @@
 }
 
 .mail {
-    border: 0px solid navy;
+    border: 3px solid crimson;
     border-radius: 100%;
     width: 36px;
     height: 36px;
@@ -65,42 +65,8 @@
 
 
 
-.linked_in {
-    border: 0px solid navy;
-    border-radius: 100%;
-    width: 36px;
-    height: 36px;
-    color: crimson;
-    background-color: snow;
-    font-size: 18px;
-    box-shadow: 1px 1px 6px 1px gray;
-
-    background: rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(36px);
-    -webkit-backdrop-filter: blur(18px);
-
-    position: fixed;
-    right: 11vw;
-
-    animation: animate 0.3s;
-    transition: 0.3s;
-    z-index: 999;
-
-    box-shadow: 3px 1px 15px gray;
-}
-
-.linked_in>a>svg {
-    color: rgb(0, 117, 252);
-}
-
-.linked_in:active {
-    transform: scale(0.8);
-}
-
-
-
 .whatsapp {
-    border: 0px solid navy;
+    border: 3px solid #25D366;
     border-radius: 100%;
     width: 36px;
     height: 36px;
@@ -124,8 +90,8 @@
 }
 
 .whatsapp>a>svg {
-    color: rgb(75, 124, 0);
-    font-size: 30px;
+    color: #25D366;
+    font-size: 24px;
 }
 
 

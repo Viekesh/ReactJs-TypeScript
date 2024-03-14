@@ -1,22 +1,23 @@
 import React, { useState } from "react";
 import "./TopNav.css";
 import { NavLink } from "react-router-dom";
+import { FaLinkedinIn } from "react-icons/fa";
 
 
 
 const TopNav = () => {
 
-    const [showMenu, setShowMenu] = useState(false);
+    // const [showMenu, setShowMenu] = useState(false);
 
-    const toggleMobileMenu = () => {
-        setShowMenu(!showMenu);
-        document.querySelector("body").classList.toggle("body-overflow-visible");
-    };
+    // const toggleMobileMenu = () => {
+    //     setShowMenu(!showMenu);
+    //     document.querySelector("body").classList.toggle("body-overflow-visible");
+    // };
 
     return (
         <>
-            <header className="nav_component x_y_axis_center">
-                <nav className="y_axis_center">
+            <nav>
+                <section className="nav_elements y_axis_center">
                     <div className="logo">
                         <NavLink to="/">
                             <h1>
@@ -50,7 +51,12 @@ const TopNav = () => {
                             </div>
                         </div>
 
-                        <div className="nav_icon x_y_axis_center">
+                        <div className="linked_in x_y_axis_center">
+                            <a href="https://www.linkedin.com/in/vikesh-gayakwad-994872194" className="x_y_axis_center">
+                                <FaLinkedinIn />
+                            </a>
+                        </div>
+                        {/* <div className="nav_icon x_y_axis_center">
                             <div className="menu_icon x_y_axis_center">
                                 <div className="only-mobile mobile-menu-button-wrapper">
                                     <button
@@ -65,11 +71,11 @@ const TopNav = () => {
                                     </button>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
 
                     </div>
 
-                    <div
+                    {/* <div
                         className={`navigation_section navigation_style ${showMenu ? "overlay" : ""
                             }`}
                         id="Navigation"
@@ -79,11 +85,9 @@ const TopNav = () => {
                             <NavLink to="/Projects" className={`option2`}>Projects</NavLink>
                             <NavLink to="/About" className={`option3`}>AboutMe</NavLink>
                         </div>
-                    </div>
-
-                </nav>
-
-            </header>
+                    </div> */}
+                </section>
+            </nav >
         </>
     )
 }

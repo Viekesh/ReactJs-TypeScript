@@ -56,7 +56,7 @@ const Projects = () => {
 
                                 <div className={`background_img ${proData.className}`}></div>
 
-                                <p className="about_pro comic-neue-bold">{proData.aboutpro}</p>
+                                <p className="about_pro lexend">{proData.aboutpro}</p>
 
                                 <div className="pro_links y_axis_center">
                                     <a href={proData.navLink} id={proData.projectId} className="x_y_axis_center">
@@ -95,8 +95,8 @@ const Projects = () => {
                     ProjectPageContent.map((content) => {
                         return (
                             <div className="para_content comic-neue-bold">
-                                <h4 className="comic-neue-bold">{content.contributionHeadline}</h4>
-                                <p className="comic-neue-bold">{content.para2}</p>
+                                <h4 className="lexend">{content.contributionHeadline}</h4>
+                                <p className="lexend">{content.para2}</p>
                             </div>
                         )
                     })

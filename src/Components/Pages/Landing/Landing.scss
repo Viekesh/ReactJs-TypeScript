@@ -1,0 +1,121 @@
+$headingOne: darkblue;
+$paracolor: blue;
+
+
+
+
+
+
+header {
+    height: 100vh;
+    background-color: #fefeff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='Artboard-5' fill='%23bbbbbb' fill-opacity='0.4' fill-rule='nonzero'%3E%3Cpath d='M6 18h12V6H6v12zM4 4h16v16H4V4z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+}
+
+.content_page {
+    margin: 30vh auto 0 auto;
+    width: 80%;
+    text-transform: capitalize;
+}
+
+.content_page h1 {
+    border: 1px solid transparent;
+    margin: 0 0 0 -9px;
+    font-size: 45px;
+    font-weight: 200;
+    color: $headingOne;
+    opacity: 0;
+    transition: 1s;
+}
+
+.content_page p {
+    border: 1px solid transparent;
+    padding: 9px 0 0 0;
+    text-align: justify;
+    font-size: 15px;
+    font-weight: 500;
+    color: $paracolor;
+    line-height: 24px;
+    opacity: 0;
+    transition: 0.6s;
+}
+
+.for_desktop_view {
+    display: none;
+}
+
+.about p {
+    border: 1px solid transparent;
+    margin: 27vh auto 33vh auto;
+    width: 76%;
+    text-align: justify;
+    text-transform: capitalize;
+    line-height: 21px;
+}
+
+footer {
+    border: 1px solid black;
+    margin: 0vh auto;
+    padding: 3vh 0;
+    text-align: center;
+    background-color: black;
+}
+
+.footer h3 {
+    border: 1px solid transparent;
+    margin: 0 auto;
+    width: 72%;
+    text-align: justify;
+    text-transform: capitalize;
+    font-size: 15px;
+    font-family: "Kanit", sans-serif;
+    font-weight: 600;
+    line-height: 21px;
+    color: gray;
+}
+
+
+
+@media only screen and (min-width: 768px) {
+
+    .main_container {
+        margin: 24vh auto;
+        width: 54%;
+    }
+
+    .for_desktop_view {
+        border: 1px solid transparent;
+        margin: 6vh auto;
+        display: block;
+        text-transform: capitalize;
+    }
+
+    .react_projects {
+        display: none;
+        text-transform: capitalize;
+    }
+
+    .para_content {
+        display: none;
+    }
+
+    .about {
+        border: 3px solid transparent;
+        margin: 24vh auto 0 auto;
+        width: 60%;
+    }
+
+    footer {
+        border: 3px solid transparent;
+        margin: 3vh auto 0 auto;
+        padding: 10px;
+    }
+
+    .footer h3 {
+        border: 3px solid transparent;
+        margin: 0 auto;
+        width: 50%;
+        text-align: center;
+    }
+}

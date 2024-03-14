@@ -1,9 +1,14 @@
 .textarea {
-    border: 1px solid black;
+    border: 3px solid gray;
     border-radius: 18px;
     margin: 18vh auto;
     padding: 9px;
-    width: 90%;
+    width: 80%;
+    color: snow;
+    background-color: black;
+
+    font-size: 12px;
+    text-transform: uppercase;
 
     display: flex;
     flex-wrap: wrap;

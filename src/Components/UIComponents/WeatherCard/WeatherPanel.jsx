@@ -12,7 +12,7 @@ class WeatherPanel extends Component {
     render() {
         return (
             <>
-                <div className="weather_app x_axis_center">
+                <div className="ui weather_app x_axis_center">
                     <button
                         className="getDataBtn"
                         onClick={() => this.setState({ city: "New York" })}

@@ -1,9 +1,13 @@
+.ui.super_tunes {
+    border: 3px solid gray;
+    width: 80%;
+    margin: 6vh auto 18vh auto;
+}
+
 .super_tunes {
     border: 1px solid black;
     border-radius: 18px;
-    margin: 6vh auto 18vh auto;
     padding: 9px;
-    width: 90%;
     height: 60vh;
 
     background-color: black;

@@ -1,0 +1,19 @@
+$headingOne: darkblue;
+$paracolor: blue;
+
+
+.heading {
+    border: 3px solid lightgray;
+    background-color: snow;
+}
+
+.heading h1 {
+    border: 3px solid lightgray;
+    margin: 0 auto;
+    width: 80%;
+    height: 10vh;
+    font-weight: 900;
+    font-size: 21px;
+    color: $headingOne;
+    background-color: lightgray;
+}

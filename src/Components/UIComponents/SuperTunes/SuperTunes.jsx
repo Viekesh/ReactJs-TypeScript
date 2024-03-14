@@ -25,7 +25,7 @@ class SuperTunes extends Component {
     render() {
         return (
             <>
-                <section className="super_tunes">
+                <section className="ui super_tunes">
                     <div id="superTunes">
                         {/* <h2 id="stTitle">Super Tunes</h2> */}
                         <div className="st_btns">

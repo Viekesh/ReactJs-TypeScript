@@ -1,4 +1,4 @@
-import "./MainContent.css";
+import "./MainContent.scss";
 
 
 
@@ -26,9 +26,9 @@ const MainContent = ({ heading, para }) => {
     return (
         <>
             <div className="content_page" onLoad={animateDelay()}>
-                <h1 id="PageHeading" className="rubik-maps-regular">{heading}</h1>
+                <h1 id="PageHeading" className="lexend">{heading}</h1>
                 <br />
-                <p id="PagePara" className="comic-neue-bold">{para}</p>
+                <p id="PagePara" className="lexend">{para}</p>
             </div>
         </>
     )
