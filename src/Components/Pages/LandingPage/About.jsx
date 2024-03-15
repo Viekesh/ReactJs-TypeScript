@@ -1,6 +1,6 @@
 import TopNav from "../../FeaturedComponents/Navigation/TopNav"
 import SocialLinks from "../../FeaturedComponents/SocialLinks/SocialLinks";
-import Footer from "./Footer";
+import Footer from "../Landing/Footer";
 
 
 

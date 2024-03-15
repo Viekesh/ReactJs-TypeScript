@@ -1,7 +1,6 @@
 import "./SocialLinks.css";
 import { IoLogoWhatsapp } from "react-icons/io5";
 import { BiLogoGmail, BiSolidPhoneCall } from "react-icons/bi";
-import { FaLinkedinIn } from "react-icons/fa";
 import { useEffect, useState } from "react";
 
 
@@ -12,7 +11,7 @@ const SocialLinks = () => {
 
     const [whatsappIconPos, setWhatsAppIconPos] = useState(12);
 
-    const [linkedInIconPos, setLinkedInIconPos] = useState(12);
+
 
     const whatsapp = {
         bottom: whatsappIconPos + "vh",
@@ -22,9 +21,7 @@ const SocialLinks = () => {
         bottom: mailIconPosition + "vh",
     }
 
-    const linkedIn = {
-        bottom: linkedInIconPos + "vh",
-    }
+
 
     useEffect(() => {
         window.addEventListener("scroll", HandleScroll);
@@ -35,19 +32,21 @@ const SocialLinks = () => {
         )
     }, []);
 
+
+
     const HandleScroll = () => {
 
         if (window.scrollY > 3) {
             setWhatsAppIconPos(32);
             setMailIconPosition(23);
-            // setLinkedInIconPos(23)
         } else {
             setWhatsAppIconPos(12);
             setMailIconPosition(12);
-            // setLinkedInIconPos(12);
         }
 
     };
+
+
 
     return (
         <>

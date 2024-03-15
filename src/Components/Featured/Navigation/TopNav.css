@@ -268,7 +268,7 @@ nav {
 
 @media only screen and (min-width : 768px) {
     .nav_elements {
-        padding: 1.6vh;
+        padding: 1vh;
         width: 50%;
     }
 

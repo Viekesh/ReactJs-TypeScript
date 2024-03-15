@@ -99,20 +99,16 @@
 @media only screen and (min-width: 768px) {
 
     .links {
-        right: 20vw;
-        bottom: 11vh;
+        right: 25vw;
+        bottom: 12vh;
     }
 
     .whatsapp {
-        right: 20.3vw;
+        right: 25.4vw;
     }
 
     .mail {
-        right: 20.3vw;
-    }
-
-    .linked_in {
-        right: 20.3vw;
+        right: 25.4vw;
     }
 }
 

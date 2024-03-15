@@ -13,13 +13,17 @@ header {
     background-attachment: fixed;
 }
 
-.content_page {
+header>.heading {
+    display: none;
+}
+
+.head_content {
     margin: 30vh auto 0 auto;
     width: 80%;
     text-transform: capitalize;
 }
 
-.content_page h1 {
+.head_content h1 {
     border: 1px solid transparent;
     margin: 0 0 0 -9px;
     font-size: 45px;
@@ -29,13 +33,13 @@ header {
     transition: 1s;
 }
 
-.content_page p {
+.head_content p {
     border: 1px solid transparent;
     padding: 9px 0 0 0;
-    text-align: justify;
+    // text-align: justify;
     font-size: 15px;
-    font-weight: 500;
-    color: $paracolor;
+    font-weight: 400;
+    color: black;
     line-height: 24px;
     opacity: 0;
     transition: 0.6s;
@@ -55,40 +59,61 @@ header {
 }
 
 footer {
-    border: 1px solid black;
+    border: 3px solid lightgray;
     margin: 0vh auto;
-    padding: 3vh 0;
     text-align: center;
-    background-color: black;
+    background-color: lightgray;
 }
 
 .footer h3 {
-    border: 1px solid transparent;
+    // border: 3px solid blue;
     margin: 0 auto;
-    width: 72%;
+    padding: 1vh;
+    width: 80%;
+    height: 100%;
     text-align: justify;
     text-transform: capitalize;
     font-size: 15px;
     font-family: "Kanit", sans-serif;
     font-weight: 600;
     line-height: 21px;
-    color: gray;
+    color: black;
+    background-color: snow;
 }
 
 
 
 @media only screen and (min-width: 768px) {
 
-    .main_container {
-        margin: 24vh auto;
-        width: 54%;
+    header>.heading {
+        display: block;
+    }
+
+    .head_content {
+        // border: 3px solid black;
+        width: 48%;
+    }
+
+    .head_content h1 {
+        font-size: 63px;
+    }
+
+    .head_content p {
+        font-size: 18px;
+        font-weight: 500;
+        color: gray;
     }
 
     .for_desktop_view {
-        border: 1px solid transparent;
+        // border: 1px solid gray;
         margin: 6vh auto;
+        width: 48%;
         display: block;
         text-transform: capitalize;
+        font-family: "Kanit", sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        color: gray;
     }
 
     .react_projects {
@@ -109,13 +134,14 @@ footer {
     footer {
         border: 3px solid transparent;
         margin: 3vh auto 0 auto;
-        padding: 10px;
     }
-
+    
     .footer h3 {
         border: 3px solid transparent;
         margin: 0 auto;
+        padding: 3vh;
         width: 50%;
-        text-align: center;
+        font-size: 18px;
+        font-weight: 500;
     }
 }

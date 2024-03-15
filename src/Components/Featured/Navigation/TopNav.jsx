@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import "./TopNav.css";
 import { NavLink } from "react-router-dom";
 import { FaLinkedinIn } from "react-icons/fa";
@@ -52,7 +51,7 @@ const TopNav = () => {
                         </div>
 
                         <div className="linked_in x_y_axis_center">
-                            <a href="https://www.linkedin.com/in/vikesh-gayakwad-994872194" className="x_y_axis_center">
+                            <a href="https://www.linkedin.com/in/vikesh-gaikwad-994872194" className="x_y_axis_center">
                                 <FaLinkedinIn />
                             </a>
                         </div>

@@ -3,6 +3,7 @@ import SocialLinks from "../../Featured/SocialLinks/SocialLinks";
 import { LandingPageContent } from "../../ServiceDB/ServiceDB";
 import UIComponents from "../../UIComponents/UIComponents";
 import Heading from "../Heading/Heading";
+import Footer from "./Footer";
 import "./Landing.scss";
 
 
@@ -35,7 +36,7 @@ const Landing = () => {
                     LandingPageContent.map((data) => {
                         return (
                             <>
-                                <div className="content_page" onLoad={animateDelay()}>
+                                <div className="head_content" onLoad={animateDelay()}>
                                     <h1 id="PageHeading" className="lexend">{data.heading}</h1>
                                     <br />
                                     <p id="PagePara" className="lexend">{data.para}</p>
@@ -48,6 +49,8 @@ const Landing = () => {
                 <div className="for_desktop_view">
                     this portfolio is developed for mobile view only. please checks it in mobile...
                 </div>
+
+                <Heading head="Get In Touch:" />
             </header>
 
             <main>
@@ -56,6 +59,10 @@ const Landing = () => {
 
                 <Heading head="Projects:" />
             </main>
+
+            <footer>
+                <Footer />
+            </footer>
         </>
     )
 }

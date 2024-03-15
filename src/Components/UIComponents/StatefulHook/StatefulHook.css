@@ -1,7 +1,7 @@
 .container {
     border: 3px solid gray;
     border-radius: 18px;
-    margin: 18vh auto;
+    margin: 9vh auto 18vh auto;
     padding: 9px;
     width: 80%;
     background-color: black;

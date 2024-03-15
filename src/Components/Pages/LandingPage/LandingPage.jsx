@@ -4,7 +4,7 @@ import ReactJsPro from "../ReactJsPro/ReactJsPro";
 import SocialLinks from "../../FeaturedComponents/SocialLinks/SocialLinks";
 import Skills from "../Skills/Skills";
 import Heading from "../Heading/Heading";
-import Footer from "./Footer";
+import Footer from "../Landing/Footer";
 import { useNavigate } from "react-router-dom";
 import MainContent from "../../ServiceDB/MainContent";
 import { LandingPageContent, LandingPageContent2 } from "../../ServiceDB/ServiceDB";

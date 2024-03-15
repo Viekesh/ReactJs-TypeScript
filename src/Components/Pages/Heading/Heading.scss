@@ -17,3 +17,15 @@ $paracolor: blue;
     color: $headingOne;
     background-color: lightgray;
 }
+
+
+
+@media only screen and (min-width: 768px) {
+    .heading {
+        display: none;
+    }
+
+    .heading h1 {
+        width: 50%;
+    }
+}
