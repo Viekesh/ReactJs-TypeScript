@@ -5,6 +5,7 @@ nav {
     background-color: lightgray;
 
     position: fixed;
+    z-index: 999;
 }
 
 .nav_elements {

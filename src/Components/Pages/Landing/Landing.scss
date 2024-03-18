@@ -83,7 +83,10 @@ footer {
 
 
 
+
 @media only screen and (min-width: 768px) {
+
+    // header
 
     header>.heading {
         display: block;
@@ -100,9 +103,12 @@ footer {
 
     .head_content p {
         font-size: 18px;
-        font-weight: 500;
+        font-weight: 300;
         color: gray;
     }
+
+
+    // main
 
     .for_desktop_view {
         // border: 1px solid gray;
@@ -114,6 +120,14 @@ footer {
         font-size: 20px;
         font-weight: 500;
         color: gray;
+    }
+
+    main>.ui_components {
+        display: none;
+    }
+
+    main>.assignments {
+        display: none;
     }
 
     .react_projects {

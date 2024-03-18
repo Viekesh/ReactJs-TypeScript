@@ -5,6 +5,8 @@ import WeatherPanel from "./WeatherCard/WeatherPanel";
 import TextCount from "./TextCount/TextCount";
 import UserPosts from "./UserPosts/UserPosts";
 import StatefulHook from "./StatefulHook/StatefulHook";
+import DraftJsEditor from "./ReactDraftWysiwyg/DraftJsEditor";
+
 
 
 const UIComponents = () => {
@@ -14,6 +16,7 @@ const UIComponents = () => {
 
                 <SocialLinks />
 
+                <DraftJsEditor />
                 <StatefulHook />
                 <SuperTunes />
                 <TextCount />

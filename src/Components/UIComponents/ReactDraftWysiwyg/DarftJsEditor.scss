@@ -1,0 +1,17 @@
+.ui_components>.draft_js_editor {
+    border: 3px solid gray;
+    border-radius: 18px;
+    margin: 15vh auto 18vh auto;
+    padding: 3px;
+    width: 80%;
+    height: 300px;
+    justify-content: space-between;
+}
+
+.ui_components>.draft_js_editor>.editor_box>textarea {
+    border: 3px solid gray;
+    border-radius: 18px;
+    padding: 9px;
+    width: 100%;
+    height: auto;
+}
