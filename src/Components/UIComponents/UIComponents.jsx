@@ -6,6 +6,7 @@ import TextCount from "./TextCount/TextCount";
 import UserPosts from "./UserPosts/UserPosts";
 import StatefulHook from "./StatefulHook/StatefulHook";
 import DraftJsEditor from "./ReactDraftWysiwyg/DraftJsEditor";
+import JokeUI from "./RandomJokes/JokeUI";
 
 
 
@@ -17,6 +18,7 @@ const UIComponents = () => {
                 <SocialLinks />
 
                 <DraftJsEditor />
+                <JokeUI />
                 <StatefulHook />
                 <SuperTunes />
                 <TextCount />

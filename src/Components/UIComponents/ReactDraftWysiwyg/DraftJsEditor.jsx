@@ -7,7 +7,6 @@ import drafttoHtml from "draftjs-to-html";
 
 
 
-
 class DraftJsEditor extends Component {
 
     state = {

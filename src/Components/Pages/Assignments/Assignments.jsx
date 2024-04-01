@@ -14,7 +14,7 @@ const Assignments = () => {
                         return (
                             <>
                                 <div className="pro_info" key={data.id}>
-                                    <div className="img">
+                                    <div className="img" key={data.id}>
                                         <img src={data.img} alt="" className="img" />
                                     </div>
                                     <div className="assignments_description">{data.proDesc}</div>
@@ -22,7 +22,7 @@ const Assignments = () => {
                                         <ul>
                                             {
                                                 data.features.map((fea) => (
-                                                    <li>{fea.f}</li>
+                                                    <li key={data.id}>{fea.f}</li>
                                                 ))
                                             }
                                         </ul>

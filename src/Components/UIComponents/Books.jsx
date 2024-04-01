@@ -13,7 +13,9 @@ const BooksList = () => {
 
                     {
                         booksList.map((props) => {
-                            <Book title={props.title} author={props.author} key={props.id} />
+                            return (
+                                <Book title={props.title} author={props.author} key={props.id} />
+                            )
                         })
                     }
                 </div>

@@ -1,0 +1,86 @@
+.joke_container {
+    border: 3px solid gray;
+    border-radius: 18px;
+    margin: 9vh auto 18vh auto;
+    padding: 9px;
+    width: 80%;
+    background-color: black;
+}
+
+
+.joke_category_picker select {
+    border: 3px solid transparent;
+    border-radius: 12px;
+    width: 100%;
+    height: 45px;
+    font-family: "Kanit", sans-serif;
+    font-size: 15px;
+}
+
+
+
+// joke
+
+.title {
+    border: 3px solid snow;
+    border-radius: 18px;
+    margin: 9vh auto 3vh auto;
+    padding: 9px;
+    text-align: center;
+    text-transform: uppercase;
+    color: snow;
+    background-color: black;
+    font-family: "Kanit", sans-serif;
+    font-weight: bold;
+    transition: 200ms background-color;
+}
+
+/* .title:hover {
+  background-color: rgb(141, 20, 20);
+} */
+
+.title_pulse {
+    border: 3px solid gray;
+    border-radius: 18px;
+    background-color: black;
+    animation-name: color;
+    animation-duration: 500ms;
+    animation-iteration-count: infinite;
+}
+
+@keyframes color {
+    0% {
+        background-color: rgb(141, 20, 20);
+    }
+
+    50% {
+        background-color: rgb(255, 67, 67);
+    }
+
+    100% {
+        background-color: rgb(141, 20, 20);
+    }
+}
+
+.joke_panel {
+    margin: 18px auto;
+}
+
+.joke_setup {
+    border: 3px solid transparent;
+    margin: 60px auto 9px auto;
+    color: snow;
+    font-family: "Kanit", sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    font-style: italic;
+}
+
+.joke_punchline {
+    border: 3px solid transparent;
+    margin: 6px auto;
+    color: blue;
+    font-family: "Kanit", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+}

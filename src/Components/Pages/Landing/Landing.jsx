@@ -55,10 +55,10 @@ const Landing = () => {
             </header>
 
             <main>
-                <Heading head="UI-Components:" />
+                <Heading head="Featured-Components:" />
                 <UIComponents />
 
-                <Heading head="Projects:" />
+                <Heading head="ongoing Projects:" />
                 <Assignments />
             </main>
 
