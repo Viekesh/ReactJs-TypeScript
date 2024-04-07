@@ -1,9 +1,10 @@
-.manage_events {
-    border: 1px solid black;
+.mouse_events {
+    border: 3px solid gray;
     border-radius: 18px;
-    margin: 18vh auto;
+    margin: 9vh auto 18vh auto;
     padding: 9px;
-    width: 90%;
+    width: 80%;
+    // background-color: black;
 }
 
 .manage_events h1 {
@@ -61,34 +62,44 @@
     right: 0px;
     margin: auto;
     padding: 20px;
-}
+} */
 
 .stats {
-    position: relative;
+    border: 3px solid black;
+    border-radius: 12px;
+    padding: 9px;
     background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
-    padding: 10px;
 }
 
 #clear-btn {
-    position: absolute;
-    right: 10px;
-    padding: 5px;
+    // position: absolute;
+    // right: 10px;
+    // padding: 5px;
+    border-radius: 6px;
+    margin: 0 9px;
+    padding: 3px;
+    font-family: "Kanit", sans-serif;
+    font-size: 12px;
+    font-weight: bold;
 }
 
 .canvas {
     position: relative;
+    border: 1px solid gray;
+    border-radius: 12px;
+    margin: 6px auto 0 auto;
     background-color: rgba(0, 0, 0, 0.1);
     height: 450px;
     border: 1px solid rgba(0, 0, 0, 0.5);
-    top: 10px;
 }
 
 .dot {
+    border: 3px solid red;
     position: absolute;
     width: 10px;
     height: 10px;
     border-radius: 5px;
     background-color: red;
     display: inline-block;
-} */
+}

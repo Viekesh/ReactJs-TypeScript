@@ -1,0 +1,68 @@
+.timer_ui_container {
+    border: 3px solid gray;
+    border-radius: 18px;
+    margin: 9vh auto 18vh auto;
+    padding: 9px;
+    width: 80%;
+    background-color: black;
+}
+
+.create-timer {
+    border: 3px solid transparent;
+}
+
+.create-timer input {
+    border-radius: 12px;
+    width: 100%;
+    padding: 9px;
+    font-family: "Kanit", sans-serif;
+    font-size: 18px;
+}
+
+
+
+
+// timer
+
+.timer {
+    border: 2px solid snow;
+    border-radius: 12px;
+    margin: 9px auto;
+    padding: 6px;
+    width: 98%;
+    justify-content: space-between;
+}
+
+.timer-name {
+    color: snow;
+    font-family: "Kanit", sans-serif;
+    font-size: 12px;
+    text-transform: capitalize;
+}
+
+.timer-display {
+    border: 3px solid green;
+    border-radius: 6px;
+    padding: 3px;
+    color: snow;
+    font-family: "Kanit", sans-serif;
+    font-size: 12px;
+}
+
+.pauseBtn {
+    border: 3px solid snow;
+    border-radius: 9px;
+    padding: 3px;
+    color: snow;
+    font-family: "Kanit", sans-serif;
+    font-size: 12px;
+}
+
+.removeBtn {
+    border: 3px solid red;
+    border-radius: 9px;
+    padding: 3px;
+    color: red;
+    font-family: "Kanit", sans-serif;
+    font-size: 12px;
+}
