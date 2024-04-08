@@ -1,6 +1,6 @@
 .virtual_page {
-    margin: 33vw auto 30vw auto;
-    width: 98vw;
+    border: 3px solid transparent;
+    margin: 15vh auto 0 auto;
 }
 
 .Virtual {
@@ -17,7 +17,7 @@
 }
 
 .Virtual .left>:nth-child(1) {
-    font-family: "Monsterrat", sans-serif;
+    font-family: "Kanit", sans-serif;
     font-size: 21px;
     font-weight: 900;
     color: snow;
@@ -25,18 +25,18 @@
 
 .Virtual .left>:nth-child(2) {
     margin: 1vw auto;
-    font-family: "Monsterrat", sans-serif;
+    font-family: "Kanit", sans-serif;
     font-size: 15px;
-    font-weight: lighter;
+    font-weight: 300;
     text-align: center;
     text-transform: uppercase;
     color: snow;
 }
 
 .Virtual .left>:nth-child(3) {
-    font-family: "Monsterrat", sans-serif;
+    font-family: "Kanit", sans-serif;
     font-size: 15px;
-    font-weight: lighter;
+    font-weight: 300;
     text-align: center;
     text-transform: uppercase;
     color: snow;

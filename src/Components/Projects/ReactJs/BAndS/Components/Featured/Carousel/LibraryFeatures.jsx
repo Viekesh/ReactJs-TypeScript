@@ -1,12 +1,14 @@
 import React, { useState, useSpring } from "react";
 import "./LibraryFeatures.css";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper/modules';
-import { EffectCards } from 'swiper/modules';
+// import { Navigation, Pagination } from 'swiper/modules';
+// import { EffectCards } from 'swiper/modules';
+import { EffectFlip, Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import 'swiper/css/effect-cards';
+import 'swiper/css/effect-flip';
+// import 'swiper/css/effect-cards';
 import { FeaturesOfBAndS } from "../../../ServiceDB/FeaturesOfBAndS";
 
 
@@ -30,15 +32,17 @@ const LibraryFeatures = () => {
                     // slidesPerView={1}
                     // spaceBetween={20}
                     // slidesPerGroup={1}
-                    // loop={true}
+                    loop={true}
 
-                    effect={'cards'}
-                    grabCursor={true}
-                    modules={[EffectCards]}
+                    // effect={'cards'}
+                    // effect={'flip'}
+                    // grabCursor={true}
+                    pagination={false}
+                    navigation={true}
+                    modules={[Pagination, Navigation]}
 
                     className="mySwiper"
                 // loopFillGroupWithBlank={true}
-                // navigation={true}
                 >
                     {
                         FeaturesOfBAndS.map((linkData) => {

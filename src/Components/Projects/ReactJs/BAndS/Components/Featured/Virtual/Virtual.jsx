@@ -1,15 +1,16 @@
-import React from "react";
 import VirtualStyleSheet from "./Virtual.module.css";
-import Shade from "../../Images/shade.png";
 import ReactCompareImage from "react-compare-image";
-import Before from "../../Images/before.png";
-import After from "../../Images/after.png";
+import Before from "../../../Img/before.png";
+import After from "../../../Img/after.png";
+import Shade from "../../../Img/shade.png";
+
+
 
 const Virtual = () => {
   return (
     <div className={VirtualStyleSheet.virtual_page}>
       <div className={VirtualStyleSheet.Virtual}>
-        
+
         <div className={VirtualStyleSheet.left}>
           <span>virtual try on</span>
           <span>never buy the wrong shade again</span>

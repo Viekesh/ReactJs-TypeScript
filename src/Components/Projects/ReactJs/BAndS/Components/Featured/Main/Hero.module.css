@@ -1,0 +1,134 @@
+.hero {
+    margin: 15vh auto 0 auto;
+    width: 98vw;
+    height: 70vh;
+    position: relative;
+    display: flex;
+}
+
+.right_side {
+    border: 3px solid transparent;
+    margin: 50vh auto 0 auto;
+    width: 90%;
+}
+
+.for_desk {
+    display: none;
+}
+
+.for_smartdevices h3 {
+    margin: 0 auto;
+    font-family: 'Kanit', sans-serif;
+    font-size: 33px;
+    font-weight: 900;
+    text-transform: capitalize;
+    text-align: center;
+    color: black;
+    text-shadow: 1px 1px 12px snow;
+}
+
+/* .for_smartdevices>.text1 {
+    position: absolute;
+    left: -6vw;
+    opacity: 0;
+    transition: 2s;
+    letter-spacing: -2px;
+}
+
+.for_smartdevices>.text2 {
+    position: absolute;
+    top: 20vw;
+    opacity: 0;
+    transition: 1s;
+} */
+
+.wrapper {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.pinkCircle {
+    border-radius: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: pink;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background: linear-gradient(to bottom, #de6161, #df467b, #ce389f, #a242c8, #2657eb);
+    box-shadow: 1px 0px 12px 0px rgb(248, 3, 207);
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.wrapper img {
+    border-radius: 100%;
+    width: 90vw;
+}
+
+@media only screen and (min-width: 768px) {
+    .hero {
+        margin: 12vh auto 0 auto;
+        width: 66vw;
+        height: 70vh;
+    }
+
+    .for_smartdevices {
+        display: none;
+    }
+
+    .for_desk {
+        display: block;
+    }
+
+    .for_desk h3 {
+        font-family: 'monsterrat', sans-serif;
+        font-size: 33px;
+        font-weight: 900;
+        line-height: 40px;
+        letter-spacing: -1px;
+        text-transform: capitalize;
+        color: black;
+    }
+
+    .for_desk>.text3 {
+        position: absolute;
+        left: -3vw;
+        opacity: 0;
+        transition: 2s;
+    }
+
+    .for_desk>.text4 {
+        position: absolute;
+        top: 5vw;
+        opacity: 0;
+        transition: 1s;
+    }
+
+    .right_side {
+        width: 30vw;
+        height: 9vh;
+        position: absolute;
+        bottom: 15vw;
+        left: 0vw;
+    }
+
+    .wrapper {
+        position: absolute;
+        margin-right: 0;
+        transform: translate(0, 0);
+        top: 0;
+        right: 0;
+    }
+
+    .wrapper img {
+        border-radius: 100%;
+        width: 33vw;
+    }
+}
