@@ -1,0 +1,16 @@
+.sub_head {
+    border: 2px solid transparent;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.sub_head>h2 {
+    font-size: 30px;
+    font-family: "Kanit", sans-serif;
+    font-weight: 900;
+
+    background: linear-gradient(to right, green, blue, rgb(72, 72, 212));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    text-transform: capitalize;
+}

@@ -1,10 +1,9 @@
-import React from "react";
 import Header from "./Components/Header";
 import Home from "./Pages/Home";
 
 
 
-const BlogLandingPage = ({active, setActive, user, setUser}) => {
+const BlogLandingPage = ({ active, setActive, user, setUser }) => {
 
   return (
     <div>

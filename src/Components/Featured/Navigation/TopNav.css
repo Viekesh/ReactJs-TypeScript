@@ -40,7 +40,6 @@ nav {
 
 .github_n_nav_icon {
     border: 3px solid transparent;
-    width: 54px;
     display: flex;
     justify-content: space-between;
 }
@@ -66,6 +65,7 @@ nav {
 .linked_in {
     border: 3px solid rgb(0, 117, 252);
     border-radius: 100%;
+    margin: 0 0 0 9px;
     width: 36px;
     height: 36px;
 }

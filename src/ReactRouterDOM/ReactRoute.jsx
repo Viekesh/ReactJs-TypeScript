@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import Landing from "../Components/Pages/Landing/Landing";
+import BAndS from "../Components/Projects/ReactJs/BAndS/Components/Pages/BAndS";
 
 
 
@@ -17,6 +18,7 @@ const ReactRoute = () => {
                 {/* <Route path="/TicTacToe" element={<TicTacToe />}></Route>
                 <Route path="/Calculator" element={<Calculator />}></Route>
                 <Route path="/JokesAPISetup" element={<JokesAPISetup />}></Route> */}
+                <Route exact path="/BAndS" element={<BAndS />}></Route>
             </Routes>
         </>
     )
