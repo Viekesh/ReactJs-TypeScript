@@ -41,7 +41,19 @@ export const FeaturesOfBAndS = [
     {
         id: 6,
         title: "24/7",
-        description: "In times of unexpected need, we'll extend an extra hour or two to you to soar with our facilitating feature.",
+        description: "In times of unexpected need, we'll extend an extra hour or two to you to soar with our facilitating feature. Take your pick and head and get started on your makeover!",
         img: img6,
     },
+];
+
+
+
+
+
+
+export const InformationContentData = [
+    {
+        contentOne: "Ready for a makeover? Our stylists picked their favorite salon services, all at amazing prices! Just choose what you like and get gorgeous!",
+        contentTwo: "for the latest update follow us on instagram",
+    }
 ];

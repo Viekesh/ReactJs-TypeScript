@@ -1,0 +1,212 @@
+.test {
+    border: 3px solid transparent;
+    margin: 24vw auto 24vh auto;
+}
+
+.testimonial {
+    border: 3px solid transparent;
+    margin: 0 auto;
+    width: 98vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.test_wrapper {
+    border: 3px solid transparent;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    align-items: center;
+}
+
+.test_wrapper>:nth-child(1) {
+    display: none;
+}
+
+.container {
+    border: 3px solid black;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.container :nth-child(1) {
+    font-weight: bold;
+}
+
+.test_wrapper>img {
+    width: 98vw;
+    justify-self: center;
+}
+
+.test_wrapper>:nth-child(3) {
+    display: none;
+}
+
+.reviews {
+    margin: .9vw auto;
+    font-family: "Kanit", sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+}
+
+.for_desktop {
+    display: none;
+}
+
+.for_mobile {
+    width: 100%;
+}
+
+.for_mobile .test_carousel {
+    border: 1px solid gray;
+    border-radius: 15px;
+    margin: 0 auto;
+    padding: 6px;
+    width: 90%;
+    background-color: darkgray;
+}
+
+.for_mobile .test_carousel .carousel_info {
+    border: 3px solid black;
+    border-radius: 15px;
+    padding: 6px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.carousel_info>img {
+    border-radius: 100%;
+    width: 3.3rem !important;
+    height: 3.3rem !important;
+}
+
+.carousel_info :nth-child(2) {
+    color: snow;
+    font-family: "Kanit", sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.carousel_info :nth-child(3) {
+    color: snow;
+    font-family: "Kanit", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+
+
+@media only screen and (min-width: 768px) {
+    .test {
+        margin: 9vw auto 18vh auto;
+    }
+
+    .testimonial {
+        margin: 0 auto;
+        width: 66vw;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .test_wrapper {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        align-items: flex-end;
+    }
+
+    .test_wrapper>:nth-child(1) {
+        font-size: .8rem;
+        text-align: left;
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .container :nth-child(1) {
+        font-weight: bold;
+    }
+
+    .test_wrapper>img {
+        width: 24vw;
+        justify-self: center;
+    }
+
+    .test_wrapper>:nth-child(3) {
+        text-align: right;
+
+        display: flex;
+        flex-direction: column;
+
+        font-size: .8rem;
+        text-transform: uppercase;
+    }
+
+    .reviews {
+        margin: .9vw auto;
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: snow;
+    }
+
+    .for_mobile {
+        display: none;
+    }
+
+    .for_desktop {
+        width: 100%;
+        display: block;
+    }
+
+    .for_desktop .test_carousel {
+        width: 100%;
+    }
+
+    .for_desktop .test_carousel .carousel_info {
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+        background: snow;
+    }
+
+    .carousel_info>img {
+        border-radius: 100%;
+        width: 3.3rem !important;
+        height: 3.3rem !important;
+        /* position: absolute !important;
+        top: -2rem !important;
+        left: 40%; */
+    }
+
+    .carousel_info :nth-child(2) {
+        font-size: .8rem;
+    }
+
+    .carousel_info :nth-child(3) {
+        font-weight: bold;
+    }
+}

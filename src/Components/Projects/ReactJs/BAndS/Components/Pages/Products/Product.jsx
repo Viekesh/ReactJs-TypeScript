@@ -45,8 +45,8 @@ const Product = () => {
                     <div className={ProductStyleSheet.name}>
                       <span>{product.name}</span>
                       <span>{product.detail}</span>
-                      <div>Shop Now</div>
-                      <span>{product.price}$</span>
+                      {/* <div>Shop Now</div> */}
+                      {/* <span>{product.price}$</span> */}
                     </div>
                   </div>
                 </div>

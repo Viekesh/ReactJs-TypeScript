@@ -86,19 +86,19 @@ const TopNav = () => {
                 id="Navigation"
             >
                 <div className="nav_links">
-                    <NavLink to="/Authenticate" className="nav_sub_section y_axis_center">
-                        <div className="section_icon x_y_axis_center">
-                            <BiUserCircle />
-                        </div>
-                        <h1 className="section_name">LogIn</h1>
-                    </NavLink>
-
                     <NavLink to="/Register" className="nav_sub_section y_axis_center">
                         <div className="section_icon x_y_axis_center">
                             <PiQrCodeBold />
                         </div>
-                        <h1 className="section_name">Admission</h1>
+                        <h1 className="section_name">Services</h1>
                     </NavLink>
+                    <NavLink to="/Authenticate" className="nav_sub_section y_axis_center">
+                        <div className="section_icon x_y_axis_center">
+                            <BiUserCircle />
+                        </div>
+                        <h1 className="section_name">Contact Us</h1>
+                    </NavLink>
+
 
                     {/* <div className="nav_sub_section y_axis_center">
                         <div className="section_icon x_y_axis_center">

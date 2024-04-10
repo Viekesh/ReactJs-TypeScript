@@ -1,6 +1,7 @@
 .bands_top_nav {
     border-bottom: 3px solid snow;
     /* border-radius: 18px; */
+    height: 72px;
     background-color: black;
     position: fixed;
     top: 0;

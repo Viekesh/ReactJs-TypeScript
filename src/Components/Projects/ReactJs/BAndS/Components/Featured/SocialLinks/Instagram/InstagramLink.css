@@ -1,5 +1,5 @@
 .instagram_link {
-    /* border: 3px solid red; */
+    border: 3px solid transparent;
     margin: 0 auto;
     justify-content: space-between;
 }
@@ -39,5 +39,5 @@
 }
 
 .instagram_link img {
-    height: 36vh;
+    height: 45vh;
 }

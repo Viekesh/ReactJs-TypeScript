@@ -1,0 +1,141 @@
+.carousel {
+    margin: 30vw auto 30vw auto;
+    width: 98vw;
+}
+
+.carousel h3 {
+    margin: 3vw 0 6vw 3vw;
+    font-family: "Monsterrat", sans-serif;
+    font-size: 30px;
+    font-weight: 900;
+    color: snow;
+}
+
+.smartphone_slider .swiper {
+    border-radius: 3vw;
+    width: 96%;
+    height: 60%;
+}
+
+.smartphone_slider .swiper-slide {
+    background-color: snow;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.left_s {
+    padding: 3vw;
+    height: 27vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.img_p {
+    width: 24vw;
+    height: 30vh;
+
+    transform: rotate(-20deg);
+    position: absolute;
+    right: 0;
+    bottom: -9vw;
+}
+
+.name {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.desk_slider {
+    display: none;
+}
+
+
+
+
+@media only screen and (min-width: 768px) {
+    .carousel {
+        margin: 9vw auto 3vw auto;
+        width: 66vw;
+    }
+
+    .carousel h3 {
+        margin: 2vw 0 2vw 0;
+        font-family: "Monsterrat", sans-serif;
+        font-size: 30px;
+        font-weight: 900;
+        color: snow;
+    }
+
+    .smartphone_slider {
+        display: none;
+    }
+
+    .desk_slider {
+        display: block;
+    }
+
+    .desk_slider .swiper {
+        width: 100%;
+        height: 60%;
+    }
+
+    .desk_slider .swiper-slide {
+        border-radius: 1vw;
+        /* background: rgba(255, 255, 255, 0.3);
+        box-shadow: 0 8px 32px 0 rgba(1, 18, 253, 0.37);
+        backdrop-filter: blur(3px);
+        -webkit-backdrop-filter: blur(3px); */
+        background-color: snow;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .desk_slider .swiper-button-prev {
+        left: 1rem;
+    }
+
+    .desk_slider .swiper-button-next {
+        right: 1rem;
+    }
+
+    .desk_slider .swiper-button-prev,
+    .desk_slider .swiper-button-next {
+        font-size: 10px;
+        color: black;
+    }
+
+    .left_s {
+        padding: 1vw;
+        height: 24vh;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .img_p {
+        width: 6vw;
+        height: 30vh;
+
+        transform: rotate(-20deg);
+        position: absolute;
+        right: 0;
+        bottom: -5vw;
+    }
+
+    .name {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}

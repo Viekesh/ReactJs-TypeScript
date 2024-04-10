@@ -1,9 +1,8 @@
-import React, { useState, useSpring } from "react";
 import "./LibraryFeatures.css";
 import { Swiper, SwiperSlide } from 'swiper/react';
-// import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination } from 'swiper/modules';
 // import { EffectCards } from 'swiper/modules';
-import { EffectFlip, Pagination, Navigation } from 'swiper/modules';
+// import { EffectFlip, Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';

@@ -6,6 +6,10 @@ import SubHead from "../Featured/Headings/SubHeadings/SubHeading";
 import Hero from "../Featured/Main/Hero";
 import Virtual from "../Featured/Virtual/Virtual";
 import Product from "./Products/Product";
+import InformationContent from "./InformationContent";
+import Testimonial from "./Testimonial/Testimonial";
+import Footer from "./Footer/Footer";
+import QnA from "./Qna/QnA";
 
 
 
@@ -26,7 +30,24 @@ const BAndS = () => {
 
             <section className="prod">
                 <Product />
+                <InformationContent />
+                <Testimonial />
+
+                <SubHead headTitle="Any Question:" />
+                <QnA question="Question" answer="Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga cum placeat laboriosam aliquid accusantium sequi voluptates provident praesentium." />
+
+                <QnA question="Question" answer="Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga cum placeat laboriosam aliquid accusantium sequi voluptates provident praesentium." />
+
+                <QnA question="Question" answer="Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga cum placeat laboriosam aliquid accusantium sequi voluptates provident praesentium." />
+
+                <QnA question="Question" answer="Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga cum placeat laboriosam aliquid accusantium sequi voluptates provident praesentium." />
+
+                <QnA question="Question" answer="Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga cum placeat laboriosam aliquid accusantium sequi voluptates provident praesentium." />
+
+                <QnA question="Question" answer="Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga cum placeat laboriosam aliquid accusantium sequi voluptates provident praesentium." />
             </section>
+
+            <Footer />
         </>
     )
 }
