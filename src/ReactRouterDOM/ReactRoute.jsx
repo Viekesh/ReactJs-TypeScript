@@ -1,6 +1,8 @@
 import { Route, Routes } from "react-router-dom";
 import Landing from "../Components/Pages/Landing/Landing";
 import BAndS from "../Components/Projects/ReactJs/BAndS/Components/Pages/BAndS";
+import BAndSServices from "../Components/Projects/ReactJs/BAndS/Components/Pages/Services/Services";
+import BAndSAbout from "../Components/Projects/ReactJs/BAndS/Components/Pages/About/About";
 
 
 
@@ -19,6 +21,10 @@ const ReactRoute = () => {
                 <Route path="/Calculator" element={<Calculator />}></Route>
                 <Route path="/JokesAPISetup" element={<JokesAPISetup />}></Route> */}
                 <Route exact path="/BAndS" element={<BAndS />}></Route>
+
+                {/* BAndS */}
+                <Route path="/BAndSServices" element={<BAndSServices />}></Route>
+                <Route path="/BAndSAbout" element={<BAndSAbout />}></Route>
             </Routes>
         </>
     )

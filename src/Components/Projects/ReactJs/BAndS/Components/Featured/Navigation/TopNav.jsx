@@ -86,7 +86,7 @@ const TopNav = () => {
                 id="Navigation"
             >
                 <div className="nav_links">
-                    <NavLink to="/Register" className="nav_sub_section y_axis_center">
+                    <NavLink to="/BAndSServices" className="nav_sub_section y_axis_center">
                         <div className="section_icon x_y_axis_center">
                             <PiQrCodeBold />
                         </div>
@@ -124,7 +124,7 @@ const TopNav = () => {
                         </div>
                         <h1 className="section_name">Contact</h1>
                     </div> */}
-                    <NavLink to="/About" className="nav_sub_section y_axis_center">
+                    <NavLink to="/BAndSAbout" className="nav_sub_section y_axis_center">
                         <div className="section_icon x_y_axis_center">
                             <FcAbout />
                         </div>

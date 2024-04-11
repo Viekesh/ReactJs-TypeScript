@@ -1,50 +1,50 @@
-import "./SocialLinks.css";
 import { IoLogoWhatsapp } from "react-icons/io5";
 import { BiLogoGmail, BiSolidPhoneCall } from "react-icons/bi";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
+import "./SocialLinks.scss";
 
 
 
 const SocialLinks = () => {
 
-    const [mailIconPosition, setMailIconPosition] = useState(12);
+    // const [mailIconPosition, setMailIconPosition] = useState(12);
 
-    const [whatsappIconPos, setWhatsAppIconPos] = useState(12);
-
-
-
-    const whatsapp = {
-        bottom: whatsappIconPos + "vh",
-    };
-
-    const mail = {
-        bottom: mailIconPosition + "vh",
-    }
+    // const [whatsappIconPos, setWhatsAppIconPos] = useState(12);
 
 
 
-    useEffect(() => {
-        window.addEventListener("scroll", HandleScroll);
-        return (
-            () => {
-                window.removeEventListener("scroll", HandleScroll);
-            }
-        )
-    }, []);
+    // const whatsapp = {
+    //     bottom: whatsappIconPos + "vh",
+    // };
+
+    // const mail = {
+    //     bottom: mailIconPosition + "vh",
+    // }
 
 
 
-    const HandleScroll = () => {
+    // useEffect(() => {
+    //     window.addEventListener("scroll", HandleScroll);
+    //     return (
+    //         () => {
+    //             window.removeEventListener("scroll", HandleScroll);
+    //         }
+    //     )
+    // }, []);
 
-        if (window.scrollY > 3) {
-            setWhatsAppIconPos(32);
-            setMailIconPosition(23);
-        } else {
-            setWhatsAppIconPos(12);
-            setMailIconPosition(12);
-        }
 
-    };
+
+    // const HandleScroll = () => {
+
+    //     if (window.scrollY > 3) {
+    //         setWhatsAppIconPos(32);
+    //         setMailIconPosition(23);
+    //     } else {
+    //         setWhatsAppIconPos(12);
+    //         setMailIconPosition(12);
+    //     }
+
+    // };
 
 
 
@@ -52,13 +52,23 @@ const SocialLinks = () => {
         <>
             <div className="portfolio_links x_y_axis_center">
 
-                <div style={whatsapp} id="Mail" className="whatsapp x_y_axis_center">
+                {/* <div style={whatsapp} id="Mail" className="whatsapp x_y_axis_center">
+                    <a href="https://wa.me/+919766940948/?text=Hello!" className="x_y_axis_center">
+                        <IoLogoWhatsapp />
+                    </a>
+                </div> */}
+                <div id="Mail" className="whatsapp x_y_axis_center">
                     <a href="https://wa.me/+919766940948/?text=Hello!" className="x_y_axis_center">
                         <IoLogoWhatsapp />
                     </a>
                 </div>
 
-                <div style={mail} id="Mail" className="mail x_y_axis_center">
+                {/* <div style={mail} id="Mail" className="mail x_y_axis_center">
+                    <a href="mailto:vikesh.g99@gmail.com" className="x_y_axis_center">
+                        <BiLogoGmail />
+                    </a>
+                </div> */}
+                <div id="Mail" className="mail x_y_axis_center">
                     <a href="mailto:vikesh.g99@gmail.com" className="x_y_axis_center">
                         <BiLogoGmail />
                     </a>

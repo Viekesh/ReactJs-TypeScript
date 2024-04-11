@@ -1,6 +1,6 @@
 .main_heading {
-    /* border: 3px solid blue; */
-    margin: 69px 0 30px 0;
+    border: 3px solid transparent;
+    margin: 68px auto 0 auto;
     height: 21vh;
 
 
@@ -11,7 +11,6 @@
 
 
 
-    /* background-repeat: no-repeat; */
     background-position: center;
     background-size: auto;
 
@@ -24,9 +23,8 @@
     /* border: 3px solid snow; */
     margin: 0 auto;
     width: 80%;
-    /* color: rgb(72, 72, 247); */
     color: snow;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Kanit', sans-serif;
     font-weight: 900;
     text-shadow: 1px 1px 9px gray;
 }
