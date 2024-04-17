@@ -9,7 +9,9 @@ import DraftJsEditor from "./ReactDraftWysiwyg/DraftJsEditor";
 import JokeUI from "./RandomJokes/JokeUI";
 import TimerUI from "../Tutorials/CompoRevi/ManagingCleanup/TimerUI";
 import MouseEvents from "../Tutorials/CompoRevi/ManageEvents/MouseEvents";
-import ControlledForm from "../Tutorials/BuildingForms/ControlledForm";
+import UncontrolledForm from "../Tutorials/BuildingForms/UncontrolledForm/UncontrolledForm";
+import ControlledForm from "../Tutorials/BuildingForms/ControlledForm/ControlledForm";
+import HandleInput from "../Tutorials/BuildingForms/HandleInputEfficiently/HandleInput";
 
 
 
@@ -22,12 +24,14 @@ const UIComponents = () => {
 
                 <ControlledForm />
                 <DraftJsEditor />
+                <HandleInput />
                 <JokeUI />
                 <MouseEvents />
                 <StatefulHook />
                 <SuperTunes />
                 <TextCount />
                 <TimerUI />
+                <UncontrolledForm />
                 <UserPosts />
                 <WeatherPanel />
 

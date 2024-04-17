@@ -1,0 +1,26 @@
+.handle_input {
+    border: 3px solid transparent;
+    border-radius: 18px;
+    margin: 9vh auto 18vh auto;
+    padding: 9px;
+    width: 80%;
+    background-color: darkslategrey;
+}
+
+.field-holder {
+    border: 3px solid transparent;
+    color: snow;
+}
+
+.field-holder label input {
+    width: 30px;
+}
+
+.output {
+    margin: 6px 0;
+    text-transform: capitalize;
+}
+
+.output li {
+    list-style-type: none;
+}

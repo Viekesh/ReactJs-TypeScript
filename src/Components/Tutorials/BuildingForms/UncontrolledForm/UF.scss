@@ -1,0 +1,59 @@
+.uncontrolled_form {
+    border: 3px solid gray;
+    border-radius: 18px;
+    margin: 9vh auto 18vh auto;
+    padding: 9px;
+    width: 80%;
+    background-color: black;
+}
+
+.form-container {
+    border: 3px solid transparent;
+}
+
+.form-fields {
+    border: 3px solid transparent;
+}
+
+.output {
+    color: snow;
+}
+
+.field-holder button {
+    border: 1px solid gray;
+    border-radius: 9px;
+    margin: 6px 0;
+    padding: 3px;
+    width: 100%;
+    height: 45px;
+    font-size: 12px;
+}
+
+input,
+select {
+    border: 1px solid gray;
+    border-radius: 9px;
+    padding: 3px;
+    width: 100%;
+    height: 45px;
+    font-size: 12px;
+}
+
+.uncontrolled_form textarea {
+    border: 1px solid gray;
+    border-radius: 9px;
+    padding: 3px;
+    width: 100%;
+    height: 60px;
+    font-size: 12px;
+}
+
+.label {
+    color: snow;
+}
+
+.ot-field {
+    border: 3px solid transparent;
+    margin: 6px 0;
+    color: snow;
+}
