@@ -1,12 +1,14 @@
 import "./App.scss";
-import ReactRouter from "./ReactRouterDOM/ReactRouter";
+import { ReactRtr } from "./ReactRouterDOM/ReactRtr";
+// import ReactRouter from "./ReactRouterDOM/ReactRouter";
 
 
 
 const App = () => {
     return (
         <>
-            <ReactRouter />
+            {/* <ReactRouter /> */}
+            <ReactRtr />
         </>
     )
 };

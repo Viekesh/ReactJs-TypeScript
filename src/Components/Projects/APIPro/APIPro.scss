@@ -1,0 +1,25 @@
+// API Pro
+
+.api_pro {
+    border: 3px solid red;
+    margin: 0 auto;
+    width: 90%;
+    overflow-x: scroll;
+}
+
+.api_pro .pro_elem {
+    border: 1px solid gray;
+    border-radius: 12px;
+    margin: 0 auto;
+    padding: 9px;
+    width: 90%;
+}
+
+.api_pro img {
+    width: 120px;
+}
+
+.api_pro p {
+    font-family: "Kanit", sans-serif;
+    text-transform: capitalize;
+}

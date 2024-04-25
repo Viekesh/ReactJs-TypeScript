@@ -1,5 +1,6 @@
 import TopNav from "../../Featured/Navigation/TopNav";
 import SocialLinks from "../../Featured/SocialLinks/SocialLinks";
+import APIPro from "../../Projects/APIPro/APIPro";
 import { LandingPageContent } from "../../ServiceDB/ServiceDB";
 import UIComponents from "../../UIComponents/UIComponents";
 import Assignments from "../Assignments/Assignments";
@@ -55,6 +56,9 @@ const Landing = () => {
             </header>
 
             <main>
+                <Heading head="API Pro:" />
+                <APIPro />
+
                 <Heading head="Featured-Components:" />
                 <UIComponents />
 

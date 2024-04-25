@@ -1,0 +1,52 @@
+// CoinGecko
+
+.coin_gecko {
+    border: 3px solid blue;
+}
+
+.crypto_nav_elements {
+    border: 1px solid red;
+    justify-content: space-between;
+}
+
+.crypto_nav_elements .logo_menu_icon .crypto_logo img {
+    width: 120px;
+}
+
+.crypto_options {
+    border: 2px solid black;
+    border-radius: 9px;
+    margin: 6px auto;
+    padding: 3px;
+    width: 90%;
+    justify-content: space-between;
+}
+
+.crypto_options a {
+    border: 3px solid black;
+    border-radius: 9px;
+    padding: 3px;
+    width: 90px;
+    font-family: "Kanit", sans-serif;
+    font-weight: 600;
+    text-align: center;
+    color: snow;
+    background-color: black;
+}
+
+
+
+// Crypto
+
+.crypto {
+    border: 1px solid green;
+    margin: 3px auto;
+}
+
+.crypto_table table tr {
+    font-family: "Kanit", sans-serif;
+    font-size: 12px;
+    font-weight: 200;
+    text-transform: capitalize;
+    text-align: center;
+}
