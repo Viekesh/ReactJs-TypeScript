@@ -22,6 +22,7 @@
     justify-content: space-between;
 }
 
+
 .crypto_options a {
     border: 3px solid black;
     border-radius: 9px;
@@ -43,10 +44,55 @@
     margin: 3px auto;
 }
 
-.crypto_table table tr {
+.crypto_options table {
+    flex-direction: column;
+}
+
+.crypto_options .table_row {
+    border: 3px solid blue;
+    margin: 6px auto;
+    padding: 6px;
+    width: 86vw;
+    justify-content: space-between;
+
     font-family: "Kanit", sans-serif;
     font-size: 12px;
     font-weight: 200;
     text-transform: capitalize;
     text-align: center;
+}
+
+.crypto_options .table_row th {
+    border: 3px solid green;
+    width: 100%;
+}
+
+.crypto_options .tbody_table_row {
+    margin: 6px auto;
+    padding: 6px;
+    width: 86vw;
+    justify-content: space-between;
+
+    font-family: "Kanit", sans-serif;
+    font-size: 12px;
+    font-weight: 200;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.crypto_options .tbody_table_row td {
+    width: 100%;
+}
+
+.crypto_options .tbody_table_row td {
+    justify-content: space-evenly;
+}
+
+.crypto_options .tbody_table_row td button {
+    width: 21px !important;
+    background-color: transparent;
+}
+
+.crypto_options .tbody_table_row td img {
+    width: 21px;
 }
