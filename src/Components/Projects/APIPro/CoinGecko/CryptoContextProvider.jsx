@@ -26,6 +26,8 @@ const CryptoContextProvider = ({ children }) => {
         }
     }
 
+
+
     const [searchData, setSearchData] = useState("");
 
     const getSearchRes = async (query) => {
@@ -34,9 +36,9 @@ const CryptoContextProvider = ({ children }) => {
 
             console.log(srchData);
 
-            setSearchData(srchData);
+            setSearchData(srchData.coins);
 
-            console.log("data:", searchData)
+            console.log("data:", searchData);
 
         } catch (error) {
             console.log(error.message);
