@@ -3,7 +3,7 @@ import { CryptoContext } from "./CryptoContext";
 
 
 
-const apiUrl = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin&category=layer-1&order=market_cap_desc&per_page=10&page=1&sparkline=false&price_change_percentage=1h%2C24h%2C7d&locale=en&precision=full&x_cg_demo_api_key=CG-iuTzfjYcKk6E1Q668rcz3scH`
+// const apiUrl = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${coinSearch}&order=market_cap_desc&per_page=10&page=1&sparkline=false&price_change_percentage=1h%2C24h%2C7d&locale=en&precision=full&x_cg_demo_api_key=CG-iuTzfjYcKk6E1Q668rcz3scH`;
 
 const CryptoContextProvider = ({ children }) => {
 
@@ -11,9 +11,11 @@ const CryptoContextProvider = ({ children }) => {
 
     const [cryptoData, setCryptodata] = useState();
 
+    const [coinSearch, setCoinSearch] = useState("");
+
     const getCryptodata = async () => {
         try {
-            const crptData = await fetch(apiUrl).then(res => res.json()).then(json => json);
+            const crptData = await fetch(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${coinSearch}&order=market_cap_desc&per_page=10&page=1&sparkline=false&price_change_percentage=1h%2C24h%2C7d&locale=en&precision=full&x_cg_demo_api_key=CG-iuTzfjYcKk6E1Q668rcz3scH`).then(res => res.json()).then(json => json);
 
             console.log(crptData);
 
@@ -45,12 +47,29 @@ const CryptoContextProvider = ({ children }) => {
         }
     }
 
+
+
+    // const getCoinData = async () => {
+    //     try {
+    //         const crptData = await fetch(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${coinSearch}&order=market_cap_desc&per_page=10&page=1&sparkline=false&price_change_percentage=1h%2C24h%2C7d&locale=en&precision=full&x_cg_demo_api_key=CG-iuTzfjYcKk6E1Q668rcz3scH`).then(res => res.json()).then(json => json);
+
+    //         console.log(crptData);
+
+    //         setCryptodata(crptData);
+
+    //         console.log("data:", cryptoData)
+
+    //     } catch (error) {
+    //         console.log(error.message);
+    //     }
+    // }
+
     useLayoutEffect(() => {
         getCryptodata();
-    }, []);
+    }, [coinSearch]);
 
     return (
-        <CryptoContext.Provider value={{ cryptoData, searchData, getSearchRes }}>
+        <CryptoContext.Provider value={{ cryptoData, searchData, getSearchRes, setCoinSearch, setSearchData }}>
             {children}
         </CryptoContext.Provider>
     )
