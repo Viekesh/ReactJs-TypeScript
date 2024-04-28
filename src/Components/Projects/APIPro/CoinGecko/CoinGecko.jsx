@@ -1,7 +1,8 @@
-import "./CoinGecko.scss";
 import { NavLink, Outlet } from "react-router-dom";
 import cryLogo from "../../../../Assets/Images/coingeckologo.webp";
 import CryptoContextProvider from "./CryptoContextProvider";
+import "./CoinGecko.scss";
+import "./CoinGeckoRes.scss";
 
 
 

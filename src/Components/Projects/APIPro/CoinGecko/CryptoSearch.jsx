@@ -282,7 +282,7 @@
 
 
 import { useContext, useState } from "react";
-import { IoSearchCircleOutline } from "react-icons/io5";
+// import { IoSearchCircleOutline } from "react-icons/io5";
 import { CryptoContext } from "./CryptoContext"; // Assuming CryptoContext is defined elsewhere
 import debounce from "lodash.debounce";
 
@@ -319,9 +319,9 @@ const SearchInput = ({ handleDebounce }) => {
                         placeholder="Search Here"
                         onChange={handleSearchReq}
                     />
-                    <button className="crypto_btn x_y_axis_center" type="submit">
+                    {/* <button className="crypto_btn x_y_axis_center" type="submit">
                         <IoSearchCircleOutline />
-                    </button>
+                    </button> */}
                 </form>
 
                 {searchCrypto.length > 0 && (

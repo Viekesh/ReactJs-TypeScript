@@ -9,7 +9,7 @@ const CryptoTable = () => {
 
     // console.log("test:", test);
 
-    let { cryptoData } = useContext(CryptoContext);
+    let { cryptoData, currency } = useContext(CryptoContext);
 
     return (
         <>
@@ -25,7 +25,7 @@ const CryptoTable = () => {
                                 <th>name</th>
                                 <th>price</th>
                                 <th>total volume</th>
-                                <th>market cap change</th>
+                                <th>mkt cap change</th>
                                 <th>1h</th>
                                 <th>24h</th>
                                 <th>7 day</th>
@@ -66,7 +66,7 @@ const CryptoTable = () => {
                                                     {
                                                         new Intl.NumberFormat("en-IN", {
                                                             style: "currency",
-                                                            currency: "usd",
+                                                            currency: currency,
                                                         }).format(data.current_price)
                                                     }
                                                 </td>
