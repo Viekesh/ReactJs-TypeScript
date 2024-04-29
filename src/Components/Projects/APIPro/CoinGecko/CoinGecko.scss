@@ -124,7 +124,7 @@
 // Crypto Search
 .crypto_search {
     border: 1px solid transparent;
-    width: 100%;
+    width: 50%;
     position: relative;
 }
 
@@ -145,6 +145,7 @@
     border: 2px solid black;
     border-radius: 12px;
     padding: 0 9px;
+    height: 6vh;
     font-size: 15px;
     font-family: "Kanit", sans-serif;
 }
@@ -196,6 +197,13 @@
     padding: 0;
 }
 
+.crypto_currency>form>label {
+    font-family: "Kanit", sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    text-transform: capitalize;
+}
+
 .crypto_currency form input {
     border: 2px solid black;
     padding: 6px;
@@ -218,4 +226,22 @@
 .crypto_currency>form>button>svg {
     margin: 3px 0 0 0;
     font-size: 21px;
+}
+
+.crypto_sorting label p {
+    font-family: "Kanit", sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    text-transform: capitalize;
+}
+
+.crypto_sorting label select {
+    border: 2px solid black;
+    margin: 0 3px;
+    padding: 0 6px !important;
+    height: 6vh;
+    font-family: "Kanit", sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    text-transform: capitalize;
 }

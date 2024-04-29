@@ -5,10 +5,9 @@ import { CryptoContext } from "./CryptoContext";
 
 
 
-
 const CryptoFilter = () => {
 
-    const { setCurrency } = useContext(CryptoContext);
+    const { setCurrency, setSortBy } = useContext(CryptoContext);
 
     const currencyRef = useRef(null);
 
@@ -19,11 +18,17 @@ const CryptoFilter = () => {
         currencyRef.current.value = "";
     };
 
+    const handleSortReq = (event) => {
+        event.preventDefault();
+        const value = event.target.value;
+        setSortBy(value);
+    }
+
     return (
         <>
-            <section className="crypto_filter crypto_options">
+            <section className="crypto_filter crypto_options y_axis_center">
                 <CryptoSearch />
-                <div className="crypto_currency">
+                <div className="crypto_currency y_axis_center">
                     <form className="y_axis_center" onSubmit={handleCurrencyReq}>
                         <label htmlFor="currency">currency :</label>
 
@@ -38,8 +43,22 @@ const CryptoFilter = () => {
                             <FaChevronCircleRight />
                         </button>
                     </form>
+                    <div className="crypto_sorting">
+                        <label className="y_axis_center">
+                            <p>sort by:</p>
+                            <select name="" onClick={handleSortReq}>
+                                <option value="id_asc">Id Asc</option>
+                                <option value="id_desc">Id Desc</option>
+                                <option value="market_cap_asc">Market Cap Asc</option>
+                                <option value="market_cap_desc">Market Cap Desc</option>
+                                <option value="Volume_asc">Volume Asc</option>
+                                <option value="volume_desc">Volume Desc</option>
+                                <option value="gecko_asc">Gecko Asc</option>
+                                <option value="gecko_desc">Gecko Desc</option>
+                            </select>
+                        </label>
+                    </div>
                 </div>
-                <div className="crypto_sorting">sorting</div>
             </section>
         </>
     )
