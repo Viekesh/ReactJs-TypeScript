@@ -2,4 +2,12 @@
     .crypto_nav_elements .logo_menu_icon .crypto_logo img {
         width: 180px;
     }
+
+    .crypto_filter {
+        flex-direction: row;
+    }
+
+    .crypto_search .crypto_search_form {
+        width: 50%;
+    }
 }

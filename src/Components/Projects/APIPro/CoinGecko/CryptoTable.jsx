@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { CryptoContext } from "./CryptoContext";
+import CryptoPagination from "./CryptoPagination";
 
 
 
@@ -89,6 +90,7 @@ const CryptoTable = () => {
                     </table> : null
                 }
             </section>
+            < CryptoPagination />
         </>
     )
 }

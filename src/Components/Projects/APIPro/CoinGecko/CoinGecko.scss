@@ -117,6 +117,7 @@
 .crypto_filter {
     border: 1px solid black;
     border-radius: 12px;
+    flex-direction: column;
 }
 
 
@@ -124,7 +125,7 @@
 // Crypto Search
 .crypto_search {
     border: 1px solid transparent;
-    width: 50%;
+    width: 100%;
     position: relative;
 }
 
@@ -244,4 +245,42 @@
     font-size: 15px;
     font-weight: 300;
     text-transform: capitalize;
+}
+
+
+
+
+
+
+// Pagination
+.pagination {
+    border: 1px solid gray;
+    border-radius: 12px;
+    padding: 9px;
+    margin: 6px auto;
+    width: 90%;
+}
+
+.pagination ul {
+    justify-content: space-between;
+}
+
+.pagination ul li {
+    list-style-type: none;
+    font-family: "Kanit", sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    text-transform: capitalize;
+}
+
+.pagination ul li .arrow {
+    border: 1px solid gray;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+.pagination ul li .arrow svg {
+    font-size: 27px;
+    color: gray;
 }
