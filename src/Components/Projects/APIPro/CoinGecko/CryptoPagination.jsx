@@ -1,15 +1,61 @@
-import { useContext, useState } from "react";
+import { useContext, useRef } from "react";
 import { CiCircleChevLeft } from "react-icons/ci";
 import { CiCircleChevRight } from "react-icons/ci";
+import { FaChevronCircleRight } from "react-icons/fa";
 import { CryptoContext } from "./CryptoContext";
+
+
+
+const PerPage = () => {
+
+    const inputRef = useRef(null);
+
+    const { setPerPage } = useContext(CryptoContext);
+
+    const handlePerPageCoins = (event) => {
+        event.preventDefault();
+        const val = inputRef.current.value;
+        if (val !== 0) {
+            setPerPage(val);
+            inputRef.current.value = val;
+        };
+    };
+
+    return (
+        <>
+            <section className="per_page y_axis_center">
+
+                <form className="y_axis_center" onSubmit={handlePerPageCoins}>
+                    <label htmlFor="perpage">per page</label>
+
+                    <input
+                        type="number"
+                        name="perpage"
+                        placeholder="10"
+                        required
+                        ref={inputRef}
+                        min={1}
+                        max={250}
+                    />
+
+                    <button type="submit y_axis_center">
+                        <FaChevronCircleRight />
+                    </button>
+
+                </form>
+
+            </section>
+        </>
+    )
+}
 
 
 
 const CryptoPagination = () => {
 
-    const { currentPage, setCurrentPage } = useContext(CryptoContext);
+    const { cryptoData, currentPage, setCurrentPage, totalPages, perPage } = useContext(CryptoContext);
 
-    const totalNumber = 250;
+    const totalNumber = Math.ceil(totalPages / perPage);
 
     const nextPage = () => {
         if (currentPage === totalNumber) {
@@ -43,66 +89,73 @@ const CryptoPagination = () => {
         }
     };
 
-    return (
-        <>
-            <section className="pagination">
-                <ul className="y_axis_center">
-                    <li>
-                        <div className="arrow x_y_axis_center" onClick={prevPage}>
-                            <CiCircleChevLeft />
-                        </div>
-                    </li>
+    {
+        if (cryptoData && cryptoData.length >= perPage) {
+            return (
+                <section className="pagination y_axis_center">
 
-                    {
-                        currentPage + 1 === totalNumber || currentPage === totalNumber
-                            ?
-                            <li onClick={multiStepPrev}><button>...</button></li>
-                            :
-                            null
-                    }
+                    <PerPage />
 
-                    {
-                        currentPage - 1 !== 0
-                            ?
-                            <li onClick={prevPage}><button>{currentPage - 1}</button></li>
-                            :
-                            null
-                    }
+                    <ul className="y_axis_center">
+                        <li>
+                            <div className="arrow x_y_axis_center" onClick={prevPage}>
+                                <CiCircleChevLeft />
+                            </div>
+                        </li>
 
-                    <li><button disabled>{currentPage}</button></li>
+                        {
+                            currentPage + 1 === totalNumber || currentPage === totalNumber
+                                ?
+                                <li onClick={multiStepPrev}><button>...</button></li>
+                                :
+                                null
+                        }
 
-                    {
-                        currentPage + 1 !== totalNumber && currentPage !== totalNumber
-                            ?
-                            <li onCl ick={nextPage}><button>{currentPage + 1}</button></li>
-                            :
-                            null
-                    }
+                        {
+                            currentPage - 1 !== 0
+                                ?
+                                <li onClick={prevPage}><button>{currentPage - 1}</button></li>
+                                :
+                                null
+                        }
 
-                    {
-                        currentPage + 1 !== totalNumber && currentPage !== totalNumber
-                            ?
-                            <li onClick={multiStepNext}><button>...</button></li>
-                            :
-                            null
-                    }
+                        <li><button disabled>{currentPage}</button></li>
 
-                    {
-                        currentPage !== totalNumber
-                            ?
-                            <li onClick={() => setCurrentPage(totalNumber)}><button>{totalNumber}</button></li>
-                            :
-                            null
-                    }
-                    <li>
-                        <div className="arrow x_y_axis_center" onClick={nextPage}>
-                            <CiCircleChevRight />
-                        </div>
-                    </li>
-                </ul>
-            </section>
-        </>
-    )
+                        {
+                            currentPage + 1 !== totalNumber && currentPage !== totalNumber
+                                ?
+                                <li onCl ick={nextPage}><button>{currentPage + 1}</button></li>
+                                :
+                                null
+                        }
+
+                        {
+                            currentPage + 1 !== totalNumber && currentPage !== totalNumber
+                                ?
+                                <li onClick={multiStepNext}><button>...</button></li>
+                                :
+                                null
+                        }
+
+                        {
+                            currentPage !== totalNumber
+                                ?
+                                <li onClick={() => setCurrentPage(totalNumber)}><button>{totalNumber}</button></li>
+                                :
+                                null
+                        }
+                        <li>
+                            <div className="arrow x_y_axis_center" onClick={nextPage}>
+                                <CiCircleChevRight />
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+            )
+        } else {
+            return null;
+        }
+    }
 }
 
 

@@ -21,11 +21,28 @@ const CryptoContextProvider = ({ children }) => {
 
     const [currentPage, setCurrentPage] = useState(1);
 
+    const [totalPages, setTotalPages] = useState(250);
+
+    const [perPage, setPerPage] = useState(10);
+
 
 
     const getCryptodata = async () => {
         try {
-            const crptData = await fetch(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency}&ids=${coinSearch}&order=${sortBy}&per_page=10&page=${currentPage}&sparkline=false&price_change_percentage=1h%2C24h%2C7d&locale=en&precision=full&x_cg_demo_api_key=CG-iuTzfjYcKk6E1Q668rcz3scH`).then(res => res.json()).then(json => json);
+            const crptData = await fetch(`https://api.coingecko.com/api/v3/coins/list`).then(res => res.json()).then(json => json);
+
+            console.log(crptData);
+
+            setTotalPages(crptData.length);
+
+        } catch (error) {
+            console.log(error.message);
+        }
+
+
+
+        try {
+            const crptData = await fetch(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency}&ids=${coinSearch}&order=${sortBy}&per_page=${perPage}&page=${currentPage}&sparkline=false&price_change_percentage=1h%2C24h%2C7d&locale=en&precision=full&x_cg_demo_api_key=CG-iuTzfjYcKk6E1Q668rcz3scH`).then(res => res.json()).then(json => json);
 
             console.log(crptData);
 
@@ -74,7 +91,14 @@ const CryptoContextProvider = ({ children }) => {
 
     useLayoutEffect(() => {
         getCryptodata();
-    }, [coinSearch, currency, sortBy, currentPage]);
+    }, [coinSearch, currency, sortBy, currentPage, perPage]);
+
+
+
+    const resetData = () => {
+        setCurrentPage(1);
+        setCoinSearch("");
+    }
 
 
 
@@ -88,7 +112,10 @@ const CryptoContextProvider = ({ children }) => {
                 setSearchData,
                 currency, setCurrency,
                 sortBy, setSortBy,
-                currentPage, setCurrentPage
+                currentPage, setCurrentPage,
+                totalPages,
+                resetData,
+                perPage, setPerPage
             }
         }>
             {children}

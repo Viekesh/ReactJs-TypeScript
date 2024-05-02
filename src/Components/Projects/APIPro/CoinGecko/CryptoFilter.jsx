@@ -1,13 +1,14 @@
 import { useContext, useRef } from "react";
 import CryptoSearch from "./CryptoSearch";
 import { FaChevronCircleRight } from "react-icons/fa";
+import { BiReset } from "react-icons/bi";
 import { CryptoContext } from "./CryptoContext";
 
 
 
 const CryptoFilter = () => {
 
-    const { setCurrency, setSortBy } = useContext(CryptoContext);
+    const { setCurrency, setSortBy, resetData } = useContext(CryptoContext);
 
     const currencyRef = useRef(null);
 
@@ -30,7 +31,7 @@ const CryptoFilter = () => {
                 <CryptoSearch />
                 <div className="crypto_currency y_axis_center">
                     <form className="y_axis_center" onSubmit={handleCurrencyReq}>
-                        <label htmlFor="currency">currency :</label>
+                        <label htmlFor="currency"></label>
 
                         <input
                             type="text"
@@ -42,10 +43,15 @@ const CryptoFilter = () => {
                         <button type="submit y_axis_center">
                             <FaChevronCircleRight />
                         </button>
+
+                        <button onClick={resetData}>
+                            <BiReset />
+                        </button>
                     </form>
+
+
                     <div className="crypto_sorting">
                         <label className="y_axis_center">
-                            <p>sort by:</p>
                             <select name="" onClick={handleSortReq}>
                                 <option value="id_asc">Id Asc</option>
                                 <option value="id_desc">Id Desc</option>
