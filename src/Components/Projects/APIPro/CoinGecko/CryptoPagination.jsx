@@ -89,73 +89,72 @@ const CryptoPagination = () => {
         }
     };
 
-    {
-        if (cryptoData && cryptoData.length >= perPage) {
-            return (
-                <section className="pagination y_axis_center">
+    if (cryptoData && cryptoData.length >= perPage) {
+        return (
+            <section className="pagination y_axis_center">
 
-                    <PerPage />
+                <PerPage />
 
-                    <ul className="y_axis_center">
-                        <li>
-                            <div className="arrow x_y_axis_center" onClick={prevPage}>
-                                <CiCircleChevLeft />
-                            </div>
-                        </li>
+                <ul className="y_axis_center">
+                    <li>
+                        <div className="arrow x_y_axis_center" onClick={prevPage}>
+                            <CiCircleChevLeft />
+                        </div>
+                    </li>
 
-                        {
-                            currentPage + 1 === totalNumber || currentPage === totalNumber
-                                ?
-                                <li onClick={multiStepPrev}><button>...</button></li>
-                                :
-                                null
-                        }
+                    {
+                        currentPage + 1 === totalNumber || currentPage === totalNumber
+                            ?
+                            <li onClick={multiStepPrev}><button>...</button></li>
+                            :
+                            null
+                    }
 
-                        {
-                            currentPage - 1 !== 0
-                                ?
-                                <li onClick={prevPage}><button>{currentPage - 1}</button></li>
-                                :
-                                null
-                        }
+                    {
+                        currentPage - 1 !== 0
+                            ?
+                            <li onClick={prevPage}><button>{currentPage - 1}</button></li>
+                            :
+                            null
+                    }
 
-                        <li><button disabled>{currentPage}</button></li>
+                    <li><button disabled>{currentPage}</button></li>
 
-                        {
-                            currentPage + 1 !== totalNumber && currentPage !== totalNumber
-                                ?
-                                <li onCl ick={nextPage}><button>{currentPage + 1}</button></li>
-                                :
-                                null
-                        }
+                    {
+                        currentPage + 1 !== totalNumber && currentPage !== totalNumber
+                            ?
+                            <li onCl ick={nextPage}><button>{currentPage + 1}</button></li>
+                            :
+                            null
+                    }
 
-                        {
-                            currentPage + 1 !== totalNumber && currentPage !== totalNumber
-                                ?
-                                <li onClick={multiStepNext}><button>...</button></li>
-                                :
-                                null
-                        }
+                    {
+                        currentPage + 1 !== totalNumber && currentPage !== totalNumber
+                            ?
+                            <li onClick={multiStepNext}><button>...</button></li>
+                            :
+                            null
+                    }
 
-                        {
-                            currentPage !== totalNumber
-                                ?
-                                <li onClick={() => setCurrentPage(totalNumber)}><button>{totalNumber}</button></li>
-                                :
-                                null
-                        }
-                        <li>
-                            <div className="arrow x_y_axis_center" onClick={nextPage}>
-                                <CiCircleChevRight />
-                            </div>
-                        </li>
-                    </ul>
-                </section>
-            )
-        } else {
-            return null;
-        }
+                    {
+                        currentPage !== totalNumber
+                            ?
+                            <li onClick={() => setCurrentPage(totalNumber)}><button>{totalNumber}</button></li>
+                            :
+                            null
+                    }
+                    <li>
+                        <div className="arrow x_y_axis_center" onClick={nextPage}>
+                            <CiCircleChevRight />
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        )
+    } else {
+        return null;
     }
+
 }
 
 
