@@ -21,7 +21,8 @@ const CoinGecko = () => {
                     <div className="crypto_nav_elements">
                         <div className="crypto_options logo_menu_icon y_axis_center">
                             <div className="crypto_logo">
-                                <img src={cryLogo} alt="" />
+                                {/* <img src={cryLogo} alt="" /> */}
+                                <h1>CryptoCoins</h1>
                             </div>
 
                             <div className="crypto_menu_icon">

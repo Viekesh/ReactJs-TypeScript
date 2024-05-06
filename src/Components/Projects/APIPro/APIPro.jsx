@@ -13,6 +13,8 @@ const APIPro = () => {
                         <img src={cryplog} alt="" />
                         <p className="cryp_descr">crypto api</p>
                     </Link>
+
+                    <Link to="/CC"></Link>
                 </div>
             </section>
         </>

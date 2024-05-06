@@ -4,6 +4,8 @@ import CoinGecko from "../Components/Projects/APIPro/CoinGecko/CoinGecko";
 import Crypto from "../Components/Projects/APIPro/CoinGecko/Crypto";
 import TrendingCrypto from "../Components/Projects/APIPro/CoinGecko/TrendingCrypto";
 import Saved from "../Components/Projects/APIPro/CoinGecko/Saved";
+import CryptoDetails from "../Components/Projects/APIPro/CoinGecko/CryptoDetails";
+import CC from "../Components/Projects/APIPro/CurrencyConverter/CC";
 
 const router = createBrowserRouter([
     {
@@ -16,7 +18,13 @@ const router = createBrowserRouter([
         children: [
             {
                 path: "Crypto",
-                element: <Crypto />
+                element: <Crypto />,
+                children: [
+                    {
+                        path: ":CoinId",
+                        element: <CryptoDetails />
+                    }
+                ]
             },
             {
                 path: "TrendingCrypto",
@@ -27,6 +35,10 @@ const router = createBrowserRouter([
                 element: <Saved />
             },
         ]
+    },
+    {
+        path: "CurrencyConverter",
+        element: <CC />,
     }
 ]);
 

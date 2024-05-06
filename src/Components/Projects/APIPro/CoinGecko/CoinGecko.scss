@@ -9,14 +9,16 @@
     justify-content: space-between;
 }
 
-.crypto_nav_elements .logo_menu_icon .crypto_logo img {
-    width: 120px;
+.crypto_nav_elements .logo_menu_icon .crypto_logo h1 {
+    // border-top: 3px solid black;
+    // border-bottom: 3px solid black;
+    font-family: "Kanit", sans-serif;
 }
 
 .crypto_options {
     border: 2px solid transparent;
     border-radius: 9px;
-    margin: 6px auto;
+    margin: 15px auto 0 auto;
     padding: 3px;
     width: 90%;
     justify-content: space-between;
@@ -27,7 +29,7 @@
     border: 2px solid gray;
     border-radius: 9px;
     padding: 3px;
-    width: 360px;
+    width: 80px;
     font-family: "Kanit", sans-serif;
     font-weight: 500;
     font-size: 15px;
@@ -49,7 +51,7 @@
 }
 
 .crypto_options .table_row {
-    border: 1px solid gray;
+    border: 1px solid red;
     border-radius: 6px;
     margin: 6px auto;
     padding: 6px;
@@ -110,6 +112,57 @@
 
 
 
+// Crypto Info
+
+.crypto_block {
+    border: 1px solid black;
+    overflow-y: scroll;
+    padding: 9px 6px;
+    height: 60vh;
+}
+
+.crypto_info {
+    border: 1px solid black;
+    border-radius: 15px;
+    margin: 0 auto 18px auto;
+    padding: 9px;
+    position: relative;
+}
+
+.crypto_info button {
+    position: absolute;
+    top: 9px;
+    right: 9px;
+    background-color: transparent;
+}
+
+.crypto_name_img {
+    border: 3px solid transparent;
+}
+
+.crypto_name_img img {
+    width: 63px;
+}
+
+.crypto_name_img h3 {
+    margin: 0 6px;
+    font-size: 24px;
+    font-family: "Kanit", sans-serif;
+    color: gray;
+}
+
+.crypto_info>.num_info>h3 {
+    text-transform: capitalize;
+    font-size: 12px;
+    font-family: "Kanit", sans-serif;
+}
+
+.crypto_info>.num_info>h3>span {
+    margin: 0 6px;
+    font-weight: 100;
+}
+
+
 
 
 
@@ -138,21 +191,21 @@
     border: 2px solid black;
     border-radius: 50%;
     margin: 3px;
-    width: 42px;
-    height: 42px;
+    width: 36px;
+    height: 36px;
 }
 
 .crypto_search .crypto_search_form>input {
     border: 2px solid black;
     border-radius: 12px;
     padding: 0 9px;
-    height: 6vh;
+    height: 45px;
     font-size: 15px;
     font-family: "Kanit", sans-serif;
 }
 
 .crypto_search .crypto_search_form .crypto_btn svg {
-    font-size: 40px;
+    font-size: 30px;
     color: black;
 }
 
@@ -173,6 +226,7 @@
 
     overflow-y: scroll;
     scrollbar-width: 45px;
+    z-index: 999;
 }
 
 .crypto_search ul li {
@@ -209,7 +263,7 @@
     border: 2px solid black;
     padding: 6px;
     width: 36%;
-    height: 6vh;
+    height: 36px;
     font-family: "Kanit", sans-serif;
     font-size: 12px;
     font-weight: 300;
@@ -240,7 +294,7 @@
     border: 2px solid black;
     margin: 0 3px;
     padding: 0 6px !important;
-    height: 6vh;
+    height: 36px;
     font-family: "Kanit", sans-serif;
     font-size: 15px;
     font-weight: 300;
@@ -307,7 +361,7 @@
 
 .per_page form input {
     width: 36%;
-    font-family: "Kanit", sans-serif;
+    height: 36px;
 }
 
 .per_page form button {
@@ -315,10 +369,36 @@
     border-radius: 50%;
     margin: 6px;
     padding: 2px 0 0 0;
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
 }
 
 .per_page form button svg {
     font-size: 21px;
+}
+
+
+
+// Crypto Details
+
+.crypto_details {
+    border: 3px solid red;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+
+    background: rgba(158, 158, 158, 0.55);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    overflow-y: scroll;
+}
+
+.crypto_elem {
+    border: 3px solid blue;
+    width: 90vw;
 }
