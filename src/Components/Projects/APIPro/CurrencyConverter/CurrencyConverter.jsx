@@ -95,6 +95,7 @@ const CurrencyConverter = () => {
         const fetchRates = async () => {
             try {
                 const { rate } = await OpenRates(convFrom, convertedTo);
+                setRate(rate);
             } catch (error) {
                 setError(error.message);
             }
@@ -111,7 +112,7 @@ const CurrencyConverter = () => {
         if (fromAmt !== null) {
             newToAmt = parseFloat(fromAmt * rate).toFixed(2);
         } else {
-            newFromAmt = parseFloat(fromAmt / rate).toFixed(2);
+            newFromAmt = parseFloat(toAmt / rate).toFixed(2);
         }
 
         return key === "From" ? newFromAmt : newToAmt;
