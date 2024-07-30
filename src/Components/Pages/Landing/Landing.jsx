@@ -56,11 +56,11 @@ const Landing = () => {
             </header>
 
             <main>
-                <Heading head="API Pro:" />
+                <Heading head="Mini Projects :" />
                 <APIPro />
 
-                <Heading head="Featured-Components:" />
-                <UIComponents />
+                {/* <Heading head="Featured-Components:" />
+                <UIComponents /> */}
 
                 <Heading head="ongoing Projects:" />
                 <Assignments />

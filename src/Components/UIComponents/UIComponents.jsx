@@ -1,5 +1,5 @@
 import "./UIComponents.css";
-import SocialLinks from "../Featured/SocialLinks/SocialLinks";
+// import SocialLinks from "../Featured/SocialLinks/SocialLinks";
 import SuperTunes from "./SuperTunes/SuperTunes";
 import WeatherPanel from "./WeatherCard/WeatherPanel";
 import TextCount from "./TextCount/TextCount";
@@ -12,6 +12,7 @@ import MouseEvents from "../Tutorials/CompoRevi/ManageEvents/MouseEvents";
 import UncontrolledForm from "../Tutorials/BuildingForms/UncontrolledForm/UncontrolledForm";
 import ControlledForm from "../Tutorials/BuildingForms/ControlledForm/ControlledForm";
 import HandleInput from "../Tutorials/BuildingForms/HandleInputEfficiently/HandleInput";
+import ErrorUI from "../Tutorials/CompoRevi/ErrorManagement/ErrorUI";
 
 
 
@@ -20,8 +21,9 @@ const UIComponents = () => {
         <>
             <section className="ui_components">
 
-                <SocialLinks />
+                {/* <SocialLinks /> */}
 
+                <ErrorUI />
                 <ControlledForm />
                 <DraftJsEditor />
                 <HandleInput />

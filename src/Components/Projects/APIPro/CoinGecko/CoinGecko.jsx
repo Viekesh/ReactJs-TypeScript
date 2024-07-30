@@ -1,5 +1,5 @@
 import { NavLink, Outlet } from "react-router-dom";
-import cryLogo from "../../../../Assets/Images/coingeckologo.webp";
+// import cryLogo from "../../../../Assets/Images/coingeckologo.webp";
 import CryptoContextProvider from "./CryptoContextProvider";
 import "./CoinGecko.scss";
 import "./CoinGeckoRes.scss";
@@ -9,7 +9,6 @@ import "./CoinGeckoRes.scss";
 const CoinGecko = () => {
 
     const toggleMobileMenu = () => {
-        // setShowMenu(!showMenu);
         document.querySelector("body").classList.toggle("body-overflow-visible");
     };
 

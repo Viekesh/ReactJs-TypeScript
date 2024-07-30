@@ -1,5 +1,7 @@
 import img1 from "../../Assets/Images/img1.PNG";
 import img2 from "../../Assets/Images/img2.PNG";
+import img3 from "../../Assets/Images/img3.PNG";
+import img5 from "../../Assets/Images/img5.PNG";
 
 
 // landing page content
@@ -67,10 +69,11 @@ export const ProjectsData = [
     },
     {
         id: 2,
-        projectTitle: "Library Management System",
+        projectTitle: "University Management System",
         img: img2,
         className: "eee",
         githublink: "https://github.com/Viekesh/EduTech",
+        navLink: "https://edutech-6116f.web.app/",
         proDesc: "this is a business web app which is developed by using various APIs and features which is given below:",
         features: [
             {
@@ -87,24 +90,25 @@ export const ProjectsData = [
             }
         ]
     },
-    // {
-    //     id: 2,
-    //     projectTitle: "Real Estate",
-    //     className: "real_estate",
-    //     nextPage: "/Projects",
-    //     aboutpro: "In this project you can upload property information, search property, signin using different methods. we develop this project using react as a frontend and firebase as a backend. Available on GitHub for community contributions and learning.",
-    //     githublink: "https://github.com/Viekesh/Realtor-Clone",
-    // },
-    // {
-    //     id: 4,
-    //     projectId: "foodDel",
-    //     projectTitle: "Edutech",
-    //     navLink: "https://edutech-6116f.web.app/",
-    //     nextPage: "/Projects",
-    //     className: "edutech",
-    //     aboutpro: "This project is in its initial phase which i have build for library. it is an educational app. right now there is no any functionality added to this project.",
-    //     githublink: "https://github.com/Viekesh/EduTech"
-    // },
+    {
+        id: 3,
+        projectTitle: "Property Listing",
+        img: img3,
+        className: "eee",
+        githublink: "https://github.com/Viekesh/Realtor-Clone",
+        proDesc: "In this project you can upload property information, search property, signin using different methods. we develop this project using react as a frontend and firebase as a backend.",
+        features: [
+            {
+                f: "CRUD Operation by using firestore database",
+            },
+            {
+                f: "Firebase Authentication",
+            },
+            {
+                f: "Google Auth",
+            },
+        ]
+    },
     // {
     //     id: 3,
     //     projectId: "foodDel",
