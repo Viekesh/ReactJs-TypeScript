@@ -2,7 +2,7 @@ import TopNav from "../../Featured/Navigation/TopNav";
 import SocialLinks from "../../Featured/SocialLinks/SocialLinks";
 import APIPro from "../../Projects/APIPro/APIPro";
 import { LandingPageContent } from "../../ServiceDB/ServiceDB";
-import UIComponents from "../../UIComponents/UIComponents";
+// import UIComponents from "../../UIComponents/UIComponents";
 import Assignments from "../Assignments/Assignments";
 import Heading from "../Heading/Heading";
 import Footer from "./Footer";

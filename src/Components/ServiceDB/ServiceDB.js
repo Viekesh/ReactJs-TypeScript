@@ -1,7 +1,8 @@
 import img1 from "../../Assets/Images/img1.PNG";
 import img2 from "../../Assets/Images/img2.PNG";
 import img3 from "../../Assets/Images/img3.PNG";
-import img5 from "../../Assets/Images/img5.PNG";
+// import img5 from "../../Assets/Images/img5.PNG";
+
 
 
 // landing page content
