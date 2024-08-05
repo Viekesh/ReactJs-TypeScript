@@ -130,15 +130,7 @@
 
 
 
-
-
-
-
-
-
-// Certainly! It looks like there are a few missing parts, such as the event listener for the reset button and the proper implementation for resetting the game.Additionally, the`renderBoxes` function has a redundant loop that needs correction.Here's the completed code:
-
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./TicTacToe.css";
 import excited from "./Assets/excited.gif";
 
@@ -247,5 +239,4 @@ const TicTacToe = () => {
 
 export default TicTacToe;
 
-// I added the event listener for the reset button, corrected the `changeTurn` function, and modified the
-// renderBoxes function to remove the redundant loop.
+// added the event listener for the reset button

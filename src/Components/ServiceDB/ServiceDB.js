@@ -110,17 +110,6 @@ export const ProjectsData = [
             },
         ]
     },
-    // {
-    //     id: 3,
-    //     projectId: "foodDel",
-    //     projectTitle: "Food Delivery",
-    //     navLink: "https://cakebee.in/",
-    //     className: "food_delivery",
-    //     nextPage: "/Projects",
-    //     aboutpro: "This food delivery app offers a convenient and personalized dining experience, similar to popular e-commerce platforms. Users can easily browse menus, add items to their cart, and securely complete their orders through an intuitive interface.",
-    //     githublink: "https://github.com/Viekesh/foodDeliveryApp",
-    //     contributionHeadline: "Head over to my GitHub repository to explore the source code and contribute to this project!"
-    // },
 ]
 
 

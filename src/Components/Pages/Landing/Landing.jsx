@@ -1,6 +1,6 @@
 import TopNav from "../../Featured/Navigation/TopNav";
 import SocialLinks from "../../Featured/SocialLinks/SocialLinks";
-import APIPro from "../../Projects/APIPro/APIPro";
+import MiniPro from "../../Projects/MiniPro/MiniPro";
 import { LandingPageContent } from "../../ServiceDB/ServiceDB";
 // import UIComponents from "../../UIComponents/UIComponents";
 import Assignments from "../Assignments/Assignments";
@@ -57,7 +57,7 @@ const Landing = () => {
 
             <main>
                 <Heading head="Mini Projects :" />
-                <APIPro />
+                <MiniPro />
 
                 {/* <Heading head="Featured-Components:" />
                 <UIComponents /> */}

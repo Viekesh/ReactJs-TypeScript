@@ -63,17 +63,17 @@ export const CalcButton = styled.button`
   // &:hover {
   //   background-color: red;
   // }
-  ${({gridSpan}) => {
-    if(gridSpan) {
+  ${({ gridSpan }) => {
+    if (gridSpan) {
       return `grid-column: span ${gridSpan}`
     }
   }}
 
-  ${({operation}) => {
+  ${({ operation }) => {
     return operation && `background-color: blue;`
   }}
 
-  ${({control}) => {
+  ${({ control }) => {
     return control && `background-color: blue;`
   }}
 `;

@@ -1,11 +1,11 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Landing from "../Components/Pages/Landing/Landing";
-import CoinGecko from "../Components/Projects/APIPro/CoinGecko/CoinGecko";
-import Crypto from "../Components/Projects/APIPro/CoinGecko/Crypto";
-import TrendingCrypto from "../Components/Projects/APIPro/CoinGecko/TrendingCrypto";
-import Saved from "../Components/Projects/APIPro/CoinGecko/Saved";
-import CryptoDetails from "../Components/Projects/APIPro/CoinGecko/CryptoDetails";
-import CC from "../Components/Projects/APIPro/CurrencyConverter/CC";
+import CoinGecko from "../Components/Projects/MiniPro/CoinGecko/CoinGecko";
+import Crypto from "../Components/Projects/MiniPro/CoinGecko/Crypto";
+import CryptoDetails from "../Components/Projects/MiniPro/CoinGecko/CryptoDetails";
+import TrendingCrypto from "../Components/Projects/MiniPro/CoinGecko/TrendingCrypto";
+import Saved from "../Components/Projects/MiniPro/CoinGecko/Saved";
+import CC from "../Components/Projects/MiniPro/CurrencyConverter/CC";
 
 
 
