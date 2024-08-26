@@ -1,16 +1,17 @@
 import { Link } from "react-router-dom";
-import "./MIniPro.scss";
-import { MiniProData } from "../../ServiceDB/ServiceDB";
+import { OngoingProData } from "../../ServiceDB/ServiceDB";
 import { FaExternalLinkAlt } from "react-icons/fa";
+import "./OngoingPro.scss";
 
 
 
-const MiniPro = () => {
+
+const OngoingPro = () => {
     return (
         <>
-            <section className="mini_pro">
+            <section className="ongoing_pro">
                 {
-                    MiniProData.map((data) => {
+                    OngoingProData.map((data) => {
                         return (
                             <>
                                 <div className="pro y_axis_center">
@@ -45,14 +46,14 @@ const MiniPro = () => {
                                     </div>
                                 </div>
                             </>
-                        )
+                        );
                     })
-                }
+                };
             </section>
         </>
     )
-}
+};
 
 
 
-export default MiniPro;
+export default OngoingPro;

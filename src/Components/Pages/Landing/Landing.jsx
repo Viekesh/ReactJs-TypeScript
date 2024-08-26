@@ -1,9 +1,10 @@
 import TopNav from "../../Featured/Navigation/TopNav";
 import SocialLinks from "../../Featured/SocialLinks/SocialLinks";
 import MiniPro from "../../Projects/MiniPro/MiniPro";
+import OngoingPro from "../../Projects/OngoingProjects/OngoingPro";
 import { LandingPageContent } from "../../ServiceDB/ServiceDB";
 // import UIComponents from "../../UIComponents/UIComponents";
-import Assignments from "../Assignments/Assignments";
+// import Assignments from "../Assignments/Assignments";
 import Heading from "../Heading/Heading";
 import Footer from "./Footer";
 import "./Landing.scss";
@@ -63,7 +64,8 @@ const Landing = () => {
                 <UIComponents /> */}
 
                 <Heading head="ongoing Projects:" />
-                <Assignments />
+                {/* <Assignments /> */}
+                <OngoingPro />
             </main>
 
             <footer>

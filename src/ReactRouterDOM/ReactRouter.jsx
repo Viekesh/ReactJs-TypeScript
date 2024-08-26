@@ -6,6 +6,7 @@ import CryptoDetails from "../Components/Projects/MiniPro/CoinGecko/CryptoDetail
 import TrendingCrypto from "../Components/Projects/MiniPro/CoinGecko/TrendingCrypto";
 import Saved from "../Components/Projects/MiniPro/CoinGecko/Saved";
 import CC from "../Components/Projects/MiniPro/CurrencyConverter/CC";
+import BAndS from "../Components/Projects/ReactJs/BAndS/Components/Pages/BAndS";
 
 
 
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
     {
         path: "/",
         element: <Landing />,
+    },
+    {
+        path: "/BAndS",
+        element: <BAndS />
     },
     {
         path: "CoinGecko",
