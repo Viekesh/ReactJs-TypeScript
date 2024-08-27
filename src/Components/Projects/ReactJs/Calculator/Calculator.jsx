@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./Calculator.css";
+// import "./Calculator.css";
 import CalcHeader from "./CalcHeader";
 import CalcKeypad from "./CalcKeypad";
 

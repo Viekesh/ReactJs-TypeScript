@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./Calc.scss";
-
+import CalcKeypad from "../../ReactJs/Calculator/CalcKeypad";
 
 
 
@@ -50,6 +50,10 @@ const Calc = () => {
                         <img src={!lightMode ? "sun_icon" : "moon_icon"} alt="" />
                     </div>
                 </div>
+
+
+
+                <CalcKeypad />
             </section>
         </>
     )

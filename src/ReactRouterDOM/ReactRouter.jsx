@@ -7,6 +7,7 @@ import TrendingCrypto from "../Components/Projects/MiniPro/CoinGecko/TrendingCry
 import Saved from "../Components/Projects/MiniPro/CoinGecko/Saved";
 import CC from "../Components/Projects/MiniPro/CurrencyConverter/CC";
 import BAndS from "../Components/Projects/ReactJs/BAndS/Components/Pages/BAndS";
+import Calc from "../Components/Projects/MiniPro/Calc/Calc";
 
 
 
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
     {
         path: "/BAndS",
         element: <BAndS />
+    },
+    {
+        path: "/Calc",
+        element: <Calc />
     },
     {
         path: "CoinGecko",
