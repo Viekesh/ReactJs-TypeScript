@@ -101,7 +101,7 @@ const Calculator = () => {
         <>
             <section
                 className="calculator"
-                onKeyDown={(event) => handleKeyPress(event.keycode, event.key)}
+                onKeyDown={(event) => handleKeyPress(event.keyCode, event.key)}
             >
 
                 <div className="calc_nav y_axis_center">

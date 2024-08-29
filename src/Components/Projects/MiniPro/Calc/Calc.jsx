@@ -1,12 +1,15 @@
 import { useState } from "react";
 import "./Calc.scss";
-import CalcKeypad from "../../ReactJs/Calculator/CalcKeypad";
+import moon_icon from "./CalcAssets/moon.png";
+import sun_icon from "./CalcAssets/sun.png";
+import CalcHead from "./CalcHead";
+import CalcKeypad from "./CalcKeypad";
 
 
 
 const Calc = () => {
 
-    const [lightMode, setLightMode] = useState();
+    const [lightMode, setLightMode] = useState(false);
 
     const convertDarkMode = () => {
         setLightMode(!lightMode);
@@ -14,9 +17,14 @@ const Calc = () => {
 
 
 
+    // const handleKeyPress = () => {
+    // }
+
+
+
     return (
         <>
-            <section className="calc">
+            <section className="calc y_axis_center" data-theme={lightMode ? "dark" : ""}>
                 <div className="calc_nav y_axis_center">
                     <div className="git_link">
                         <div className="github_icon x_y_axis_center">
@@ -40,25 +48,31 @@ const Calc = () => {
                         </div>
                     </div>
 
-                    <div className="light_mode">
+                    <div className="light_mode y_axis_center" >
                         <div className="light_mode_toggle" onClick={convertDarkMode}>
                             <div
-                                className={`light_mode_toggle_circle ${!lightMode ? "light_mode_active" : ""}`}
-                            ></div>
+                                className={`light_mode_toggle_circle data-theme=${lightMode ? "dark" : ""} ${lightMode ? "light_mode_active" : ""}`}
+                            >
+                                <img src={!lightMode ? moon_icon : sun_icon} alt="" />
+                            </div>
                         </div>
-
-                        <img src={!lightMode ? "sun_icon" : "moon_icon"} alt="" />
                     </div>
                 </div>
 
 
 
+                <CalcHead />
                 <CalcKeypad />
             </section>
         </>
     )
-}
+};
 
 
 
 export default Calc;
+
+
+
+// To enable dark-light mode we use attributes. (In this component we can use "data-theme" attrubute)
+// We use same attribute in an elements where we want to change the mode and then we write appropriate css style.

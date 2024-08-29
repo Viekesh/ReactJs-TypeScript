@@ -92,7 +92,10 @@ const CalcKeypad = (props) => {
                         keys.map((index, element) => {
                             return (
                                 <>
-                                    <p key={index} onClick={() => props.handleKeyPress(element.keyCode, element.label)}>
+                                    <p
+                                        key={index}
+                                    // onClick={() => props.handleKeyPress(element.keyCode, element.label)}
+                                    >
                                         {element.label}
                                     </p>
                                 </>
@@ -106,7 +109,10 @@ const CalcKeypad = (props) => {
                         symbols.map((index, element) => {
                             return (
                                 <>
-                                    <p key={index} onClick={() => props.handleKeyPres(element.keyCode, element.value)}>
+                                    <p
+                                        key={index}
+                                    // onClick={() => props.handleKeyPress(element.keyCode, element.value)}
+                                    >
                                         {element.label}
                                     </p>
                                 </>
