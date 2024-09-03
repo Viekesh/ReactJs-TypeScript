@@ -50,7 +50,7 @@ export const MiniProData = [
         id: 1,
         name: "Calculator",
         githublink: "https://github.com/Viekesh/ControlAndAutomation",
-        projectLink: "https://portfolio-3069",
+        projectLink: "/Calc",
     },
     {
         id: 2,

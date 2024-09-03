@@ -1,6 +1,8 @@
 .calc {
-    border: 3px solid black;
+    border: 1px solid gray;
+    border-radius: 9px;
     margin: 0 auto;
+    padding: 6px;
     height: 100vh;
     background-color: transparent;
     position: relative;
@@ -19,8 +21,20 @@
     right: 12px;
 }
 
+.git_link {
+    z-index: 999;
+}
+
+.light_mode {
+    z-index: 998;
+}
+
+.calc button {
+    border: 3px solid black;
+    z-index: 997;
+}
+
 .light_mode_toggle_circle {
-    // border: 3px solid red;
     border-radius: 50%;
     margin: 0 6px;
     width: 36px;
@@ -46,9 +60,47 @@
 // Calc Head
 
 .calc_head {
-    border: 3px solid green;
+    border: 1px solid gray;
+    border-radius: 9px;
     width: 100%;
     height: 24vh;
+    position: relative;
+}
+
+.head_history {
+    border: 3px solid transparent;
+    padding: 3px;
+    width: 50%;
+    height: 9vh;
+    font-size: 15px;
+    font-family: "Kanit", sans-serif;
+    font-weight: 300;
+    overflow-y: scroll;
+}
+
+.head_expression {
+    border: 1px solid gray;
+    border-radius: 9px;
+    margin: 3px;
+    padding: 3px 6px;
+    width: 150px;
+    font-size: 18px;
+    font-family: "Kanit", sans-serif;
+    font-weight: 600;
+    text-align: left;
+    white-space: nowrap;
+    overflow-x: scroll;
+}
+
+.head_result {
+    border: 3px solid transparent;
+    padding: 0 3px;
+    width: 100%;
+    font-size: 33px;
+    font-family: "Kanit", sans-serif;
+    font-weight: 300;
+    position: absolute;
+    bottom: 0;
 }
 
 
@@ -56,12 +108,31 @@
 // Calc Keypad
 
 .calc_keypad {
-    border: 3px solid red;
+    border: 1px solid gray;
+    border-radius: 9px;
     width: 100%;
     height: 72%;
 }
 
 .keys {
-    border: 3px solid black;
-    border: 3px solid yellowgreen;
+    border: 3px solid transparent;
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.keys>p {
+    border: 3px solid darkblue;
+    border-radius: 50%;
+    margin: 6px 0;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    background-color: darkblue;
+    color: snow;
+    font-family: "Kanit", sans-serif;
+    font-weight: 600;
+    // user-select: none;
 }

@@ -29,8 +29,8 @@ const Calculator = () => {
     );
 
     const convertDarkMode = () => {
-        setIsLightMode(!isLightMode)
-    }
+        setIsLightMode(!isLightMode);
+    };
 
     const handleKeyPress = (keyCode, key) => {
         if (!keyCode) return;

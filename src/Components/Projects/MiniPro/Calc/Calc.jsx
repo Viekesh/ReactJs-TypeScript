@@ -7,6 +7,15 @@ import CalcKeypad from "./CalcKeypad";
 
 
 
+const usedKeyCodes = [
+    48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 96, 97, 98, 99, 100, 101, 102, 103,
+    104, 105, 8, 13, 190, 187, 189, 191, 56, 111, 106, 107, 109
+];
+
+const numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+
+const operators = ["-", "+", "*", "/"];
+
 const Calc = () => {
 
     const [lightMode, setLightMode] = useState(false);
@@ -15,10 +24,27 @@ const Calc = () => {
         setLightMode(!lightMode);
     };
 
+    const [expression, setExpression] = useState("");
 
 
-    // const handleKeyPress = () => {
-    // }
+
+    const handleKeyPress = (keycode, key, value) => {
+        // console.log(keycode, key, value);
+        // alert("key press");
+        if (!keycode) return;
+
+        if (!usedKeyCodes.includes(keycode)) return;
+
+        if (numbers.includes(key)) {
+            console.log("Number");
+        } else if (operators.includes(key)) {
+            console.log("Operators: ", value);
+        } else if (keycode === "8") {
+            console.log("Backspace");
+        } else if (keycode === "13") {
+            console.log("Enter");
+        }
+    };
 
 
 
@@ -57,12 +83,14 @@ const Calc = () => {
                             </div>
                         </div>
                     </div>
+
+                    <button title="Press" type="button" onKeyDown={(event) => handleKeyPress(event.keycode, event.key)}>Click</button>
                 </div>
 
 
 
                 <CalcHead />
-                <CalcKeypad />
+                <CalcKeypad handleKeyPress={handleKeyPress} />
             </section>
         </>
     )
