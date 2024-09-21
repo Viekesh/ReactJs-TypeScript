@@ -11,10 +11,10 @@ const OngoingPro = () => {
         <>
             <section className="ongoing_pro">
                 {
-                    OngoingProData.map((data) => {
+                    OngoingProData.map((data, index) => {
                         return (
                             <>
-                                <div className="pro y_axis_center">
+                                <div className="pro y_axis_center" key={data.id}>
                                     <div className="box1 x_y_axis_center">
                                         <div className="inner_box1 x_y_axis_center">{data.id}</div>
                                     </div>

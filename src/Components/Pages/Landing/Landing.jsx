@@ -36,10 +36,10 @@ const Landing = () => {
                 <SocialLinks />
 
                 {
-                    LandingPageContent.map((data) => {
+                    LandingPageContent.map((data, index) => {
                         return (
                             <>
-                                <div className="head_content" onLoad={animateDelay()}>
+                                <div className="head_content" onLoad={animateDelay()} key={index}>
                                     <h1 id="PageHeading" className="lexend">{data.heading}</h1>
                                     <br />
                                     <p id="PagePara" className="lexend">{data.para}</p>

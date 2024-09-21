@@ -9,6 +9,7 @@ import img3 from "../../Assets/Images/img3.PNG";
 
 export const LandingPageContent = [
     {
+        id: 0,
         heading: "hi, there!",
         para: "thanks for giving me your precious time and reached out to my portfolio. I'm full stack software engineer specializing in JavaScript libraries and related technologies. here you'll get examples of my work showcasing my expertise in building real world projects."
     }
@@ -47,65 +48,71 @@ export const Slider1Content = [
 
 export const MiniProData = [
     {
-        id: 1,
+        id: 0,
         name: "Calculator",
         githublink: "https://github.com/Viekesh/ControlAndAutomation",
         projectLink: "/Calc",
     },
     {
-        id: 2,
+        id: 1,
         name: "Currency Converter",
         githublink: "https://github.com/Viekesh/ControlAndAutomation",
         projectLink: "https://portfolio-3069",
     },
     {
-        id: 3,
+        id: 2,
         name: "To Do List",
         githublink: "https://github.com/Viekesh/ControlAndAutomation",
         projectLink: "https://portfolio-3069",
     },
     {
-        id: 4,
+        id: 3,
         name: "Crypto Data API",
         githublink: "https://github.com/Viekesh/ControlAndAutomation",
         projectLink: "https://portfolio-3069",
     },
     {
-        id: 5,
+        id: 4,
         name: "Tic Tac Toe",
         githublink: "https://github.com/Viekesh/ControlAndAutomation",
         projectLink: "https://portfolio-3069",
     },
+    {
+        id: 5,
+        name: "CRUD",
+        githublink: "https://github.com/Viekesh/ControlAndAutomation",
+        projectLink: "/CRUD",
+    }
 ];
 
 
 export const OngoingProData = [
     {
-        id: 1,
+        id: 0,
         name: "Calculator",
         githublink: "https://github.com/Viekesh/ControlAndAutomation",
         projectLink: "https://portfolio-3069",
     },
     {
-        id: 2,
+        id: 1,
         name: "Currency Converter",
         githublink: "https://github.com/Viekesh/ControlAndAutomation",
         projectLink: "https://portfolio-3069",
     },
     {
-        id: 3,
+        id: 2,
         name: "To Do List",
         githublink: "https://github.com/Viekesh/ControlAndAutomation",
         projectLink: "https://portfolio-3069",
     },
     {
-        id: 4,
+        id: 3,
         name: "Crypto Data API",
         githublink: "https://github.com/Viekesh/ControlAndAutomation",
         projectLink: "https://portfolio-3069",
     },
     {
-        id: 5,
+        id: 4,
         name: "Tic Tac Toe",
         githublink: "https://github.com/Viekesh/ControlAndAutomation",
         projectLink: "https://portfolio-3069",

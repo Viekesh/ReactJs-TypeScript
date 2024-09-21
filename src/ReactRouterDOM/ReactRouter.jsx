@@ -8,6 +8,9 @@ import Saved from "../Components/Projects/MiniPro/CoinGecko/Saved";
 import CC from "../Components/Projects/MiniPro/CurrencyConverter/CC";
 import BAndS from "../Components/Projects/ReactJs/BAndS/Components/Pages/BAndS";
 import Calc from "../Components/Projects/MiniPro/Calc/Calc";
+import CRUD from "../Components/Projects/MiniPro/CRUD/CRUD";
+import CRUDDirectory from "../Components/Projects/MiniPro/CRUD/CRUDDirectory";
+import Note from "../Components/Projects/MiniPro/CRUD/Note";
 
 
 
@@ -23,6 +26,20 @@ const router = createBrowserRouter([
     {
         path: "/Calc",
         element: <Calc />
+    },
+    {
+        path: "/CRUD",
+        element: <CRUD />,
+        children: [
+            {
+                path: "/CRUD",
+                element: <CRUDDirectory />,
+            },
+            {
+                path: "/CRUD/Note/:id",
+                element: <Note />,
+            },
+        ]
     },
     {
         path: "CoinGecko",
@@ -53,6 +70,8 @@ const router = createBrowserRouter([
         element: <CC />,
     }
 ]);
+
+
 
 export const ReactRouter = () => {
     return (
