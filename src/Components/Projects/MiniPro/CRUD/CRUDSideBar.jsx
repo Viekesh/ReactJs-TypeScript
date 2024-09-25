@@ -49,7 +49,7 @@ const sideBarItems = [
 const CRUDSideBar = () => {
     return (
         <>
-            <section className="crudsidebar">
+            <section className="crudsidebar y_axis_center">
                 {
                     sideBarItems.map((data) => {
                         return (

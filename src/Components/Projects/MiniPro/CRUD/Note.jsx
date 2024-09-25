@@ -7,7 +7,9 @@ const Note = () => {
 
     const navigate = useNavigate();
 
-    const openNote = () => { };
+    const openNote = () => {
+        navigate("/Notes/kjdfklja3933j3k43k")
+    };
 
     return (
         <>

@@ -7,7 +7,6 @@
 .crudsubcompo {
     border: 0px solid transparent;
     margin: 6px 0;
-    display: flex;
 }
 
 // CRUDNav
@@ -62,20 +61,20 @@
 .crudsidebar {
     border: 1px solid gray;
     border-radius: 9px;
+    margin: 9px auto;
     padding: 0 9px;
-    width: 36vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    overflow-x: auto;
 }
 
 .crudsidebar>.crudsidebarele>button {
     border: 1px solid gray;
     border-radius: 9px;
-    margin: 9px 0;
+    margin: 9px 3px;
     padding: 0 9px;
     width: 90px;
     height: 27px;
+    background-color: black;
+    color: snow;
     justify-content: space-between;
     text-transform: uppercase;
     font-family: "Kanit", sans-serif;
@@ -89,7 +88,7 @@
 .cruddir {
     border: 1px solid gray;
     border-radius: 9px;
-    margin: 0 0 0 6px;
+    margin: 9px auto;
     padding: 9px;
     width: 100%;
 }
@@ -109,9 +108,12 @@
 
 .notes>.notesele>button {
     border-radius: 6px;
-    padding: 3px;
+    padding: 0 6px;
+    width: 90px;
+    height: 27px;
     background-color: black;
     color: snow;
+    box-shadow: 1px 1px 3px gray;
 }
 
 .notes>.notesele>.notesicons {
@@ -128,4 +130,19 @@
 
 
 
+// Notes
+
+
+
+
 // Note
+
+.note {
+    border: 1px solid rgb(201, 201, 201);
+    border-radius: 6px;
+    margin: 6px auto;
+    padding: 3px;
+    font-family: "Kanit", sans-serif;
+    font-weight: 300;
+    color: gray;
+}

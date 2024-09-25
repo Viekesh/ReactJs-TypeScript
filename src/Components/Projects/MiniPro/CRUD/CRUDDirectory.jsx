@@ -32,10 +32,6 @@ const CRUDDirectory = () => {
 
     const [notesType, notesTypeSelected] = useState(0);
 
-    // const notestypesel = (index) => {
-    //     notesTypeSelected(index);
-    // };
-
     return (
         <>
             <section className="cruddir">
