@@ -1,12 +1,17 @@
 import "./App.scss";
 import { ReactRouter } from "./ReactRouterDOM/ReactRouter";
+import { Provider } from "react-redux";
+// import Store from "./Redux/Redux";
+import ConfigStore from "./Redux/Ex/ConfigStore";
 
 
 
 const App = () => {
     return (
         <>
-            <ReactRouter />
+            <Provider store={ConfigStore}>
+                <ReactRouter />
+            </Provider>
         </>
     )
 };

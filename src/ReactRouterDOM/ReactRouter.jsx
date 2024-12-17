@@ -10,7 +10,7 @@ import BAndS from "../Components/Projects/ReactJs/BAndS/Components/Pages/BAndS";
 import Calc from "../Components/Projects/MiniPro/Calc/Calc";
 import CRUD from "../Components/Projects/MiniPro/CRUD/CRUD";
 import CRUDDirectory from "../Components/Projects/MiniPro/CRUD/CRUDDirectory";
-import Note from "../Components/Projects/MiniPro/CRUD/Note";
+import DetailNote from "../Components/Projects/MiniPro/CRUD/DetailNote";
 
 
 
@@ -36,8 +36,8 @@ const router = createBrowserRouter([
                 element: <CRUDDirectory />,
             },
             {
-                path: "/CRUD/Note/:id",
-                element: <Note />,
+                path: "/CRUD/DetailNote",
+                element: <DetailNote />,
             },
         ]
     },

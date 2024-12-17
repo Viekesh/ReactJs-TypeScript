@@ -1,3 +1,4 @@
+import Counter from "../../../Redux/Ex/Counter";
 import TopNav from "../../Featured/Navigation/TopNav";
 import SocialLinks from "../../Featured/SocialLinks/SocialLinks";
 import MiniPro from "../../Projects/MiniPro/MiniPro";
@@ -69,6 +70,7 @@ const Landing = () => {
             </main>
 
             <footer>
+                <Counter />
                 <Footer />
             </footer>
         </>

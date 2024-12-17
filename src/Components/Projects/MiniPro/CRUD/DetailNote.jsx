@@ -60,12 +60,19 @@ const DetailNote = () => {
                 </div>
 
                 <div className="note_count y_axis_center">
-                    <p>subject</p>
-                    <p>inbox</p>
+                    <h1>subject</h1>
                 </div>
 
                 <div className="note_date">
                     <p>date</p>
+                </div>
+
+                <div className="email_add">
+                    <h3>sender <span>receiver</span></h3>
+                </div>
+
+                <div className="email_mess">
+                    <p>message</p>
                 </div>
             </section>
         </>

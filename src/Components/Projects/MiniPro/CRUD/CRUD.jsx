@@ -3,6 +3,7 @@ import "./CRUD.scss";
 import CRUDNavB from "./CRUDNavB";
 import CRUDSideBar from "./CRUDSideBar";
 import { Outlet } from "react-router-dom";
+import CreateNote from "./CreateNote";
 
 
 
@@ -11,11 +12,15 @@ const CRUD = () => {
         <>
             <section className="crud">
                 <CrudNav />
-                <CRUDNavB />
+                {/* <CRUDNavB /> */}
 
                 <div className="crudsubcompo">
                     <CRUDSideBar />
                     <Outlet />
+                </div>
+
+                <div>
+                    <CreateNote />
                 </div>
             </section>
         </>

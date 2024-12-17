@@ -2,13 +2,12 @@ import { useNavigate } from "react-router-dom";
 
 
 
-
 const Note = () => {
 
     const navigate = useNavigate();
 
     const openNote = () => {
-        navigate("/Notes/kjdfklja3933j3k43k")
+        navigate("/CRUD/DetailNote")
     };
 
     return (

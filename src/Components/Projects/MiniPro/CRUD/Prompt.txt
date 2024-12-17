@@ -1,0 +1,94 @@
+Act as a experienced Full Stack Engineer and solve the problem which is given below.
+
+What I want to do is when onclick callback function is triggered which is given in "CRUDSideBar"
+component then "CreateNote.jsx" component is displayed on the screen right now its visibility hidden.
+For this I want to use redux.
+
+import { MdOutlineCreate } from "react-icons/md";
+import { useState } from "react";
+import { useDispatch } from "react-redux";
+
+const CRUDSideBar = () => {
+    const [open, setOpen] = useState(false);
+
+    // this is local state variable, we need to send "open" in "CreateNote.jsx" component
+    // so we need to use redux toolkit, it provide us global state store where we can get this "open"
+    // variable for "CreateNote.jsx" component.
+
+    const dispatch = useDispatch();
+
+    return (
+        <>
+            <section className="crudsidebar y_axis_center">
+                <div className="crudsidebarele" onClick={() => dispatch(setOpen(true))}>
+                    <button type="button" title="create" className="y_axis_center"><MdOutlineCreate size={"18px"} /> create</button>
+                </div>
+            </section>
+        </>
+    )
+};
+export default CRUDSideBar;
+
+
+This is a "CreateNote.jsx" component
+
+import { useSelector } from "react-redux";
+import Store from "../../../../Redux/Redux";
+
+const CreateNote = () => {
+
+    const { open } = useSelector(Store => Store.CRUDSlice.open);
+
+    return (
+        <>
+            <section className={`${open ? "block" : "hidden"} create_note`}>
+                <div className="new_note">
+                    <h1>new note</h1>
+                </div>
+            </section>
+        </>
+    );
+};
+
+export default CreateNote;
+
+
+This is a redux file where we create store
+
+import { configureStore } from "@reduxjs/toolkit";
+import CRUDSlice from "./CRUDSlice";
+
+const Store = configureStore({
+    reducer: {
+        CRUDReducer: CRUDSlice
+    }
+});
+
+export default Store;
+
+
+This is another file
+
+import { createSlice } from "@reduxjs/toolkit";
+
+
+
+
+const CRUDSlice = createSlice({
+    name: "CRUDSlice",
+    initialState: {
+        open: false,
+    },
+    reducers: {
+        setOpen: (state, action) => {
+            state.open = action.payload
+        }
+    }
+});
+
+export const { setOpen } = CRUDSlice.actions;
+
+export default CRUDSlice.reducer;
+
+When I have execute this code browser console says "open" is undefined please analyse
+the code and solve the problem and rewrite the code.

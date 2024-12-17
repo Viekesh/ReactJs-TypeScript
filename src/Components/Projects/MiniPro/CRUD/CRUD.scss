@@ -146,3 +146,64 @@
     font-weight: 300;
     color: gray;
 }
+
+
+
+// Detail Note
+
+.detailnote>.detailnoteele {
+    border-top: 1px solid rgb(201, 201, 201);
+    border-bottom: 1px solid rgb(201, 201, 201);
+    padding: 3px 0;
+    justify-content: space-between;
+}
+
+.detailnote>.note_count {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    margin: 12px auto 6px auto;
+    padding: 6px;
+    text-transform: capitalize;
+    font-family: "Kanit", sans-serif;
+    font-weight: 300;
+    color: gray;
+}
+
+.detailnote>.note_date {
+    border: 0px solid black;
+    margin: 3px auto;
+    text-transform: capitalize;
+    font-family: "Kanit", sans-serif;
+    font-weight: 300;
+    color: gray;
+}
+
+.detailnote>.email_add {
+    border: 0px solid black;
+    margin: 3px auto;
+    text-transform: capitalize;
+    font-family: "Kanit", sans-serif;
+    font-weight: 100;
+    color: gray;
+}
+
+.detailnote>.email_mess {
+    border: 0px solid black;
+    margin: 3px auto;
+    text-transform: capitalize;
+    font-family: "Kanit", sans-serif;
+    font-weight: 100;
+    color: gray;
+}
+
+
+
+// CreateNote
+
+.create_note {
+    border: 1px solid blue;
+}
+
+.hidden {
+    visibility: hidden;
+}
